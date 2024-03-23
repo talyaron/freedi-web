@@ -1,0 +1,13 @@
+.roundedBtn {
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--blue-light);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color: var(--blue-dark);
+    }
+}

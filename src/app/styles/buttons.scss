@@ -11,3 +11,12 @@
         background-color: var(--blue-dark);
     }
 }
+
+.defaultBtn {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}

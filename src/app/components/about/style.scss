@@ -1,0 +1,21 @@
+.aboutSection {
+    height: 70vh;
+    margin-top: 5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &__backgroundShape {
+        height: 100%;
+        width: auto;
+        position: absolute;
+        z-index: -10;
+    }
+    &__overview{
+        display: flex;
+        justify-content: space-around;
+        &__image{
+            height: 40vh;
+            width: auto;
+        }
+    }
+}

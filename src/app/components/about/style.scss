@@ -1,21 +1,37 @@
 .aboutSection {
-    height: 70vh;
+    height: 80vh;
     margin-top: 5rem;
     position: relative;
     display: flex;
     flex-direction: column;
     &__backgroundShape {
-        height: 100%;
-        width: auto;
+        height: auto;
+        width: 60vw;
         position: absolute;
         z-index: -10;
     }
     &__overview{
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 10vw;
         &__image{
-            height: 40vh;
+            height: 50vh;
             width: auto;
         }
+        &__text{
+            width: 40%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+    &__benefits{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 5rem;
+        width: 70%;
+        margin: 0 auto;
     }
 }

@@ -1,9 +1,27 @@
 @import "./buttons.scss";
 
+:root {
+    --white: #f2f2f2;
+    --blue-light: #03379f15;
+    --blue-dark: #03379f;
+
+    --button-primary: #5D98F3;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html{
+    display: flex;
+}
+
+body{
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
 }
 
 a {
@@ -11,12 +29,12 @@ a {
     color: inherit;
 }
 
-:root {
-    --white: #f2f2f2;
-    --blue-light: #03379f15;
-    --blue-dark: #03379f;
-
-    --button-primary: #5D98F3;
+button {
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    border: none;
+    text-align: center;
 }
 
 @media screen and (max-width: 1024px) {

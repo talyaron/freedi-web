@@ -18,8 +18,8 @@ export default function CrownIcon({ remSize }: Props) {
                 fill="#5699E9"
             />
             <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M67.6875 65.625H8.3125C7.4375 65.625 6.75 64.9375 6.75 64.0625V57.8125C6.75 56.9375 7.4375 56.25 8.3125 56.25H67.6875C68.5625 56.25 69.25 56.9375 69.25 57.8125V64.0625C69.25 64.9375 68.5625 65.625 67.6875 65.625Z"
                 fill="#FF7373"
             />

@@ -14,15 +14,10 @@
     padding: 0;
 }
 
-html{
-    display: flex;
+html {
+    font-size: 24px;
 }
 
-body{
-    max-width: 1400px;
-    margin: 0 auto;
-    position: relative;
-}
 
 a {
     text-decoration: none;
@@ -35,6 +30,18 @@ button {
     cursor: pointer;
     border: none;
     text-align: center;
+}
+
+@media screen and (max-width: 2560px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    html {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 1024px) {

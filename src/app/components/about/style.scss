@@ -1,9 +1,10 @@
 .aboutSection {
     height: 80vh;
-    margin-top: 5rem;
+    margin-top: 5vw;
     position: relative;
     display: flex;
     flex-direction: column;
+    gap: 5vw;
     &__backgroundShape {
         height: auto;
         width: 60vw;
@@ -13,25 +14,38 @@
     &__overview{
         display: flex;
         justify-content: center;
-        gap: 10vw;
+        gap: 5vw;
         &__image{
-            height: 50vh;
-            width: auto;
+            height: auto;
+            width: 20vw;
         }
         &__text{
             width: 40%;
-            height: 80%;
+            height: 70%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            margin: auto 0;
+            margin-left: 5vw
         }
     }
+
     &__benefits{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        gap: 5rem;
         margin-top: 5rem;
         width: 70%;
         margin: 0 auto;
+        &__benefit{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+            p{
+                width: 80%;
+            }
+        }
     }
 }

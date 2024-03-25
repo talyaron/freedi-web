@@ -17,44 +17,6 @@ import LightBulbIcon from "../icons/LightBulbIcon";
 import OldWomanIcon from "../icons/OldWomanIcon";
 
 export default function AboutSection() {
-    const benefitsData = [
-        {
-            icon: <CrownIcon remSize="2.5rem" />,
-            title: "Empowerment",
-            description:
-                "Empower your team members to make decisions that they believe in.",
-        },
-        {
-            icon: <TeamIcon remSize="2.5rem" />,
-            title: "Collaboration",
-            description:
-                "Collaborate with your team members to find the best solutions.",
-        },
-        {
-            icon: <CodeIcon remSize="2.5rem" />,
-            title: "Innovation",
-            description:
-                "Encourage innovative solutions by allowing diverse viewpoints.",
-        },
-        {
-            icon: <HandShakeIcon remSize="2.5rem" />,
-            title: "Inclusivity",
-            description:
-                "Include all team members in the decision-making process.",
-        },
-        {
-            icon: <LightBulbIcon remSize="2.5rem" />,
-            title: "Creativity",
-            description:
-                "Foster creativity by allowing team members to think outside the box.",
-        },
-        {
-            icon: <OldWomanIcon remSize="2.5rem" />,
-            title: "Wisdom",
-            description:
-                "Leverage the wisdom of your team members to make better decisions.",
-        },
-    ];
     return (
         <section className="aboutSection">
             <Image
@@ -90,9 +52,7 @@ export default function AboutSection() {
                         className="aboutSection__benefits__benefit"
                         key={index}
                     >
-                        <div className="aboutSection__benefits__benefit__icon">
-                            {benefit.icon}
-                        </div>
+                        {benefit.icon}
                         <h4>{benefit.title}</h4>
                         <p>{benefit.description}</p>
                     </div>
@@ -101,3 +61,41 @@ export default function AboutSection() {
         </section>
     );
 }
+
+const benefitsData = [
+    {
+        icon: <CrownIcon remSize="2.5rem" />,
+        title: "Empowerment",
+        description:
+            "Empower your team members to make decisions that they believe in.",
+    },
+    {
+        icon: <TeamIcon remSize="2.5rem" />,
+        title: "Collaboration",
+        description:
+            "Collaborate with your team members to find the best solutions.",
+    },
+    {
+        icon: <CodeIcon remSize="2.5rem" />,
+        title: "Innovation",
+        description:
+            "Encourage innovative solutions by allowing diverse viewpoints.",
+    },
+    {
+        icon: <HandShakeIcon remSize="2.5rem" />,
+        title: "Inclusivity",
+        description: "Include all team members in the decision-making process.",
+    },
+    {
+        icon: <LightBulbIcon remSize="2.5rem" />,
+        title: "Creativity",
+        description:
+            "Foster creativity by allowing team members to think outside the box.",
+    },
+    {
+        icon: <OldWomanIcon remSize="2.5rem" />,
+        title: "Wisdom",
+        description:
+            "Leverage the wisdom of your team members to make better decisions.",
+    },
+];

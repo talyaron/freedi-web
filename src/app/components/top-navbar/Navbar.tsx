@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./style.module.scss";
 import LogoIcon from "../icons/LogoIcon";
 import { usePathname } from "next/navigation";

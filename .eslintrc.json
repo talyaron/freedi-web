@@ -2,7 +2,7 @@
     "extends": ["next/core-web-vitals","plugin:@typescript-eslint/recommended", "prettier"],
     "plugins": ["import", "react", "@typescript-eslint", "prettier"],
     "rules": {
-        "react/display-name": "off",
+        "react/display-name": "error",
         "react/no-unescaped-entities": "off",
         "import/no-anonymous-default-export": "off",
         "@typescript-eslint/no-unused-vars": "error",

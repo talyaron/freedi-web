@@ -1,6 +1,6 @@
 import React from "react";
 import AboutSection from "./components/about/AboutSection";
-import Header from "./components/header/Header";
+import WelcomeHeader from "./components/header/WelcomeHeader";
 import Image from "next/image";
 import heroBg from "@/assets/Images/Hero BG illustrations.png";
 
@@ -10,6 +10,8 @@ export default function Home() {
             <Image
                 alt="Hero-Background"
                 src={heroBg}
+                quality={100}
+                placeholder="blur"
                 sizes="100vw"
                 priority
                 style={{
@@ -20,8 +22,14 @@ export default function Home() {
                     zIndex: -10,
                 }}
             />
-            <Header />
+
+            <WelcomeHeader />
+
             <AboutSection />
+
+            <section>
+                
+            </section>
         </main>
     );
 }

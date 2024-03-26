@@ -2,9 +2,9 @@
 
 import React from "react";
 import styles from "./style.module.scss";
-import LogoIcon from "../icons/LogoIcon";
+import LogoIcon from "../../../components/icons/LogoIcon";
 import { usePathname } from "next/navigation";
-import RoundedButton from "../buttons/RoundedButton";
+import RoundedButton from "../../../components/buttons/RoundedButton";
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -25,7 +25,7 @@ export default function Navbar() {
                                 fontWeight:
                                     pathname.includes(link) ||
                                     (pathname === "/" && link === "home")
-                                        ? 900
+                                        ? "bold"
                                         : 500,
                             }}
                             href={link === "home" ? "/" : `${link}`}

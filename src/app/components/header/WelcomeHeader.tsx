@@ -30,6 +30,8 @@ export default function Header() {
             <Image
                 alt="Hero-Image"
                 src={heroImg}
+                quality={100}
+                sizes="50vw"
                 style={{
                     width: "50vw",
                     maxWidth: "800px",

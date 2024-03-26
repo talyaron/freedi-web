@@ -6,15 +6,15 @@ import "./style.scss";
 // Images
 import overview from "@/assets/Images/Overview.png";
 import backgroundShape from "@/assets/Images/Background shape 01.png";
-import DefaultButton from "../buttons/DefaultButton";
+import DefaultButton from "../../../components/buttons/DefaultButton";
 
 // Icons
-import CrownIcon from "../icons/CrownIcon";
-import TeamIcon from "../icons/TeamIcon";
-import CodeIcon from "../icons/CodeIcon";
-import HandShakeIcon from "../icons/HandShakeIcon";
-import LightBulbIcon from "../icons/LightBulbIcon";
-import OldWomanIcon from "../icons/OldWomanIcon";
+import CrownIcon from "../../../components/icons/CrownIcon";
+import TeamIcon from "../../../components/icons/TeamIcon";
+import CodeIcon from "../../../components/icons/CodeIcon";
+import HandShakeIcon from "../../../components/icons/HandShakeIcon";
+import LightBulbIcon from "../../../components/icons/LightBulbIcon";
+import OldWomanIcon from "../../../components/icons/OldWomanIcon";
 
 export default function AboutSection() {
     return (
@@ -28,6 +28,9 @@ export default function AboutSection() {
                 <Image
                     alt="overview-image"
                     src={overview}
+                    quality={100}
+                    placeholder="blur"
+                    sizes="50vw"
                     className="aboutSection__overview__image"
                 />
                 <div className="aboutSection__overview__text">

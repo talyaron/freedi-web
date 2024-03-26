@@ -1,20 +1,20 @@
 import React from "react";
 import Image from "next/image";
 
-import "./style.scss";
+import "./AboutSectionStyle.scss";
 
 // Images
 import overview from "@/assets/Images/Overview.png";
 import backgroundShape from "@/assets/Images/Background shape 01.png";
-import DefaultButton from "../../../components/buttons/DefaultButton";
+import DefaultButton from "../../../../components/buttons/DefaultButton";
 
 // Icons
-import CrownIcon from "../../../components/icons/CrownIcon";
-import TeamIcon from "../../../components/icons/TeamIcon";
-import CodeIcon from "../../../components/icons/CodeIcon";
-import HandShakeIcon from "../../../components/icons/HandShakeIcon";
-import LightBulbIcon from "../../../components/icons/LightBulbIcon";
-import OldWomanIcon from "../../../components/icons/OldWomanIcon";
+import CrownIcon from "../../../../components/icons/CrownIcon";
+import TeamIcon from "../../../../components/icons/TeamIcon";
+import CodeIcon from "../../../../components/icons/CodeIcon";
+import HandShakeIcon from "../../../../components/icons/HandShakeIcon";
+import LightBulbIcon from "../../../../components/icons/LightBulbIcon";
+import OldWomanIcon from "../../../../components/icons/OldWomanIcon";
 
 export default function AboutSection() {
     return (

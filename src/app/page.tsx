@@ -1,7 +1,13 @@
 import React from "react";
-import AboutSection from "./components/about/AboutSection";
-import WelcomeHeader from "./components/header/WelcomeHeader";
+
 import Image from "next/image";
+
+// Custom Components
+import AboutSection from "./components/HomeSections/about/AboutSection";
+import WelcomeHeader from "./components/HomeSections/header/WelcomeHeader";
+import FeatureSection from "./components/HomeSections/features/FeatureSection";
+
+// import Images
 import heroBg from "@/assets/Images/Hero BG illustrations.png";
 
 export default function Home() {
@@ -27,9 +33,7 @@ export default function Home() {
 
             <AboutSection />
 
-            <section>
-                
-            </section>
+            <FeatureSection />
         </main>
     );
 }

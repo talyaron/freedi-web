@@ -12,7 +12,7 @@ import useWindowSize from "@/app/hooks/useWindowSize";
 export default function Header() {
     const { width } = useWindowSize();
 
-    const imgDimenstions = 1920 / 829;
+    const imgDimenstions = 1920 / 829;  
 
     return (
         <header className={styles.header}>

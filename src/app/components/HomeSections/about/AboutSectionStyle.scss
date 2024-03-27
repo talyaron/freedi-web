@@ -11,41 +11,68 @@
         position: absolute;
         z-index: -10;
     }
-    &__overview{
+    &__overview {
         display: flex;
         justify-content: center;
-        gap: 5vw;
-        &__image{
+        align-items: center;
+        gap: 10vw;
+        &__image {
             height: auto;
             width: 20vw;
         }
-        &__text{
+        &__text {
             width: 40%;
             height: 70%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            margin: auto 0;
-            margin-left: 5vw
+            gap: 1.5rem;
+            margin-bottom: .5rem;
+            h3 {
+                font-family: Catamaran, sans-serif;
+                font-size: 1.5rem;
+                font-weight: 600;
+                letter-spacing: 0.25px;
+                text-align: left;
+                color: var(--text-black);
+            }
+            p {
+                font-family: Catamaran, sans-serif;
+                font-size: 0.9rem;
+                font-weight: 400;
+                letter-spacing: 0.25px;
+                text-align: left;
+                color: #3b4f7d;
+            }
         }
     }
 
-    &__benefits{
+    &__benefits {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 5rem;
-        margin-top: 5rem;
         width: 70%;
         margin: 0 auto;
-        &__benefit{
+        margin-top: 5rem;
+        &__benefit {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 1rem;
             text-align: center;
-            p{
+            p {
                 width: 80%;
             }
         }
     }
+}
+
+
+@media screen and (max-width: 450px) {
+    .aboutSection {
+        &__benefits {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+    }
+    
 }

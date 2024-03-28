@@ -33,6 +33,7 @@
     }
     &__features{
         display: flex;
+        position: relative;
 
         &__backgroundShape {
             height: auto;

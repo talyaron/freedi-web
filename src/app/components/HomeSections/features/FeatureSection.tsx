@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
@@ -9,8 +11,16 @@ import firstFeaturePartTwo from "@/assets/Images/feature01-2.png";
 // Styles
 import "./FeatureSectionStyle.scss";
 import DefaultButton from "@/components/buttons/DefaultButton";
+import ChevronLeftIcon from "@/components/icons/icons/ChevronLeftIcon";
+import ChevronRightIcon from "@/components/icons/icons/ChevronRightIcon";
+import FeatureOne from "./components/FeatureOne";
+import FeatureTwo from "./components/FeatureTwo";
 
 export default function FeatureSection() {
+    const handleClick = (rightClick: boolean) => {
+        console.log("Button Clicked");
+    };
+
     return (
         <section className="featureSection">
             <div className="featureSection__explanation">
@@ -31,28 +41,21 @@ export default function FeatureSection() {
                     placeholder="blur"
                     sizes="40vw"
                 />
-                <Image
-                    alt="feature-image"
-                    src={firstFeature}
-                    style={{
-                        width: "15vw",
-                        height: "auto",
-                        position: "absolute",
-                        right: "15vw",
-                        top: "7vw",
-                    }}
-                />
-                <Image
-                    alt="feature-image"
-                    src={firstFeaturePartTwo}
-                    style={{
-                        width: "15vw",
-                        height: "auto",
-                        position: "absolute",
-                        right: "10%",
-                        top: "22vw",
-                    }}
-                />
+                <FeatureTwo />
+                <div style={{ position: "absolute", top: "17vw", left: "5vw" }}>
+                    <ChevronLeftIcon
+                        size="2rem"
+                        onClick={() => handleClick(false)}
+                    />
+                </div>
+                <div
+                    style={{ position: "absolute", top: "17vw", right: "12vw" }}
+                >
+                    <ChevronRightIcon
+                        size="2rem"
+                        onClick={() => handleClick(true)}
+                    />
+                </div>
             </div>
         </section>
     );

@@ -1,9 +1,14 @@
 interface Props {
     onClick: () => void;
     size?: string;
+    style?: React.CSSProperties;
 }
 
-export default function ChevronRightIcon({ onClick, size }: Readonly<Props>) {
+export default function ChevronRightIcon({
+    onClick,
+    size,
+    style,
+}: Readonly<Props>) {
     const iconSize = size ?? "1.5rem";
 
     return (
@@ -14,6 +19,7 @@ export default function ChevronRightIcon({ onClick, size }: Readonly<Props>) {
             viewBox="0 0 24 25"
             fill="none"
             onClick={onClick}
+            style={style}
         >
             <path
                 fillRule="evenodd"

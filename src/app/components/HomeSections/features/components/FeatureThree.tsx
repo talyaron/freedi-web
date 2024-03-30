@@ -1,21 +1,21 @@
-import React from "react";
 import Image from "next/image";
-import firstFeature from "@/assets/Images/feature01-1.png";
-import firstFeaturePartTwo from "@/assets/Images/feature01-2.png";
+import React from "react";
 
-export default function FeatureOne() {
+import featureThree01 from "@/assets/Images/feature03-1.png";
+import featureThree02 from "@/assets/Images/feature03-2.png";
+
+export default function FeatureThree() {
     return (
         <div
             style={{
                 width: "100%",
                 height: "100%",
                 position: "absolute",
-                transition: "all 0.5s",
             }}
         >
             <Image
                 alt="feature-image"
-                src={firstFeature}
+                src={featureThree01}
                 style={{
                     width: "15vw",
                     height: "auto",
@@ -26,13 +26,13 @@ export default function FeatureOne() {
             />
             <Image
                 alt="feature-image"
-                src={firstFeaturePartTwo}
+                src={featureThree02}
                 style={{
-                    width: "15vw",
+                    width: "17vw",
                     height: "auto",
                     position: "absolute",
                     right: "10vw",
-                    top: "22vw",
+                    top: "21vw",
                 }}
             />
         </div>

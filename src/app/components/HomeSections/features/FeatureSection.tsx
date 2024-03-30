@@ -1,12 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 // Images
 import backgroundShape from "@/assets/Images/Background shape 01.png";
-import firstFeature from "@/assets/Images/feature01-1.png";
-import firstFeaturePartTwo from "@/assets/Images/feature01-2.png";
 
 // Styles
 import "./FeatureSectionStyle.scss";
@@ -15,20 +13,51 @@ import ChevronLeftIcon from "@/components/icons/icons/ChevronLeftIcon";
 import ChevronRightIcon from "@/components/icons/icons/ChevronRightIcon";
 import FeatureOne from "./components/FeatureOne";
 import FeatureTwo from "./components/FeatureTwo";
+import FeatureThree from "./components/FeatureThree";
+import FeatureFour from "./components/FeatureFour";
+
+const features = [
+    {
+        title: "Make reaching agreements effortless with our DeliCol app",
+        description: "Real-time conversation and discussion",
+        comp: <FeatureOne />,
+    },
+    {
+        title: "Simplify agreement processes with DeliCol app",
+        description: "Rating the options",
+        comp: <FeatureTwo />,
+    },
+    {
+        title: "Streamline agreements effortlessly with DeliCol app",
+        description: "Visualizations of data and viewpoints",
+        comp: <FeatureThree />,
+    },
+    {
+        title: "Provide objective information and data on topics with DeliCol app",
+        description: "Voting the options",
+        comp: <FeatureFour />,
+    },
+];
 
 export default function FeatureSection() {
+    const [feature, setFeature] = useState(features[0]);
+
     const handleClick = (rightClick: boolean) => {
-        console.log("Button Clicked");
+        if (rightClick) {
+            const index = features.indexOf(feature) + 1;
+            setFeature(features[index % features.length]);
+        } else {
+            const index = features.indexOf(feature) - 1;
+            setFeature(features[(index + features.length) % features.length]);
+        }
     };
 
     return (
-        <section className="featureSection">
+        <section className="featureSection notSelectable">
             <div className="featureSection__explanation">
                 <h4>Our features</h4>
-                <h2>
-                    Make reaching agreements effortless with our DeliCol app
-                </h2>
-                <p>Real-time conversation and discussion</p>
+                <h2>{feature.title}</h2>
+                <p>{feature.description}</p>
                 <DefaultButton type="primary" text="Reach Out" />
             </div>
 
@@ -41,11 +70,12 @@ export default function FeatureSection() {
                     placeholder="blur"
                     sizes="40vw"
                 />
-                <FeatureTwo />
+                {feature.comp}
                 <div style={{ position: "absolute", top: "17vw", left: "5vw" }}>
                     <ChevronLeftIcon
                         size="2rem"
                         onClick={() => handleClick(false)}
+                        style={{ cursor: "pointer" }}
                     />
                 </div>
                 <div
@@ -54,6 +84,7 @@ export default function FeatureSection() {
                     <ChevronRightIcon
                         size="2rem"
                         onClick={() => handleClick(true)}
+                        style={{ cursor: "pointer" }}
                     />
                 </div>
             </div>

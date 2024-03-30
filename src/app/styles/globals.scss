@@ -5,10 +5,10 @@
     --blue-light: #03379f15;
     --blue-dark: #03379f;
 
-    --button-primary: #5D98F3;
+    --button-primary: #5d98f3;
 
-    --text-gray: #6E8AA6;
-    --text-black: #232F4A
+    --text-gray: #6e8aa6;
+    --text-black: #232f4a;
 }
 
 * {
@@ -21,7 +21,6 @@ html {
     font-size: 24px;
 }
 
-
 a {
     text-decoration: none;
     color: inherit;
@@ -33,6 +32,14 @@ button {
     cursor: pointer;
     border: none;
     text-align: center;
+}
+
+.notSelectable {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 @media screen and (max-width: 2560px) {

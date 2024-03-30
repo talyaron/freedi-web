@@ -2,17 +2,21 @@ import React from "react";
 
 import Image from "next/image";
 
-// Custom Components
-import AboutSection from "./components/HomeSections/about/AboutSection";
-import WelcomeHeader from "./components/HomeSections/header/WelcomeHeader";
-import FeatureSection from "./components/HomeSections/features/FeatureSection";
+// Styles
+import "./mainStyle.scss";
 
 // import Images
 import heroBg from "@/assets/Images/Hero BG illustrations.png";
 
+// Custom Components
+import AboutSection from "./components/HomeSections/about/AboutSection";
+import WelcomeHeader from "./components/HomeSections/header/WelcomeHeader";
+import FeatureSection from "./components/HomeSections/features/FeatureSection";
+import ConnectionsSection from "./components/HomeSections/connections/ConnectionsSection";
+
 export default function Home() {
     return (
-        <main>
+        <main className="main">
             <Image
                 alt="Hero-Background"
                 src={heroBg}
@@ -34,6 +38,8 @@ export default function Home() {
             <AboutSection />
 
             <FeatureSection />
+
+            <ConnectionsSection />
         </main>
     );
 }

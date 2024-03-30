@@ -56,8 +56,8 @@ export default function FeatureSection() {
         <section className="featureSection notSelectable">
             <div className="featureSection__explanation">
                 <h4>Our features</h4>
-                <h2>{feature.title}</h2>
-                <p>{feature.description}</p>
+                <h3 className="sectionTitle">{feature.title}</h3>
+                <p className="sectionText">{feature.description}</p>
                 <DefaultButton type="primary" text="Reach Out" />
             </div>
 

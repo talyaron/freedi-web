@@ -19,19 +19,12 @@
             letter-spacing: 0.08em;
             color: var(--text-gray);
         }
-        h2 {
-            font-family: Catamaran, sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            text-align: left;
-        }
-        p {
-            font-family: Catamaran, sans-serif;
-            font-size: .8rem;
-            font-weight: 400;
+
+        button {
+            margin-top: 2rem;
         }
     }
-    &__features{
+    &__features {
         display: flex;
         position: relative;
 

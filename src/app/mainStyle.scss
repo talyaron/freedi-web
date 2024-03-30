@@ -1,0 +1,35 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+.sectionTextBox {
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    button {
+        margin-top: 2rem;
+    }
+}
+
+.sectionTitle {
+    font-family: Catamaran, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+    text-align: left;
+    color: var(--text-black);
+}
+
+.sectionText {
+    font-family: Catamaran, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    text-align: left;
+    color: #3b4f7d;
+}

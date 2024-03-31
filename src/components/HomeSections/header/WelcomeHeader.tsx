@@ -7,24 +7,26 @@ import React from "react";
 import heroImg from "@/assets/Images/Hero illustration.png";
 
 import styles from "./style.module.scss";
-import useWindowSize from "@/app/hooks/useWindowSize";
+import useWindowSize from "@/hooks/useWindowSize";
+import useTranslate from "@/hooks/useTranslate";
 
 export default function Header() {
     const { width } = useWindowSize();
+    const { t } = useTranslate();
 
-    const imgDimenstions = 1920 / 829;  
+    const imgDimenstions = 1920 / 829;
 
     return (
         <header className={styles.header}>
             <div className={styles.heroTitle}>
                 <h2 className={styles.heading}>
-                    Delicol fosters community well-being
+                    {t("Delicol fosters community well-being")}
                 </h2>
                 <h2 className={styles.heading}>
-                    throught compassionate deliberation
+                    {t("Throught compassionate deliberation")}
                 </h2>
                 <p className={styles.paragraph}>
-                    Building Bonds and Bridging Divides
+                    {t("Building Bonds and Bridging Divides")}
                 </p>
             </div>
             <Image

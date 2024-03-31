@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
 
@@ -15,6 +13,7 @@ import FeatureOne from "./components/FeatureOne";
 import FeatureTwo from "./components/FeatureTwo";
 import FeatureThree from "./components/FeatureThree";
 import FeatureFour from "./components/FeatureFour";
+import useTranslate from "@/hooks/useTranslate";
 
 const features = [
     {
@@ -40,6 +39,8 @@ const features = [
 ];
 
 export default function FeatureSection() {
+    const { t } = useTranslate();
+
     const [feature, setFeature] = useState(features[0]);
 
     const handleClick = (rightClick: boolean) => {
@@ -55,10 +56,10 @@ export default function FeatureSection() {
     return (
         <section className="featureSection notSelectable">
             <div className="featureSection__explanation">
-                <h4>Our features</h4>
-                <h3 className="sectionTitle">{feature.title}</h3>
-                <p className="sectionText">{feature.description}</p>
-                <DefaultButton type="primary" text="Reach Out" />
+                <h4>{t("Our features")}</h4>
+                <h3 className="sectionTitle">{t(feature.title)}</h3>
+                <p className="sectionText">{t(feature.description)}</p>
+                <DefaultButton type="primary" text={t("Reach Out")} />
             </div>
 
             <div className="featureSection__features">

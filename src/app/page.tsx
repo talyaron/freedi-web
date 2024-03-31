@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 import Image from "next/image";
@@ -9,10 +11,10 @@ import "./mainStyle.scss";
 import heroBg from "@/assets/Images/Hero BG illustrations.png";
 
 // Custom Components
-import AboutSection from "./components/HomeSections/about/AboutSection";
-import WelcomeHeader from "./components/HomeSections/header/WelcomeHeader";
-import FeatureSection from "./components/HomeSections/features/FeatureSection";
-import ConnectionsSection from "./components/HomeSections/connections/ConnectionsSection";
+import AboutSection from "../components/HomeSections/about/AboutSection";
+import WelcomeHeader from "../components/HomeSections/header/WelcomeHeader";
+import FeatureSection from "../components/HomeSections/features/FeatureSection";
+import ConnectionsSection from "../components/HomeSections/connections/ConnectionsSection";
 
 export default function Home() {
     return (

@@ -2,12 +2,14 @@
 
 import React from "react";
 import styles from "./style.module.scss";
-import LogoIcon from "../../../components/icons/LogoIcon";
+import LogoIcon from "../../components/icons/LogoIcon";
 import { usePathname } from "next/navigation";
-import RoundedButton from "../../../components/buttons/RoundedButton";
+import RoundedButton from "../../components/buttons/RoundedButton";
+import useTranslate from "@/hooks/useTranslate";
 
 export default function Navbar() {
     const pathname = usePathname();
+    const { t } = useTranslate();
 
     const links = ["home", "about", "blog", "pricing"];
 
@@ -15,7 +17,7 @@ export default function Navbar() {
         <nav className={styles.navbar}>
             <div className={styles.logoBox}>
                 <LogoIcon size="2rem" />
-                <p>DeliCol</p>
+                <p>{t("DeliCol")}</p>
             </div>
             <ul>
                 {links.map((link) => (
@@ -35,7 +37,7 @@ export default function Navbar() {
                     </li>
                 ))}
             </ul>
-            <RoundedButton text="Contact us" />
+            <RoundedButton text={t("Contact us")} />
         </nav>
     );
 }

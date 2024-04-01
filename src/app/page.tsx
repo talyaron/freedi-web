@@ -15,6 +15,7 @@ import AboutSection from "../components/HomeSections/about/AboutSection";
 import WelcomeHeader from "../components/HomeSections/header/WelcomeHeader";
 import FeatureSection from "../components/HomeSections/features/FeatureSection";
 import ConnectionsSection from "../components/HomeSections/connections/ConnectionsSection";
+import VideoSection from "@/components/HomeSections/videoSection/VideoSection";
 
 export default function Home() {
     return (
@@ -42,6 +43,11 @@ export default function Home() {
             <FeatureSection />
 
             <ConnectionsSection />
+
+            <VideoSection />
+
+            
+            <div></div>
         </main>
     );
 }

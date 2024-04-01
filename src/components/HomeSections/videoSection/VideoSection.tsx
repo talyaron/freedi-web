@@ -20,12 +20,6 @@ export default function VideoSection() {
                 src="https://www.youtube.com/embed/qLznfpgj1E4"
                 allowFullScreen
                 title="DeliCol"
-                width="560"
-                height={
-                    ref.current?.width
-                        ? Number(ref.current?.width) * 0.5625 + "px"
-                        : "250px"
-                }
                 className="videoSection__video"
                 loading="lazy"
             />

@@ -24,7 +24,7 @@ export default function VideoSection() {
                 height={
                     ref.current?.width
                         ? Number(ref.current?.width) * 0.5625 + "px"
-                        : "315px"
+                        : "250px"
                 }
                 className="videoSection__video"
                 loading="lazy"

@@ -18,6 +18,8 @@ import ConnectionsSection from "../components/HomeSections/connections/Connectio
 import VideoSection from "@/components/HomeSections/videoSection/VideoSection";
 import ClientFeedbackSection from "@/components/HomeSections/feedback/ClientFeedbackSection";
 import AccessTodaySection from "@/components/HomeSections/join-today/AccessTodaySection";
+import TeamworkSection from "@/components/HomeSections/teamwork/TeamworkSection";
+import HomeFooter from "@/components/HomeSections/footer/HomeFooter";
 
 export default function Home() {
     return (
@@ -52,7 +54,9 @@ export default function Home() {
 
             <AccessTodaySection />
 
-            <div></div>
+            <TeamworkSection />
+
+            <HomeFooter />
         </main>
     );
 }

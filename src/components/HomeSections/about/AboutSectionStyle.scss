@@ -11,23 +11,6 @@
         position: absolute;
         z-index: -10;
     }
-    &__overview {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10vw;
-        &__image {
-            height: auto;
-            width: 20vw;
-        }
-        &__text {
-            width: 40%;
-            height: 70%;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-    }
 
     &__benefits {
         display: grid;
@@ -49,7 +32,6 @@
     }
 }
 
-
 @media screen and (max-width: 450px) {
     .aboutSection {
         &__benefits {
@@ -57,5 +39,4 @@
             gap: 2rem;
         }
     }
-    
 }

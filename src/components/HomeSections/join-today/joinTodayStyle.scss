@@ -4,8 +4,10 @@
     &__wrapper {
         background: url("../../../assets/Images/Backgroun\ shape\ 02.png")
             no-repeat top center/contain;
+
+        background-size: 100% 100%;
         width: 70%;
-        height: 10vw;
+        height: 15vw;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;

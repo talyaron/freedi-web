@@ -28,14 +28,14 @@ export default function AboutSection() {
                 src={backgroundShape}
                 className="aboutSection__backgroundShape"
             />
-            <div className="aboutSection__overview">
+            <div className="defaultSection">
                 <Image
                     alt="overview-image"
                     src={overview}
                     quality={100}
                     placeholder="blur"
-                    sizes="50vw"
-                    className="aboutSection__overview__image"
+                    sizes="20vw"
+                    style={{ width: "20vw", height: "auto"}}
                 />
                 <div className="sectionTextBox" style={{ direction }}>
                     <h3 className="sectionTitle">{t("About DeliCol")}</h3>

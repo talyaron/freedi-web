@@ -12,7 +12,7 @@ const languages: Record<string, string>[] = [en, he];
 
 export default function useTranslate() {
     const [currentLanguage, setCurrentLanguage] = useState<LanguagesEnum>(
-        LanguagesEnum.he
+        LanguagesEnum.en
     );
 
     const [languageData, setLanguageData] = useState<Record<string, string>>(

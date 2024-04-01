@@ -8,7 +8,7 @@ import DefaultButton from "@/components/buttons/DefaultButton";
 import useTranslate from "@/hooks/useTranslate";
 
 export default function ConnectionsSection() {
-    const { t } = useTranslate();
+    const { t, direction } = useTranslate();
 
     return (
         <section className="connections">
@@ -17,7 +17,7 @@ export default function ConnectionsSection() {
                 src={connectionIllustration}
                 style={{ width: "40vw", height: "auto" }}
             />
-            <div className="sectionTextBox">
+            <div className="sectionTextBox" style={{ direction }}>
                 <h3 className="sectionTitle">
                     {t("Stay always connected and never miss a beat")}
                 </h3>

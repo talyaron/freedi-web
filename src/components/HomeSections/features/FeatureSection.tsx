@@ -39,7 +39,7 @@ const features = [
 ];
 
 export default function FeatureSection() {
-    const { t } = useTranslate();
+    const { t, direction } = useTranslate();
 
     const [feature, setFeature] = useState(features[0]);
 
@@ -55,7 +55,7 @@ export default function FeatureSection() {
 
     return (
         <section className="featureSection notSelectable">
-            <div className="featureSection__explanation">
+            <div className="featureSection__explanation" style={{ direction }}>
                 <h4>{t("Our features")}</h4>
                 <h3 className="sectionTitle">{t(feature.title)}</h3>
                 <p className="sectionText">{t(feature.description)}</p>

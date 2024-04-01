@@ -19,7 +19,7 @@ import { generateRandomNumber } from "@/helpers/generators";
 import useTranslate from "@/hooks/useTranslate";
 
 export default function AboutSection() {
-    const { t } = useTranslate();
+    const { t, direction } = useTranslate();
 
     return (
         <section className="aboutSection">
@@ -37,7 +37,7 @@ export default function AboutSection() {
                     sizes="50vw"
                     className="aboutSection__overview__image"
                 />
-                <div className="sectionTextBox">
+                <div className="sectionTextBox" style={{ direction }}>
                     <h3 className="sectionTitle">{t("About DeliCol")}</h3>
                     <p className="sectionText">
                         {t(

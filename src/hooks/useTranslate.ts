@@ -2,11 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 
 export enum LanguagesEnum {
     en = "en",
-    ar = "ar",
-    de = "de",
-    es = "es",
     he = "he",
-    nl = "nl",
 }
 
 import en from "../assets/Languages/en.json";
@@ -16,20 +12,21 @@ const languages: Record<string, string>[] = [en, he];
 
 export default function useTranslate() {
     const [currentLanguage, setCurrentLanguage] = useState<LanguagesEnum>(
-        LanguagesEnum.en
+        LanguagesEnum.he
     );
 
     const [languageData, setLanguageData] = useState<Record<string, string>>(
         {}
     );
 
-    // Function to change the language
+    const [direction, setDirection] = useState<"rtl" | "ltr">("rtl");
     const changeLanguage = useCallback((newLanguage: LanguagesEnum) => {
         setCurrentLanguage(newLanguage);
     }, []);
 
-    // Fetch language data when the language changes or on component mount
     useEffect(() => {
+        setDirection(currentLanguage === LanguagesEnum.he ? "rtl" : "ltr");
+
         async function fetchLanguageData() {
             try {
                 const languageIndex =
@@ -57,5 +54,6 @@ export default function useTranslate() {
         currentLanguage,
         changeLanguage,
         t,
+        direction,
     };
 }

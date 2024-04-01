@@ -17,6 +17,7 @@ import FeatureSection from "../components/HomeSections/features/FeatureSection";
 import ConnectionsSection from "../components/HomeSections/connections/ConnectionsSection";
 import VideoSection from "@/components/HomeSections/videoSection/VideoSection";
 import ClientFeedbackSection from "@/components/HomeSections/feedback/ClientFeedbackSection";
+import AccessTodaySection from "@/components/HomeSections/join-today/AccessTodaySection";
 
 export default function Home() {
     return (
@@ -48,7 +49,9 @@ export default function Home() {
             <VideoSection />
 
             <ClientFeedbackSection />
-            
+
+            <AccessTodaySection />
+
             <div></div>
         </main>
     );

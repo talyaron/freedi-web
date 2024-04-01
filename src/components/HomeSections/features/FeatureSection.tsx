@@ -43,7 +43,14 @@ export default function FeatureSection() {
 
     const [feature, setFeature] = useState(features[0]);
 
+    const featureRef = React.useRef<HTMLDivElement>(null);
+
     const handleClick = (rightClick: boolean) => {
+        featureRef.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+
         if (rightClick) {
             const index = features.indexOf(feature) + 1;
             setFeature(features[index % features.length]);
@@ -54,7 +61,7 @@ export default function FeatureSection() {
     };
 
     return (
-        <section className="featureSection notSelectable">
+        <section className="featureSection notSelectable" ref={featureRef}>
             <div className="featureSection__explanation" style={{ direction }}>
                 <h4>{t("Our features")}</h4>
                 <h3 className="sectionTitle">{t(feature.title)}</h3>

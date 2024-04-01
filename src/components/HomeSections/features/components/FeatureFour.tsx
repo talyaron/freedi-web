@@ -28,11 +28,11 @@ export default function FeatureFour() {
                 alt="feature-image"
                 src={featureFourTwo}
                 style={{
-                    width: "15vw",
+                    width: "13vw",
                     height: "auto",
                     position: "absolute",
-                    right: "10vw",
-                    top: "21vw",
+                    right: "12vw",
+                    top: "20vw",
                 }}
             />
         </div>

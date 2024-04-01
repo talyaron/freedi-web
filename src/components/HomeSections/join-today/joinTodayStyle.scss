@@ -1,0 +1,30 @@
+.AccessTodaySection {
+    width: 100%;
+    height: fit-content;
+    &__wrapper {
+        background: url("../../../assets/Images/Backgroun\ shape\ 02.png")
+            no-repeat top center/contain;
+        width: 70%;
+        height: 10vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__flower {
+            width: 6vw;
+            height: auto;
+        }
+        p {
+            font-size: 1.5vw;
+            margin-top: 2vw;
+            margin-left: 5vw;
+        }
+        &__character {
+            width: 10vw;
+            height: auto;
+            position: relative;
+            right: -5vw;
+            top: 4vw;
+        }
+    }
+}

@@ -13,7 +13,11 @@ export default function ClientFeedbackSection() {
     const [selectedFeedback, setSelectedFeedback] = useState(avatarArr[0]);
     const [avatarArray, setAvatarArray] = useState(avatarArr);
 
+    const clientFeedbackRef = React.useRef<HTMLDivElement>(null);
+
     const handleClick = (clickedAvatar: Avatar) => {
+        clientFeedbackRef.current?.scrollIntoView({ behavior: "smooth" });
+
         const findSelected = avatarArray.indexOf(selectedFeedback);
         const findClicked = avatarArray.indexOf(clickedAvatar);
 
@@ -30,19 +34,19 @@ export default function ClientFeedbackSection() {
     };
 
     return (
-        <section className="clientFeedback">
+        <section className="clientFeedback" ref={clientFeedbackRef}>
             <div className="clientFeedback__shapesArea">
                 <div className="clientFeedback__shapesArea__shapesBox">
-                    <EclipseShape01 size="2.5vw"/>
+                    <EclipseShape01 size="2.5vw" />
                 </div>
                 <div className="clientFeedback__shapesArea__shapesBox">
-                    <EclipseShape02 size="1.7vw"/>
+                    <EclipseShape02 size="1.7vw" />
                 </div>
                 <div className="clientFeedback__shapesArea__shapesBox">
                     <CircleIcon size="1.5vw" />
                 </div>
                 <div className="clientFeedback__shapesArea__shapesBox">
-                    <CircleIcon size="1vw"/>
+                    <CircleIcon size="1vw" />
                 </div>
             </div>
             <div className="clientFeedback__feedback">

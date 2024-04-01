@@ -7,8 +7,8 @@ import backgroundShape from "@/assets/Images/Background shape 01.png";
 // Styles
 import "./FeatureSectionStyle.scss";
 import DefaultButton from "@/components/buttons/DefaultButton";
-import ChevronLeftIcon from "@/components/icons/icons/ChevronLeftIcon";
-import ChevronRightIcon from "@/components/icons/icons/ChevronRightIcon";
+import ChevronLeftIcon from "@/components/icons/ChevronLeftIcon";
+import ChevronRightIcon from "@/components/icons/ChevronRightIcon";
 import FeatureOne from "./components/FeatureOne";
 import FeatureTwo from "./components/FeatureTwo";
 import FeatureThree from "./components/FeatureThree";

@@ -1,8 +1,28 @@
 .clientFeedback {
     display: flex;
 
-    &__shapesBox {
+    &__shapesArea {
         width: 15%;
+        position: relative;
+        &__shapesBox {
+            position: absolute;
+        }
+        &__shapesBox:nth-child(1) {
+            top: 29vw;
+            left: 13vw;
+        }
+        &__shapesBox:nth-child(2) {
+            top: 30vw;
+            left: 10vw;
+        }
+        &__shapesBox:nth-child(3) {
+            top: 26vw;
+            left: 5vw;
+        }
+        &__shapesBox:nth-child(4) {
+            top: 23vw;
+            left: 0;
+        }
     }
     &__feedback {
         width: 60%;
@@ -13,7 +33,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 2vw 10vw 0 10vw;
+        padding: 0 10vw 3vw 10vw;
         gap: 3vw;
         color: var(--white);
 
@@ -32,7 +52,7 @@
             text-align: left;
         }
 
-        h4{
+        h4 {
             font-size: 1.5vw;
             font-weight: 700;
         }
@@ -46,5 +66,63 @@
 
     &__clients {
         flex: 1;
+        position: relative;
+
+        &__client {
+            border-radius: 50%;
+            position: absolute;
+            cursor: pointer;
+            transition: all 0.5s;
+            border: 1px solid #fff;
+            &--selected {
+                border-radius: 50%;
+                width: 10vw;
+                height: 10vw;
+                position: absolute;
+                border: 1vw solid #fff;
+                box-shadow: 0 5px 20px #00000040;
+                top: 7vw;
+                left: -10vw;
+            }
+        }
+
+        &__client:nth-child(2) {
+            width: 5vw;
+            height: 5vw;
+            top: 10vw;
+            left: 12vw;
+        }
+
+        &__client:nth-child(3) {
+            width: 5vw;
+            height: 5vw;
+            top: 23vw;
+            left: 15vw;
+        }
+
+        &__client:nth-child(4) {
+            width: 7vw;
+            height: 7vw;
+            top: 33vw;
+            left: 10vw;
+        }
+
+        &__client:nth-child(5) {
+            width: 5vw;
+            height: 5vw;
+            top: 42vw;
+            left: 0vw;
+        }
+
+        &__client:nth-child(6) {
+            width: 3vw;
+            height: 3vw;
+            top: 25vw;
+            left: 3vw;
+        }
+
+        &__client:hover {
+            transform: scale(1.1);
+        }
     }
 }

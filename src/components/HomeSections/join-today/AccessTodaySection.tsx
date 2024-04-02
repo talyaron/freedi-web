@@ -1,14 +1,19 @@
 import React from "react";
+import Image from "next/image";
 
+// Styles
 import "./joinTodayStyle.scss";
 
+// Hooks
+import useTranslate from "@/hooks/useTranslate";
+
+// Custom Components
 import character from "@/assets/Images/character.png";
 import flower from "@/assets/Images/flower.png";
-import useTranslate from "@/hooks/useTranslate";
-import Image from "next/image";
 
 export default function AccessTodaySection() {
     const { t } = useTranslate();
+
     return (
         <section className="AccessTodaySection">
             <div className="AccessTodaySection__wrapper">

@@ -14,10 +14,6 @@ export default function LanguageDropdown() {
             flag: <UsaFlagIcon />,
         },
         {
-            lang: LanguagesEnum.en,
-            flag: <UsaFlagIcon />,
-        },
-        {
             lang: LanguagesEnum.he,
             flag: <IsraelFlagIcon />,
         },

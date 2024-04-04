@@ -1,0 +1,13 @@
+.logoBox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    &__name {
+        font-family: Glory, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 31.36px;
+        text-align: left;
+    }
+}

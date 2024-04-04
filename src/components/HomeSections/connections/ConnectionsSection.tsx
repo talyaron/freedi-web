@@ -5,7 +5,7 @@ import "./connectionStyle.scss";
 import connectionIllustration from "@/assets/Images/Connection illustration.png";
 import Image from "next/image";
 import DefaultButton from "@/components/buttons/DefaultButton";
-import useTranslate from "@/hooks/useTranslate";
+import { useTranslate } from "@/hooks/useTranslate";
 
 export default function ConnectionsSection() {
     const { t, direction } = useTranslate();

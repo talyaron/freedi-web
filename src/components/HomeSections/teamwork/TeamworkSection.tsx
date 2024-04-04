@@ -1,7 +1,7 @@
 import React from "react";
 import teamwork from "@/assets/Images/teamwork.png";
 import Image from "next/image";
-import useTranslate from "@/hooks/useTranslate";
+import { useTranslate } from "@/hooks/useTranslate";
 import DefaultButton from "@/components/buttons/DefaultButton";
 
 export default function TeamworkSection() {

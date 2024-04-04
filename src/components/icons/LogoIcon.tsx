@@ -5,7 +5,7 @@ interface Props {
     size: string
 }
 
-export default function LogoIcon({color = "#f2f2f2", size}: Props) {
+export default function LogoIcon({color = "#f2f2f2", size}: Readonly<Props>) {
     return (
         <svg
             width={size}

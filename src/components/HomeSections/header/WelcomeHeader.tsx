@@ -8,7 +8,7 @@ import heroImg from "@/assets/Images/Hero illustration.png";
 
 import styles from "./style.module.scss";
 import useWindowSize from "@/hooks/useWindowSize";
-import useTranslate from "@/hooks/useTranslate";
+import { useTranslate } from "@/hooks/useTranslate";
 
 export default function Header() {
     const { width } = useWindowSize();

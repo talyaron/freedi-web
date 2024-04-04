@@ -16,7 +16,7 @@ import HandShakeIcon from "../../../components/icons/HandShakeIcon";
 import LightBulbIcon from "../../../components/icons/LightBulbIcon";
 import OldWomanIcon from "../../../components/icons/OldWomanIcon";
 import { generateRandomNumber } from "@/helpers/generators";
-import useTranslate from "@/hooks/useTranslate";
+import { useTranslate } from "@/hooks/useTranslate";
 
 export default function AboutSection() {
     const { t, direction } = useTranslate();
@@ -35,7 +35,7 @@ export default function AboutSection() {
                     quality={100}
                     placeholder="blur"
                     sizes="20vw"
-                    style={{ width: "20vw", height: "auto"}}
+                    style={{ width: "20vw", height: "auto" }}
                 />
                 <div className="sectionTextBox" style={{ direction }}>
                     <h3 className="sectionTitle">{t("About DeliCol")}</h3>

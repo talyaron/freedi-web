@@ -13,7 +13,7 @@ import FeatureOne from "./components/FeatureOne";
 import FeatureTwo from "./components/FeatureTwo";
 import FeatureThree from "./components/FeatureThree";
 import FeatureFour from "./components/FeatureFour";
-import useTranslate from "@/hooks/useTranslate";
+import { useTranslate } from "@/hooks/useTranslate";
 
 const features = [
     {

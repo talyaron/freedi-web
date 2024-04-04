@@ -4,7 +4,7 @@ import Image from "next/image";
 import "./footerStyle.scss";
 
 // Hooks
-import useTranslate from "@/hooks/useTranslate";
+import { useTranslate } from "@/hooks/useTranslate";
 
 // Images
 import backgroundShape from "@/assets/Images/Background shape 01.png";
@@ -13,8 +13,8 @@ import nature from "@/assets/Images/nature.png";
 import flower2 from "@/assets/Images/flower02.png";
 
 // Custom Components
-import LogoIcon from "@/components/icons/LogoIcon";
 import PageLinks from "@/components/top-navbar/PageLinks";
+import LogoWithName from "@/components/logo/LogoWithName";
 
 export default function HomeFooter() {
     const { t } = useTranslate();
@@ -42,10 +42,7 @@ export default function HomeFooter() {
                 src={nature}
             />
             <div className="footer__text">
-                <div className="footer__text__logo">
-                    <LogoIcon size="2rem" color="var(--button-primary)" />
-                    <p>{t("DeliCol")}</p>
-                </div>
+                <LogoWithName color="var(--button-primary)" size="1.2rem"/>
 
                 <PageLinks isFooter={true} />
 

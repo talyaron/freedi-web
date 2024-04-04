@@ -5,7 +5,7 @@ import Image from "next/image";
 import "./joinTodayStyle.scss";
 
 // Hooks
-import useTranslate from "@/hooks/useTranslate";
+import { useTranslate } from "@/hooks/useTranslate";
 
 // Custom Components
 import character from "@/assets/Images/character.png";
@@ -27,7 +27,11 @@ export default function AccessTodaySection() {
                         "Access your first community debate for free by contacting us today"
                     )}
                 </p>
-                <Image alt="character-image" src={character} className="AccessTodaySection__wrapper__character"/>
+                <Image
+                    alt="character-image"
+                    src={character}
+                    className="AccessTodaySection__wrapper__character"
+                />
             </div>
         </section>
     );

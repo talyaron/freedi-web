@@ -3,7 +3,7 @@
 import { LanguagesEnum, useTranslate } from "@/hooks/useTranslate";
 import React, { useState } from "react";
 import UsaFlagIcon from "../icons/UsaFlagIcon";
-import CrownIcon from "../icons/CrownIcon";
+import IsraelFlagIcon from "../icons/IsraelFlagIcon";
 
 export default function LanguageDropdown() {
     const { t, currentLanguage, changeLanguage } = useTranslate();
@@ -11,37 +11,52 @@ export default function LanguageDropdown() {
     const flagArr = [
         {
             lang: LanguagesEnum.en,
-            flag: <UsaFlagIcon size="1.5rem" />,
+            flag: <UsaFlagIcon />,
+        },
+        {
+            lang: LanguagesEnum.en,
+            flag: <UsaFlagIcon />,
         },
         {
             lang: LanguagesEnum.he,
-            flag: <CrownIcon remSize="1.5rem" />,
+            flag: <IsraelFlagIcon />,
         },
     ];
 
     const currentFlag = flagArr.find((x) => x.lang === currentLanguage);
 
     const [currentLang, setCurrentLang] = useState(currentFlag);
+    const [isOpen, setIsOpen] = useState(false);
 
     const handleSetLang = (lang: (typeof flagArr)[0]) => {
+        setIsOpen(false);
         setCurrentLang(lang);
         changeLanguage(lang.lang);
     };
     return (
         <div className="navbar__languages">
-            {currentLang?.flag}
-            <div className="navbar__languages__dropdown">
-                {flagArr
-                    .filter((x) => x.lang !== currentLanguage)
-                    .map((lang) => (
-                        <button
-                            key={lang.lang.toString()}
-                            onClick={() => handleSetLang(lang)}
-                        >
-                            {lang.flag}
-                        </button>
-                    ))}
-            </div>
+            <button
+                className="navbar__languages__flag--current"
+                onClick={() => setIsOpen((prev) => !prev)}
+            >
+                {currentLang?.flag}
+            </button>
+            {flagArr
+                .filter((x) => x.lang !== currentLanguage)
+                .map((lang, i) => (
+                    <button
+                        className="navbar__languages__flag"
+                        key={lang.lang.toString()}
+                        onClick={() => handleSetLang(lang)}
+                        style={{
+                            top: isOpen ? (i + 1) * 1.5 + "rem" : i + 1 + "rem",
+                            zIndex: isOpen ? 1 : -1,
+                            opacity: isOpen ? 1 : 0,
+                        }}
+                    >
+                        {lang.flag}
+                    </button>
+                ))}
         </div>
     );
 }

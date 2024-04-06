@@ -39,8 +39,13 @@ const features = [
     },
 ];
 
-export default function FeatureSection() {
-
+export default function FeatureSection({
+    currentLang,
+    direction,
+}: {
+    currentLang: Record<string, string>;
+    direction: "rtl" | "ltr";
+}) {
     const [feature, setFeature] = useState(features[0]);
 
     const featureRef = React.useRef<HTMLDivElement>(null);
@@ -62,11 +67,13 @@ export default function FeatureSection() {
 
     return (
         <section className="featureSection notSelectable" ref={featureRef}>
-            <div className="featureSection__explanation">
-                <h4>{("Our features")}</h4>
-                <h3 className="sectionTitle">{(feature.title)}</h3>
-                <p className="sectionText">{(feature.description)}</p>
-                <DefaultButton type="primary" text={("Reach Out")} />
+            <div className="featureSection__explanation" style={{ direction }}>
+                <h4>{currentLang["Our features"]}</h4>
+                <h3 className="sectionTitle">{currentLang[feature.title]}</h3>
+                <p className="sectionText">
+                    {currentLang[feature.description]}
+                </p>
+                <DefaultButton type="primary" text={currentLang["Reach Out"]} />
             </div>
 
             <div className="featureSection__features">

@@ -1,4 +1,5 @@
 
+import { useTranslate } from "@/hooks/useTranslate";
 import React from "react";
 
 interface Props {
@@ -7,10 +8,11 @@ interface Props {
 }
 
 export default function RoundedButton({ text, onClick }: Readonly<Props>) {
+    const { t } = useTranslate();
 
     return (
         <button onClick={onClick} className="roundedBtn">
-            {(text)}
+            {t(text)}
         </button>
     );
 }

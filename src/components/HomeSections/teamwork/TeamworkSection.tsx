@@ -5,22 +5,34 @@ import teamwork from "@/assets/Images/teamwork.png";
 import Image from "next/image";
 import DefaultButton from "@/components/buttons/DefaultButton";
 
-export default function TeamworkSection() {
-
+export default function TeamworkSection({
+    currentLang,
+    direction,
+}: {
+    currentLang: Record<string, string>;
+    direction: "rtl" | "ltr";
+}) {
     return (
         <section className="defaultSection">
-            <div className="sectionTextBox" >
+            <div className="sectionTextBox" style={{ direction }}>
                 <h3 className="sectionTitle">
-                    {(
-                        "Make future-proof decisions today to shape a better tomorrow."
-                    )}
+                    {
+                        currentLang[
+                            "Make future-proof decisions today to shape a better tomorrow."
+                        ]
+                    }
                 </h3>
                 <p className="sectionText">
-                    {(
-                        "Invest effort/time into an in-depth deliberative process with DeliCol app help that enables the end choices to effectively address and serve the requirements and priorities of the entire community."
-                    )}
+                    {
+                        currentLang[
+                            "Invest effort/time into an in-depth deliberative process with DeliCol app help that enables the end choices to effectively address and serve the requirements and priorities of the entire community."
+                        ]
+                    }
                 </p>
-                <DefaultButton type="primary" text={("Contact us")} />
+                <DefaultButton
+                    type="primary"
+                    text={currentLang["Contact us"]}
+                />
             </div>
             <Image
                 alt="teamwork-image"

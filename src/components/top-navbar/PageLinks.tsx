@@ -3,12 +3,14 @@ import React from "react";
 import "./navBarStyle.scss";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useTranslate } from "@/hooks/useTranslate";
 
 interface PageLinksProps {
     isFooter?: boolean;
 }
 
 export default function PageLinks({ isFooter }: Readonly<PageLinksProps>) {
+    const { t } = useTranslate();
     const pathname = usePathname();
 
     const links = ["home", "about", "blog", "pricing"];
@@ -39,7 +41,7 @@ export default function PageLinks({ isFooter }: Readonly<PageLinksProps>) {
                         }}
                         href={`/${pathname.split("/")[1]}/${link}`}
                     >
-                        {(link.charAt(0).toUpperCase() + link.slice(1))}
+                        {t(link.charAt(0).toUpperCase() + link.slice(1))}
                     </Link>
                 </li>
             ))}

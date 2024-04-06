@@ -29,6 +29,8 @@ export default async function Home({
 
     const currentLang = langs[params.lang];
 
+    const direction = params.lang === "he" ? "rtl" : "ltr";
+
     return (
         <main className="main">
             <Image
@@ -48,19 +50,19 @@ export default async function Home({
 
             <WelcomeHeader currentLang={currentLang} />
 
-            <AboutSection currentLang={currentLang} lang={params.lang} />
+            <AboutSection currentLang={currentLang} direction={direction} />
 
-            <FeatureSection />
+            <FeatureSection currentLang={currentLang} direction={direction}/>
 
-            <ConnectionsSection />
+            <ConnectionsSection currentLang={currentLang} direction={direction}/>
 
-            <VideoSection />
+            <VideoSection currentLang={currentLang} />
 
-            <ClientFeedbackSection />
+            <ClientFeedbackSection/>
 
-            <AccessTodaySection />
+            <AccessTodaySection currentLang={currentLang}/>
 
-            <TeamworkSection />
+            <TeamworkSection currentLang={currentLang} direction={direction}/>
 
             <HomeFooter />
         </main>

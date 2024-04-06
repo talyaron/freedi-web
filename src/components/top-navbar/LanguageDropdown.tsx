@@ -3,15 +3,16 @@
 import React, { useState } from "react";
 import UsaFlagIcon from "../icons/UsaFlagIcon";
 import IsraelFlagIcon from "../icons/IsraelFlagIcon";
+import { useTranslate } from "@/hooks/useTranslate";
 
 export default function LanguageDropdown({ lang }: { lang: string }) {
     const flagArr = [
         {
-            lang: 'en',
+            lang: "en",
             flag: <UsaFlagIcon />,
         },
         {
-            lang: 'he',
+            lang: "he",
             flag: <IsraelFlagIcon />,
         },
     ];
@@ -22,6 +23,7 @@ export default function LanguageDropdown({ lang }: { lang: string }) {
 
     const handleSetLang = (lang: (typeof flagArr)[0]) => {
         setIsOpen(false);
+
         const currentPath = window.location.pathname;
 
         const newPath = currentPath

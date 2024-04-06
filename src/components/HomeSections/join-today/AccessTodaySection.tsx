@@ -10,7 +10,11 @@ import "./joinTodayStyle.scss";
 import character from "@/assets/Images/character.png";
 import flower from "@/assets/Images/flower.png";
 
-export default function AccessTodaySection() {
+export default function AccessTodaySection({
+    currentLang,
+}: {
+    currentLang: Record<string, string>;
+}) {
     return (
         <section className="AccessTodaySection">
             <div className="AccessTodaySection__wrapper">
@@ -21,7 +25,9 @@ export default function AccessTodaySection() {
                 />
                 <p className="sectionText">
                     {
-                        "Access your first community debate for free by contacting us today"
+                        currentLang[
+                            "Access your first community debate for free by contacting us today"
+                        ]
                     }
                 </p>
                 <Image

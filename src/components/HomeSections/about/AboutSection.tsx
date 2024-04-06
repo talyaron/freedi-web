@@ -20,13 +20,11 @@ import { English, Hebrew } from "@/types/language";
 
 export default function AboutSection({
     currentLang,
-    lang,
+    direction,
 }: {
-    currentLang: English | Hebrew;
-    lang: string;
+    currentLang: Record<string, string>;
+    direction: "rtl" | "ltr";
 }) {
-    const getDirection = () => (lang === "he" ? "rtl" : "ltr");
-
     return (
         <section className="aboutSection">
             <Image
@@ -46,7 +44,7 @@ export default function AboutSection({
                 />
                 <div
                     className="sectionTextBox"
-                    style={{ direction: getDirection() }}
+                    style={{ direction }}
                 >
                     <h3 className="sectionTitle">
                         {currentLang["About DeliCol"]}
@@ -78,8 +76,10 @@ export default function AboutSection({
                         key={generateRandomNumber()}
                     >
                         {benefit.icon}
-                        <h4>{benefit.title}</h4>
-                        <p className="sectionText">{benefit.description}</p>
+                        <h4>{currentLang[benefit.title]}</h4>
+                        <p className="sectionText">
+                            {currentLang[benefit.description]}
+                        </p>
                     </div>
                 ))}
             </div>

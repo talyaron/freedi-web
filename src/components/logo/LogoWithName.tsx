@@ -15,11 +15,13 @@ export default function LogoWithName({
     size = "2rem",
     color,
 }: Readonly<Props>) {
+    const { t } = useTranslate();
+    
     return (
         <div className="logoBox">
             <LogoIcon size={"2rem"} color={color} />
             <p className="logoBox__name" style={{ color, fontSize: size }}>
-                {"DeliCol"}
+                {t("DeliCol")}
             </p>
         </div>
     );

@@ -16,16 +16,24 @@ import HandShakeIcon from "../../../components/icons/HandShakeIcon";
 import LightBulbIcon from "../../../components/icons/LightBulbIcon";
 import OldWomanIcon from "../../../components/icons/OldWomanIcon";
 import { generateRandomNumber } from "@/helpers/generators";
-import { useTranslate } from "@/hooks/useTranslate";
+import { English, Hebrew } from "@/types/language";
 
-export default function AboutSection() {
-    const { t, direction } = useTranslate();
+export default function AboutSection({
+    currentLang,
+    lang,
+}: {
+    currentLang: English | Hebrew;
+    lang: string;
+}) {
+    const getDirection = () => (lang === "he" ? "rtl" : "ltr");
 
     return (
         <section className="aboutSection">
             <Image
                 alt="Background-Shape"
                 src={backgroundShape}
+                quality={100}
+                loading="eager"
                 className="aboutSection__backgroundShape"
             />
             <div className="defaultSection">
@@ -33,23 +41,34 @@ export default function AboutSection() {
                     alt="overview-image"
                     src={overview}
                     quality={100}
-                    placeholder="blur"
                     sizes="20vw"
                     style={{ width: "20vw", height: "auto" }}
                 />
-                <div className="sectionTextBox" style={{ direction }}>
-                    <h3 className="sectionTitle">{t("About DeliCol")}</h3>
+                <div
+                    className="sectionTextBox"
+                    style={{ direction: getDirection() }}
+                >
+                    <h3 className="sectionTitle">
+                        {currentLang["About DeliCol"]}
+                    </h3>
                     <p className="sectionText">
-                        {t(
-                            "The goal of Delicol app is to go beyond simple majority rule votes by facilitating informed deliberation, finding common ground, and working towards decisions that incorporate diverse viewpoints and address minority concerns when possible."
-                        )}
+                        {
+                            currentLang[
+                                "The goal of Delicol app is to go beyond simple majority rule votes by facilitating informed deliberation, finding common ground, and working towards decisions that incorporate diverse viewpoints and address minority concerns when possible."
+                            ]
+                        }
                     </p>
                     <p className="sectionText">
-                        {t(
-                            "This is the app that can make group decision-making more democratic, inclusive, and reasoned."
-                        )}
+                        {
+                            currentLang[
+                                "This is the app that can make group decision-making more democratic, inclusive, and reasoned."
+                            ]
+                        }
                     </p>
-                    <DefaultButton type="primary" text={t("Talk to Us")} />
+                    <DefaultButton
+                        type="primary"
+                        text={currentLang["Talk to Us"]}
+                    />
                 </div>
             </div>
             <div className="aboutSection__benefits">
@@ -59,8 +78,8 @@ export default function AboutSection() {
                         key={generateRandomNumber()}
                     >
                         {benefit.icon}
-                        <h4>{t(benefit.title)}</h4>
-                        <p className="sectionText">{t(benefit.description)}</p>
+                        <h4>{benefit.title}</h4>
+                        <p className="sectionText">{benefit.description}</p>
                     </div>
                 ))}
             </div>

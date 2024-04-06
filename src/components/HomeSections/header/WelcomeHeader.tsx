@@ -7,38 +7,38 @@ import React from "react";
 import heroImg from "@/assets/Images/Hero illustration.png";
 
 import styles from "./style.module.scss";
-import useWindowSize from "@/hooks/useWindowSize";
-import { useTranslate } from "@/hooks/useTranslate";
+import { English, Hebrew } from "@/types/language";
 
-export default function Header() {
-    const { width } = useWindowSize();
-    const { t } = useTranslate();
-
-    const imgDimenstions = 1920 / 829;
-
+export default function Header({
+    currentLang,
+}: {
+    currentLang: English | Hebrew;
+}) {
     return (
         <header className={styles.header}>
             <div className={styles.heroTitle}>
                 <h2 className={styles.heading}>
-                    {t("Delicol fosters community well-being")}
+                    {currentLang["Delicol fosters community well-being"]}
                 </h2>
                 <h2 className={styles.heading}>
-                    {t("Throught compassionate deliberation")}
+                    {currentLang["Throught compassionate deliberation"]}
                 </h2>
                 <p className={styles.paragraph}>
-                    {t("Building Bonds and Bridging Divides")}
+                    {currentLang["Building Bonds and Bridging Divides"]}
                 </p>
             </div>
             <Image
                 alt="Hero-Image"
                 src={heroImg}
                 quality={100}
+                loading="eager"
+                loader={({ src }) => src}
                 sizes="50vw"
                 style={{
                     width: "50vw",
                     maxWidth: "800px",
                     height: "auto",
-                    marginTop: `${(width / 500) * imgDimenstions}%`,
+                    marginTop: "1vw",
                 }}
             />
         </header>

@@ -11,7 +11,7 @@ import React, {
 
 type LanguageContextType = {
     currentLanguage: string;
-    changeLanguage: (newLanguage: LanguagesEnum) => void;
+    changeLanguage: (newLanguage: string) => void;
     t: (text: string) => string;
     direction: "rtl" | "ltr";
 };
@@ -30,42 +30,40 @@ export function useTranslate() {
 }
 
 interface LanguageProviderProps {
-    defaultLanguage: LanguagesEnum;
     children: React.ReactNode;
 }
 
-export enum LanguagesEnum {
-    en = "en",
-    he = "he",
-}
+const languagesArr = ["en", "he"];
 
 import en from "../assets/Languages/en.json";
 import he from "../assets/Languages/he.json";
+import { usePathname } from "next/navigation";
 
 const languages: Record<string, string>[] = [en, he];
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({
-    defaultLanguage,
     children,
 }) => {
-    const [currentLanguage, setCurrentLanguage] = useState(defaultLanguage);
+    const path = usePathname();
+
+    const [currentLanguage, setCurrentLanguage] = useState(path.split("/")[1]);
 
     const [languageData, setLanguageData] = useState<Record<string, string>>(
         {}
     );
 
-    const changeLanguage = useCallback((newLanguage: LanguagesEnum) => {
+    const changeLanguage = useCallback((newLanguage: string) => {
         setCurrentLanguage(newLanguage);
     }, []);
 
     const [direction, setDirection] = useState<"rtl" | "ltr">("rtl");
 
     useEffect(() => {
-        setDirection(currentLanguage === LanguagesEnum.he ? "rtl" : "ltr");
+        setDirection(currentLanguage === "he" ? "rtl" : "ltr");
         async function fetchLanguageData() {
             try {
                 const languageIndex =
-                    Object.values(LanguagesEnum).indexOf(currentLanguage);
+                    Object.values(languagesArr).indexOf(currentLanguage);
                 if (languageIndex !== -1) {
                     setLanguageData(languages[languageIndex]);
                 } else {

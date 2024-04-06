@@ -1,10 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
 import "./footerStyle.scss";
-
-// Hooks
-import { useTranslate } from "@/hooks/useTranslate";
 
 // Images
 import backgroundShape from "@/assets/Images/Background shape 01.png";
@@ -17,7 +16,6 @@ import PageLinks from "@/components/top-navbar/PageLinks";
 import LogoWithName from "@/components/logo/LogoWithName";
 
 export default function HomeFooter() {
-    const { t } = useTranslate();
 
     return (
         <section className="footer">
@@ -47,7 +45,7 @@ export default function HomeFooter() {
                 <PageLinks isFooter={true} />
 
                 <p className="sectionText footer__text__credit">
-                    {t("From the Institute for Deliberative Democracy")}
+                    {("From the Institute for Deliberative Democracy")}
                 </p>
             </div>
             <Image

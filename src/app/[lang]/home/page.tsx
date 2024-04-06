@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 
 import Image from "next/image";
@@ -20,15 +18,23 @@ import ClientFeedbackSection from "@/components/HomeSections/feedback/ClientFeed
 import AccessTodaySection from "@/components/HomeSections/join-today/AccessTodaySection";
 import TeamworkSection from "@/components/HomeSections/teamwork/TeamworkSection";
 import HomeFooter from "@/components/HomeSections/footer/HomeFooter";
+import { getLanguageData } from "@/helpers/languages";
 
-export default function Home() {
+export default async function Home({
+    params,
+}: {
+    params: { lang: "he" | "en" | "ar" };
+}) {
+    const langs = await getLanguageData();
+
+    const currentLang = langs[params.lang];
+
     return (
         <main className="main">
             <Image
                 alt="Hero-Background"
                 src={heroBg}
-                quality={100}
-                placeholder="blur"
+                loading="eager"
                 sizes="100vw"
                 priority
                 style={{
@@ -40,9 +46,9 @@ export default function Home() {
                 }}
             />
 
-            <WelcomeHeader />
+            <WelcomeHeader currentLang={currentLang} />
 
-            <AboutSection />
+            <AboutSection currentLang={currentLang} lang={params.lang} />
 
             <FeatureSection />
 

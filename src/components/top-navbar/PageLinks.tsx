@@ -2,7 +2,7 @@ import React from "react";
 
 import "./navBarStyle.scss";
 import { usePathname } from "next/navigation";
-import { useTranslate } from "@/hooks/useTranslate";
+import Link from "next/link";
 
 interface PageLinksProps {
     isFooter?: boolean;
@@ -10,7 +10,6 @@ interface PageLinksProps {
 
 export default function PageLinks({ isFooter }: Readonly<PageLinksProps>) {
     const pathname = usePathname();
-    const { t, direction } = useTranslate();
 
     const links = ["home", "about", "blog", "pricing"];
 
@@ -23,10 +22,10 @@ export default function PageLinks({ isFooter }: Readonly<PageLinksProps>) {
         isFooter ? currentLinkColor(link) : "var(--white)";
 
     return (
-        <ul style={{ direction }}>
+        <ul>
             {links.map((link) => (
                 <li key={link}>
-                    <a
+                    <Link
                         style={{
                             fontWeight:
                                 pathname.includes(link) ||
@@ -38,10 +37,10 @@ export default function PageLinks({ isFooter }: Readonly<PageLinksProps>) {
 
                             fontSize: !isFooter ? "1.1rem" : ".7rem",
                         }}
-                        href={link === "home" ? "/" : `${link}`}
+                        href={`/${pathname.split("/")[1]}/${link}`}
                     >
-                        {t(link.charAt(0).toUpperCase() + link.slice(1))}
-                    </a>
+                        {(link.charAt(0).toUpperCase() + link.slice(1))}
+                    </Link>
                 </li>
             ))}
         </ul>

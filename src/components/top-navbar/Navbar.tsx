@@ -5,27 +5,26 @@ import React from "react";
 // Styles
 import "./navBarStyle.scss";
 
-// Hooks
-import { LanguageProvider, LanguagesEnum } from "@/hooks/useTranslate";
-
 // Custom Components
 import RoundedButton from "../../components/buttons/RoundedButton";
 import PageLinks from "./PageLinks";
 import LanguageDropdown from "./LanguageDropdown";
 import LogoWithName from "../logo/LogoWithName";
 
-export default function Navbar() {
+export default function Navbar({
+    lang,
+}: {
+    lang: string;
+}) {
     return (
-        <LanguageProvider defaultLanguage={LanguagesEnum.he}>
-            <nav className="navbar">
-                <LogoWithName />
+        <nav className="navbar">
+            <LogoWithName />
 
-                <PageLinks />
+            <PageLinks />
 
-                <LanguageDropdown />
+            <LanguageDropdown lang={lang} />
 
-                <RoundedButton text={"Contact us"} />
-            </nav>
-        </LanguageProvider>
+            <RoundedButton text={"Contact us"} />
+        </nav>
     );
 }

@@ -82,7 +82,6 @@ export default function FeatureSection({
                     alt="Background-Shape"
                     src={backgroundShape}
                     quality={100}
-                    placeholder="blur"
                     sizes="40vw"
                 />
                 {feature.comp}

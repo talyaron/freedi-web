@@ -10,7 +10,7 @@ interface PageLinksProps {
 }
 
 export default function PageLinks({ isFooter }: Readonly<PageLinksProps>) {
-    const { t } = useTranslate();
+    const { t, direction } = useTranslate();
     const pathname = usePathname();
 
     const links = ["home", "about", "blog", "pricing"];
@@ -24,16 +24,16 @@ export default function PageLinks({ isFooter }: Readonly<PageLinksProps>) {
         isFooter ? currentLinkColor(link) : "var(--white)";
 
     return (
-        <ul>
+        <ul style={{ direction }}>
             {links.map((link) => (
                 <li key={link}>
                     <Link
                         style={{
-                            fontWeight:
-                                pathname.includes(link) ||
-                                (pathname === "/" && link === "home")
-                                    ? 700
-                                    : 100,
+                            fontWeight: pathname.includes(link) ? "bold" : 100,
+
+                            textDecoration: pathname.includes(link)
+                                ? "underline"
+                                : "none",
 
                             color: linkColor(link),
 

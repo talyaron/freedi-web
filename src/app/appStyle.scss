@@ -9,3 +9,48 @@
     gap: 3rem;
     color: var(--text-gray);
 }
+
+.notFound {
+    width: 100svw;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    &__title {
+        color: var(--notFound-title);
+        font-family: Yuji Hentaigana Akebono, "Segoe UI", Tahoma, Geneva,
+            Verdana, sans-serif;
+        font-size: 8rem;
+        font-weight: 400;
+        line-height: 185.34px;
+        text-align: left;
+    }
+
+    h4 {
+        color: var(--notFound-title);
+        font-family: Catamaran, "Segoe UI", Tahoma, Geneva;
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+
+    .roundedBtn {
+        width: 30svw;
+        height: 3rem;
+        opacity: 1;
+        background-color: var(--notFound-btn);
+        font-family: Sora, "Segoe UI", Tahoma, Geneva;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .roundedBtn:hover {
+        background-color: var(--notFound-btn);
+    }
+
+    &__footer {
+        color: var(--notFound-btn);
+    }
+}

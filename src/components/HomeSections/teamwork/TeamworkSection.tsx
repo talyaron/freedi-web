@@ -38,7 +38,9 @@ export default function TeamworkSection({
                 alt="teamwork-image"
                 src={teamwork}
                 sizes="20vw"
-                style={{ width: "40vw", height: "auto" }}
+                quality={100}
+                unoptimized
+                style={{ width: "30vw", height: "auto" }}
             />
         </section>
     );

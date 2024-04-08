@@ -4,7 +4,7 @@ interface Props {
     size?: string;
 }
 
-export default function UsaFlagIcon({ size = "1.5rem" }: Readonly<Props>) {
+export default function UsaFlagIcon({ size = "2rem" }: Readonly<Props>) {
     return (
         <svg
             width={size}

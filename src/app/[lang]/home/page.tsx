@@ -18,13 +18,15 @@ import ClientFeedbackSection from "@/components/HomeSections/feedback/ClientFeed
 import AccessTodaySection from "@/components/HomeSections/join-today/AccessTodaySection";
 import TeamworkSection from "@/components/HomeSections/teamwork/TeamworkSection";
 import HomeFooter from "@/components/HomeSections/footer/HomeFooter";
+
+// Helpers
 import { getLanguageData } from "@/helpers/languages";
 
 export default async function Home({
     params,
-}: {
+}: Readonly<{
     params: { lang: "he" | "en" | "ar" };
-}) {
+}>) {
     const langs = await getLanguageData();
 
     const currentLang = langs[params.lang];

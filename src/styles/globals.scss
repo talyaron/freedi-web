@@ -5,10 +5,14 @@
     --blue-light: #03379f15;
     --blue-dark: #03379f;
 
+    --background-primary: #eff1ff;
     --button-primary: #5d98f3;
 
     --text-gray: #6e8aa6;
     --text-black: #232f4a;
+
+    --notFound-title: #544d80;
+    --notFound-btn: #81a0d3;
 }
 
 * {
@@ -19,6 +23,10 @@
 
 html {
     font-size: 24px;
+}
+
+body {
+    background-color: var(--background-primary);
 }
 
 a {
@@ -44,25 +52,25 @@ button {
 
 @media screen and (max-width: 2560px) {
     html {
-        font-size: 20px;
+        font-size: 22px;
     }
 }
 
 @media screen and (max-width: 1440px) {
     html {
-        font-size: 16px;
+        font-size: 20px;
     }
 }
 
 @media screen and (max-width: 1024px) {
     html {
-        font-size: 12px;
+        font-size: 16px;
     }
 }
 
 @media screen and (max-width: 768px) {
     html {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 

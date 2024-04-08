@@ -54,7 +54,7 @@ export default function LanguageDropdown({ lang }: { lang: string }) {
                         key={lang.lang.toString()}
                         onClick={() => handleSetLang(lang)}
                         style={{
-                            top: isOpen ? (i + 1) * 1.5 + "rem" : i + 1 + "rem",
+                            top: isOpen ? (i + 1) * 2 + "rem" : i + 1 + "rem",
                             zIndex: isOpen ? 1 : -1,
                             opacity: isOpen ? 1 : 0,
                         }}

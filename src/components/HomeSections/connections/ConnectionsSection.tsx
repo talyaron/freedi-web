@@ -11,10 +11,10 @@ import DefaultButton from "@/components/buttons/DefaultButton";
 export default function ConnectionsSection({
     currentLang,
     direction,
-}: {
+}: Readonly<{
     currentLang: Record<string, string>;
     direction: "rtl" | "ltr";
-}) {
+}>) {
     return (
         <section className="connections">
             <Image

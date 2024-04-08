@@ -11,9 +11,9 @@ import { English, Hebrew } from "@/types/language";
 
 export default function Header({
     currentLang,
-}: {
+}: Readonly<{
     currentLang: English | Hebrew;
-}) {
+}>) {
     return (
         <header className={styles.header}>
             <div className={styles.heroTitle}>
@@ -32,6 +32,7 @@ export default function Header({
                 src={heroImg}
                 quality={100}
                 loading="eager"
+                unoptimized
                 loader={({ src }) => src}
                 sizes="50vw"
                 style={{

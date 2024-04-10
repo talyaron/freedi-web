@@ -16,7 +16,6 @@ import HandShakeIcon from "../../../components/icons/HandShakeIcon";
 import LightBulbIcon from "../../../components/icons/LightBulbIcon";
 import OldWomanIcon from "../../../components/icons/OldWomanIcon";
 import { generateRandomNumber } from "@/helpers/generators";
-import { English, Hebrew } from "@/types/language";
 
 export default function AboutSection({
     currentLang,

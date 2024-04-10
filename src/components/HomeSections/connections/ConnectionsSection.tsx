@@ -18,9 +18,9 @@ export default function ConnectionsSection({
     return (
         <section className="connections">
             <Image
+                className="connections__img"
                 alt="connection-illustration"
                 src={connectionIllustration}
-                style={{ width: "40vw", height: "auto" }}
             />
             <div className="sectionTextBox" style={{ direction }}>
                 <h3 className="sectionTitle">

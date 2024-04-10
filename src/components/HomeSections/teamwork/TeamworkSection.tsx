@@ -8,10 +8,10 @@ import DefaultButton from "@/components/buttons/DefaultButton";
 export default function TeamworkSection({
     currentLang,
     direction,
-}: {
+}: Readonly<{
     currentLang: Record<string, string>;
     direction: "rtl" | "ltr";
-}) {
+}>) {
     return (
         <section className="defaultSection">
             <div className="sectionTextBox" style={{ direction }}>
@@ -35,12 +35,12 @@ export default function TeamworkSection({
                 />
             </div>
             <Image
+            className="defaultSection__teamworkImg"
                 alt="teamwork-image"
                 src={teamwork}
                 sizes="20vw"
                 quality={100}
                 unoptimized
-                style={{ width: "30vw", height: "auto" }}
             />
         </section>
     );

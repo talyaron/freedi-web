@@ -42,10 +42,10 @@ const features = [
 export default function FeatureSection({
     currentLang,
     direction,
-}: {
+}: Readonly<{
     currentLang: Record<string, string>;
     direction: "rtl" | "ltr";
-}) {
+}>) {
     const [feature, setFeature] = useState(features[0]);
 
     const featureRef = React.useRef<HTMLDivElement>(null);

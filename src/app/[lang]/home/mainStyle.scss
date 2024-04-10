@@ -6,9 +6,14 @@
 
 .defaultSection {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     gap: 5vw;
+
+    &__teamworkImg {
+        width: 30vw;
+        height: auto;
+    }
 }
 
 .sectionTextBox {
@@ -25,7 +30,7 @@
 
 .sectionTitle {
     font-family: Catamaran, sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     letter-spacing: 0.25px;
     color: var(--text-black);
@@ -33,9 +38,29 @@
 
 .sectionText {
     font-family: Catamaran, sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.25px;
     color: #3b4f7d;
     line-height: 1.2rem;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+    .defaultSection {
+        flex-direction: column;
+
+        &__teamworkImg {
+            width: 50vw;
+        }
+    }
+
+    .sectionTextBox {
+        width: 80%;
+        justify-content: end;
+    }
+
+    .sectionText {
+        width: 50%;
+    }
 }

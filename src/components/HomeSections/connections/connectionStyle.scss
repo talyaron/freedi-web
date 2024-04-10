@@ -2,8 +2,24 @@
     display: flex;
     gap: 10vw;
 
+    &__img{
+        width: 40vw;
+        height: auto;
+    }
+
 }
 
 .sectionTextBox{
     margin: auto 0 ;
+}
+
+@media screen and (max-width: 500px) {
+    .connections{
+        flex-direction: column;
+
+        &__img{
+            width: 60vw;
+        }
+    }
+    
 }

@@ -37,7 +37,7 @@ export default function PageLinks({ isFooter }: Readonly<PageLinksProps>) {
 
                             color: linkColor(link),
 
-                            fontSize: !isFooter ? "1.1rem" : ".7rem",
+                            fontSize: !isFooter ? "1.4rem" : "1rem",
                         }}
                         href={`/${pathname.split("/")[1]}/${link}`}
                     >

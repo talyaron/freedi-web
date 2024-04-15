@@ -12,9 +12,11 @@ import flower from "@/assets/Images/flower.png";
 
 export default function AccessTodaySection({
     currentLang,
-}: {
+    direction,
+}: Readonly<{
     currentLang: Record<string, string>;
-}) {
+    direction: "rtl" | "ltr";
+}>) {
     return (
         <section className="AccessTodaySection">
             <div className="AccessTodaySection__wrapper">
@@ -23,7 +25,7 @@ export default function AccessTodaySection({
                     src={flower}
                     className="AccessTodaySection__wrapper__flower"
                 />
-                <p className="sectionText">
+                <p className="sectionText" style={{ direction }}>
                     {
                         currentLang[
                             "Access your first community debate for free by contacting us today"

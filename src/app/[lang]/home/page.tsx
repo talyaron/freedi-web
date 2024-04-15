@@ -62,7 +62,7 @@ export default async function Home({
 
             <ClientFeedbackSection/>
 
-            <AccessTodaySection currentLang={currentLang}/>
+            <AccessTodaySection currentLang={currentLang} direction={direction}/>
 
             <TeamworkSection currentLang={currentLang} direction={direction}/>
 

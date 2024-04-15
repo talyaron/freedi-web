@@ -14,9 +14,9 @@ import { useTranslate } from "@/hooks/useTranslate";
 
 export default function Navbar({
     lang,
-}: {
+}: Readonly<{
     lang: string;
-}) {
+}>) {
     const { t } = useTranslate();
 
     return (

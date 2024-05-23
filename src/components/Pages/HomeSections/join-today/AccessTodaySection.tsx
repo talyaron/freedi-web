@@ -25,7 +25,7 @@ export default function AccessTodaySection({
                     src={flower}
                     className="AccessTodaySection__wrapper__flower"
                 />
-                <p className="sectionText" style={{ direction }}>
+                <p className="AccessTodaySection__wrapper__sectionText sectionText" style={{ direction }}>
                     {
                         currentLang[
                             "Access your first community debate for free by contacting us today"

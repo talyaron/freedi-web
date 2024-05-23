@@ -2,7 +2,7 @@
     width: 100%;
     height: fit-content;
     &__wrapper {
-        background: url("../../../assets/Images/Backgroun\ shape\ 02.png")
+        background: url("../../../../assets/Images/Backgroun\ shape\ 02.png")
             no-repeat top center/contain;
 
         background-size: 100% 100%;
@@ -30,7 +30,6 @@
     }
 }
 
-
 @media screen and (max-width: 500px) {
     .AccessTodaySection {
         &__wrapper {
@@ -43,6 +42,11 @@
             }
             &__character {
                 width: 15vw;
+            }
+
+            &__sectionText {
+                font-size: 1rem;
+                line-height: 1.5rem;
             }
         }
     }

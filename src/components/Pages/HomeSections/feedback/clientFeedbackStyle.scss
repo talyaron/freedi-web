@@ -28,14 +28,14 @@
     &__feedback {
         width: 60%;
         height: 50vw;
-        background: url("../../../assets/Images/Client\ Feedback\ Shape.png")
+        background: url("../../../../assets/Images/Client\ Feedback\ Shape.png")
             no-repeat center center/contain;
 
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 10vw 10vw 3vw 10vw;
-        gap: 3vw;
+        padding: 8vw 5vw 3vw 9vw;
+        gap: 2vw;
         color: var(--white);
 
         h2 {
@@ -47,9 +47,9 @@
         p {
             font-family: Bai Jamjuree;
             font-size: 1.5vw;
-            font-style: italic;
+            // font-style: italic;
             font-weight: 200;
-            line-height: 2vw;
+            line-height: 2.5vw;
             text-align: left;
         }
 

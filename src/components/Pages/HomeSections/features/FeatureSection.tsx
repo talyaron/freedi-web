@@ -11,33 +11,7 @@ import "./FeatureSectionStyle.scss";
 import DefaultButton from "@/components/buttons/DefaultButton";
 import ChevronLeftIcon from "@/components/icons/ChevronLeftIcon";
 import ChevronRightIcon from "@/components/icons/ChevronRightIcon";
-import FeatureOne from "./components/FeatureOne";
-import FeatureTwo from "./components/FeatureTwo";
-import FeatureThree from "./components/FeatureThree";
-import FeatureFour from "./components/FeatureFour";
-
-const features = [
-    {
-        title: "Make reaching agreements effortless with our Council app",
-        description: "Real-time conversation and discussion",
-        comp: <FeatureOne />,
-    },
-    {
-        title: "Simplify agreement processes with Council app",
-        description: "Rating the options",
-        comp: <FeatureTwo />,
-    },
-    {
-        title: "Streamline agreements effortlessly with Council app",
-        description: "Visualizations of data and viewpoints",
-        comp: <FeatureThree />,
-    },
-    {
-        title: "Provide objective information and data on topics with Council app",
-        description: "Voting the options",
-        comp: <FeatureFour />,
-    },
-];
+import { features } from "./data/features";
 
 export default function FeatureSection({
     currentLang,
@@ -48,14 +22,7 @@ export default function FeatureSection({
 }>) {
     const [feature, setFeature] = useState(features[0]);
 
-    const featureRef = React.useRef<HTMLDivElement>(null);
-
     const handleClick = (rightClick: boolean) => {
-        featureRef.current?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-        });
-
         if (rightClick) {
             const index = features.indexOf(feature) + 1;
             setFeature(features[index % features.length]);
@@ -66,7 +33,7 @@ export default function FeatureSection({
     };
 
     return (
-        <section className="featureSection notSelectable" ref={featureRef}>
+        <section className="featureSection notSelectable">
             <div className="featureSection__explanation" style={{ direction }}>
                 <h4>{currentLang["Our features"]}</h4>
                 <h3 className="sectionTitle">{currentLang[feature.title]}</h3>

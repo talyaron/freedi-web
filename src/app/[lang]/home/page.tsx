@@ -9,15 +9,15 @@ import "./home.scss";
 import heroBg from "@/assets/Images/Hero BG illustrations.png";
 
 // Custom Components
-import AboutSection from "@/components/HomeSections/about/AboutSection";
-import WelcomeHeader from "@/components/HomeSections/header/WelcomeHeader";
-import FeatureSection from "@/components/HomeSections/features/FeatureSection";
-import ConnectionsSection from "@/components/HomeSections/connections/ConnectionsSection";
-import VideoSection from "@/components/HomeSections/videoSection/VideoSection";
-import ClientFeedbackSection from "@/components/HomeSections/feedback/ClientFeedbackSection";
-import AccessTodaySection from "@/components/HomeSections/join-today/AccessTodaySection";
-import TeamworkSection from "@/components/HomeSections/teamwork/TeamworkSection";
-import HomeFooter from "@/components/HomeSections/footer/HomeFooter";
+import AboutSection from "@/components/Pages/HomeSections/about/AboutSection";
+import WelcomeHeader from "@/components/Pages/HomeSections/header/WelcomeHeader";
+import FeatureSection from "@/components/Pages/HomeSections/features/FeatureSection";
+import ConnectionsSection from "@/components/Pages/HomeSections/connections/ConnectionsSection";
+import VideoSection from "@/components/Pages/HomeSections/videoSection/VideoSection";
+import ClientFeedbackSection from "@/components/Pages/HomeSections/feedback/ClientFeedbackSection";
+import AccessTodaySection from "@/components/Pages/HomeSections/join-today/AccessTodaySection";
+import TeamworkSection from "@/components/Pages/HomeSections/teamwork/TeamworkSection";
+import HomeFooter from "@/components/Pages/HomeSections/footer/HomeFooter";
 
 // Helpers
 import { getLanguageData } from "@/helpers/languages";

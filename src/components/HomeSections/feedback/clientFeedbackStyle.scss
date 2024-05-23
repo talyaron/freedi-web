@@ -1,5 +1,6 @@
 .clientFeedback {
     display: flex;
+    padding-right: 10vw;
 
     &__shapesArea {
         width: 15%;
@@ -33,12 +34,12 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 0 10vw 3vw 10vw;
+        padding: 10vw 10vw 3vw 10vw;
         gap: 3vw;
         color: var(--white);
 
         h2 {
-            font-family: Catamaran;
+            font-family: "Catamaran", Arial, Helvetica, sans-serif;
             font-size: 3vw;
             font-weight: 700;
         }

@@ -3,7 +3,7 @@
 import React from "react";
 
 // Styles
-import "./navBarStyle.scss";
+import "./navbar.scss";
 
 // Custom Components
 import RoundedButton from "../../components/buttons/RoundedButton";
@@ -23,11 +23,11 @@ export default function Navbar({
         <nav className="navbar">
             <LogoWithName />
 
-            <PageLinks />
+            {/* <PageLinks /> */}
 
             <LanguageDropdown lang={lang} />
 
-            <RoundedButton text={t("Contact us")} />
+            {/* <RoundedButton text={t("Contact us")} /> */}
         </nav>
     );
 }

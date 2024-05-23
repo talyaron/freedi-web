@@ -18,7 +18,7 @@ export default function Header({
         <header className={styles.header}>
             <div className={styles.heroTitle}>
                 <h2 className={styles.heading}>
-                    {currentLang["Delicol fosters community well-being"]}
+                    {currentLang["Council fosters community well-being"]}
                 </h2>
                 <h2 className={styles.heading}>
                     {currentLang["Throught compassionate deliberation"]}

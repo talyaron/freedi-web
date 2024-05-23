@@ -3,9 +3,8 @@
 import React, { useState } from "react";
 import UsaFlagIcon from "../icons/UsaFlagIcon";
 import IsraelFlagIcon from "../icons/IsraelFlagIcon";
-import { useTranslate } from "@/hooks/useTranslate";
 
-export default function LanguageDropdown({ lang }: { lang: string }) {
+export default function LanguageDropdown({ lang }: Readonly<{ lang: string }>) {
     const flagArr = [
         {
             lang: "en",

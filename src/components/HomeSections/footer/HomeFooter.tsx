@@ -42,7 +42,7 @@ export default function HomeFooter() {
             <div className="footer__text">
                 <LogoWithName color="var(--button-primary)" size="1.2rem"/>
 
-                <PageLinks isFooter={true} />
+                {/* <PageLinks isFooter={true} /> */}
 
                 <p className="sectionText footer__text__credit">
                     {("From the Institute for Deliberative Democracy")}

@@ -1,0 +1,21 @@
+.teamWorkSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+
+    &__teamworkImg {
+        width: 30vw;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .teamWorkSection {
+        flex-direction: column;
+
+        &__teamworkImg {
+            width: 50vw;
+        }
+    }
+}

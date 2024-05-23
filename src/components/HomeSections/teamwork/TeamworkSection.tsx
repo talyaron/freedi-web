@@ -4,6 +4,7 @@ import React from "react";
 import teamwork from "@/assets/Images/teamwork.png";
 import Image from "next/image";
 import DefaultButton from "@/components/buttons/DefaultButton";
+import "./teamWorkStyle.scss";
 
 export default function TeamworkSection({
     currentLang,
@@ -13,7 +14,7 @@ export default function TeamworkSection({
     direction: "rtl" | "ltr";
 }>) {
     return (
-        <section className="defaultSection">
+        <section className="teamWorkSection">
             <div className="sectionTextBox" style={{ direction }}>
                 <h3 className="sectionTitle">
                     {
@@ -25,7 +26,7 @@ export default function TeamworkSection({
                 <p className="sectionText">
                     {
                         currentLang[
-                            "Invest effort/time into an in-depth deliberative process with DeliCol app help that enables the end choices to effectively address and serve the requirements and priorities of the entire community."
+                            "Invest effort/time into an in-depth deliberative process with Council app help that enables the end choices to effectively address and serve the requirements and priorities of the entire community."
                         ]
                     }
                 </p>
@@ -35,7 +36,7 @@ export default function TeamworkSection({
                 />
             </div>
             <Image
-            className="defaultSection__teamworkImg"
+                className="teamWorkSection__teamworkImg"
                 alt="teamwork-image"
                 src={teamwork}
                 sizes="20vw"

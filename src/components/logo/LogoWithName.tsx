@@ -21,7 +21,7 @@ export default function LogoWithName({
         <div className="logoBox">
             <LogoIcon size={"2rem"} color={color} />
             <p className="logoBox__name" style={{ color, fontSize: size }}>
-                {t("DeliCol")}
+                {t("Council")}
             </p>
         </div>
     );

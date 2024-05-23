@@ -20,10 +20,10 @@ import { generateRandomNumber } from "@/helpers/generators";
 export default function AboutSection({
     currentLang,
     direction,
-}: {
+}: Readonly<{
     currentLang: Record<string, string>;
     direction: "rtl" | "ltr";
-}) {
+}>) {
     return (
         <section className="aboutSection">
             <Image
@@ -33,25 +33,21 @@ export default function AboutSection({
                 loading="eager"
                 className="aboutSection__backgroundShape"
             />
-            <div className="defaultSection">
+            <div className="aboutSection__wrapper">
                 <Image
                     alt="overview-image"
                     src={overview}
                     quality={100}
-                    sizes="20vw"
-                    style={{ width: "20vw", height: "auto" }}
+                    className="aboutSection__wrapper__image"
                 />
-                <div
-                    className="sectionTextBox"
-                    style={{ direction }}
-                >
+                <div className="sectionTextBox" style={{ direction }}>
                     <h3 className="sectionTitle">
-                        {currentLang["About DeliCol"]}
+                        {currentLang["About Council"]}
                     </h3>
                     <p className="sectionText">
                         {
                             currentLang[
-                                "The goal of Delicol app is to go beyond simple majority rule votes by facilitating informed deliberation, finding common ground, and working towards decisions that incorporate diverse viewpoints and address minority concerns when possible."
+                                "The goal of Council app is to go beyond simple majority rule votes by facilitating informed deliberation, finding common ground, and working towards decisions that incorporate diverse viewpoints and address minority concerns when possible."
                             ]
                         }
                     </p>

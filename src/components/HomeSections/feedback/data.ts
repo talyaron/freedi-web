@@ -23,7 +23,7 @@ export const avatarArr: Avatar[] = [
         avatar: avatar1,
         title: "Client Feedback",
         feedback:
-            "DeliCol has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
+            "Council has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
     },
     {
         id: 2,
@@ -32,7 +32,7 @@ export const avatarArr: Avatar[] = [
         avatar: avatar2,
         title: "Client Feedback",
         feedback:
-            "DeliCol has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
+            "Council has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
     },
     {
         id: 3,
@@ -41,7 +41,7 @@ export const avatarArr: Avatar[] = [
         avatar: avatar3,
         title: "Client Feedback",
         feedback:
-            "DeliCol has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
+            "Council has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
     },
     {
         id: 4,
@@ -50,7 +50,7 @@ export const avatarArr: Avatar[] = [
         avatar: avatar4,
         title: "Client Feedback",
         feedback:
-            "DeliCol has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
+            "Council has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
     },
     {
         id: 5,
@@ -59,7 +59,7 @@ export const avatarArr: Avatar[] = [
         avatar: avatar5,
         title: "Client Feedback",
         feedback:
-            "DeliCol has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
+            "Council has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
     },
     {
         id: 6,
@@ -68,6 +68,6 @@ export const avatarArr: Avatar[] = [
         avatar: avatar6,
         title: "Client Feedback",
         feedback:
-            "DeliCol has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
+            "Council has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
     },
 ];

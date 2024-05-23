@@ -6,15 +6,15 @@ import "./videoSectionStyle.scss";
 
 export default function VideoSection({
     currentLang,
-}: {
+}: Readonly<{
     currentLang: Record<string, string>;
-}) {
+}>) {
     const ref = React.useRef<HTMLIFrameElement>(null);
 
     return (
         <section className="videoSection">
             <h2 className="sectionTitle">
-                {currentLang["How does DeliCol work"]}
+                {currentLang["How does Council work"]}
             </h2>
             <p className="sectionText">
                 {
@@ -27,7 +27,7 @@ export default function VideoSection({
                 ref={ref}
                 src="https://www.youtube.com/embed/qLznfpgj1E4"
                 allowFullScreen
-                title="DeliCol"
+                title="Council"
                 className="videoSection__video"
                 loading="lazy"
             />

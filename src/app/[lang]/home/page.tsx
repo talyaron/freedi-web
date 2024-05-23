@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 
 // Styles
-import "./mainStyle.scss";
+import "./home.scss";
 
 // import Images
 import heroBg from "@/assets/Images/Hero BG illustrations.png";
@@ -54,17 +54,23 @@ export default async function Home({
 
             <AboutSection currentLang={currentLang} direction={direction} />
 
-            <FeatureSection currentLang={currentLang} direction={direction}/>
+            <FeatureSection currentLang={currentLang} direction={direction} />
 
-            <ConnectionsSection currentLang={currentLang} direction={direction}/>
+            <ConnectionsSection
+                currentLang={currentLang}
+                direction={direction}
+            />
 
             <VideoSection currentLang={currentLang} />
 
-            <ClientFeedbackSection/>
+            <ClientFeedbackSection />
 
-            <AccessTodaySection currentLang={currentLang} direction={direction}/>
+            <AccessTodaySection
+                currentLang={currentLang}
+                direction={direction}
+            />
 
-            <TeamworkSection currentLang={currentLang} direction={direction}/>
+            <TeamworkSection currentLang={currentLang} direction={direction} />
 
             <HomeFooter />
         </main>

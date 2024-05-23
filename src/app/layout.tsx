@@ -5,7 +5,7 @@ import "@/styles/globals.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Delicol",
+    title: "Council",
     description: "Building Bonds and Bridging Divides",
 };
 

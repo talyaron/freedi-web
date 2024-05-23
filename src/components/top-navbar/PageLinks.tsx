@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./navBarStyle.scss";
+import "./navbar.scss";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useTranslate } from "@/hooks/useTranslate";

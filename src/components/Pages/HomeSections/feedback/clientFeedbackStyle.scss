@@ -1,73 +1,64 @@
 .clientFeedback {
+    padding: 0 1rem;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 50vw;
+    background-image: url("../../../../assets/Images/clientFeedbackShape.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
     display: flex;
-    padding-right: 10vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    color: var(--white);
 
-    &__shapesArea {
-        width: 15%;
-        position: relative;
-        &__shapesBox {
-            position: absolute;
-        }
-        &__shapesBox:nth-child(1) {
-            top: 29vw;
-            left: 13vw;
-        }
-        &__shapesBox:nth-child(2) {
-            top: 30vw;
-            left: 10vw;
-        }
-        &__shapesBox:nth-child(3) {
-            top: 26vw;
-            left: 5vw;
-        }
-        &__shapesBox:nth-child(4) {
-            top: 23vw;
-            left: 0;
-        }
+    .title {
+        font-family: "Roboto", sans-serif;
+        font-size: 2vw;
+        text-align: center;
+        font-weight: 500;
     }
-    &__feedback {
-        width: 60%;
-        height: 50vw;
-        background: url("../../../../assets/Images/Client\ Feedback\ Shape.png")
-            no-repeat center center/contain;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 8vw 5vw 3vw 9vw;
-        gap: 2vw;
-        color: var(--white);
+    .body {
+        width: 30%;
+    }
 
-        h2 {
-            font-family: "Catamaran", Arial, Helvetica, sans-serif;
-            font-size: 3vw;
-            font-weight: 700;
-        }
+    p {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.5vw;
+        font-style: italic;
+        text-align: center;
+        font-weight: 300;
+        line-height: 2.5vw;
+    }
 
-        p {
-            font-family: Bai Jamjuree;
-            font-size: 1.5vw;
-            // font-style: italic;
-            font-weight: 200;
-            line-height: 2.5vw;
-            text-align: left;
-        }
+    &__shapesBox {
+        position: absolute;
+    }
 
-        h4 {
-            font-size: 1.5vw;
-            font-weight: 700;
-        }
+    .shapeOne {
+        top: 27vw;
+        left: 27vw;
+    }
 
-        &__background {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-        }
+    .shapeTwo {
+        top: 23vw;
+        left: 26vw;
+    }
+
+    .shapeThree {
+        top: 20vw;
+        left: 23vw;
     }
 
     &__clients {
-        flex: 1;
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
 
         &__client {
             border-radius: 50%;
@@ -80,46 +71,39 @@
                 width: 10vw;
                 height: 10vw;
                 position: absolute;
-                border: 1vw solid #fff;
+                border: 2px solid #fff;
                 box-shadow: 0 5px 20px #00000040;
-                top: 7vw;
-                left: -10vw;
+                top: -3vw;
+                left: 26vw;
             }
         }
 
         &__client:nth-child(2) {
             width: 5vw;
             height: 5vw;
-            top: 10vw;
-            left: 12vw;
+            top: 45vw;
+            left: 62vw;
         }
 
         &__client:nth-child(3) {
-            width: 5vw;
-            height: 5vw;
-            top: 23vw;
-            left: 15vw;
+            width: 7vw;
+            height: 7vw;
+            top: 50vw;
+            left: 55vw;
         }
 
         &__client:nth-child(4) {
-            width: 7vw;
-            height: 7vw;
-            top: 33vw;
-            left: 10vw;
+            width: 5vw;
+            height: 5vw;
+            top: 52vw;
+            left: 45vw;
         }
 
         &__client:nth-child(5) {
             width: 5vw;
             height: 5vw;
-            top: 42vw;
-            left: 0vw;
-        }
-
-        &__client:nth-child(6) {
-            width: 3vw;
-            height: 3vw;
-            top: 25vw;
-            left: 3vw;
+            top: 53vw;
+            left: 35vw;
         }
 
         &__client:hover {

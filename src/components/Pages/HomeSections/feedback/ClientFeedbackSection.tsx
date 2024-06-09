@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-
 import "./clientFeedbackStyle.scss";
 import Image from "next/image";
 import { Avatar, avatarArr } from "./data";
@@ -13,11 +12,7 @@ export default function ClientFeedbackSection() {
     const [selectedFeedback, setSelectedFeedback] = useState(avatarArr[0]);
     const [avatarArray, setAvatarArray] = useState(avatarArr);
 
-    const clientFeedbackRef = React.useRef<HTMLDivElement>(null);
-
     const handleClick = (clickedAvatar: Avatar) => {
-        clientFeedbackRef.current?.scrollIntoView({ behavior: "smooth" });
-
         const findSelected = avatarArray.indexOf(selectedFeedback);
         const findClicked = avatarArray.indexOf(clickedAvatar);
 
@@ -34,29 +29,23 @@ export default function ClientFeedbackSection() {
     };
 
     return (
-        <section className="clientFeedback" ref={clientFeedbackRef}>
-            <div className="clientFeedback__shapesArea">
-                <div className="clientFeedback__shapesArea__shapesBox">
-                    <EclipseShape01 size="2.5vw" />
-                </div>
-                <div className="clientFeedback__shapesArea__shapesBox">
-                    <EclipseShape02 size="1.7vw" />
-                </div>
-                <div className="clientFeedback__shapesArea__shapesBox">
-                    <CircleIcon size="1.5vw" />
-                </div>
-                <div className="clientFeedback__shapesArea__shapesBox">
-                    <CircleIcon size="1vw" />
-                </div>
+        <section className="clientFeedback">
+            <h1 className="title">Our clients tell about us</h1>
+            <p className="body">{selectedFeedback.feedback}</p>
+            <div>
+                <p className="name">{selectedFeedback.name}</p>
+                <p className="position">{selectedFeedback.position}</p>
             </div>
-            <div className="clientFeedback__feedback">
-                <h2>{selectedFeedback.title}</h2>
-                <p>{selectedFeedback.feedback}</p>
-                <div>
-                    <h4>{selectedFeedback.name}</h4>
-                    <p>{selectedFeedback.position}</p>
-                </div>
+            <div className="clientFeedback__shapesBox shapeOne">
+                <EclipseShape01 size="2vw" />
             </div>
+            <div className="clientFeedback__shapesBox shapeTwo">
+                <EclipseShape02 size="1.3vw" />
+            </div>
+            <div className="clientFeedback__shapesBox shapeThree">
+                <CircleIcon size="1vw" />
+            </div>
+
             <div className="clientFeedback__clients">
                 {avatarArray.map((avatar) => (
                     <Image
@@ -68,6 +57,7 @@ export default function ClientFeedbackSection() {
                         }
                         onClick={() => handleClick(avatar)}
                         alt="client-avatar"
+                        quality={100}
                         src={avatar.avatar}
                     />
                 ))}

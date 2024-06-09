@@ -36,15 +36,6 @@ export const avatarArr: Avatar[] = [
     },
     {
         id: 3,
-        name: "Sara Johnson",
-        position: "Marketing Coordinator",
-        avatar: avatar3,
-        title: "Client Feedback",
-        feedback:
-            "Freedi has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
-    },
-    {
-        id: 4,
         name: "Bob Smith",
         position: "Marketing Coordinator",
         avatar: avatar4,
@@ -53,7 +44,7 @@ export const avatarArr: Avatar[] = [
             "Freedi has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
     },
     {
-        id: 5,
+        id: 4,
         name: "Mark Johnson",
         position: "Marketing Coordinator",
         avatar: avatar5,
@@ -62,7 +53,7 @@ export const avatarArr: Avatar[] = [
             "Freedi has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
     },
     {
-        id: 6,
+        id: 5,
         name: "Mitchell Cannon",
         position: "Marketing Coordinator",
         avatar: avatar6,

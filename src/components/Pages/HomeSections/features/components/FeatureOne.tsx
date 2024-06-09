@@ -17,22 +17,22 @@ export default function FeatureOne() {
                 alt="feature-image"
                 src={firstFeature}
                 style={{
-                    width: "15vw",
+                    width: "10vw",
                     height: "auto",
                     position: "absolute",
-                    right: "15vw",
-                    top: "7vw",
+                    right: "10vw",
+                    top: "0",
                 }}
             />
             <Image
                 alt="feature-image"
                 src={firstFeaturePartTwo}
                 style={{
-                    width: "15vw",
+                    width: "10vw",
                     height: "auto",
                     position: "absolute",
-                    right: "10vw",
-                    top: "22vw",
+                    right: "7vw",
+                    top: "10vw",
                 }}
             />
         </div>

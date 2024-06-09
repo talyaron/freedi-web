@@ -17,22 +17,22 @@ export default function FeatureThree() {
                 alt="feature-image"
                 src={featureThree01}
                 style={{
-                    width: "15vw",
+                    width: "10vw",
                     height: "auto",
                     position: "absolute",
-                    right: "15vw",
-                    top: "7vw",
+                    right: "10vw",
+                    top: "0",
                 }}
             />
             <Image
                 alt="feature-image"
                 src={featureThree02}
                 style={{
-                    width: "17vw",
+                    width: "10vw",
                     height: "auto",
                     position: "absolute",
-                    right: "10vw",
-                    top: "21vw",
+                    right: "8vw",
+                    top: "10vw",
                 }}
             />
         </div>

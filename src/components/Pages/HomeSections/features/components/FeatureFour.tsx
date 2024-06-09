@@ -17,22 +17,22 @@ export default function FeatureFour() {
                 alt="feature-image"
                 src={featureFourOne}
                 style={{
-                    width: "15vw",
+                    width: "10vw",
                     height: "auto",
                     position: "absolute",
-                    right: "15vw",
-                    top: "7vw",
+                    right: "10vw",
+                    top: "0",
                 }}
             />
             <Image
                 alt="feature-image"
                 src={featureFourTwo}
                 style={{
-                    width: "13vw",
+                    width: "10vw",
                     height: "auto",
                     position: "absolute",
-                    right: "12vw",
-                    top: "20vw",
+                    right: "7vw",
+                    top: "10vw",
                 }}
             />
         </div>

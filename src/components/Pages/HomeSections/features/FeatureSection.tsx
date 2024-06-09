@@ -35,7 +35,7 @@ export default function FeatureSection({
     return (
         <section className="featureSection notSelectable">
             <div className="featureSection__explanation" style={{ direction }}>
-                <h4>{currentLang["Our features"]}</h4>
+                <h4 className="sectionHeader">{currentLang["Our features"]}</h4>
                 <h3 className="sectionTitle">{currentLang[feature.title]}</h3>
                 <p className="sectionText">
                     {currentLang[feature.description]}
@@ -44,26 +44,19 @@ export default function FeatureSection({
             </div>
 
             <div className="featureSection__features">
-                <Image
-                    className="featureSection__features__backgroundShape"
-                    alt="Background-Shape"
-                    src={backgroundShape}
-                    quality={100}
-                    sizes="40vw"
-                />
                 {feature.comp}
-                <div style={{ position: "absolute", top: "17vw", left: "5vw" }}>
+                <div style={{ position: "absolute", top: "5vw", right: "25vw" }}>
                     <ChevronLeftIcon
-                        size="2rem"
+                        size="1.5rem"
                         onClick={() => handleClick(false)}
                         style={{ cursor: "pointer" }}
                     />
                 </div>
                 <div
-                    style={{ position: "absolute", top: "17vw", right: "12vw" }}
+                    style={{ position: "absolute", top: "5vw", right: "5vw" }}
                 >
                     <ChevronRightIcon
-                        size="2rem"
+                        size="1.5rem"
                         onClick={() => handleClick(true)}
                         style={{ cursor: "pointer" }}
                     />

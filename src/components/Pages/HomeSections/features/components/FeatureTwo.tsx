@@ -18,33 +18,33 @@ export default function FeatureTwo() {
                 alt="feature-image"
                 src={featureTwo01}
                 style={{
-                    width: "15vw",
+                    width: "10vw",
                     height: "auto",
                     position: "absolute",
-                    right: "15vw",
-                    top: "7vw",
+                    right: "10vw",
+                    top: "0",
                 }}
             />
             <Image
                 alt="feature-image"
                 src={featureTwo02}
                 style={{
-                    width: "20vw",
+                    width: "15vw",
                     height: "auto",
                     position: "absolute",
-                    right: "12vw",
-                    top: "11vw",
+                    right: "6vw",
+                    top: "3vw",
                 }}
             />
             <Image
                 alt="feature-image"
                 src={featureTwo03}
                 style={{
-                    width: "20vw",
+                    width: "15vw",
                     height: "auto",
                     position: "absolute",
-                    right: "13vw",
-                    top: "20vw",
+                    right: "9vw",
+                    top: "10vw",
                 }}
             />
         </div>

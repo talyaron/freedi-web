@@ -1,66 +1,74 @@
 .aboutSection {
     height: fit-content;
-    margin-top: 5vw;
     position: relative;
     display: flex;
-    flex-direction: column;
-    gap: 5vw;
-    &__backgroundShape {
-        height: auto;
-        width: 60vw;
-        position: absolute;
-        z-index: -10;
-    }
+    gap: 5rem;
 
-    &__wrapper {
+    &__imageWrapper {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
-        gap: 5vw;
+        position: relative;
+        width: 35%;
+
+        &__bubble {
+            position: absolute;
+            height: auto;
+        }
+
+        &__bubble:nth-child(1) {
+            width: 3rem;
+            top: 55%;
+            left: 0%;
+        }
+        &__bubble:nth-child(2) {
+            width: 2rem;
+            top: 35%;
+            left: 5%;
+        }
+        &__bubble:nth-child(3) {
+            width: 1rem;
+            top: 15%;
+            left: 0%;
+        }
 
         &__image {
-            width: 20vw;
+            width: 10rem;
             height: auto;
         }
     }
 
-    &__benefits {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
-        padding: 3rem;
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 5rem;
-        &__benefit {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            text-align: center;
-            p {
-                text-align: center;
-            }
+    &__info {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+
+        &__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-black);
+        }
+
+        &__text {
+            font-size: var(--btn-font-size);
+            line-height: 1.5rem;
+            color: var(--text-gray);
         }
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
     .aboutSection {
-        &__benefits {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            width: 100%;
+        flex-direction: column;
+        &__imageWrapper {
+            margin: 0 auto;
+            width: 50%;
         }
-
-        &__wrapper {
-            flex-direction: column;
-
-            &__image {
-                width: 25vw;
-                height: auto;
-                margin-right: 30vw;
-            }
+        &__info {
+            width: 80%;
+            margin: 0 auto;
         }
     }
 }

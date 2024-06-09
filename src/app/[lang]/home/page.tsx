@@ -21,6 +21,7 @@ import HomeFooter from "@/components/Pages/HomeSections/footer/HomeFooter";
 
 // Helpers
 import { getLanguageData } from "@/helpers/languages";
+import BenefitsSection from "@/components/Pages/HomeSections/benefits/BenefitsSection";
 
 export default async function Home({
     params,
@@ -49,28 +50,37 @@ export default async function Home({
                     zIndex: -10,
                 }}
             />
-
             <WelcomeHeader currentLang={currentLang} />
 
-            <AboutSection currentLang={currentLang} direction={direction} />
+            <div className="main__body">
+                <AboutSection currentLang={currentLang} direction={direction} />
 
-            <FeatureSection currentLang={currentLang} direction={direction} />
+                <BenefitsSection currentLang={currentLang} />
 
-            <ConnectionsSection
-                currentLang={currentLang}
-                direction={direction}
-            />
+                <FeatureSection
+                    currentLang={currentLang}
+                    direction={direction}
+                />
 
-            <VideoSection currentLang={currentLang} />
+                <ConnectionsSection
+                    currentLang={currentLang}
+                    direction={direction}
+                />
 
-            <ClientFeedbackSection />
+                <VideoSection currentLang={currentLang} />
 
-            <AccessTodaySection
-                currentLang={currentLang}
-                direction={direction}
-            />
+                <ClientFeedbackSection />
 
-            <TeamworkSection currentLang={currentLang} direction={direction} />
+                <AccessTodaySection
+                    currentLang={currentLang}
+                    direction={direction}
+                />
+
+                <TeamworkSection
+                    currentLang={currentLang}
+                    direction={direction}
+                />
+            </div>
 
             <HomeFooter />
         </main>

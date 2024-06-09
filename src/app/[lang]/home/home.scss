@@ -1,7 +1,29 @@
 .main {
     display: flex;
     flex-direction: column;
-    gap: 10vw;
+    align-items: center;
+    gap: 5rem;
+    // padding: 0 10vw;
+    // background-image: url("../../../assets/Images/Hero-Background.png");
+    // background-repeat: no-repeat;
+    // background-position: top;
+    // background-size: cover;
+    // background-size: contain;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+        width: 100%;
+    }
+}
+
+.sectionHeader {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--text-gray);
 }
 
 .sectionTextBox {
@@ -10,28 +32,18 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-
-    button {
-        margin-top: 2rem;
-    }
 }
 
 .sectionTitle {
-    font-family: Catamaran, sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: 0.25px;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--text-black);
 }
 
 .sectionText {
-    font-family: Catamaran, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    letter-spacing: 0.25px;
-    color: #3b4f7d;
-    line-height: 2rem;
-    padding: 1rem;
+    font-size: var(--btn-font-size);
+    line-height: 1.5rem;
+    color: var(--text-gray);
 }
 
 @media screen and (max-width: 500px) {
@@ -53,5 +65,14 @@
 
     .sectionText {
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .main {
+
+        &__body {
+            width: 70%;
+        }
     }
 }

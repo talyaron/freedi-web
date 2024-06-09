@@ -26,7 +26,7 @@ export default function TeamworkSection({
                 <p className="sectionText">
                     {
                         currentLang[
-                            "Invest effort/time into an in-depth deliberative process with Council app help that enables the end choices to effectively address and serve the requirements and priorities of the entire community."
+                            "Invest effort/time into an in-depth deliberative process with Freedi app help that enables the end choices to effectively address and serve the requirements and priorities of the entire community."
                         ]
                     }
                 </p>

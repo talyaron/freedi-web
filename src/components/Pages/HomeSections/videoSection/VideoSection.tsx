@@ -14,7 +14,7 @@ export default function VideoSection({
     return (
         <section className="videoSection">
             <h2 className="sectionTitle">
-                {currentLang["How does Council work"]}
+                {currentLang["How does Freedi work"]}
             </h2>
             <p className="sectionText">
                 {
@@ -27,7 +27,7 @@ export default function VideoSection({
                 ref={ref}
                 src="https://www.youtube.com/embed/qLznfpgj1E4"
                 allowFullScreen
-                title="Council"
+                title="Freedi"
                 className="videoSection__video"
                 loading="lazy"
             />

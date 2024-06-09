@@ -13,7 +13,7 @@ export default function App() {
 
     return (
         <div className="app">
-            <h1>{"Delib: Make Decisions Together"}</h1>
+            <h1>{"Freedi: Make Decisions Together"}</h1>
             <LoaderGlass />
             <h2>{("Please wait while the page loads")}</h2>
         </div>

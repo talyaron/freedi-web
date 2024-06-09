@@ -42,12 +42,12 @@ export default function AboutSection({
                 />
                 <div className="sectionTextBox" style={{ direction }}>
                     <h3 className="sectionTitle">
-                        {currentLang["About Council"]}
+                        {currentLang["About Freedi"]}
                     </h3>
                     <p className="sectionText">
                         {
                             currentLang[
-                                "The goal of Council app is to go beyond simple majority rule votes by facilitating informed deliberation, finding common ground, and working towards decisions that incorporate diverse viewpoints and address minority concerns when possible."
+                                "The goal of Freedi app is to go beyond simple majority rule votes by facilitating informed deliberation, finding common ground, and working towards decisions that incorporate diverse viewpoints and address minority concerns when possible."
                             ]
                         }
                     </p>

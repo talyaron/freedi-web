@@ -7,22 +7,22 @@ import FeatureFour from "../components/FeatureFour";
 
 export const features = [
     {
-        title: "Make reaching agreements effortless with our Council app",
+        title: "Make reaching agreements effortless with our Freedi app",
         description: "Real-time conversation and discussion",
         comp: <FeatureOne />,
     },
     {
-        title: "Simplify agreement processes with Council app",
+        title: "Simplify agreement processes with Freedi app",
         description: "Rating the options",
         comp: <FeatureTwo />,
     },
     {
-        title: "Streamline agreements effortlessly with Council app",
+        title: "Streamline agreements effortlessly with Freedi app",
         description: "Visualizations of data and viewpoints",
         comp: <FeatureThree />,
     },
     {
-        title: "Provide objective information and data on topics with Council app",
+        title: "Provide objective information and data on topics with Freedi app",
         description: "Voting the options",
         comp: <FeatureFour />,
     },

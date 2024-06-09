@@ -64,7 +64,7 @@ const avatarArr: Avatar[] = [
         position: "Marketing Coordinator",
         avatar: avatar1,
         feedback:
-            "Council has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
+            "Freedi has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
     },
     {
         id: 2,
@@ -72,7 +72,7 @@ const avatarArr: Avatar[] = [
         position: "Marketing Coordinator",
         avatar: avatar2,
         feedback:
-            "Council has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
+            "Freedi has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
     },
     {
         id: 3,
@@ -80,7 +80,7 @@ const avatarArr: Avatar[] = [
         position: "Marketing Coordinator",
         avatar: avatar3,
         feedback:
-            "Council has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
+            "Freedi has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
     },
     {
         id: 4,
@@ -88,7 +88,7 @@ const avatarArr: Avatar[] = [
         position: "Marketing Coordinator",
         avatar: avatar4,
         feedback:
-            "Council has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
+            "Freedi has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
     },
     {
         id: 5,
@@ -96,7 +96,7 @@ const avatarArr: Avatar[] = [
         position: "Marketing Coordinator",
         avatar: avatar5,
         feedback:
-            "Council has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
+            "Freedi has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
     },
     {
         id: 6,
@@ -104,6 +104,6 @@ const avatarArr: Avatar[] = [
         position: "Marketing Coordinator",
         avatar: avatar6,
         feedback:
-            "Council has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
+            "Freedi has transformed how our community makes decisions. The structured deliberation tools allow all voices to be heard and different perspectives to be thoughtfully considered. We're reaching well-rounded agreements that bring people together rather than further dividing us.",
     },
 ];

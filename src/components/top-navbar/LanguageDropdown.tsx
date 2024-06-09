@@ -4,15 +4,17 @@ import React, { useState } from "react";
 import UsaFlagIcon from "../icons/UsaFlagIcon";
 import IsraelFlagIcon from "../icons/IsraelFlagIcon";
 
+const flagSize = "1.5rem";
+
 export default function LanguageDropdown({ lang }: Readonly<{ lang: string }>) {
     const flagArr = [
         {
             lang: "en",
-            flag: <UsaFlagIcon />,
+            flag: <UsaFlagIcon size={flagSize} />,
         },
         {
             lang: "he",
-            flag: <IsraelFlagIcon />,
+            flag: <IsraelFlagIcon size={flagSize} />,
         },
     ];
 

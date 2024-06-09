@@ -12,17 +12,15 @@ interface Props {
 }
 
 export default function LogoWithName({
-    size = "2rem",
+    size = "1rem",
     color,
 }: Readonly<Props>) {
     const { t } = useTranslate();
-    
+
     return (
         <div className="logoBox">
-            <LogoIcon size={"2rem"} color={color} />
-            <p className="logoBox__name" style={{ color, fontSize: size }}>
-                {t("Freedi")}
-            </p>
+            <LogoIcon size={"2.5rem"} color={color} />
+            <p className="logoBox__name">{t("Freedi")}</p>
         </div>
     );
 }

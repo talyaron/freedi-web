@@ -6,7 +6,7 @@ import Image from "next/image";
 import "./home.scss";
 
 // import Images
-import heroBg from "@/assets/Images/Hero BG illustrations.png";
+import heroBg from "@/assets/Images/Hero-Background.png";
 
 // Custom Components
 import AboutSection from "@/components/Pages/HomeSections/about/AboutSection";

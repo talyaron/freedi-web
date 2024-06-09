@@ -15,13 +15,10 @@ export default function Header({
     currentLang: English | Hebrew;
 }>) {
     return (
-        <header className="header">
+        <header className="welcomeHeader">
             <div className="heroTitle">
                 <h2 className="heading">
                     {currentLang["Freedi fosters community well-being"]}
-                </h2>
-                <h2 className="heading">
-                    {currentLang["Throught compassionate deliberation"]}
                 </h2>
                 <p className="paragraph">
                     {currentLang["Building Bonds and Bridging Divides"]}
@@ -42,6 +39,11 @@ export default function Header({
                     marginTop: "1vw",
                 }}
             />
+            <ul className="welcomeHeader__nav">
+                <li>{currentLang["About"]}</li>
+                <li>{currentLang["Features"]}</li>
+                <li>{currentLang["Feedbacks"]}</li>
+            </ul>
         </header>
     );
 }

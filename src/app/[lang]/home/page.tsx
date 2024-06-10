@@ -40,11 +40,10 @@ export default async function Home({
                 alt="Hero-Background"
                 src={heroBg}
                 loading="eager"
-                sizes="100vw"
                 priority
                 style={{
                     width: "100%",
-                    height: "auto",
+                    height: "20rem",
                     position: "absolute",
                     top: 0,
                     zIndex: -10,

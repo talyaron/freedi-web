@@ -3,7 +3,7 @@
     position: relative;
     margin: auto;
     width: 100%;
-    height: 50vw;
+    height: 30rem;
     background-image: url("../../../../assets/Images/clientFeedbackShape.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -13,27 +13,27 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2vw;
+    gap: 2rem;
     color: var(--white);
 
     .title {
         font-family: "Roboto", sans-serif;
-        font-size: 2vw;
+        font-size: 1.5rem;
         text-align: center;
         font-weight: 500;
     }
 
     .body {
-        width: 30%;
+        width: 20rem;
     }
 
     p {
         font-family: "Roboto", sans-serif;
-        font-size: 1.5vw;
+        font-size: 1rem;
         font-style: italic;
         text-align: center;
         font-weight: 300;
-        line-height: 2.5vw;
+        line-height: 1.5rem;
     }
 
     &__shapesBox {
@@ -41,8 +41,8 @@
     }
 
     .shapeOne {
-        top: 27vw;
-        left: 27vw;
+        top: 17rem;
+        left: 17rem;
     }
 
     .shapeTwo {
@@ -79,31 +79,31 @@
         }
 
         &__client:nth-child(2) {
-            width: 5vw;
-            height: 5vw;
-            top: 45vw;
-            left: 62vw;
+            width: 3rem;
+            height: 3rem;
+            top: 28rem;
+            left: 65vw;
         }
 
         &__client:nth-child(3) {
-            width: 7vw;
-            height: 7vw;
-            top: 50vw;
-            left: 55vw;
+            width: 4rem;
+            height: 4rem;
+            top: 30rem;
+            left: 50vw;
         }
 
         &__client:nth-child(4) {
-            width: 5vw;
-            height: 5vw;
-            top: 52vw;
-            left: 45vw;
+            width: 2.5rem;
+            height: 2.5rem;
+            top: 32rem;
+            left: 40vw;
         }
 
         &__client:nth-child(5) {
-            width: 5vw;
-            height: 5vw;
-            top: 53vw;
-            left: 35vw;
+            width: 2.5rem;
+            height: 2.5rem;
+            top: 30rem;
+            left: 25vw;
         }
 
         &__client:hover {

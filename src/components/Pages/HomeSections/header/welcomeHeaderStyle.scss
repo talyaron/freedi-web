@@ -5,8 +5,8 @@
     justify-content: space-between;
     width: 100%;
     height: fit-content;
-    margin-top: 2vw;
     gap: 5vw;
+    margin-top: 2rem;
     .heroTitle {
         color: var(--white);
         display: flex;
@@ -14,12 +14,12 @@
         align-items: center;
         gap: 1rem;
         .heading {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            line-height: 2rem;
+            line-height: 1.7rem;
             letter-spacing: 1px;
             text-align: center;
-            width: 70%;
+            width: 80%;
         }
         .paragraph {
             font-size: 1rem;

@@ -1,9 +1,9 @@
 .featureSection {
     position: relative;
-    height: fit-content;
+    height: auto;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    padding: 5vw;
 
     &__explanation {
         display: flex;

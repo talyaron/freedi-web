@@ -44,23 +44,38 @@ export default function FeatureSection({
             </div>
 
             <div className="featureSection__features">
-                {feature.comp}
-                <div style={{ position: "absolute", top: "5vw", right: "25vw" }}>
-                    <ChevronLeftIcon
-                        size="1.5rem"
-                        onClick={() => handleClick(false)}
-                        style={{ cursor: "pointer" }}
-                    />
-                </div>
-                <div
-                    style={{ position: "absolute", top: "5vw", right: "5vw" }}
-                >
-                    <ChevronRightIcon
-                        size="1.5rem"
-                        onClick={() => handleClick(true)}
-                        style={{ cursor: "pointer" }}
-                    />
-                </div>
+                <ChevronLeftIcon
+                    size="1.5rem"
+                    onClick={() => handleClick(false)}
+                    style={{
+                        cursor: "pointer",
+                        position: "absolute",
+                        top: "40%",
+                        left: "10%",
+                    }}
+                />
+                <Image
+                    alt="feature-image"
+                    src={feature.image}
+                    quality={100}
+                    style={{
+                        width: feature.width,
+                        height: "auto",
+                        position: "absolute",
+                        right: feature.right,
+                        top: feature.top,
+                    }}
+                />
+                <ChevronRightIcon
+                    size="1.5rem"
+                    onClick={() => handleClick(true)}
+                    style={{
+                        cursor: "pointer",
+                        position: "absolute",
+                        top: "40%",
+                        right: "10%",
+                    }}
+                />
             </div>
         </section>
     );

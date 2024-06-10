@@ -16,6 +16,7 @@
         align-items: center;
         gap: 5rem;
         width: 100%;
+        max-width: 1440px;
     }
 }
 
@@ -68,11 +69,11 @@
     }
 }
 
-@media screen and (min-width: 1440px) {
-    .main {
+// @media screen and (min-width: 1440px) {
+//     .main {
 
-        &__body {
-            width: 70%;
-        }
-    }
-}
+//         &__body {
+//             width: 70%;
+//         }
+//     }
+// }

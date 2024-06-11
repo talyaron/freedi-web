@@ -1,26 +1,27 @@
 .connections {
     display: flex;
-    gap: 10vw;
+    gap: 5rem;
 
     &__img {
         width: 40vw;
         height: auto;
     }
-}
 
-.sectionTextBox {
-    margin: auto 0;
+    .sectionTextBox {
+        margin: auto 0;
+        padding-right: 5vw;
+    }
 }
 
 @media screen and (max-width: 500px) {
-    .connections {
-        flex-direction: column;
+    // .connections {
+    //     flex-direction: column;
 
-        &__img {
-            width: 60vw;
-        }
-    }
-    .sectionTextBox {
-        margin: 0 auto;
-    }
+    //     &__img {
+    //         width: 60vw;
+    //     }
+    // }
+    // .sectionTextBox {
+    //     margin: 0 auto;
+    // }
 }

@@ -12,15 +12,15 @@ export const features = [
         image: firstFeature,
         width: "50%",
         right: "20%",
-        top: "%",
+        top: "0%",
     },
     {
         title: "Simplify agreement processes with Freedi app",
         description: "Rating the options",
         image: secondFeature,
-        width: "55%",
+        width: "57%",
         right: "17%",
-        top: "3%",
+        top: "0%",
     },
     {
         title: "Streamline agreements effortlessly with Freedi app",

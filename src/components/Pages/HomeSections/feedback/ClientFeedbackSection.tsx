@@ -8,6 +8,8 @@ import CircleIcon from "@/components/icons/CircleIcon";
 import EclipseShape01 from "@/components/icons/EclipseShape01";
 import EclipseShape02 from "@/components/icons/EclipseShape02";
 
+import background from "@/assets/images/clientFeedbackShape.png";
+
 export default function ClientFeedbackSection() {
     const [selectedFeedback, setSelectedFeedback] = useState(avatarArr[0]);
     const [avatarArray, setAvatarArray] = useState(avatarArr);
@@ -30,13 +32,18 @@ export default function ClientFeedbackSection() {
 
     return (
         <section className="clientFeedback">
+            <Image
+                src={background}
+                alt="background-shape"
+                className="clientFeedback__backgroundShape"
+            />
             <h1 className="title">Our clients tell about us</h1>
             <p className="body">{selectedFeedback.feedback}</p>
             <div>
                 <p className="name">{selectedFeedback.name}</p>
                 <p className="position">{selectedFeedback.position}</p>
             </div>
-            <div className="clientFeedback__shapesBox shapeOne">
+            {/* <div className="clientFeedback__shapesBox shapeOne">
                 <EclipseShape01 size="2vw" />
             </div>
             <div className="clientFeedback__shapesBox shapeTwo">
@@ -44,7 +51,7 @@ export default function ClientFeedbackSection() {
             </div>
             <div className="clientFeedback__shapesBox shapeThree">
                 <CircleIcon size="1vw" />
-            </div>
+            </div> */}
 
             <div className="clientFeedback__clients">
                 {avatarArray.map((avatar) => (

@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "FreeDi",
-    description: "Building Bonds and Bridging Divides",
+    description: "Reaching Decisions Collaboratively",
 };
 
 export default function RootLayout({

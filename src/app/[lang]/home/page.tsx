@@ -30,12 +30,15 @@ export default async function Home({
 }>) {
     const langs = await getLanguageData();
 
-    const currentLang = langs[params.lang];
+    const currentLang = langs[params.lang] || "en";
 
-    const direction = params.lang === "he" ? "rtl" : "ltr";
+    const direction =
+        params.lang === "he" || params.lang === "ar" ? "rtl" : "ltr";
+
+        const isHebrew = params.lang === "he";
 
     return (
-        <main className="main">
+        <main className={isHebrew?"main he":"main en"}>
             <Image
                 alt="Hero-Background"
                 src={heroBg}

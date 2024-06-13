@@ -21,7 +21,7 @@ export default function Header({
                     {currentLang["Freedi fosters community well-being"]}
                 </h2>
                 <p className="paragraph">
-                    {currentLang["Building Bonds and Bridging Divides"]}
+                    {currentLang["Reaching Decisions Collaboratively"]}
                 </p>
             </div>
             <Image

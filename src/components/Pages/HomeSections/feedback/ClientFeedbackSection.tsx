@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import "./clientFeedbackStyle.scss";
 import Image from "next/image";
 import { Avatar, avatarArr } from "./data";
-import CircleIcon from "@/components/icons/CircleIcon";
-import EclipseShape01 from "@/components/icons/EclipseShape01";
-import EclipseShape02 from "@/components/icons/EclipseShape02";
+// import CircleIcon from "@/components/icons/CircleIcon";
+// import EclipseShape01 from "@/components/icons/EclipseShape01";
+// import EclipseShape02 from "@/components/icons/EclipseShape02";
 
 import background from "@/assets/images/clientFeedbackShape.png";
 

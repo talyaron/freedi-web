@@ -8,7 +8,7 @@ import { Avatar, avatarArr } from "./data";
 // import EclipseShape01 from "@/components/icons/EclipseShape01";
 // import EclipseShape02 from "@/components/icons/EclipseShape02";
 
-import background from "@/assets/images/clientFeedbackShape.png";
+import background from "../../../../assets/Images/clientFeedbackShape.png";
 
 export default function ClientFeedbackSection() {
     const [selectedFeedback, setSelectedFeedback] = useState(avatarArr[0]);

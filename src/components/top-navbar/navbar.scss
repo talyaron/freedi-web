@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0.5rem 2rem;
+    padding: 1.4rem 1.4rem;
     background-color: #5d98f1;
 
     &__languages {
@@ -11,16 +11,25 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-top: 0.3rem;
+        gap: 0.3rem;
         &__flag {
             transition: all 0.5s ease-in-out;
             position: absolute;
-            width: auto;
-            height: auto;
             background-color: transparent;
             right: 0;
             &--current {
                 position: relative;
                 background-color: transparent;
+                height: 1.2rem;
+                width: 1.2rem;
+            }
+        }
+
+        &__ArrowDownIcon{
+            &--button{
+                border: none;
+                background-color: initial;
             }
         }
     }

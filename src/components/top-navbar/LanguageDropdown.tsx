@@ -56,8 +56,8 @@ export default function LanguageDropdown({ lang }: Readonly<{ lang: string }>) {
                         key={lang.lang.toString()}
                         onClick={() => handleSetLang(lang)}
                         style={{
-                            top: isOpen ? (i + 1) * 2 + "rem" : i + 1.3 + "rem",
-                            left: isOpen? (i + 1.3) + "rem" : i + 1.3 + "rem" ,
+                            top: isOpen ? (i + 1) * 2 + "rem" : i + 1 + "rem",
+                            right: isOpen ? (i + 1) * 1 + "rem" : i + 1 + "rem",
                             zIndex: isOpen ? 1 : -1,
                             opacity: isOpen ? 1 : 0,
                         }}

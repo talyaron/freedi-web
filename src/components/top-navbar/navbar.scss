@@ -4,7 +4,7 @@
     justify-content: space-around;
     align-items: center;
     padding: 1.4rem 1.4rem;
-    background-color: #5d98f1;
+    background-color: initial;
 
     &__languages {
         position: relative;
@@ -23,7 +23,6 @@
                 background-color: transparent;
                 height: 1.2rem;
                 width: 1.2rem;
-                cursor: default;
             }
         }
 

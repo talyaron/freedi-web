@@ -19,7 +19,13 @@ import ContactPhoneIcon from "@/components/icons/ContactPhoneIcon"
 import ContactEmailIcon from "@/components/icons/ContactEmailIcon";
 import ArrowUpIcon from "@/components/icons/ArrowUpIcon";
 
-export default function HomeFooter() {
+export default function HomeFooter({
+    currentLang,
+    direction,
+}: Readonly<{
+    currentLang: Record<string, string>;
+    direction: "rtl" | "ltr";
+}>) {
 
     return (
         <div className="footer">
@@ -38,8 +44,14 @@ export default function HomeFooter() {
                     </div>
                     <div className="footer__contactDetails__email">
                         <ContactEmailIcon />
-                        <div className="footer__contactDetails__text">
-                            <p >Contact via Email</p>
+                        <div className="footer__contactDetails__text" style={{ direction }}>
+                            <p>
+                                {
+                                    currentLang[
+                                    "Contact via Email"
+                                    ]
+                                }
+                            </p>
                             <p>tal.yaron@delib.org</p>
                         </div>
                     </div>

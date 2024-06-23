@@ -78,7 +78,7 @@ export default async function Home({
                     currentLang={currentLang}
                     direction={direction}
                 />
-                
+
                 <TeamworkSection
                     currentLang={currentLang}
                     direction={direction}

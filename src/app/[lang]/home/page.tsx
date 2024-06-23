@@ -18,6 +18,7 @@ import ClientFeedbackSection from "@/components/Pages/HomeSections/feedback/Clie
 import AccessTodaySection from "@/components/Pages/HomeSections/join-today/AccessTodaySection";
 import TeamworkSection from "@/components/Pages/HomeSections/teamwork/TeamworkSection";
 import HomeFooter from "@/components/Pages/HomeSections/footer/HomeFooter";
+import HeroSection from "@/components/Pages/HomeSections/heroSection/HeroSection";
 
 // Helpers
 import { getLanguageData } from "@/helpers/languages";
@@ -35,10 +36,10 @@ export default async function Home({
     const direction =
         params.lang === "he" || params.lang === "ar" ? "rtl" : "ltr";
 
-        const isHebrew = params.lang === "he";
+    const isHebrew = params.lang === "he";
 
     return (
-        <main className={isHebrew?"main he":"main en"}>
+        <main className={isHebrew ? "main he" : "main en"}>
             <Image
                 alt="Hero-Background"
                 src={heroBg}
@@ -77,14 +78,17 @@ export default async function Home({
                     currentLang={currentLang}
                     direction={direction}
                 />
-
+                
                 <TeamworkSection
                     currentLang={currentLang}
                     direction={direction}
                 />
             </div>
 
-            <HomeFooter />
+            <HomeFooter
+                currentLang={currentLang}
+                direction={direction}
+            />
         </main>
     );
 }

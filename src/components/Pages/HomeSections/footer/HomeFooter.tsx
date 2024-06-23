@@ -39,7 +39,7 @@ export default function HomeFooter() {
                     <div className="footer__contactDetails__email">
                         <ContactEmailIcon />
                         <div className="footer__contactDetails__text">
-                            <p>Contact via Email</p>
+                            <p >Contact via Email</p>
                             <p>tal.yaron@delib.org</p>
                         </div>
                     </div>

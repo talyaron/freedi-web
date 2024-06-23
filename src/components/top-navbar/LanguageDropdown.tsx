@@ -44,6 +44,7 @@ export default function LanguageDropdown({ lang }: Readonly<{ lang: string }>) {
         <div className="navbar__languages">
             <button
                 className="navbar__languages__flag--current"
+                onClick={() => setIsOpen((prev) => !prev)}
             >
                 {currentFlag?.flag}
             </button>

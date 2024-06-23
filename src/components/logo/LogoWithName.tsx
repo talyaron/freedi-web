@@ -5,6 +5,7 @@ import LogoIcon from "../icons/LogoIcon";
 
 import "./logoStyle.scss";
 import { useTranslate } from "@/hooks/useTranslate";
+import FreediLogo from "../icons/FreediIcon";
 
 interface Props {
     size?: string;
@@ -19,8 +20,10 @@ export default function LogoWithName({
 
     return (
         <div className="logoBox">
-            <LogoIcon size={"2.5rem"} color={color} />
-            <p className="logoBox__name">{t("Freedi")}</p>
+            <LogoIcon size={"1.9rem"} color={color} />
+            <FreediLogo height="1.9rem" width="4.1rem" />
         </div>
     );
 }
+
+// 25 83

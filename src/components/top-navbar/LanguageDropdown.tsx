@@ -3,8 +3,9 @@
 import React, { useState } from "react";
 import UsaFlagIcon from "../icons/UsaFlagIcon";
 import IsraelFlagIcon from "../icons/IsraelFlagIcon";
+import ArrowDownIcon from "../icons/ArrowDownIcon";
 
-const flagSize = "1.5rem";
+const flagSize = "1.2rem";
 
 export default function LanguageDropdown({ lang }: Readonly<{ lang: string }>) {
     const flagArr = [
@@ -43,10 +44,10 @@ export default function LanguageDropdown({ lang }: Readonly<{ lang: string }>) {
         <div className="navbar__languages">
             <button
                 className="navbar__languages__flag--current"
-                onClick={() => setIsOpen((prev) => !prev)}
             >
                 {currentFlag?.flag}
             </button>
+            <ArrowDownIcon height="0.7rem" width="0.7rem" onClick={() => setIsOpen((prev) => !prev)}/>
             {flagArr
                 .filter((x) => x.lang !== lang)
                 .map((lang, i) => (
@@ -55,7 +56,8 @@ export default function LanguageDropdown({ lang }: Readonly<{ lang: string }>) {
                         key={lang.lang.toString()}
                         onClick={() => handleSetLang(lang)}
                         style={{
-                            top: isOpen ? (i + 1) * 2 + "rem" : i + 1 + "rem",
+                            top: isOpen ? (i + 1) * 2 + "rem" : i + 1.3 + "rem",
+                            left: isOpen? (i + 1.3) + "rem" : i + 1.3 + "rem" ,
                             zIndex: isOpen ? 1 : -1,
                             opacity: isOpen ? 1 : 0,
                         }}

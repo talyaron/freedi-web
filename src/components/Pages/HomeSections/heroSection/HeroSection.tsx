@@ -6,7 +6,7 @@ import "./heroSection.scss"
 import heroSectionImg from "@/assets/Images/HeroSectionImg.png"
 
 //Custom Components
-import ArrowDownIcon from '@/components/icons/ArrowDownIcon'
+import ArrowDownIcon2 from '@/components/icons/ArrowDownIcon2'
 import ContactPhoneBlueIcon from '@/components/icons/ContactPhoneBlueIcon'
 
 function HeroSection({
@@ -25,7 +25,7 @@ function HeroSection({
                         <p>Building Bonds and Bridging Divides</p>
                     </div>
                     <div className="heroSection__centerArea__leftSideContent__icons">
-                        <ArrowDownIcon />
+                        <ArrowDownIcon2 />
                         <div className="heroSection__centerArea__leftSideContent__icons__phone">
                             <ContactPhoneBlueIcon />
                             <div className="heroSection__centerArea__leftSideContent__icons__phone__text">

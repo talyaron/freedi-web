@@ -26,6 +26,7 @@ export default function HomeFooter({
     currentLang: Record<string, string>;
     direction: "rtl" | "ltr";
 }>) {
+    console.log(currentLang);
 
     return (
         <div className="footer">
@@ -45,13 +46,7 @@ export default function HomeFooter({
                     <div className="footer__contactDetails__email">
                         <ContactEmailIcon />
                         <div className="footer__contactDetails__text" style={{ direction }}>
-                            <p>
-                                {
-                                    currentLang[
-                                    "Contact via Email"
-                                    ]
-                                }
-                            </p>
+                            <p>Contact via Email</p>
                             <p>tal.yaron@delib.org</p>
                         </div>
                     </div>

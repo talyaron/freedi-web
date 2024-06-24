@@ -85,6 +85,10 @@ export default async function Home({
                 />
             </div>
 
+            <HeroSection
+                currentLang={currentLang}
+                direction={direction} />
+
             <HomeFooter
                 currentLang={currentLang}
                 direction={direction}

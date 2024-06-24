@@ -1,0 +1,76 @@
+$ColorTextHeadline: #232f4a;
+$ColorBodyText: #57688f;
+$ColorText: #81a0d3;
+
+.heroSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__centerArea {
+        width: 65vw;
+        display: flex;
+
+        &__leftSideContent {
+            margin-top: 6rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+
+            &__title {
+                h1 {
+                    font-weight: 600;
+                    color: $ColorTextHeadline;
+                    font-size: 3rem;
+                    line-height: 3.5rem;
+                    margin-bottom: 0.5rem;
+                }
+
+                p {
+                    color: $ColorBodyText;
+                }
+            }
+            &__icons {
+                display: flex;
+                gap: 1.5rem;
+                align-items: center;
+
+                &__phone {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    &__text {
+                        font-weight: 300;
+                        font-size: 0.8rem;
+                        line-height: 1.1rem;
+                        color: $ColorText;
+                    }
+                }
+            }
+        }
+    }
+    &__bottomArea {
+        margin-top: 10rem;
+
+        ul {
+            display: flex;
+            gap: 2.5rem;
+            color: $ColorText;
+
+            li {
+                position: relative;
+                padding-left: 1rem;
+
+                &::before {
+                    content: "•";
+                    position: absolute;
+                    left: 0;
+                    color: $ColorText;
+                    font-size: 1.4rem;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}

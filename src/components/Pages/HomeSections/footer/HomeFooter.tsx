@@ -1,20 +1,9 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-
-import "./footerStyle.scss";
-
-// Images
-import backgroundShape from "@/assets/Images/Background shape 01.png";
-import backgroundShape2 from "@/assets/Images/Backgroun shape 03.png";
-import nature from "@/assets/Images/nature.png";
-import flower2 from "@/assets/Images/flower02.png";
-
+import "./HomeFooterStyle.scss";
 
 // Custom Components
-import PageLinks from "@/components/top-navbar/PageLinks";
-import LogoWithName from "@/components/logo/LogoWithName";
 import ContactPhoneIcon from "@/components/icons/ContactPhoneIcon"
 import ContactEmailIcon from "@/components/icons/ContactEmailIcon";
 import ArrowUpIcon from "@/components/icons/ArrowUpIcon";
@@ -45,7 +34,7 @@ export default function HomeFooter({
                     </div>
                     <div className="footer__contactDetails__email">
                         <ContactEmailIcon />
-                        <div className="footer__contactDetails__text" style={{ direction }}>
+                        <div className="footer__contactDetails__text">
                             <p>Contact via Email</p>
                             <p>tal.yaron@delib.org</p>
                         </div>
@@ -66,6 +55,17 @@ export default function HomeFooter({
     );
 }
 
+
+// import Image from "next/image";
+// import PageLinks from "@/components/top-navbar/PageLinks";
+// import LogoWithName from "@/components/logo/LogoWithName";
+
+// Images
+
+// import backgroundShape from "@/assets/Images/Background shape 01.png";
+// import backgroundShape2 from "@/assets/Images/Backgroun shape 03.png";
+// import nature from "@/assets/Images/nature.png";
+// import flower2 from "@/assets/Images/flower02.png";
 
 {/* <Image
                 className="footer__backgroundShapeLeft"

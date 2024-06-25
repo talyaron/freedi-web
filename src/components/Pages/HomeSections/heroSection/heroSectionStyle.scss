@@ -49,7 +49,14 @@ $ColorText: #81a0d3;
                 }
             }
         }
+        &__rightSideContent {
+            .heroSectionImg {
+                width: 38rem;
+                height: 35rem;
+            }
+        }
     }
+
     &__bottomArea {
         margin-top: 10rem;
 

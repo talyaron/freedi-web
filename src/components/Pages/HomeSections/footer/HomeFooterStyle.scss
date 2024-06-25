@@ -1,15 +1,22 @@
-$BackgroundColor: #81a0d3;
+$FooterBackgroundColor: #81a0d3;
+$breakpoint-xxlarge: 1440px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-large: 1024px;
+$breakpoint-medium: 768px;
+$breakpoint-small: 576px;
+$breakpoint-xsmall: 375px;
+
 .footer {
     width: 100%;
-    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    background-color: $BackgroundColor;
+    background-color: $FooterBackgroundColor;
     gap: 2rem;
 
     &__mainArea {
+        width: 69rem;
         margin-top: 6rem;
         display: flex;
         flex-direction: column;
@@ -17,8 +24,8 @@ $BackgroundColor: #81a0d3;
     }
 
     &__topText {
-        font-size: 1.5rem;
-        width: 20vw;
+        font-size: 1.6rem;
+        width: 30%;
         color: rgb(255, 255, 255);
     }
 
@@ -48,14 +55,14 @@ $BackgroundColor: #81a0d3;
 
     &__bottomText {
         font-weight: 610;
-        font-size: 5rem;
+        font-size: 5.4rem;
         color: rgb(255, 255, 255);
     }
 
     &__bottomArea {
         display: flex;
         justify-content: flex-end;
-        width: 66vw;
+        width: 73%;
         margin-bottom: 2rem;
     }
 
@@ -67,6 +74,74 @@ $BackgroundColor: #81a0d3;
         display: flex;
         align-items: center;
     }
+}
+
+@media (max-width: $breakpoint-xsmall) {
+}
+
+// Small screens (up to 576px)
+@media (max-width: $breakpoint-small) {
+}
+
+// Medium screens (up to 768px)
+@media (max-width: $breakpoint-medium) {
+}
+
+// Large screens (up to 1024px)
+@media (max-width: $breakpoint-large) {
+    .footer {
+        &__mainArea {
+            width: 36.5rem;
+        }
+        &__topText {
+            width: 35%;
+        }
+        &__bottomText {
+            font-size: 4.2rem;
+        }
+        &__bottomArea {
+            width: 80%;
+        }
+    }
+}
+
+// Extra large screens (up to 1200px)
+@media (max-width: $breakpoint-xlarge) {
+    .footer {
+        &__mainArea {
+            width: 51rem;
+        }
+        &__topText {
+            width: 35%;
+        }
+        &__bottomText {
+            font-size: 4.2rem;
+        }
+        &__bottomArea {
+            width: 20%;
+        }
+    }
+}
+
+// Extra extra large screens (up to 1440px)
+@media (max-width: $breakpoint-xxlarge) {
+    .footer {
+        &__mainArea {
+            width: 56.75rem;
+        }
+        &__topText {
+            width: 35%;
+        }
+        &__bottomText {
+            font-size: 4.4rem;
+        }
+        &__bottomArea {
+            width: 71%;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-large) {
 }
 
 // .footer {

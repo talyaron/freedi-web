@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import "./heroSection.scss"
+import "./heroSectionStyle.scss"
 
 //Custom Images
 import heroSectionImg from "@/assets/Images/HeroSectionImg.png"
@@ -36,7 +36,7 @@ function HeroSection({
                     </div>
                 </div>
                 <div className="heroSection__centerArea__rightSideContent">
-                    <Image style={{ width: "38rem", height: "35rem" }} className="heroSectionImg" src={heroSectionImg} alt="Hero Section" />
+                    <Image className="heroSectionImg" src={heroSectionImg} alt="Hero Section" />
                 </div>
             </div>
             <div className="heroSection__bottomArea">

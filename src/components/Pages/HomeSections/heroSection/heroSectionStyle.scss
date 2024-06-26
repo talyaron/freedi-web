@@ -1,6 +1,11 @@
 $ColorTextHeadline: #232f4a;
 $ColorBodyText: #57688f;
 $ColorText: #81a0d3;
+$breakpoint-xxlarge: 1440px;
+$breakpoint-xlarge: 1201px;
+$breakpoint-large: 1024px;
+$breakpoint-medium: 769px;
+$breakpoint-small: 576px;
 
 .heroSection {
     display: flex;
@@ -8,8 +13,9 @@ $ColorText: #81a0d3;
     align-items: center;
 
     &__centerArea {
-        width: 65vw;
+        width: 70rem;
         display: flex;
+        justify-content: center;
 
         &__leftSideContent {
             margin-top: 6rem;
@@ -21,12 +27,14 @@ $ColorText: #81a0d3;
                 h1 {
                     font-weight: 600;
                     color: $ColorTextHeadline;
-                    font-size: 3rem;
-                    line-height: 3.5rem;
+                    font-size: 3.75rem;
+                    line-height: 4.6rem;
                     margin-bottom: 0.5rem;
+                    width: 25rem;
                 }
 
                 p {
+                    font-size: 1.1rem;
                     color: $ColorBodyText;
                 }
             }
@@ -51,15 +59,15 @@ $ColorText: #81a0d3;
         }
         &__rightSideContent {
             .heroSectionImg {
-                width: 38rem;
-                height: 35rem;
+                width: 40rem;
+                height: 37rem;
             }
         }
     }
 
     &__bottomArea {
         margin-top: 10rem;
-
+        
         ul {
             display: flex;
             gap: 2.5rem;
@@ -76,6 +84,234 @@ $ColorText: #81a0d3;
                     color: $ColorText;
                     font-size: 1.4rem;
                     line-height: 1;
+                }
+            }
+        }
+    }
+}
+
+// Small screens (up to 576px)
+@media (max-width: $breakpoint-small) {
+    .heroSection {
+        &__centerArea {
+            width: 36rem;
+
+            &__leftSideContent {
+                height: 8.4rem;
+
+                &__title {
+                    position: relative;
+                    left: 12rem;
+
+                    h1 {
+                        width: 28rem;
+                        font-size: 2.25rem;
+                        line-height: 3.1rem;
+                    }
+                    p {
+                    }
+                }
+                &__icons {
+                    position: relative;
+                    top: 23rem;
+                    left: 14.5rem;
+                    gap: 1.8rem;
+                    width: 50%;
+                    svg {
+                        width: 2rem;
+                    }
+
+                    &__phone {
+                        &__text {
+                        }
+                    }
+                }
+            }
+            &__rightSideContent {
+                position: relative;
+                top: 16rem;
+                right: 14rem;
+                .heroSectionImg {
+                    width: 26rem;
+                    height: 24rem;
+                }
+            }
+        }
+        &__bottomArea {
+            margin-top: 25rem;
+
+            ul {
+                width: 34rem;
+                li {
+                }
+            }
+        }
+    }
+}
+
+// Medium screens (up to 768px)
+@media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+    .heroSection {
+        &__centerArea {
+            width: 30rem;
+
+            &__leftSideContent {
+                height: 8.4rem;
+
+                &__title {
+                    position: relative;
+                    left: 16rem;
+
+                    h1 {
+                        width: 36.25rem;
+                        font-size: 2.5rem;
+                        line-height: 3.1rem;
+                    }
+                    p {
+                    }
+                }
+                &__icons {
+                    position: relative;
+                    top: 23rem;
+                    left: 21rem;
+                    gap: 1.8rem;
+                    width: 50%;
+                    svg {
+                        width: 2rem;
+                    }
+
+                    &__phone {
+                        &__text {
+                        }
+                    }
+                }
+            }
+            &__rightSideContent {
+                position: relative;
+                top: 16rem;
+                right: 17rem;
+                .heroSectionImg {
+                    width: 27rem;
+                    height: 24rem;
+                }
+            }
+        }
+        &__bottomArea {
+            margin-top: 25rem;
+            width: 35rem;
+            ul {
+                li {
+                }
+            }
+        }
+    }
+}
+
+// Large screens (up to 1024px)
+@media screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+    .heroSection {
+        &__centerArea {
+            width: 46rem;
+            &__leftSideContent {
+                width: 17rem;
+                height: 19rem;
+
+                &__title {
+                    h1 {
+                        width: 26.25rem;
+                        font-size: 3rem;
+                        line-height: 3.75rem;
+                    }
+                    p {
+                    }
+                }
+            }
+            &__rightSideContent {
+                .heroSectionImg {
+                    position: relative;
+                    top: 18rem;
+                    right: 1rem;
+                    width: 24rem;
+                    height: 22rem;
+                }
+            }
+        }
+        &__bottomArea {
+            margin-top: 21rem;
+
+            ul {
+                li {
+                }
+            }
+        }
+    }
+}
+
+// Extra large screens (up to 1200px)
+@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-xlarge) {
+    .heroSection {
+        &__centerArea {
+            width: 54.75rem;
+            &__leftSideContent {
+                width: 20.25rem;
+
+                &__title {
+                    h1 {
+                        width: 26.25rem;
+                        font-size: 3.25rem;
+                    }
+                    p {
+                    }
+                }
+            }
+            &__rightSideContent {
+                .heroSectionImg {
+                    position: relative;
+                    top: 17rem;
+                    right: 2rem;
+                    width: 29rem;
+                    height: 27rem;
+                }
+            }
+        }
+        &__bottomArea {
+            margin-top: 22rem;
+
+            ul {
+                li {
+                }
+            }
+        }
+    }
+}
+
+// Extra extra large screens (up to 1440px)
+@media screen and (min-width: $breakpoint-xlarge) and (max-width: $breakpoint-xxlarge) {
+    .heroSection {
+        &__centerArea {
+            width: 65rem;
+            &__leftSideContent {
+                width: 20rem;
+
+                &__title {
+                    h1 {
+                        width: 25rem;
+                        font-size: 3.25rem;
+                    }
+                    p {
+                    }
+                }
+            }
+            &__rightSideContent {
+                .heroSectionImg {
+                    width: 33rem;
+                    height: 32rem;
+                }
+            }
+        }
+        &__bottomArea {
+            ul {
+                li {
                 }
             }
         }

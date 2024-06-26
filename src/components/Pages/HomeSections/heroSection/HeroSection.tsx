@@ -8,6 +8,7 @@ import heroSectionImg from "@/assets/Images/HeroSectionImg.png"
 //Custom Components
 import ArrowDownIcon2 from '@/components/icons/ArrowDownIcon2'
 import ContactPhoneBlueIcon from '@/components/icons/ContactPhoneBlueIcon'
+import RunningBanner from './RunningBanner'
 
 function HeroSection({
     currentLang,
@@ -40,10 +41,7 @@ function HeroSection({
                 </div>
             </div>
             <div className="heroSection__bottomArea">
-                <ul>
-                    <li>Consensus reaching technology</li>
-                    <li>Everybody can evaluate the different options</li>
-                </ul>
+                <RunningBanner />
             </div>
         </div>
     )

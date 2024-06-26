@@ -2,7 +2,7 @@ $FooterBackgroundColor: #81a0d3;
 $breakpoint-xxlarge: 1440px;
 $breakpoint-xlarge: 1200px;
 $breakpoint-large: 1024px;
-$breakpoint-medium: 768px;
+$breakpoint-medium: 769px;
 $breakpoint-small: 576px;
 
 .footer {
@@ -79,13 +79,13 @@ $breakpoint-small: 576px;
 @media (max-width: $breakpoint-small) {
     .footer {
         &__mainArea {
-            width: 37rem;
+            width: 35rem;
         }
         &__topText {
-            width: 50%;
+            width: 55%;
         }
         &__bottomText {
-            font-size: 2.9rem;
+            font-size: 2.7rem;
         }
         &__bottomArea {
             width: 80%;
@@ -121,13 +121,13 @@ $breakpoint-small: 576px;
 @media screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
     .footer {
         &__mainArea {
-            width: 47.5rem;
+            width: 46.5rem;
         }
         &__topText {
             width: 40%;
         }
         &__bottomText {
-            font-size: 3.7rem;
+            font-size: 3.6rem;
         }
         &__bottomArea {
             width: 76%;

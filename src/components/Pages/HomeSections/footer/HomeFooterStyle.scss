@@ -4,7 +4,6 @@ $breakpoint-xlarge: 1200px;
 $breakpoint-large: 1024px;
 $breakpoint-medium: 768px;
 $breakpoint-small: 576px;
-$breakpoint-xsmall: 375px;
 
 .footer {
     width: 100%;
@@ -17,7 +16,7 @@ $breakpoint-xsmall: 375px;
 
     &__mainArea {
         width: 69rem;
-        margin-top: 6rem;
+        margin-top: 4rem;
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -76,37 +75,71 @@ $breakpoint-xsmall: 375px;
     }
 }
 
-@media (max-width: $breakpoint-xsmall) {
-}
-
 // Small screens (up to 576px)
 @media (max-width: $breakpoint-small) {
-}
-
-// Medium screens (up to 768px)
-@media (max-width: $breakpoint-medium) {
-}
-
-// Large screens (up to 1024px)
-@media (max-width: $breakpoint-large) {
     .footer {
         &__mainArea {
-            width: 36.5rem;
+            width: 37rem;
         }
         &__topText {
-            width: 35%;
+            width: 50%;
         }
         &__bottomText {
-            font-size: 4.2rem;
+            font-size: 2.9rem;
         }
         &__bottomArea {
             width: 80%;
+        }
+        &__arrowUp {
+            width: 2.5rem;
+        }
+    }
+}
+
+// Medium screens (up to 768px)
+@media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+    .footer {
+        &__mainArea {
+            width: 37rem;
+        }
+        &__topText {
+            width: 50%;
+        }
+        &__bottomText {
+            font-size: 2.9rem;
+        }
+        &__bottomArea {
+            width: 70%;
+        }
+        &__arrowUp {
+            width: 2rem;
+        }
+    }
+}
+
+// Large screens (up to 1024px)
+@media screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+    .footer {
+        &__mainArea {
+            width: 47.5rem;
+        }
+        &__topText {
+            width: 40%;
+        }
+        &__bottomText {
+            font-size: 3.7rem;
+        }
+        &__bottomArea {
+            width: 76%;
+        }
+        &__arrowUp {
+            width: 2rem;
         }
     }
 }
 
 // Extra large screens (up to 1200px)
-@media (max-width: $breakpoint-xlarge) {
+@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-xlarge) {
     .footer {
         &__mainArea {
             width: 51rem;
@@ -115,16 +148,16 @@ $breakpoint-xsmall: 375px;
             width: 35%;
         }
         &__bottomText {
-            font-size: 4.2rem;
+            font-size: 4rem;
         }
         &__bottomArea {
-            width: 20%;
+            width: 79%;
         }
     }
 }
 
 // Extra extra large screens (up to 1440px)
-@media (max-width: $breakpoint-xxlarge) {
+@media screen and (min-width: $breakpoint-xlarge) and (max-width: $breakpoint-xxlarge) {
     .footer {
         &__mainArea {
             width: 56.75rem;
@@ -139,9 +172,6 @@ $breakpoint-xsmall: 375px;
             width: 71%;
         }
     }
-}
-
-@media (max-width: $breakpoint-large) {
 }
 
 // .footer {

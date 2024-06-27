@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import "./heroSectionStyle.scss"
+import style from "./heroSectionStyle.module.scss"
+
 
 //Custom Images
 import heroSectionImg from "@/assets/Images/HeroSectionImg.png"
@@ -18,29 +19,29 @@ function HeroSection({
     direction: "rtl" | "ltr";
 }>) {
     return (
-        <div className="heroSection">
-            <div className="heroSection__centerArea">
-                <div className="heroSection__centerArea__leftSideContent">
-                    <div className="heroSection__centerArea__leftSideContent__title">
+        <div className={style.heroSection}>
+            <div className={style.heroSection__centerArea}>
+                <div className={style.heroSection__centerArea__leftSideContent}>
+                    <div className={style.heroSection__centerArea__leftSideContent__title}>
                         <h1>Genuine Agreement via Deliberation</h1>
                         <p>Building Bonds and Bridging Divides</p>
                     </div>
-                    <div className="heroSection__centerArea__leftSideContent__icons">
+                    <div className={style.heroSection__centerArea__leftSideContent__icons}>
                         <ArrowDownIcon2 />
-                        <div className="heroSection__centerArea__leftSideContent__icons__phone">
+                        <div className={style.heroSection__centerArea__leftSideContent__icons__phone}>
                             <ContactPhoneBlueIcon />
-                            <div className="heroSection__centerArea__leftSideContent__icons__phone__text">
+                            <div className={style.heroSection__centerArea__leftSideContent__icons__phone__text}>
                                 <p>Call us</p>
                                 <p>+972-52-607-9419</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="heroSection__centerArea__rightSideContent">
-                    <Image className="heroSectionImg" src={heroSectionImg} alt="Hero Section" />
+                <div className={style.heroSection__centerArea__rightSideContent}>
+                    <Image className={style.heroSectionImg} src={heroSectionImg} alt="Hero Section" />
                 </div>
             </div>
-            <div className="heroSection__bottomArea">
+            <div className={style.heroSection__runningBanner}>
                 <RunningBanner />
             </div>
         </div>

@@ -1,9 +1,8 @@
 import React from 'react'
-import "./runningBannerStyle.scss"
 
 function RunningBanner() {
     return (
-        <ul className='heroSection__bottomArea__runningBanner'>
+        <ul>
             <li>Consensus reaching technology</li>
             <li>Everybody can evaluate the different options</li>
             <li>Suites for all ages</li>

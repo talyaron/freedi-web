@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import "./HomeFooterStyle.scss";
+import style from "./HomeFooterStyle.module.scss";
 
 // Custom Components
 import ContactPhoneIcon from "@/components/icons/ContactPhoneIcon"
@@ -18,36 +18,36 @@ export default function HomeFooter({
     console.log(currentLang);
 
     return (
-        <div className="footer">
-            <div className="footer__mainArea">
-                <div className="footer__topText">
+        <div className={style.footer}>
+            <div className={style.footer__mainArea}>
+                <div className={style.footer__topText}>
                     <p>Together, we can build a better future for everyone</p>
                 </div>
-                <div className="footer__contactDetails">
-                    <div className="footer__contactDetails__call">
+                <div className={style.footer__contactDetails}>
+                    <div className={style.footer__contactDetails__call}>
                         <ContactPhoneIcon />
-                        <div className="footer__contactDetails__text">
+                        <div className={style.footer__contactDetails__text}>
                             <p>Call us</p>
                             <p>+972-52-607-9419</p>
                         </div>
 
                     </div>
-                    <div className="footer__contactDetails__email">
+                    <div className={style.footer__contactDetails__email}>
                         <ContactEmailIcon />
-                        <div className="footer__contactDetails__text">
+                        <div className={style.footer__contactDetails__text}>
                             <p>Contact via Email</p>
                             <p>tal.yaron@delib.org</p>
                         </div>
                     </div>
                 </div>
 
-                <div className="footer__bottomText">
+                <div className={style.footer__bottomText}>
                     <p>FreeDi Genuine Deliberation</p>
                 </div>
             </div>
             <hr />
-            <div className="footer__bottomArea">
-                <div className="footer__arrowUp">
+            <div className={style.footer__bottomArea}>
+                <div className={style.footer__arrowUp}>
                     <ArrowUpIcon />
                 </div>
             </div>

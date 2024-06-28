@@ -30,7 +30,7 @@ export default function VideoSection({
 
     if (!isClient) {
         return (
-            <div className={styles.loading}>Loading...</div>
+            <section className={styles.videoSection}></section>
         )
     }
 

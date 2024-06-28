@@ -34,7 +34,6 @@ export default function WhyUsSection({
     return (
         <LangContext.Provider value={{ currentLang, inSection: isVisible, itemRef:ref }}>
             <section
-                ref={ref}
                 className={isVisible ? "whyUs whyUsActive" : "whyUs"}
                 style={{ direction }}
             >

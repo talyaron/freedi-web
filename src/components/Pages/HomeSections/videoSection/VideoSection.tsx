@@ -16,7 +16,6 @@ export default function VideoSection({
     currentLang: Record<string, string>;
 }>) {
     const { width } = useWindowSizeFixed();
-    const [isClient, setIsClient] = useState(false);
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);
     
 
@@ -24,11 +23,7 @@ export default function VideoSection({
         setIsVideoPlaying(true);
     };
 
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-
-    if (!isClient) {
+    if (width == undefined) {
         return (
             <section className={styles.videoSection}></section>
         )

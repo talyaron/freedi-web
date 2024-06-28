@@ -1,0 +1,67 @@
+$ColorDarkText: #57688f;
+
+.whoAreWe {
+    width: 76.5rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    &__leftSection {
+        width: 29rem;
+        display: flex;
+        flex-direction: column;
+
+        &__top {
+            margin-top: 7rem;
+            display: flex;
+            flex-direction: column;
+            gap: 35rem;
+
+            &__title {
+                font-size: 3.75rem;
+                font-weight: 500;
+                color: var(--text-black);
+            }
+
+            &__description {
+                font-size: 2.2rem;
+                font-weight: 400;
+                line-height: 3rem;
+                color: var(--text-black);
+            }
+        }
+
+        &__bottom {
+            margin-top: 10rem;
+
+            &__imgArea {
+                margin-bottom: 10rem;
+                &__geometryImg {
+                    width: 24rem;
+                    height: 12rem;
+                }
+            }
+            &__paragraph {
+                width: 24rem;
+                p {
+                    margin-bottom: 1rem;
+                    color: $ColorDarkText;
+                    font-weight: 350;
+                    line-height: 1.8rem;
+                }
+            }
+        }
+    }
+
+    &__rightSection {
+        position: sticky;
+        top: -12rem;
+        height: fit-content;
+        align-self: flex-start;
+
+        &__img {
+            width: 47rem;
+            height: 67.5rem;
+        }
+    }
+}

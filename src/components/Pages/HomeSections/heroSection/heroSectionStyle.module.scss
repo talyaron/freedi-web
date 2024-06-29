@@ -41,6 +41,11 @@ $breakpoint-small: 576px;
                 gap: 1.5rem;
                 align-items: center;
 
+                svg {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+
                 &__phone {
                     display: flex;
                     align-items: center;
@@ -48,8 +53,8 @@ $breakpoint-small: 576px;
 
                     &__text {
                         font-weight: 300;
-                        font-size: 0.8rem;
-                        line-height: 1.1rem;
+                        font-size: 1rem;
+                        line-height: 1.4rem;
                         color: var(--notFound-btn);
                     }
                 }
@@ -109,7 +114,8 @@ $breakpoint-small: 576px;
 @media (max-width: $breakpoint-small) {
     .heroSection {
         &__centerArea {
-            width: 36rem;
+            margin-left: 8rem;
+            width: 21.5rem;
 
             &__leftSideContent {
                 height: 8.4rem;
@@ -130,6 +136,7 @@ $breakpoint-small: 576px;
                     left: 14.5rem;
                     gap: 1.8rem;
                     width: 50%;
+
                     svg {
                         width: 2rem;
                     }
@@ -138,7 +145,8 @@ $breakpoint-small: 576px;
             &__rightSideContent {
                 position: relative;
                 top: 16rem;
-                right: 14rem;
+                right: 18rem;
+
                 .heroSectionImg {
                     width: 26rem;
                     height: 24rem;
@@ -163,7 +171,7 @@ $breakpoint-small: 576px;
 }
 
 // Medium screens (up to 768px)
-@media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+@media screen and (min-width: $breakpoint-small) and (max-width: ($breakpoint-medium + 1)) {
     .heroSection {
         &__centerArea {
             width: 30rem;
@@ -184,9 +192,10 @@ $breakpoint-small: 576px;
                 &__icons {
                     position: relative;
                     top: 23rem;
-                    left: 21rem;
+                    left: 19rem;
                     gap: 1.8rem;
                     width: 50%;
+
                     svg {
                         width: 2rem;
                     }
@@ -195,7 +204,8 @@ $breakpoint-small: 576px;
             &__rightSideContent {
                 position: relative;
                 top: 16rem;
-                right: 17rem;
+                right: 18rem;
+
                 .heroSectionImg {
                     width: 27rem;
                     height: 24rem;
@@ -203,7 +213,7 @@ $breakpoint-small: 576px;
             }
         }
         &__runningBanner {
-            margin-top: 25rem;
+            margin-top: 21rem;
             width: 20rem;
             ul {
                 @keyframes running-banner-animation {
@@ -223,31 +233,46 @@ $breakpoint-small: 576px;
 @media screen and (min-width: ($breakpoint-medium  + 1)) and (max-width: $breakpoint-large) {
     .heroSection {
         &__centerArea {
-            width: 46rem;
+            width: 30rem;
+
             &__leftSideContent {
-                width: 17rem;
-                height: 19rem;
+                height: 8.4rem;
 
                 &__title {
+                    position: relative;
+                    left: 16rem;
+
                     h1 {
-                        width: 26.25rem;
-                        font-size: 3rem;
-                        line-height: 3.75rem;
+                        width: 36.25rem;
+                        font-size: 2.5rem;
+                        line-height: 3.1rem;
+                    }
+                }
+                &__icons {
+                    position: relative;
+                    top: 23rem;
+                    left: 20rem;
+                    gap: 1.8rem;
+                    width: 50%;
+
+                    svg {
+                        width: 2rem;
                     }
                 }
             }
             &__rightSideContent {
+                position: relative;
+                top: 16rem;
+                right: 18rem;
+
                 .heroSectionImg {
-                    position: relative;
-                    top: 18rem;
-                    right: 1rem;
-                    width: 24rem;
-                    height: 22rem;
+                    width: 27rem;
+                    height: 24rem;
                 }
             }
         }
         &__runningBanner {
-            margin-top: 20rem;
+            margin-top: 27rem;
             margin-bottom: -2rem;
             width: 33rem;
             ul {
@@ -278,12 +303,15 @@ $breakpoint-small: 576px;
                         font-size: 3.25rem;
                     }
                 }
+                &__icons {
+                    gap: 2.2rem;
+                }
             }
             &__rightSideContent {
                 .heroSectionImg {
                     position: relative;
-                    top: 17rem;
-                    right: 2rem;
+                    top: 18rem;
+                    left: 0.5rem;
                     width: 29rem;
                     height: 27rem;
                 }
@@ -323,13 +351,16 @@ $breakpoint-small: 576px;
             }
             &__rightSideContent {
                 .heroSectionImg {
+                    position: relative;
+                    top: 13rem;
+                    left: 1rem;
                     width: 33rem;
                     height: 32rem;
                 }
             }
         }
         &__runningBanner {
-            margin-top: 10rem;
+            margin-top: 20rem;
             margin-bottom: -2rem;
             width: 33rem;
             ul {

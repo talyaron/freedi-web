@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, createContext, useRef } from "react";
+import React, { useEffect, createContext, useRef, useMemo } from "react";
 
 import "./whyUsStyle.scss";
 
@@ -30,9 +30,10 @@ export default function WhyUsSection({
         }
     }, [isVisible]);
 
+    const contextValue = useMemo(() => ({ currentLang, isVisible, itemRef: ref }), [currentLang, isVisible]);
 
     return (
-        <LangContext.Provider value={{ currentLang, inSection: isVisible, itemRef:ref }}>
+        <LangContext.Provider value={contextValue}>
             <section
                 className={isVisible ? "whyUs whyUsActive" : "whyUs"}
                 style={{ direction }}

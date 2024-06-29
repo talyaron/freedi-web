@@ -49,17 +49,15 @@ $breakpoint-xsmall: 375px;
     &__cardSection {
         position: relative;
         height: 31.2rem;
-        width: 50.8rem;
-        margin-top: 4rem;
+        width: 48.5995rem;
+        margin: 4rem 5rem 0rem 5rem;
         overflow-y: hidden;
         mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
-        margin-left: 5rem;
 
         &__carouselWrapper {
             display: flex;
             gap: 2rem;
             height: 87.9375rem;
-            margin-top: -37.375rem;
             width: 48.5995rem;
             margin-inline: auto;
 
@@ -179,13 +177,14 @@ $breakpoint-xsmall: 375px;
 
         &--title {
             font-size: 2rem;
-            padding-left: 4rem;
+            padding-inline: 4rem;
         }
 
         &__cardSection {
             width: 24rem;
             height: 39.875rem;
             margin-left: 0;
+            margin-right: 0;
 
             &__carouselWrapper {
                 width: 21.1875rem;
@@ -238,13 +237,15 @@ $breakpoint-xsmall: 375px;
 
         &--title {
             font-size: 2rem;
-            padding-left: 4rem;
+            padding-inline: 4rem;
         }
 
         &__cardSection {
             width: 24rem;
             height: 39.875rem;
             margin-left: 0;
+            margin-right: 0;
+
 
             &__carouselWrapper {
                 width: 21.1875rem;
@@ -298,18 +299,21 @@ $breakpoint-xsmall: 375px;
 
         &--title {
             font-size: 2.25rem;
-            padding-left: 3rem;
+            padding-inline: 3rem;
         }
 
         &__cardSection {
             width: 35.9375rem;
             margin-left: 0;
+            margin-right: 0;
 
 
             &__carouselWrapper {
                 width: 30.5rem;
                 margin-inline: auto;
                 gap: 2rem;
+                margin-top: -37.375rem;
+
 
                 &__carousel__firstVertical,
                 &__carousel__secondVertical,
@@ -378,19 +382,22 @@ $breakpoint-xsmall: 375px;
 
         &--title {
             font-size: 2.25rem;
-            padding-left: 3rem;
+            padding-inline: 3rem;
         }
 
         &__cardSection {
             width: 35.9375rem;
             margin-top: 8rem;
             margin-left: 0;
+            margin-right: 0;
 
 
             &__carouselWrapper {
                 width: 30.5rem;
                 margin-inline: auto;
                 gap: 2rem;
+                margin-top: -37.375rem;
+
 
                 &__carousel__firstVertical,
                 &__carousel__secondVertical,
@@ -461,6 +468,7 @@ $breakpoint-xsmall: 375px;
             width: 50rem;
             margin-top: 8rem;
             margin-left: 0;
+            margin-right: 0;
 
 
             &__carouselWrapper {
@@ -489,6 +497,7 @@ $breakpoint-xsmall: 375px;
             width: 50rem;
             margin-top: 8rem;
             margin-left: 0;
+            margin-right: 0;
 
 
             &__carouselWrapper {

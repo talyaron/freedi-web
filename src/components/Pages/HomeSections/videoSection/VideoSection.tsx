@@ -12,8 +12,10 @@ import useWindowSizeFixed from "@/hooks/useWindowSizeFixed";
 
 export default function VideoSection({
     currentLang,
+    direction,
 }: Readonly<{
     currentLang: Record<string, string>;
+    direction: "rtl" | "ltr";
 }>) {
     const { width } = useWindowSizeFixed();
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -30,9 +32,8 @@ export default function VideoSection({
     }
 
     return (
-        <section className={styles.videoSection}>
+        <section className={styles.videoSection} style={{direction}}>
             {width! > 1200 ? (
-                <>
                     <div
                         className={styles.videoWrapper}
                     >
@@ -96,7 +97,6 @@ export default function VideoSection({
                             className={styles.videoPeopleImage}
                         />
                     </div>
-                </>
             ) : (
                 <>
                     <div className={styles.textWrapper}>

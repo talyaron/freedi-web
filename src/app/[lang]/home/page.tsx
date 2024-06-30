@@ -70,7 +70,7 @@ export default async function Home({
                     direction={direction}
                 />
 
-                <VideoSection currentLang={currentLang} />
+                <VideoSection currentLang={currentLang} direction={direction}/>
 
                 <ClientFeedbackSection />
 

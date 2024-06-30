@@ -1,4 +1,6 @@
 $ColorDarkText: #57688f;
+$ColorFree: #3851d3;
+$ColorDi: #3db7b7;
 $breakpoint-xxlarge: 1440px;
 $breakpoint-xlarge: 1200px;
 $breakpoint-large: 1024px;
@@ -43,17 +45,28 @@ $breakpoint-xsmall: 375px;
             &__imgArea {
                 margin-bottom: 10rem;
                 &__geometryImg {
-                    width: 24rem;
-                    height: 12rem;
+                    width: 29.2rem;
+                    height: 13rem;
                 }
             }
             &__paragraph {
-                width: 24rem;
+                width: 29.2rem;
                 p {
                     margin-bottom: 1rem;
                     color: $ColorDarkText;
                     font-weight: 350;
                     line-height: 1.8rem;
+                    font-size: 1.25rem;
+                }
+
+                span {
+                    font-weight: 450;
+                }
+                .free {
+                    color: $ColorFree;
+                }
+                .di {
+                    color: $ColorDi;
                 }
             }
         }
@@ -74,28 +87,20 @@ $breakpoint-xsmall: 375px;
 
 // Small screens (up to 576px)
 @media (min-width: $breakpoint-xsmall) and (max-width: $breakpoint-small) {
-}
-
-// Medium screens (up to 768px)
-@media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
     .whoAreWe {
-        width: 36.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        &__leftSection {
-            width: 25rem;
+        width: 21.5rem;
 
+        &__leftSection {
             &__top {
                 margin-top: 7rem;
-                gap: 35rem;
+                gap: 39rem;
 
                 &__title {
                     font-size: 2.5rem;
                 }
 
                 &__description {
+                    width: 25rem;
                     font-size: 1.8rem;
                     line-height: 2.5rem;
                 }
@@ -108,12 +113,12 @@ $breakpoint-xsmall: 375px;
                     margin-bottom: 10rem;
 
                     &__geometryImg {
-                        width: 23rem;
-                        height: 10rem;
+                        width: 35rem;
+                        height: 15rem;
                     }
                 }
                 &__paragraph {
-                    width: 24rem;
+                    width: 25rem;
 
                     p {
                         margin-bottom: 1rem;
@@ -124,7 +129,63 @@ $breakpoint-xsmall: 375px;
         }
         &__rightSection {
             position: relative;
-            bottom: 95rem;
+            top: 10rem;
+            right: 32rem;
+
+            &__img {
+                width: 29rem;
+                height: 39rem;
+            }
+        }
+    }
+}
+
+// Medium screens (up to 768px)
+@media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+    .whoAreWe {
+        width: 30.5rem;
+
+        &__leftSection {
+            &__top {
+                margin-top: 7rem;
+                gap: 39rem;
+
+                &__title {
+                    font-size: 2.5rem;
+                }
+
+                &__description {
+                    width: 25rem;
+                    font-size: 1.8rem;
+                    line-height: 2.5rem;
+                }
+            }
+
+            &__bottom {
+                margin-top: 10rem;
+
+                &__imgArea {
+                    margin-bottom: 10rem;
+
+                    &__geometryImg {
+                        width: 35rem;
+                        height: 15rem;
+                    }
+                }
+                &__paragraph {
+                    width: 35rem;
+
+                    p {
+                        margin-bottom: 1rem;
+                        line-height: 1.8rem;
+                    }
+                }
+            }
+        }
+        &__rightSection {
+            position: relative;
+            top: 13rem;
+            right: 27rem;
 
             &__img {
                 width: 31rem;
@@ -137,20 +198,18 @@ $breakpoint-xsmall: 375px;
 // Large screens (up to 1024px)
 @media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
     .whoAreWe {
-        width: 51rem;
-
+        width: 36.5rem;
         &__leftSection {
-            width: 25rem;
-
             &__top {
                 margin-top: 7rem;
-                gap: 35rem;
+                gap: 39rem;
 
                 &__title {
                     font-size: 2.5rem;
                 }
 
                 &__description {
+                    width: 25rem;
                     font-size: 1.8rem;
                     line-height: 2.5rem;
                 }
@@ -163,12 +222,12 @@ $breakpoint-xsmall: 375px;
                     margin-bottom: 10rem;
 
                     &__geometryImg {
-                        width: 23rem;
-                        height: 10rem;
+                        width: 36rem;
+                        height: 15rem;
                     }
                 }
                 &__paragraph {
-                    width: 24rem;
+                    width: 36rem;
 
                     p {
                         margin-bottom: 1rem;
@@ -178,8 +237,9 @@ $breakpoint-xsmall: 375px;
             }
         }
         &__rightSection {
-            position: sticky;
-            top: 0;
+            position: relative;
+            top: 13rem;
+            right: 27rem;
 
             &__img {
                 width: 31rem;
@@ -218,12 +278,12 @@ $breakpoint-xsmall: 375px;
                     margin-bottom: 10rem;
 
                     &__geometryImg {
-                        width: 23rem;
-                        height: 10rem;
+                        width: 24rem;
+                        height: 12rem;
                     }
                 }
                 &__paragraph {
-                    width: 24rem;
+                    width: 25rem;
 
                     p {
                         margin-bottom: 1rem;
@@ -238,6 +298,9 @@ $breakpoint-xsmall: 375px;
             top: -5rem;
 
             &__img {
+                position: relative;
+                top: 3rem;
+                right: 0rem;
                 width: 33rem;
                 height: 40rem;
             }
@@ -274,12 +337,12 @@ $breakpoint-xsmall: 375px;
                     margin-bottom: 10rem;
 
                     &__geometryImg {
-                        width: 23rem;
+                        width: 26.3rem;
                         height: 10rem;
                     }
                 }
                 &__paragraph {
-                    width: 24rem;
+                    width: 26.3rem;
 
                     p {
                         margin-bottom: 1rem;

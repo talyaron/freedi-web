@@ -12,17 +12,17 @@ import heroBg from "@/assets/Images/Hero-Background.png";
 import AboutSection from "@/components/Pages/HomeSections/about/AboutSection";
 import WelcomeHeader from "@/components/Pages/HomeSections/header/WelcomeHeader";
 import FeatureSection from "@/components/Pages/HomeSections/features/FeatureSection";
-import ConnectionsSection from "@/components/Pages/HomeSections/connections/ConnectionsSection";
 import VideoSection from "@/components/Pages/HomeSections/videoSection/VideoSection";
 import ClientFeedbackSection from "@/components/Pages/HomeSections/feedback/ClientFeedbackSection";
 import AccessTodaySection from "@/components/Pages/HomeSections/join-today/AccessTodaySection";
 import TeamworkSection from "@/components/Pages/HomeSections/teamwork/TeamworkSection";
 import HomeFooter from "@/components/Pages/HomeSections/footer/HomeFooter";
+import WhoAreWeSection from "@/components/Pages/HomeSections/whoAreWe/WhoAreWeSection";
+import WhyUsSection from "@/components/Pages/HomeSections/whyUs/WhyUsSection";
 
 // Helpers
 import { getLanguageData } from "@/helpers/languages";
-import BenefitsSection from "@/components/Pages/HomeSections/benefits/BenefitsSection";
-import WhoAreWeSection from "@/components/Pages/HomeSections/whoAreWe/WhoAreWeSection";
+
 
 export default async function Home({
     params,
@@ -65,12 +65,12 @@ export default async function Home({
                     direction={direction}
                 />
 
-                <ConnectionsSection
+                <WhyUsSection
                     currentLang={currentLang}
                     direction={direction}
                 />
 
-                <VideoSection currentLang={currentLang} />
+                <VideoSection currentLang={currentLang} direction={direction}/>
 
                 <ClientFeedbackSection />
 

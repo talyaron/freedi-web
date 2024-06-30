@@ -17,11 +17,11 @@ import ClientFeedbackSection from "@/components/Pages/HomeSections/feedback/Clie
 import AccessTodaySection from "@/components/Pages/HomeSections/join-today/AccessTodaySection";
 import TeamworkSection from "@/components/Pages/HomeSections/teamwork/TeamworkSection";
 import HomeFooter from "@/components/Pages/HomeSections/footer/HomeFooter";
+import WhoAreWeSection from "@/components/Pages/HomeSections/whoAreWe/WhoAreWeSection";
+import WhyUsSection from "@/components/Pages/HomeSections/whyUs/WhyUsSection";
 
 // Helpers
 import { getLanguageData } from "@/helpers/languages";
-import BenefitsSection from "@/components/Pages/HomeSections/benefits/BenefitsSection";
-import WhyUsSection from "@/components/Pages/HomeSections/whyUs/WhyUsSection";
 
 
 export default async function Home({
@@ -36,10 +36,10 @@ export default async function Home({
     const direction =
         params.lang === "he" || params.lang === "ar" ? "rtl" : "ltr";
 
-        const isHebrew = params.lang === "he";
+    const isHebrew = params.lang === "he";
 
     return (
-        <main className={isHebrew?"main he":"main en"}>
+        <main className={isHebrew ? "main he" : "main en"}>
             <Image
                 alt="Hero-Background"
                 src={heroBg}
@@ -79,11 +79,14 @@ export default async function Home({
                     direction={direction}
                 />
 
+                <WhoAreWeSection />
+                
                 <TeamworkSection
                     currentLang={currentLang}
                     direction={direction}
                 />
             </div>
+
 
             <HomeFooter />
         </main>

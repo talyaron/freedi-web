@@ -3,15 +3,14 @@
 import { useState, useEffect } from "react";
 
 function useWindowSize() {
-    
     const [windowDimensions, setWindowDimensions] = useState({
         width: 360,
-        height:820,
+        height: 820,
     });
 
     useEffect(() => {
-        if(typeof window === "undefined") return;
-        
+        if (typeof window === "undefined") return;
+
         const handleResize = () => {
             setWindowDimensions({
                 width: window.innerWidth,
@@ -21,6 +20,8 @@ function useWindowSize() {
 
         // Listen for window resize events
         window.addEventListener("resize", handleResize);
+
+        handleResize();
 
         // Remove the event listener when the component unmounts
         return () => {

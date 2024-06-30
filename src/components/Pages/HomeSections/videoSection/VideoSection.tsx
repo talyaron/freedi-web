@@ -82,12 +82,12 @@ export default function VideoSection({
                                     : styles.logoWrapper
                             }
                         >
-                            <FreediLogoIcon size={"1.9rem"} color={"#fff"} />
+                            <FreediLogoIcon size={"1.9rem"} color={"white"} />
                             <FreediIcon
                                 height="1.9rem"
                                 width="4.1rem"
-                                freeColor="#FFE601"
-                                diColor="#fff"
+                                freeColor="var(--freedi-yellow)"
+                                diColor="white"
                             />
                         </div>
                         <Image
@@ -143,12 +143,12 @@ export default function VideoSection({
                                     : styles.logoWrapper
                             }
                         >
-                            <FreediLogoIcon size={"1.459rem"} color={"#fff"} />
+                            <FreediLogoIcon size={"1.459rem"} color={"white"} />
                             <FreediIcon
                                 height="1rem"
                                 width="3.22rem"
-                                freeColor="#FFE601"
-                                diColor="#fff"
+                                freeColor="var(--freedi-yellow)"
+                                diColor="white"
                             />
                         </div>
                         <Image

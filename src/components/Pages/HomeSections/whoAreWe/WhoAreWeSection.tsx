@@ -24,17 +24,17 @@ function WhoAreWeSection() {
 
                 <div className={style.whoAreWe__leftSection__bottom}>
                     <div className={style.whoAreWe__leftSection__bottom__imgArea}>
-                        {width > 576 ?(
+                        {width > 576 ? (
                             <Image
                                 className={style.whoAreWe__leftSection__bottom__imgArea__geometryImg}
                                 src={geometryImg}
                                 alt="Geometry Img"
                             />
-                        ): <Image
-                                className={style.whoAreWe__leftSection__bottom__imgArea__geometryImg2}
-                                src={geometryImg2}
-                                alt="Geometry Img2"
-                            />}
+                        ) : <Image
+                            className={style.whoAreWe__leftSection__bottom__imgArea__geometryImg2}
+                            src={geometryImg2}
+                            alt="Geometry Img2"
+                        />}
                     </div>
                     <div className={style.whoAreWe__leftSection__bottom__paragraph}>
                         <p>In today's polarized world, finding common ground can feel like an uphill battle. But we believe that through open and inclusive dialogue, even the toughest issues have solutions.</p>

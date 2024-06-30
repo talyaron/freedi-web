@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import WhyUsColumn1 from "./whyUsColumns/whyUsColumn1";
 import WhyUsColumn2 from "./whyUsColumns/whyUsColumn2";
 import WhyUsColumn3 from "./whyUsColumns/whyUsColumn3";
@@ -9,7 +9,9 @@ import { LangContext } from "./WhyUsSection";
 const WhyUsCardContainer = () => {
 
     const { width } = useWindowSizeFixed();
-
+    const isSmallScreen = width! < 576;
+    const isMediumScreen = width! >= 576 && width! < 1024;
+    const isLargeScreen = width! >= 1024;
     const context = useContext(LangContext);
     if(!context) {
         throw new Error('Lang or inSection cannot be undefined!');
@@ -20,7 +22,7 @@ const WhyUsCardContainer = () => {
     return (
         <div className="whyUs__cardSection">
             <div className="whyUs__cardSection__carouselWrapper" ref={itemRef}>
-                {width! >= 1024 ? (
+                {isLargeScreen ? (
                     <>
                         <div className="whyUs__cardSection__carouselWrapper__carousel">
                             <WhyUsColumn1 />
@@ -35,7 +37,7 @@ const WhyUsCardContainer = () => {
                             <WhyUsColumn3 />
                         </div>
                     </>
-                ) : width! >= 576 && width! < 1024 ? (
+                ) : isMediumScreen ? (
                     <>
                         <div className="whyUs__cardSection__carouselWrapper__carousel animationUp">
                             <WhyUsColumn1 />
@@ -50,15 +52,13 @@ const WhyUsCardContainer = () => {
                             <WhyUsColumn3 />
                         </div>
                     </>
-                ) : width! <= 576 ? (
-                    <>
+                ) : isSmallScreen ? (
                         <div className="whyUs__cardSection__carouselWrapper__carousel">
                             <WhyUsColumn1 />
                             <WhyUsColumn2 />
                             <WhyUsColumn3 />
                             <WhyUsColumn1 />
                         </div>
-                    </>
                 ) : null}
             </div>
         </div>

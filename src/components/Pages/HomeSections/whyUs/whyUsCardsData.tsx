@@ -18,7 +18,7 @@ export const firstConnectionCards:CardModel[] = [
         img: <FreediFirstSliderIcon1/>,
     },
     {
-        title: "Everybody can Paricipate",
+        title: "Everybody can Participate",
         description: "When we create an open and welcoming environment, everybody can share their perspectives and engage in thoughtful discussion to find the best solutions.",
         img: <FreediFirstSliderIcon2/>,
     },
@@ -36,14 +36,14 @@ export const secondConnectionCards: CardModel[] = [
         img: <FreediSecondSliderIcon1/>,
     },
     {
-        title: "Everybody can evaluate the diffrent options",
-        description: "When we come together for a deliberative discussion, each individual's perspective and ability to thoughtfully evaluate the various options on the table is valuable and welcomed",
-        img: <FreediSecondSliderIcon2/>,
-    },
-    {
         title: "Everybody can write her/his opinion",
         description: "Deliberative discussions thrive when everyone feels comfortable sharing their unique perspectives and ideas freely.",
         img: <FreediSecondSliderIcon3/>,
+    },
+    {
+        title: "Everybody can evaluate the different options",
+        description: "When we come together for a deliberative discussion, each individual's perspective and ability to thoughtfully evaluate the various options on the table is valuable and welcomed",
+        img: <FreediSecondSliderIcon2/>,
     },
 ]
 

@@ -8,6 +8,6 @@ export interface CardModel{
 
 export interface LangType {
     currentLang: Record<string, string>;
-    inSection: boolean;
+    isVisible: boolean;
     itemRef: LegacyRef<HTMLDivElement> | undefined;
 }

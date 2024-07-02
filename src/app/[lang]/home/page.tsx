@@ -18,11 +18,11 @@ import AccessTodaySection from "@/components/Pages/HomeSections/join-today/Acces
 import TeamworkSection from "@/components/Pages/HomeSections/teamwork/TeamworkSection";
 import HomeFooter from "@/components/Pages/HomeSections/footer/HomeFooter";
 import HeroSection from "@/components/Pages/HomeSections/heroSection/HeroSection";
+import WhoAreWeSection from "@/components/Pages/HomeSections/whoAreWe/WhoAreWeSection";
+import WhyUsSection from "@/components/Pages/HomeSections/whyUs/WhyUsSection";
 
 // Helpers
 import { getLanguageData } from "@/helpers/languages";
-import BenefitsSection from "@/components/Pages/HomeSections/benefits/BenefitsSection";
-import WhyUsSection from "@/components/Pages/HomeSections/whyUs/WhyUsSection";
 
 
 export default async function Home({
@@ -80,6 +80,8 @@ export default async function Home({
                     direction={direction}
                 />
 
+                <WhoAreWeSection />
+                
                 <TeamworkSection
                     currentLang={currentLang}
                     direction={direction}

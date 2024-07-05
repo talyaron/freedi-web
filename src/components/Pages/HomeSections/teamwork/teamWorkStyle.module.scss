@@ -1,7 +1,11 @@
+$breakpoint-small: 500px;
+
+@import "../../../../styles/globalExtends.scss";
+
+
 .teamWorkSection {
-    display: flex;
+    @extend %flex-align;
     justify-content: center;
-    align-items: center;
     gap: 5vw;
 
     &__teamworkImg {
@@ -10,7 +14,7 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: $breakpoint-small) {
     .teamWorkSection {
         flex-direction: column;
 

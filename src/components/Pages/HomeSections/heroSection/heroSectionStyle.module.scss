@@ -5,10 +5,10 @@ $breakpoint-large: 1024px;
 $breakpoint-medium: 768px;
 $breakpoint-small: 576px;
 
+@import "../../../../styles/globalExtends.scss";
+
 .heroSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend %centered;
 
     &__centerArea {
         width: 70rem;
@@ -17,8 +17,7 @@ $breakpoint-small: 576px;
 
         &__leftSideContent {
             margin-top: 6rem;
-            display: flex;
-            flex-direction: column;
+            @extend %flex-column;
             gap: 2.5rem;
 
             &__title {
@@ -37,9 +36,8 @@ $breakpoint-small: 576px;
                 }
             }
             &__icons {
-                display: flex;
+                @extend %flex-align;
                 gap: 1.5rem;
-                align-items: center;
 
                 svg {
                     width: 2.5rem;
@@ -47,8 +45,7 @@ $breakpoint-small: 576px;
                 }
 
                 &__phone {
-                    display: flex;
-                    align-items: center;
+                    @extend %flex-align;
                     gap: 0.5rem;
 
                     &__text {

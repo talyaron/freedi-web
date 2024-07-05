@@ -6,8 +6,8 @@ import Image from "next/image";
 // Images
 import backgroundShape from "@/assets/Images/Background shape 01.png";
 
-// Styles
-import "./FeatureSectionStyle.scss";
+// style
+import style from "./FeatureSectionStyle.module.scss";
 import DefaultButton from "@/components/buttons/DefaultButton";
 import ChevronLeftIcon from "@/components/icons/ChevronLeftIcon";
 import ChevronRightIcon from "@/components/icons/ChevronRightIcon";
@@ -33,17 +33,15 @@ export default function FeatureSection({
     };
 
     return (
-        <section className="featureSection notSelectable">
-            <div className="featureSection__explanation" style={{ direction }}>
-                <h4 className="sectionHeader">{currentLang["Our features"]}</h4>
-                <h3 className="sectionTitle">{currentLang[feature.title]}</h3>
-                <p className="sectionText">
-                    {currentLang[feature.description]}
-                </p>
+        <section className={style.featureSection + " notSelectable"}>
+            <div className={style.featureSection__explanation} style={{ direction }}>
+                <h4 className={style.sectionHeader}>{currentLang["Our features"]}</h4>
+                <h3 className={style.sectionTitle}>{currentLang[feature.title]}</h3>
+                <p className={style.sectionText}>{currentLang[feature.description]}</p>
                 <DefaultButton type="primary" text={currentLang["Reach Out"]} />
             </div>
 
-            <div className="featureSection__features">
+            <div className={style.featureSection__features}>
                 <ChevronLeftIcon
                     size="1.5rem"
                     onClick={() => handleClick(false)}

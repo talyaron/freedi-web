@@ -6,7 +6,7 @@ import OldWomanIcon from "@/components/icons/OldWomanIcon";
 import TeamIcon from "@/components/icons/TeamIcon";
 import { generateRandomNumber } from "@/helpers/generators";
 import React from "react";
-import "./BenefitsSectionStyle.scss";
+import style from "./BenefitsSectionStyle.module.scss";
 
 export default function BenefitsSection({
     currentLang,
@@ -14,18 +14,18 @@ export default function BenefitsSection({
     currentLang: Record<string, string>;
 }>) {
     return (
-        <section className="benefitSection">
-            <h1 className="sectionHeader">{currentLang["Benefits"]}</h1>
-			<div className="benefitsWrapper">
+        <section className={style.benefitSection}>
+            <h1 className={style.sectionHeader}>{currentLang["Benefits"]}</h1>
+			<div className={style.benefitsWrapper}>
 				
             {benefitsData.map((benefit) => (
                 <div
-                    className="benefit"
+                    className={style.benefit}
                     key={generateRandomNumber()}
                 >
                     {benefit.icon}
                     <h4>{currentLang[benefit.title]}</h4>
-                    <p className="sectionText">
+                    <p className={style.sectionText}>
                         {currentLang[benefit.description]}
                     </p>
                 </div>

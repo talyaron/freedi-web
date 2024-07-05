@@ -1,7 +1,6 @@
+@import "../../../styles/globalExtends.scss";
 .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend %centered;
     gap: 5rem;
     transition: .7s ease-in-out;
     // padding: 0 10vw;
@@ -12,9 +11,7 @@
     // background-size: contain;
 
     &__body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @extend %centered;
         gap: 10rem;
         width: 100%;
         max-width: 1440px;

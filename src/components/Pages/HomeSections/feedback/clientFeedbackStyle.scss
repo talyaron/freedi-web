@@ -1,13 +1,13 @@
+@import "../../../../styles/globalExtends.scss";
+
+$rem: 2.5rem;
+
 .clientFeedback {
     padding: 1rem;
     position: relative;
     margin: auto;
     width: 30rem;
     height: 35rem;
-    // background-image: url("../../../../assets/Images/clientFeedbackShape.png");
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
 
     &__backgroundShape {
         position: absolute;
@@ -18,9 +18,7 @@
         z-index: -1;
     }
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend %centered;
     justify-content: center;
     gap: 2rem;
     color: var(--white);
@@ -104,15 +102,15 @@
         }
 
         &__client:nth-child(4) {
-            width: 2.5rem;
-            height: 2.5rem;
+            width: $rem;
+            height: $rem;
             top: 36rem;
             left: 10rem;
         }
 
         &__client:nth-child(5) {
-            width: 2.5rem;
-            height: 2.5rem;
+            width: $rem;
+            height: $rem;
             top: 37rem;
             left: 5rem;
         }

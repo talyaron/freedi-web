@@ -5,7 +5,9 @@ $breakpoint-medium: 768px;
 $breakpoint-small: 576px;
 $breakpoint-xsmall: 375px;
 
-.whyUsActive {
+ @import "../../../../styles/globalExtends.scss";
+
+ .whyUsActive {
 
     &--title {
         color: white !important;
@@ -62,14 +64,12 @@ $breakpoint-xsmall: 375px;
             margin-inline: auto;
 
             &__carousel {
-                display: flex;
-                flex-direction: column;
+                @extend %flex-column;
                 gap: 2rem;
                 width: 14.8665rem;
 
                 &__vertical {
-                    display: flex;
-                    flex-direction: column;
+                    @extend %flex-column;
                     gap: 2rem;
                 }
 
@@ -101,9 +101,7 @@ $breakpoint-xsmall: 375px;
         0px 30px 18px 0px rgba(132, 143, 169, 0.05),
         0px 54px 22px 0px rgba(132, 143, 169, 0.01),
         0px 84px 24px 0px rgba(132, 143, 169, 0);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend %centered;
     gap: 1.6rem;
     padding: 2.4rem 1.2rem;
     font-family: 'Overused Grotesk', sans-serif;
@@ -112,8 +110,7 @@ $breakpoint-xsmall: 375px;
     transition: 1s ease-out;
 
     &__card {
-        display: flex;
-        flex-direction: column;
+        @extend %flex-column;
         align-items: flex-start;
         gap: 0.8rem;
         transition: opacity 0.3s ease-in-out;

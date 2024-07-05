@@ -3,8 +3,8 @@
   display: inline-block;
   width: 50px;
   height: 80px;
-  border-top: 5px solid #fff;
-  border-bottom: 5px solid #fff;
+  border-top: 5px solid var(--white);
+  border-bottom: 5px solid var(--white);
   position: relative;
   background: linear-gradient(var(--accent) 30px, transparent 0) no-repeat;
   background-size: 2px 40px;

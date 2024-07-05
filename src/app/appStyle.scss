@@ -42,7 +42,7 @@
         opacity: 1;
         background-color: var(--notFound-btn);
         font-family: Sora, "Segoe UI", Tahoma, Geneva;
-        font-size: 1rem;
+        font-size: var(--btn-font-size);
         font-weight: 600;
     }
 

@@ -1,10 +1,11 @@
 import React from "react";
 import { secondConnectionCards } from "../whyUsCardsData";
 import WhyUsCard from "../WhyUsCard";
+import style from "../whyUsStyle.module.scss";
 
 const whyUsColumn2 = () => {
     return (
-        <div className="whyUs__cardSection__carouselWrapper__carousel__vertical whyUs__cardSection__carouselWrapper__carousel__secondVertical">
+        <div className={`${style.whyUs__cardSection__carouselWrapper__carousel__vertical} ${style.whyUs__cardSection__carouselWrapper__carousel__secondVertical}`}>
             {secondConnectionCards.map((card, index) => {
                 return (
                     <WhyUsCard

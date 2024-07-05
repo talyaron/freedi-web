@@ -4,8 +4,7 @@ $breakpoint-medium: 768px;
 
 .aboutSection {
     height: fit-content;
-    position: relative;
-    display: flex;
+    @extend %flex-relative;
     gap: 5rem;
     padding: 0 5vw;
 

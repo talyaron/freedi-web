@@ -34,11 +34,11 @@ $breakpoint-medium: 800px;
         gap: 1rem;
         li {
             list-style: none;
-            color: #6a7699;
+            color: var(--gray-blue);
             cursor: pointer;
         }
         li:hover {
-            color: #0f0f0f;
+            color: var(--black);
         }
     }
 }

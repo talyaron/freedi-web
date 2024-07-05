@@ -10,17 +10,17 @@ $breakpoint-xsmall: 375px;
  .whyUsActive {
 
     &--title {
-        color: white !important;
+        color: var(--white) !important;
         transition: 1s ease-in;
     }
 
     &--description {
-        color: white !important;
+        color: var(--white) !important;
         transition: 1s ease-in;
     }
 
     &__cardWrapper {
-        background-color: #5A80BF !important;
+        background-color: var(--sky-blue) !important;
         box-shadow:
             0px 4px 9px 0px rgba(88, 109, 141, 0.24),
             0px 16px 16px 0px rgba(88, 109, 141, 0.2),
@@ -105,7 +105,7 @@ $breakpoint-xsmall: 375px;
     gap: 1.6rem;
     padding: 2.4rem 1.2rem;
     font-family: 'Overused Grotesk', sans-serif;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 2px;
     transition: 1s ease-out;
 
@@ -128,7 +128,7 @@ $breakpoint-xsmall: 375px;
         line-height: 150%;
         font-weight: 350;
         font-size: 0.9rem;
-        color: #57688F;
+        color: var(--gray-blue);
         transition: 1s ease-out;
     }
 }

@@ -6,23 +6,20 @@ $bottomLogoFreeDark: #437ddb;
 $bottomLogoDiDark: #bed8ff;
 
 .bottomLogo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     width: 21rem;
     font-size: 1.5rem;
     font-weight: 450;
     font-family: "Bruno Ace";
 
     &__bottomLogoLight {
-        margin-bottom: 2rem;
-
         p {
             color: $bottomLogoFreeLight;
             span {
                 color: $bottomLogoDiLight;
             }
+        }
+        &__span {
+            animation: fadeIn 2s infinite;
         }
     }
 
@@ -33,5 +30,22 @@ $bottomLogoDiDark: #bed8ff;
                 color: $bottomLogoDiDark;
             }
         }
+        &__span {
+            animation: fadeIn 2s infinite;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

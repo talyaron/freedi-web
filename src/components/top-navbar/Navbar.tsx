@@ -6,8 +6,6 @@ import React from "react";
 import "./navbar.scss";
 
 // Custom Components
-import RoundedButton from "../../components/buttons/RoundedButton";
-import PageLinks from "./PageLinks";
 import LanguageDropdown from "./LanguageDropdown";
 import LogoWithName from "../logo/LogoWithName";
 import { useTranslate } from "@/hooks/useTranslate";
@@ -23,11 +21,8 @@ export default function Navbar({
         <nav className="navbar">
             <LogoWithName />
 
-            {/* <PageLinks /> */}
-
             <LanguageDropdown lang={lang} />
 
-            {/* <RoundedButton text={t("Contact us")} /> */}
         </nav>
     );
 }

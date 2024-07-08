@@ -3,7 +3,7 @@
 import React from "react";
 import FreediLogoIcon from "../icons/FreediLogoIcon";
 
-import "./logoStyle.scss";
+import style from "./logoStyle.module.scss";
 import { useTranslate } from "@/hooks/useTranslate";
 import FreediIcon from "../icons/FreediIcon";
 
@@ -19,7 +19,7 @@ export default function LogoWithName({
     const { t } = useTranslate();
 
     return (
-        <div className="logoBox">
+        <div className={style["logoBox"]}>
             <FreediLogoIcon size={"1.9rem"} color={color} />
             <FreediIcon height="1.9rem" width="4.1rem" />
         </div>

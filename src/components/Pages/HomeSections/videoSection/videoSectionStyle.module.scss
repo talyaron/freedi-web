@@ -5,7 +5,7 @@ $breakpoint-medium: 768px;
 $breakpoint-small: 576px;
 $breakpoint-xsmall: 375px;
 
-
+ @import "../../../../styles/globalExtends.scss";
 
 .videoSection {
     font-family: 'Overused Grotesk';
@@ -27,15 +27,14 @@ $breakpoint-xsmall: 375px;
         }
 
         .textWrapper {
-            display: flex;
-            flex-direction: column;
+            @extend %flex-column;
             position: absolute;
             top: 20%;
             left: 50%;
             transform: translate(-50%, -50%);
             gap: .8rem;
             text-align: center;
-            color: white;
+            color: var(--white);
             width: 40rem;
             .header{
                 font-weight: 500;
@@ -60,9 +59,8 @@ $breakpoint-xsmall: 375px;
             position: absolute;
             left: 1.5rem;
             bottom: 2.1rem;
-            display: flex;
+            @extend %flex-align;
             justify-content: center;
-            align-items: center;
             gap: .6rem;
         }
 

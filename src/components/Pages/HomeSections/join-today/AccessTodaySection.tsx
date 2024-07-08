@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 
 // Styles
-import "./joinTodayStyle.scss";
+import style from "./joinTodayStyle.module.scss";
 
 // Custom Components
 import character from "@/assets/Images/character.png";
@@ -18,14 +18,14 @@ export default function AccessTodaySection({
     direction: "rtl" | "ltr";
 }>) {
     return (
-        <section className="AccessTodaySection">
-            <div className="AccessTodaySection__wrapper">
+        <section className={style.AccessTodaySection}>
+            <div className={style.AccessTodaySection__wrapper}>
                 <Image
                     alt="flower-image"
                     src={flower}
-                    className="AccessTodaySection__wrapper__flower"
+                    className={style.AccessTodaySection__wrapper__flower}
                 />
-                <p className="AccessTodaySection__wrapper__sectionText sectionText" style={{ direction }}>
+                <p className={style.AccessTodaySection__wrapper__sectionText+ " sectionText"} style={{ direction }}>
                     {
                         currentLang[
                             "Access your first community debate for free by contacting us today"
@@ -35,7 +35,7 @@ export default function AccessTodaySection({
                 <Image
                     alt="character-image"
                     src={character}
-                    className="AccessTodaySection__wrapper__character"
+                    className={style.AccessTodaySection__wrapper__character}
                 />
             </div>
         </section>

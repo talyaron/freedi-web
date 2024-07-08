@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useEffect, createContext, useRef, useMemo } from "react";
-
-import "./whyUsStyle.scss";
+import style from "./whyUsStyle.module.scss";
 
 import WhyUsCardContainer from "./WhyUsCardContainer";
 import { LangType } from "./whyUsModel";
@@ -10,23 +9,22 @@ import { useIsVisible } from "@/hooks/useIsVisible";
 
 export const LangContext = createContext<LangType | undefined>(undefined);
 
-export default function WhyUsSection({
+const WhyUsSection = ({
     currentLang,
     direction,
 }: Readonly<{
     currentLang: Record<string, string>;
     direction: "rtl" | "ltr";
-}>) {
-
+}>) => {
     const ref = useRef<HTMLDivElement>(null);
     const isVisible = useIsVisible(ref);
 
     useEffect(() => {
         const body = document.querySelector(".main") as HTMLElement;
         if (isVisible) {
-            body.classList.add("whyUsActive__main");
+            body.classList.add(style.whyUsActive__main); 
         } else {
-            body.classList.remove("whyUsActive__main");
+            body.classList.remove(style.whyUsActive__main); 
         }
     }, [isVisible]);
 
@@ -35,14 +33,14 @@ export default function WhyUsSection({
     return (
         <LangContext.Provider value={contextValue}>
             <section
-                className={isVisible ? "whyUs whyUsActive" : "whyUs"}
+                className={isVisible ? `${style.whyUs} ${style.whyUsActive}` : style.whyUs} 
                 style={{ direction }}
             >
                 <h1
                     className={
                         isVisible
-                            ? "whyUs--title whyUsActive--title"
-                            : "whyUs--title"
+                            ? `${style["whyUs--title"]} ${style["whyUsActive--title"]}`
+                            : style["whyUs--title"] 
                     }
                 >
                     {currentLang["Why Freedi?"]}
@@ -51,4 +49,6 @@ export default function WhyUsSection({
             </section>
         </LangContext.Provider>
     );
-}
+};
+
+export default WhyUsSection;

@@ -4,7 +4,7 @@ import React from "react";
 import teamwork from "@/assets/Images/teamwork.png";
 import Image from "next/image";
 import DefaultButton from "@/components/buttons/DefaultButton";
-import "./teamWorkStyle.scss";
+import style from "./teamWorkStyle.module.scss";
 
 export default function TeamworkSection({
     currentLang,
@@ -14,16 +14,16 @@ export default function TeamworkSection({
     direction: "rtl" | "ltr";
 }>) {
     return (
-        <section className="teamWorkSection">
-            <div className="sectionTextBox" style={{ direction }}>
-                <h3 className="sectionTitle">
+        <section className={style.teamWorkSection}>
+            <div className={style.sectionTextBox} style={{ direction }}>
+                <h3 className={style.sectionTitle}>
                     {
                         currentLang[
                             "Make future-proof decisions today to shape a better tomorrow."
                         ]
                     }
                 </h3>
-                <p className="sectionText">
+                <p className={style.sectionText}>
                     {
                         currentLang[
                             "Invest effort/time into an in-depth deliberative process with Freedi app help that enables the end choices to effectively address and serve the requirements and priorities of the entire community."
@@ -36,7 +36,7 @@ export default function TeamworkSection({
                 />
             </div>
             <Image
-                className="teamWorkSection__teamworkImg"
+                className={style.teamWorkSection__teamworkImg}
                 alt="teamwork-image"
                 src={teamwork}
                 sizes="20vw"

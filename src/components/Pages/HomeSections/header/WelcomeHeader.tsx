@@ -6,7 +6,7 @@ import React from "react";
 // Images
 import heroImg from "@/assets/Images/Hero illustration.png";
 
-import "./welcomeHeaderStyle.scss";
+import style from "./welcomeHeaderStyle.module.scss";
 import { English, Hebrew } from "@/types/language";
 
 export default function Header({
@@ -15,12 +15,12 @@ export default function Header({
     currentLang: English | Hebrew;
 }>) {
     return (
-        <header className="welcomeHeader">
-            <div className="heroTitle">
-                <h2 className="heading">
+        <header className={style.welcomeHeader}>
+            <div className={style.heroTitle}>
+                <h2 className={style.heading}>
                     {currentLang["Freedi fosters community well-being"]}
                 </h2>
-                <p className="paragraph">
+                <p className={style.paragraph}>
                     {currentLang["Reaching Decisions Collaboratively"]}
                 </p>
             </div>
@@ -39,7 +39,7 @@ export default function Header({
                     marginTop: "1vw",
                 }}
             />
-            <ul className="welcomeHeader__nav">
+            <ul className={style.welcomeHeader__nav}>
                 <li>{currentLang["About"]}</li>
                 <li>{currentLang["Features"]}</li>
                 <li>{currentLang["Feedbacks"]}</li>

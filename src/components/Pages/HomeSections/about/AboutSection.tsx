@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import "./AboutSectionStyle.scss";
+import style from "./AboutSectionStyle.module.scss";
 
 // Images
 import overview from "@/assets/Images/Overview.png";
@@ -25,38 +25,38 @@ export default function AboutSection({
     direction: "rtl" | "ltr";
 }>) {
     return (
-        <section className="aboutSection">
-            <div className="aboutSection__imageWrapper">
+        <section className={style.aboutSection}>
+            <div className={style.aboutSection__imageWrapper}>
                 <Image
                     alt="bubble-image"
                     src={bubble}
                     quality={100}
-                    className="aboutSection__imageWrapper__bubble first"
+                    className={`${style.aboutSection__imageWrapper__bubble} ${style.first}`}
                 />
                 <Image
                     alt="bubble-image"
                     src={bubble}
                     quality={100}
-                    className="aboutSection__imageWrapper__bubble second"
+                    className={`${style.aboutSection__imageWrapper__bubble} ${style.second}`}
                 />
                 <Image
                     alt="bubble-image"
                     src={bubble}
                     quality={100}
-                    className="aboutSection__imageWrapper__bubble third"
+                    className={`${style.aboutSection__imageWrapper__bubble} ${style.third}`}
                 />
                 <Image
                     alt="overview-image"
                     src={overview}
                     quality={100}
-                    className="aboutSection__imageWrapper__image"
+                    className={style.aboutSection__imageWrapper__image}
                 />
             </div>
-            <div className="aboutSection__info" style={{ direction }}>
-                <h3 className="aboutSection__info__title">
+            <div className={style.aboutSection__info} style={{ direction }}>
+                <h3 className={style.aboutSection__info__title}>
                     {currentLang["About Freedi"]}
                 </h3>
-                <p className="aboutSection__info__text">
+                <p className={style.aboutSection__info__text}>
                     {
                         currentLang[
                             "The goal of Freedi app is to go beyond simple majority rule votes by facilitating informed deliberation, finding common ground, and working towards decisions that incorporate diverse viewpoints and address minority concerns when possible."

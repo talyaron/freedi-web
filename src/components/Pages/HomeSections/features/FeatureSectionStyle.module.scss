@@ -1,13 +1,13 @@
+ @import "../../../../styles/globalExtends.scss";
+
 .featureSection {
-    position: relative;
+    @extend %flex-relative;
     height: auto;
     width: 100%;
-    display: flex;
     padding: 5vw;
 
     &__explanation {
-        display: flex;
-        flex-direction: column;
+        @extend %flex-column;
         justify-content: center;
         gap: 1rem;
         width: 50%;
@@ -22,8 +22,7 @@
     }
     &__features {
         width: 50%;
-        display: flex;
-        position: relative;
+         @extend %flex-relative;
 
         &__backgroundShape {
             height: auto;

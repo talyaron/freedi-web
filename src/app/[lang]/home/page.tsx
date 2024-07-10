@@ -41,7 +41,12 @@ export default async function Home({
 
     return (
         <main className={isHebrew ? "main he" : "main en"}>
-            <Image
+            <HeroSection
+                currentLang={currentLang}
+                direction={direction}
+                 />
+                
+            {/* <Image
                 alt="Hero-Background"
                 src={heroBg}
                 loading="eager"
@@ -53,8 +58,8 @@ export default async function Home({
                     top: 0,
                     zIndex: -10,
                 }}
-            />
-            <WelcomeHeader currentLang={currentLang} />
+            /> */}
+            {/* <WelcomeHeader currentLang={currentLang} /> */}
 
             <div className="main__body">
                 <AboutSection currentLang={currentLang} direction={direction} />
@@ -71,7 +76,7 @@ export default async function Home({
                     direction={direction}
                 />
 
-                <VideoSection currentLang={currentLang} direction={direction}/>
+                <VideoSection currentLang={currentLang} direction={direction} />
 
                 <ClientFeedbackSection />
 
@@ -86,9 +91,7 @@ export default async function Home({
                 />
             </div>
 
-            <HeroSection
-                currentLang={currentLang}
-                direction={direction} />
+
 
             <HomeFooter
                 currentLang={currentLang}

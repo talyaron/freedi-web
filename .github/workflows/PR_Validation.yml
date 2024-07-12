@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Pull Request Validation
 
 on:
     push:
@@ -7,24 +7,34 @@ on:
         branches: [main, dev]
 
 jobs:
-    build:
+    basic-checks:
         runs-on: ubuntu-latest
-
         strategy:
             matrix:
-                node-version: [14, 16, 18]
+                node-version: [18.x]
 
         steps:
-            - name: Checkout repository
-              uses: actions/checkout@v2
-
+            - uses: actions/checkout@v3
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
+                  cache: "npm"
 
             - name: Install dependencies
               run: npm install
 
-            - name: Run lint
+            # - name: Execute Unit tests
+            #   run: |
+            #       npm ci
+            #       npm install @rollup/rollup-linux-x64-gnu
+            #       npm run test:unit
+
+            - name: Run ESLint
               run: npm run lint
+
+            - name: Run TypeScript type checking
+              run: npm run typecheck
+
+            - name: Build
+              run: npm run build

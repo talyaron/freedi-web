@@ -1,7 +1,9 @@
+import React from 'react';
+
 export default function RootLayout({
-    children,
+	children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    return <section>{children}</section>;
+	return <section>{children}</section>;
 }

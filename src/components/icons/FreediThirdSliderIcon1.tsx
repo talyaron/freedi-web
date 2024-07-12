@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function FreediThirdSliderIcon1() {
 	return (
 		<svg className="freediSliderIcons"

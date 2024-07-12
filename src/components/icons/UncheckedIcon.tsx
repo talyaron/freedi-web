@@ -1,8 +1,10 @@
+import React from "react";
+
 export default function UncheckedIcon({
 	color = "#787FFF",
-}: {
+}: Readonly<{
     color?: string;
-}) {
+}>) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

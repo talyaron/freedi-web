@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function AddStatementIcon() {
 	return (
 		<svg
@@ -5,7 +7,6 @@ export default function AddStatementIcon() {
 			height="1.2rem"
 			viewBox="0 0 24 24"
 			xmlns="http://www.w3.org/2000/svg"
-			mirror-in-rtl="true"
 		>
 			<path
 				fill="#ffffff"

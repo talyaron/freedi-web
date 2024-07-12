@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function NewestIcon({ color }: { color: string }) {
 	return (
 		<svg

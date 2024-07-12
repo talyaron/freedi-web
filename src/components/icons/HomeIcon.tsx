@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function HomeIcon({ color = "white" }: { color: string }) {
 	return (
 		<svg

@@ -1,6 +1,14 @@
 {
-	"plugins": ["import", "react", "@typescript-eslint", "prettier", "sonarjs"],
-	"extends": ["plugin:@typescript-eslint/recommended", "prettier"],
+	"plugins": ["@typescript-eslint", "prettier", "sonarjs", "react", "import"],
+	"extends": [
+		"plugin:@next/next/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier",
+		"plugin:react/recommended",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"plugin:import/typescript"
+	],
 	"rules": {
 		"react/display-name": "error",
 		"react/no-unescaped-entities": "off",
@@ -40,7 +48,7 @@
 				}
 			}
 		],
-		"no-console": ["error", { "allow": ["warn", "error", "info"] }],
+		"no-console": ["error", { "allow": ["warn", "error"] }],
 		"indent": ["error", "tab"],
 
 		// SonarJS rules
@@ -49,8 +57,8 @@
 	},
 	"settings": {
 		"react": {
-            "version": "detect" // Tells eslint-plugin-react to autodetect the version
-        },
+			"version": "detect" // Tells eslint-plugin-react to autodetect the version
+		},
 		"import/parsers": {
 			"@typescript-eslint/parser": [".ts", ".tsx"]
 		},

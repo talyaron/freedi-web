@@ -1,3 +1,4 @@
+import React from "react";
 import style from "./loaderGlass.module.scss";
 
 const LoaderGlass = () => {

@@ -1,8 +1,9 @@
 "use client";
 
+import React, { useEffect } from 'react';
 import "./appStyle.scss";
 
-import { useEffect } from "react";
+
 import { redirect } from "next/navigation";
 import LoaderGlass from "@/components/loaders/loader-glass/LoaderGlass";
 

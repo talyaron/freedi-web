@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function HappySmileyIcon({ color }: { color: string }) {
 	return (
 		<svg

@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function BellSlashIcon({
 	color = "#4E88C7",
 }: {

@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function BellIcon({ color }: { color: string }) {
 	return (
 		<svg

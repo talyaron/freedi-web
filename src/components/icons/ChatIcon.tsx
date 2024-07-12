@@ -1,10 +1,12 @@
+import React from "react";
+
 export default function ChatIcon({
 	statementType,
 	color = "#226CBC",
-}: {
+}: Readonly<{
     statementType?: string;
     color?: string;
-}) {
+}>) {
 	const _color = statementType === "question" ? "#fff" : "#787FFF";
 	color = color || _color;
 

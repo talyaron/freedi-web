@@ -24,78 +24,67 @@ import WhyUsSection from "@/components/Pages/HomeSections/whyUs/WhyUsSection";
 // Helpers
 import { getLanguageData } from "@/helpers/languages";
 
-
 export default async function Home({
-    params,
+	params,
 }: Readonly<{
     params: { lang: "he" | "en" | "ar" };
 }>) {
-    const langs = await getLanguageData();
+	const langs = await getLanguageData();
 
-    const currentLang = langs[params.lang] || "en";
+	const currentLang = langs[params.lang] || "en";
 
-    const direction =
+	const direction =
         params.lang === "he" || params.lang === "ar" ? "rtl" : "ltr";
 
-    const isHebrew = params.lang === "he";
+	const isHebrew = params.lang === "he";
 
-    return (
-        <main className={isHebrew ? "main he" : "main en"}>
-            <Image
-                alt="Hero-Background"
-                src={heroBg}
-                loading="eager"
-                priority
-                style={{
-                    width: "100%",
-                    height: "20rem",
-                    position: "absolute",
-                    top: 0,
-                    zIndex: -10,
-                }}
-            />
-            <WelcomeHeader currentLang={currentLang} />
+	return (
+		<main className={isHebrew ? "main he" : "main en"}>
+			<Image
+				alt="Hero-Background"
+				src={heroBg}
+				loading="eager"
+				priority
+				style={{
+					width: "100%",
+					height: "20rem",
+					position: "absolute",
+					top: 0,
+					zIndex: -10,
+				}}
+			/>
+			<WelcomeHeader currentLang={currentLang} />
 
-            <div className="main__body">
-                <AboutSection currentLang={currentLang} direction={direction} />
+			<div className="main__body">
+				<AboutSection currentLang={currentLang} direction={direction} />
 
-                <BenefitsSection currentLang={currentLang} />
+				<FeatureSection
+					currentLang={currentLang}
+					direction={direction}
+				/>
 
-                <FeatureSection
-                    currentLang={currentLang}
-                    direction={direction}
-                />
+				<WhyUsSection currentLang={currentLang} direction={direction} />
 
-                <WhyUsSection
-                    currentLang={currentLang}
-                    direction={direction}
-                />
+				<VideoSection currentLang={currentLang} direction={direction} />
 
-                <VideoSection currentLang={currentLang} direction={direction}/>
+				<ClientFeedbackSection />
 
-                <ClientFeedbackSection />
+				<AccessTodaySection
+					currentLang={currentLang}
+					direction={direction}
+				/>
 
-                <AccessTodaySection
-                    currentLang={currentLang}
-                    direction={direction}
-                />
+				<WhoAreWeSection />
 
-                <WhoAreWeSection />
-                
-                <TeamworkSection
-                    currentLang={currentLang}
-                    direction={direction}
-                />
-            </div>
+				<TeamworkSection
+					currentLang={currentLang}
+					direction={direction}
+				/>
+			</div>
 
-            <HeroSection
-                currentLang={currentLang}
-                direction={direction} />
+			<HeroSection />
 
-            <HomeFooter
-                currentLang={currentLang}
-                direction={direction}
-            />
-        </main>
-    );
+			<HomeFooter />
+		</main>
+	);
 }

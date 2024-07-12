@@ -10,41 +10,41 @@ interface PageLinksProps {
 }
 
 export default function PageLinks({ isFooter }: Readonly<PageLinksProps>) {
-    const { t, direction } = useTranslate();
-    const pathname = usePathname();
+	const { t, direction } = useTranslate();
+	const pathname = usePathname();
 
-    const links = ["home", "about", "blog", "pricing"];
+	const links = ["home", "about", "blog", "pricing"];
 
-    const currentLinkColor = (link: (typeof links)[1]) =>
-        pathname.includes(link) || (pathname === "/" && link === "home")
-            ? "var(--button-primary)"
-            : "#222";
+	const currentLinkColor = (link: (typeof links)[1]) =>
+		pathname.includes(link) || (pathname === "/" && link === "home")
+			? "var(--button-primary)"
+			: "#222";
 
-    const linkColor = (link: (typeof links)[1]) =>
-        isFooter ? currentLinkColor(link) : "var(--white)";
+	const linkColor = (link: (typeof links)[1]) =>
+		isFooter ? currentLinkColor(link) : "var(--white)";
 
-    return (
-        <ul style={{ direction }}>
-            {links.map((link) => (
-                <li key={link}>
-                    <Link
-                        style={{
-                            fontWeight: pathname.includes(link) ? "bold" : 100,
+	return (
+		<ul style={{ direction }}>
+			{links.map((link) => (
+				<li key={link}>
+					<Link
+						style={{
+							fontWeight: pathname.includes(link) ? "bold" : 100,
 
-                            textDecoration: pathname.includes(link)
-                                ? "underline"
-                                : "none",
+							textDecoration: pathname.includes(link)
+								? "underline"
+								: "none",
 
-                            color: linkColor(link),
+							color: linkColor(link),
 
-                            fontSize: !isFooter ? "1.4rem" : "1rem",
-                        }}
-                        href={`/${pathname.split("/")[1]}/${link}`}
-                    >
-                        {t(link.charAt(0).toUpperCase() + link.slice(1))}
-                    </Link>
-                </li>
-            ))}
-        </ul>
-    );
+							fontSize: !isFooter ? "1.4rem" : "1rem",
+						}}
+						href={`/${pathname.split("/")[1]}/${link}`}
+					>
+						{t(link.charAt(0).toUpperCase() + link.slice(1))}
+					</Link>
+				</li>
+			))}
+		</ul>
+	);
 }

@@ -4,19 +4,17 @@ $breakpoint-large: 1024px;
 $breakpoint-medium: 768px;
 $breakpoint-small: 576px;
 
+@import "../../../../styles/globalExtends.scss";
 .footer {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend %centered;
     position: relative;
     background-color: var(--notFound-btn);
 
     &__mainArea {
         width: 69rem;
         margin-top: 4rem;
-        display: flex;
-        flex-direction: column;
+        @extend %flex-column;
         gap: 3rem;
     }
 
@@ -34,14 +32,12 @@ $breakpoint-small: 576px;
 
         &__call,
         &__email {
-            display: flex;
-            align-items: center;
+            @extend %flex-align;
             gap: 0.5rem;
         }
 
         &__text {
-            display: flex;
-            flex-direction: column;
+            @extend %flex-column;
         }
 
         p {
@@ -68,8 +64,7 @@ $breakpoint-small: 576px;
     }
 
     &__arrowUp {
-        display: flex;
-        align-items: center;
+        @extend %flex-align;
         width: 7rem;
     }
 }

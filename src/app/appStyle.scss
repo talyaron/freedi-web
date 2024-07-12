@@ -1,11 +1,11 @@
+@import "../styles/globalExtends.scss";
+
 .app {
+    @extend %centered;
     width: 100vw;
     height: 100vh;
     background-color: var(--blue-dark);
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: 3rem;
     color: var(--text-gray);
 }
@@ -42,7 +42,7 @@
         opacity: 1;
         background-color: var(--notFound-btn);
         font-family: Sora, "Segoe UI", Tahoma, Geneva;
-        font-size: 1rem;
+        font-size: var(--btn-font-size);
         font-weight: 600;
     }
 

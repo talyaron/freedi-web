@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
 
-$bottomLogoFreeLight: #3851d3;
-$bottomLogoDiLight: #3db7b7;
-$bottomLogoFreeDark: #437ddb;
-$bottomLogoDiDark: #bed8ff;
-
 .bottomLogo {
     width: 21rem;
     font-size: 1.5rem;
@@ -13,9 +8,9 @@ $bottomLogoDiDark: #bed8ff;
 
     &__bottomLogoLight {
         p {
-            color: $bottomLogoFreeLight;
+            color: var(--bottom-Logo-Free-Light);
             span {
-                color: $bottomLogoDiLight;
+                color: var(--bottom-Logo-Di-Light);
             }
         }
         &__span {
@@ -25,9 +20,9 @@ $bottomLogoDiDark: #bed8ff;
 
     &__bottomLogoDark {
         p {
-            color: $bottomLogoFreeDark;
+            color: var(--bottom-Logo-Free-Dark);
             span {
-                color: $bottomLogoDiDark;
+                color: var(--bottom-Logo-Di-Dark);
             }
         }
         &__span {

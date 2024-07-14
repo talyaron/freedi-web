@@ -23,6 +23,7 @@ const WhyUsCard = ({ title, description, img: SvgImage }: CardModel) => {
 				</p>
 			</div>
 		</div>
+        
 	);
 };
 

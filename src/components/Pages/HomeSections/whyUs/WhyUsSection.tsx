@@ -6,6 +6,7 @@ import style from "./whyUsStyle.module.scss";
 import WhyUsCardContainer from "./WhyUsCardContainer";
 import { LangType } from "./whyUsModel";
 import { useIsVisible } from "@/hooks/useIsVisible";
+import LogoWithName from "@/components/logo/LogoWithName";
 
 export const LangContext = createContext<LangType | undefined>(undefined);
 
@@ -22,9 +23,9 @@ const WhyUsSection = ({
 	useEffect(() => {
 		const body = document.querySelector(".main") as HTMLElement;
 		if (isVisible) {
-			body.classList.add(style.whyUsActive__main); 
+			body.classList.add(style.whyUsActive__main);
 		} else {
-			body.classList.remove(style.whyUsActive__main); 
+			body.classList.remove(style.whyUsActive__main);
 		}
 	}, [isVisible]);
 
@@ -33,21 +34,25 @@ const WhyUsSection = ({
 	return (
 		<LangContext.Provider value={contextValue}>
 			<section
-				className={isVisible ? `${style.whyUs} ${style.whyUsActive}` : style.whyUs} 
+				className={isVisible ? `${style.whyUs} ${style.whyUsActive}` : style.whyUs}
 				style={{ direction }}
 			>
 				<h1
 					className={
 						isVisible
 							? `${style["whyUs--title"]} ${style["whyUsActive--title"]}`
-							: style["whyUs--title"] 
+							: style["whyUs--title"]
 					}
 				>
 					{currentLang["Why Freedi?"]}
 				</h1>
 				<WhyUsCardContainer />
 			</section>
+			<div className={style.freediLogo}>
+				<LogoWithName />
+			</div>
 		</LangContext.Provider>
+        
 	);
 };
 

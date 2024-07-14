@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-import styles from "./videoSectionStyle.module.scss";
+import style from "./videoSectionStyle.module.scss";
 import FreediLogoIcon from "@/components/icons/FreediLogoIcon";
 import FreediIcon from "@/components/icons/FreediIcon";
 import videoSectionImage from "@/assets/Images/VideoSectionImage.png";
@@ -19,7 +19,6 @@ export default function VideoSection({
 }>) {
 	const { width } = useWindowSizeFixed();
 	const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-    
 
 	const handlePlayVideo = () => {
 		setIsVideoPlaying(true);
@@ -27,61 +26,41 @@ export default function VideoSection({
 
 	if (width == undefined) {
 		return (
-			<section className={styles.videoSection}></section>
+			<section className={style.videoSection}></section>
 		)
 	}
 
 	return (
-		<section className={styles.videoSection} style={{direction}}>
+		<section className={style.videoSection} style={{ direction }}>
 			{width! > 1200 ? (
-				<div
-					className={styles.videoWrapper}
-				>
+				<div className={style.videoWrapper}>
 					<iframe
-						src={`https://www.youtube.com/embed/qLznfpgj1E4?wmode=transparent&autoplay=1`}
+						src="https://www.youtube.com/embed/qLznfpgj1E4?wmode=transparent&autoplay=1"
 						title="YouTube video player"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 						loading="lazy"
 						allowFullScreen
-						className={
-							isVideoPlaying
-								? `${styles.videoPlayer} ${styles.videoImage}`
-								: styles.none
-						}
+						className={isVideoPlaying ? `${style.videoPlayer} ${style.videoImage}` : style.none}
 					></iframe>
 					<Image
 						alt="videoImage"
 						src={videoSectionImage}
 						quality={100}
-						className={
-							isVideoPlaying ? styles.none : styles.videoImage
-						}
+						className={isVideoPlaying ? style.none : style.videoImage}
 						onClick={() => handlePlayVideo()}
 					/>
-					<div
-						className={
-							isVideoPlaying
-								? styles.none
-								: styles.textWrapper
-						}
-					>
-						<p className={styles.timerP}>
+					<div className={isVideoPlaying ? style.none : style.textWrapper}>
+						<p className={style.timerP}>
 							{currentLang["explained in 90 second"]}
 						</p>
-						<h1 className={styles.header}>
+						<h1 className={style.header}>
 							{currentLang["How does FreeDi work?"]}
 						</h1>
-						<p className={styles.underHeaderP}>
+						<p className={style.underHeaderP}>
 							{currentLang["Let us walk you through how our app works"]}
 						</p>
 					</div>
-					<div
-						className={
-							isVideoPlaying
-								? styles.none
-								: styles.logoWrapper
-						}
-					>
+					<div className={isVideoPlaying ? style.none : style.logoWrapper}>
 						<FreediLogoIcon size={"1.9rem"} color={"white"} />
 						<FreediIcon
 							height="1.9rem"
@@ -94,55 +73,37 @@ export default function VideoSection({
 						alt="videoPeopleImage"
 						src={videoSectionPeopleImage}
 						quality={100}
-						className={styles.videoPeopleImage}
+						className={style.videoPeopleImage}
 					/>
 				</div>
 			) : (
 				<>
-					<div className={styles.textWrapper}>
-						<h1 className={styles.header}>{currentLang["How does FreeDi work?"]}</h1>
-						<p className={styles.underHeaderP}>
+					<div className={style.textWrapper}>
+						<h1 className={style.header}>{currentLang["How does FreeDi work?"]}</h1>
+						<p className={style.underHeaderP}>
 							{currentLang["Let us walk you through how our app works"]}
 						</p>
 					</div>
-					<div
-						className={styles.videoWrapper}
-					>
+					<div className={style.videoWrapper}>
 						<iframe
-							src={`https://www.youtube.com/embed/qLznfpgj1E4?wmode=transparent&autoplay=1`}
+							src="https://www.youtube.com/embed/qLznfpgj1E4?wmode=transparent&autoplay=1"
 							title="YouTube video player"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							loading="lazy"
 							allowFullScreen
-							className={
-								isVideoPlaying
-									? `${styles.videoPlayer} ${styles.videoImage}`
-									: styles.none
-							}
+							className={isVideoPlaying ? `${style.videoPlayer} ${style.videoImage}` : style.none}
 						></iframe>
 						<Image
 							alt="videoImage"
 							src={videoSectionImage}
 							quality={100}
-							className={
-								isVideoPlaying ? styles.none : styles.videoImage
-							}
+							className={isVideoPlaying ? style.none : style.videoImage}
 							onClick={() => handlePlayVideo()}
 						/>
-						<p
-							className={
-								isVideoPlaying ? styles.none : styles.timerP
-							}
-						>
+						<p className={isVideoPlaying ? style.none : style.timerP}>
 							{currentLang["explained in 90 second"]}
 						</p>
-						<div
-							className={
-								isVideoPlaying
-									? styles.none
-									: styles.logoWrapper
-							}
-						>
+						<div className={isVideoPlaying ? style.none : style.logoWrapper}>
 							<FreediLogoIcon size={"1.459rem"} color={"white"} />
 							<FreediIcon
 								height="1rem"
@@ -155,7 +116,7 @@ export default function VideoSection({
 							alt="videoPeopleImage"
 							src={videoSectionPeopleImage}
 							quality={100}
-							className={styles.videoPeopleImage}
+							className={style.videoPeopleImage}
 						/>
 					</div>
 				</>

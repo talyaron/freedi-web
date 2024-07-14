@@ -1,25 +1,27 @@
 $ColorBodyText: #57688f;
+$breakpoint-xxxlarge: 1920px;
 $breakpoint-xxlarge: 1440px;
 $breakpoint-xlarge: 1200px;
 $breakpoint-large: 1024px;
 $breakpoint-medium: 768px;
 $breakpoint-small: 576px;
 
+@import "../../../../styles/globalExtends.scss";
+
 .heroSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend %centered;
 
     &__centerArea {
-        width: 70rem;
+        width: 66.5rem;
         display: flex;
         justify-content: center;
 
         &__leftSideContent {
-            margin-top: 6rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
+            position: relative;
+            top: 19rem;
+            @extend %flex-column;
+            gap: 3rem;
+            height: 22.8rem;
 
             &__title {
                 h1 {
@@ -32,28 +34,29 @@ $breakpoint-small: 576px;
                 }
 
                 p {
-                    font-size: 1.1rem;
+                    font-size: 1rem;
+                    font-weight: 350;
                     color: $ColorBodyText;
                 }
             }
             &__icons {
-                display: flex;
+                @extend %flex-align;
                 gap: 1.5rem;
-                align-items: center;
-
+                
                 svg {
                     width: 2.5rem;
                     height: 2.5rem;
                 }
+                svg:hover{
+                opacity: 0.5
+                }
 
                 &__phone {
-                    display: flex;
-                    align-items: center;
+                    @extend %flex-align;
                     gap: 0.5rem;
-
                     &__text {
                         font-weight: 300;
-                        font-size: 1rem;
+                        font-size: 0.99rem;
                         line-height: 1.4rem;
                         color: var(--notFound-btn);
                     }
@@ -61,9 +64,10 @@ $breakpoint-small: 576px;
             }
         }
         &__rightSideContent {
+            margin-top: 11.1rem;
             .heroSectionImg {
-                width: 40rem;
-                height: 37rem;
+                width: 43.8rem;
+                height: 40.4rem;
             }
         }
     }
@@ -72,11 +76,11 @@ $breakpoint-small: 576px;
         margin-top: 10rem;
         overflow: hidden;
         width: 57rem;
-        margin-bottom: -2rem;
+        margin-bottom: 5rem;
 
         ul {
             display: flex;
-            gap: 2.5rem;
+            gap: 1rem;
             color: var(--notFound-btn);
             animation: running-banner-animation 25s linear infinite;
 
@@ -114,8 +118,9 @@ $breakpoint-small: 576px;
 @media (max-width: $breakpoint-small) {
     .heroSection {
         &__centerArea {
-            margin-left: 8rem;
-            width: 21.5rem;
+            margin-left: 5rem;
+            width: 26.5rem;
+            margin-top: -15rem;
 
             &__leftSideContent {
                 height: 8.4rem;
@@ -125,27 +130,32 @@ $breakpoint-small: 576px;
                     left: 12rem;
 
                     h1 {
-                        width: 28rem;
-                        font-size: 2.25rem;
-                        line-height: 3.1rem;
+                        width: 30rem;
+                        font-size: 2rem;
+                        line-height: 125%;
                     }
                 }
                 &__icons {
                     position: relative;
-                    top: 23rem;
-                    left: 14.5rem;
+                    top: 27rem;
+                    left: 12rem;
                     gap: 1.8rem;
                     width: 50%;
 
                     svg {
                         width: 2rem;
                     }
+                    &__phone {
+                        &__text {
+                            font-size: 0.95rem;
+                        }
+                    }
                 }
             }
             &__rightSideContent {
                 position: relative;
-                top: 16rem;
-                right: 18rem;
+                top: 20rem;
+                right: 17rem;
 
                 .heroSectionImg {
                     width: 26rem;
@@ -154,15 +164,17 @@ $breakpoint-small: 576px;
             }
         }
         &__runningBanner {
-            margin-top: 25rem;
-            width: 23rem;
+            margin-top: 27.5rem;
+            font-size: 1.1rem;
+            font-weight: 350;
+            width: 26.5rem;
             ul {
                 @keyframes running-banner-animation {
                     0% {
                         transform: translateX(100%);
                     }
                     100% {
-                        transform: translateX(-800%);
+                        transform: translateX(-150%);
                     }
                 }
             }
@@ -174,54 +186,62 @@ $breakpoint-small: 576px;
 @media screen and (min-width: $breakpoint-small) and (max-width: ($breakpoint-medium + 1)) {
     .heroSection {
         &__centerArea {
-            width: 30rem;
+            width: 30.5rem;
+            margin-top: -15rem;
 
             &__leftSideContent {
                 height: 8.4rem;
 
                 &__title {
                     position: relative;
-                    left: 16rem;
+                    left: 12rem;
 
                     h1 {
-                        width: 36.25rem;
+                        width: 28rem;
                         font-size: 2.5rem;
-                        line-height: 3.1rem;
+                        line-height: 125%;
                     }
                 }
                 &__icons {
                     position: relative;
-                    top: 23rem;
-                    left: 19rem;
-                    gap: 1.8rem;
+                    top: 26rem;
+                    left: 13.5rem;
+                    gap: 2rem;
                     width: 50%;
 
                     svg {
                         width: 2rem;
                     }
+                    &__phone {
+                        &__text {
+                            font-size: 0.90rem;
+                        }
+                    }
                 }
             }
             &__rightSideContent {
                 position: relative;
-                top: 16rem;
-                right: 18rem;
-
+                top: 18rem;
+                right: 15rem;
                 .heroSectionImg {
-                    width: 27rem;
-                    height: 24rem;
+                    width: 30.1rem;
+                    height: 27.8rem;
                 }
             }
         }
         &__runningBanner {
-            margin-top: 21rem;
-            width: 20rem;
+            margin-top: 26rem;
+            margin-left: -2rem;
+            font-size: 1.1rem;
+            font-weight: 350;
+            width: 29rem;
             ul {
                 @keyframes running-banner-animation {
                     0% {
                         transform: translateX(100%);
                     }
                     100% {
-                        transform: translateX(-900%);
+                        transform: translateX(-150%);
                     }
                 }
             }
@@ -233,55 +253,65 @@ $breakpoint-small: 576px;
 @media screen and (min-width: ($breakpoint-medium  + 1)) and (max-width: $breakpoint-large) {
     .heroSection {
         &__centerArea {
-            width: 30rem;
+            margin-left: -15rem;
+            width: 36.5rem;
+            margin-top: -15rem;
 
             &__leftSideContent {
                 height: 8.4rem;
 
                 &__title {
                     position: relative;
-                    left: 16rem;
+                    left: 24rem;
 
                     h1 {
-                        width: 36.25rem;
+                        width: 36.3rem;
                         font-size: 2.5rem;
-                        line-height: 3.1rem;
+                        line-height: 125%;
                     }
                 }
                 &__icons {
                     position: relative;
-                    top: 23rem;
-                    left: 20rem;
+                    top: 27rem;
+                    left: 29rem;
                     gap: 1.8rem;
-                    width: 50%;
+                    width: 20.8rem;
+                    height: 2.6rem;
 
                     svg {
                         width: 2rem;
+                    }
+                    &__phone {
+                        &__text {
+                            font-size: 1rem;
+                        }
                     }
                 }
             }
             &__rightSideContent {
                 position: relative;
-                top: 16rem;
-                right: 18rem;
-
+                top: 18rem;
+                left: -9rem;
                 .heroSectionImg {
-                    width: 27rem;
-                    height: 24rem;
+                    width: 30.1rem;
+                    height: 27.8rem;
                 }
             }
         }
         &__runningBanner {
-            margin-top: 27rem;
-            margin-bottom: -2rem;
-            width: 33rem;
+            margin-top: 28rem;
+            margin-left: 2rem;
+            font-size: 1.1rem;
+            font-weight: 350;
+            width: 28rem;
+            height: 1.6rem;
             ul {
                 @keyframes running-banner-animation {
                     0% {
                         transform: translateX(100%);
                     }
                     100% {
-                        transform: translateX(-500%);
+                        transform: translateX(-150%);
                     }
                 }
             }
@@ -293,40 +323,65 @@ $breakpoint-small: 576px;
 @media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-xlarge) {
     .heroSection {
         &__centerArea {
-            width: 54.75rem;
+            margin-left: -40rem;
+            width: 51rem;
+            margin-top: -11rem;
+
             &__leftSideContent {
-                width: 20.25rem;
+                height: 8.4rem;
 
                 &__title {
+                    position: relative;
+                    left: 24rem;
+
                     h1 {
-                        width: 26.25rem;
-                        font-size: 3.25rem;
+                        width: 20.8rem;
+                        font-size: 2.5rem;
+                        line-height: 125%;
                     }
                 }
                 &__icons {
-                    gap: 2.2rem;
+                    position: relative;
+                    top: -1rem;
+                    left: 24rem;
+                    gap: 1.8rem;
+                    width: 20.8rem;
+                    height: 2.6rem;
+
+                    svg {
+                        width: 2rem;
+                    }
+                    &__phone {
+                        &__text {
+                            font-size: 1rem;
+                        }
+                    }
                 }
             }
             &__rightSideContent {
+                position: relative;
+                top: 15rem;
+                left: 18rem;
                 .heroSectionImg {
-                    position: relative;
-                    top: 18rem;
-                    left: 0.5rem;
-                    width: 29rem;
+                    width: 31.5rem;
                     height: 27rem;
                 }
             }
         }
         &__runningBanner {
-            margin-top: 25rem;
-            width: 33rem;
+            margin-top: 22rem;
+            margin-left: 2rem;
+            font-size: 1.1rem;
+            font-weight: 350;
+            width: 28rem;
+            height: 1.6rem;
             ul {
                 @keyframes running-banner-animation {
                     0% {
                         transform: translateX(100%);
                     }
                     100% {
-                        transform: translateX(-500%);
+                        transform: translateX(-150%);
                     }
                 }
             }
@@ -338,38 +393,135 @@ $breakpoint-small: 576px;
 @media screen and (min-width: ($breakpoint-xlarge + 1)) and (max-width: $breakpoint-xxlarge) {
     .heroSection {
         &__centerArea {
-            width: 65rem;
+            margin-left: -40rem;
+            width: 54.75rem;
+            margin-top: -11rem;
+
             &__leftSideContent {
-                width: 20rem;
+                height: 8.4rem;
 
                 &__title {
+                    position: relative;
+                    left: 24rem;
+
                     h1 {
-                        width: 25rem;
+                        width: 26.25rem;
                         font-size: 3.25rem;
+                        line-height: 125%;
+                    }
+                }
+                &__icons {
+                    position: relative;
+                    top: -1rem;
+                    left: 24rem;
+                    gap: 1.8rem;
+                    width: 20.8rem;
+                    height: 2.6rem;
+
+                    svg {
+                        width: 2.5rem;
+                    }
+                    &__phone {
+                        &__text {
+                            font-size: 1rem;
+                        }
                     }
                 }
             }
             &__rightSideContent {
+                position: relative;
+                top: 15rem;
+                left: 18rem;
                 .heroSectionImg {
-                    position: relative;
-                    top: 13rem;
-                    left: 1rem;
-                    width: 33rem;
-                    height: 32rem;
+                    width: 33.75rem;
+                    height: 28.9rem;
                 }
             }
         }
         &__runningBanner {
-            margin-top: 20rem;
-            margin-bottom: -2rem;
-            width: 33rem;
+            margin-top: 22rem;
+            margin-left: 5rem;
+            font-size: 1.1rem;
+            font-weight: 350;
+            width: 28rem;
+            height: 1.6rem;
             ul {
                 @keyframes running-banner-animation {
                     0% {
                         transform: translateX(100%);
                     }
                     100% {
-                        transform: translateX(-500%);
+                        transform: translateX(-150%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Extra extra extra large screens (up to 1920px)
+@media screen and (min-width: ($breakpoint-xxlarge + 1)) and (max-width: $breakpoint-xxxlarge) {
+    .heroSection {
+        &__centerArea {
+            margin-left: -49rem;
+            width: 69rem;
+            margin-top: -9rem;
+
+            &__leftSideContent {
+                height: 20.1rem;
+
+                &__title {
+                    position: relative;
+                    left: 24rem;
+
+                    h1 {
+                        width: 26.25rem;
+                        font-size: 3.25rem;
+                        line-height: 125%;
+                    }
+                }
+                &__icons {
+                    position: relative;
+                    top: -1rem;
+                    left: 24rem;
+                    gap: 1.8rem;
+                    width: 20.8rem;
+                    height: 2.6rem;
+
+                    svg {
+                        width: 2.5rem;
+                    }
+                    &__phone {
+                        &__text {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+            &__rightSideContent {
+                position: relative;
+                top: 2.5rem;
+                left: 26rem;
+                .heroSectionImg {
+                    width: 33.6rem;
+                    height: 33.5rem;
+                }
+            }
+        }
+        &__runningBanner {
+            margin-top: 8rem;
+            margin-left: -1rem;
+            font-size: 1.1rem;
+            font-weight: 350;
+            width: 40rem;
+            height: 1.6rem;
+            ul {
+                @keyframes running-banner-animation {
+                    0% {
+                        transform: translateX(100%);
+                    }
+                    100% {
+                        transform: translateX(-150%);
                     }
                 }
             }

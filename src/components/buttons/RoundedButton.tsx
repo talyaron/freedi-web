@@ -6,9 +6,9 @@ interface Props {
 }
 
 export default function RoundedButton({ text, onClick }: Readonly<Props>) {
-    return (
-        <button onClick={onClick} className="roundedBtn">
-            {text}
-        </button>
-    );
+	return (
+		<button onClick={onClick} className="roundedBtn">
+			{text}
+		</button>
+	);
 }

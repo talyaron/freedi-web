@@ -1,0 +1,169 @@
+$breakpoint-xxlarge: 1440px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-large: 1024px;
+$breakpoint-medium: 768px;
+$breakpoint-small: 576px;
+
+@import "../../../../styles/globalExtends.scss";
+.footer {
+    width: 100%;
+    @extend %centered;
+    position: relative;
+    background-color: var(--notFound-btn);
+
+    &__mainArea {
+        width: 69rem;
+        margin-top: 4rem;
+        @extend %flex-column;
+        gap: 3rem;
+    }
+
+    &__topText {
+        font-size: 1.6rem;
+        width: 30%;
+        color: var(--white);
+    }
+
+    &__contactDetails {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 3.5rem;
+
+        &__call,
+        &__email {
+            @extend %flex-align;
+            gap: 0.5rem;
+        }
+
+        &__text {
+            @extend %flex-column;
+        }
+
+        p {
+            color: var(--white);
+        }
+    }
+
+    &__bottomText {
+        font-weight: 610;
+        font-size: 5.4rem;
+        color: var(--white);
+    }
+
+    &__bottomArea {
+        display: flex;
+        justify-content: flex-end;
+        width: 81%;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    hr {
+        width: 100%;
+        opacity: 30%;
+    }
+
+    &__arrowUp {
+        @extend %flex-align;
+        width: 7rem;
+    }
+}
+
+// Small screens (up to 576px)
+@media (max-width: $breakpoint-small) {
+    .footer {
+        &__mainArea {
+            width: 35rem;
+        }
+        &__topText {
+            width: 55%;
+        }
+        &__bottomText {
+            font-size: 2.7rem;
+        }
+        &__bottomArea {
+            width: 86%;
+        }
+        &__arrowUp {
+            width: 2rem;
+        }
+    }
+}
+
+// Medium screens (up to 768px)
+@media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+    .footer {
+        &__mainArea {
+            width: 37rem;
+        }
+        &__topText {
+            width: 50%;
+        }
+        &__bottomText {
+            font-size: 2.9rem;
+        }
+        &__bottomArea {
+            width: 70%;
+        }
+        &__arrowUp {
+            width: 2rem;
+        }
+    }
+}
+
+// Large screens (up to 1024px)
+@media screen and (min-width: $breakpoint-medium) and (max-width: ($breakpoint-large + 1)) {
+    .footer {
+        &__mainArea {
+            width: 46.5rem;
+        }
+        &__topText {
+            width: 40%;
+        }
+        &__bottomText {
+            font-size: 3.6rem;
+        }
+        &__bottomArea {
+            width: 72%;
+        }
+        &__arrowUp {
+            width: 2rem;
+        }
+    }
+}
+
+// Extra large screens (up to 1200px)
+@media screen and (min-width: ($breakpoint-large +1)) and (max-width: $breakpoint-xlarge) {
+    .footer {
+        &__mainArea {
+            width: 51rem;
+        }
+        &__topText {
+            width: 35%;
+        }
+        &__bottomText {
+            font-size: 4rem;
+        }
+        &__bottomArea {
+            width: 93%;
+        }
+    }
+}
+
+// Extra extra large screens (up to 1440px)
+@media screen and (min-width: $breakpoint-xlarge) and (max-width: $breakpoint-xxlarge) {
+    .footer {
+        &__mainArea {
+            width: 56.75rem;
+        }
+        &__topText {
+            width: 35%;
+        }
+        &__bottomText {
+            font-size: 4.4rem;
+        }
+        &__bottomArea {
+            width: 82%;
+        }
+    }
+}

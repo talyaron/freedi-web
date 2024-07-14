@@ -7,9 +7,9 @@ interface props {
 }
 
 export default function DefaultButton({ text, onClick, type }: props) {
-    return (
-        <button onClick={onClick} className={`defaultBtn defaultBtn--${type}`}>
-            {text}
-        </button>
-    );
+	return (
+		<button onClick={onClick} className={`defaultBtn defaultBtn--${type}`}>
+			{text}
+		</button>
+	);
 }

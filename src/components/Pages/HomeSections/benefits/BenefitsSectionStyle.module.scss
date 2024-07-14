@@ -1,0 +1,33 @@
+$breakpoint-large: 1024px;
+@import "../../../../styles/globalExtends.scss";
+.benefitSection {
+    @extend %flex-column;
+    gap: 2rem;
+    padding: 0 5vw;
+
+    .benefitsWrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+
+        .benefit {
+            @extend %centered;
+            justify-content: center;
+            gap: 1rem;
+            text-align: center;
+
+            p {
+                text-align: center;
+                width: 60%;
+            }
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-large) {
+        .benefitsWrapper {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            width: 100%;
+        }
+    }
+}

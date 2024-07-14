@@ -118,8 +118,8 @@ $breakpoint-small: 576px;
 @media (max-width: $breakpoint-small) {
     .heroSection {
         &__centerArea {
-            margin-left: 8rem;
-            width: 21.5rem;
+            margin-left: 5rem;
+            width: 26.5rem;
             margin-top: -15rem;
 
             &__leftSideContent {
@@ -130,15 +130,15 @@ $breakpoint-small: 576px;
                     left: 12rem;
 
                     h1 {
-                        width: 28rem;
+                        width: 30rem;
                         font-size: 2rem;
                         line-height: 125%;
                     }
                 }
                 &__icons {
                     position: relative;
-                    top: 23rem;
-                    left: 10rem;
+                    top: 27rem;
+                    left: 12rem;
                     gap: 1.8rem;
                     width: 50%;
 
@@ -154,8 +154,8 @@ $breakpoint-small: 576px;
             }
             &__rightSideContent {
                 position: relative;
-                top: 16rem;
-                right: 18rem;
+                top: 20rem;
+                right: 17rem;
 
                 .heroSectionImg {
                     width: 26rem;
@@ -164,10 +164,10 @@ $breakpoint-small: 576px;
             }
         }
         &__runningBanner {
-            margin-top: 23.5rem;
+            margin-top: 27.5rem;
             font-size: 1.1rem;
             font-weight: 350;
-            width: 22rem;
+            width: 26.5rem;
             ul {
                 @keyframes running-banner-animation {
                     0% {
@@ -186,7 +186,6 @@ $breakpoint-small: 576px;
 @media screen and (min-width: $breakpoint-small) and (max-width: ($breakpoint-medium + 1)) {
     .heroSection {
         &__centerArea {
-            margin-left: 5.6rem;
             width: 30.5rem;
             margin-top: -15rem;
 
@@ -206,7 +205,7 @@ $breakpoint-small: 576px;
                 &__icons {
                     position: relative;
                     top: 26rem;
-                    left: 15rem;
+                    left: 13.5rem;
                     gap: 2rem;
                     width: 50%;
 
@@ -215,7 +214,7 @@ $breakpoint-small: 576px;
                     }
                     &__phone {
                         &__text {
-                            font-size: 0.95rem;
+                            font-size: 0.90rem;
                         }
                     }
                 }
@@ -232,10 +231,10 @@ $breakpoint-small: 576px;
         }
         &__runningBanner {
             margin-top: 26rem;
-            margin-left: 2rem;
+            margin-left: -2rem;
             font-size: 1.1rem;
             font-weight: 350;
-            width: 26.9rem;
+            width: 29rem;
             ul {
                 @keyframes running-banner-animation {
                     0% {
@@ -300,7 +299,7 @@ $breakpoint-small: 576px;
             }
         }
         &__runningBanner {
-            margin-top: 30rem;
+            margin-top: 28rem;
             margin-left: 2rem;
             font-size: 1.1rem;
             font-weight: 350;
@@ -326,7 +325,7 @@ $breakpoint-small: 576px;
         &__centerArea {
             margin-left: -40rem;
             width: 51rem;
-            margin-top: -12rem;
+            margin-top: -11rem;
 
             &__leftSideContent {
                 height: 8.4rem;
@@ -361,7 +360,7 @@ $breakpoint-small: 576px;
             }
             &__rightSideContent {
                 position: relative;
-                top: 18rem;
+                top: 15rem;
                 left: 18rem;
                 .heroSectionImg {
                     width: 31.5rem;
@@ -370,7 +369,7 @@ $breakpoint-small: 576px;
             }
         }
         &__runningBanner {
-            margin-top: 25rem;
+            margin-top: 22rem;
             margin-left: 2rem;
             font-size: 1.1rem;
             font-weight: 350;
@@ -396,7 +395,7 @@ $breakpoint-small: 576px;
         &__centerArea {
             margin-left: -40rem;
             width: 54.75rem;
-            margin-top: -12rem;
+            margin-top: -11rem;
 
             &__leftSideContent {
                 height: 8.4rem;
@@ -464,9 +463,9 @@ $breakpoint-small: 576px;
 @media screen and (min-width: ($breakpoint-xxlarge + 1)) and (max-width: $breakpoint-xxxlarge) {
     .heroSection {
         &__centerArea {
-            margin-left: -40rem;
+            margin-left: -49rem;
             width: 69rem;
-            margin-top: -7rem;
+            margin-top: -9rem;
 
             &__leftSideContent {
                 height: 20.1rem;
@@ -501,20 +500,20 @@ $breakpoint-small: 576px;
             }
             &__rightSideContent {
                 position: relative;
-                top: 0;
-                left: 18rem;
+                top: 2.5rem;
+                left: 26rem;
                 .heroSectionImg {
-                    width: 39.6rem;
-                    height: 36.5rem;
+                    width: 33.6rem;
+                    height: 33.5rem;
                 }
             }
         }
         &__runningBanner {
             margin-top: 8rem;
-            margin-left: 5rem;
+            margin-left: -1rem;
             font-size: 1.1rem;
             font-weight: 350;
-            width: 28rem;
+            width: 40rem;
             height: 1.6rem;
             ul {
                 @keyframes running-banner-animation {

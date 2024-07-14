@@ -7,6 +7,7 @@ $breakpoint-medium: 768px;
     @extend %flex-relative;
     gap: 5rem;
     padding: 0 5vw;
+    margin-top: 15rem;
 
     &__imageWrapper {
         @extend %centered;

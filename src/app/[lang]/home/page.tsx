@@ -44,43 +44,28 @@ export default async function Home({
             <HeroSection
                 currentLang={currentLang}
                 direction={direction}
-                 />
-                
-            {/* <Image
-                alt="Hero-Background"
-                src={heroBg}
-                loading="eager"
-                priority
-                style={{
-                    width: "100%",
-                    height: "20rem",
-                    position: "absolute",
-                    top: 0,
-                    zIndex: -10,
-                }}
-            /> */}
-            {/* <WelcomeHeader currentLang={currentLang} /> */}
-
-            <div className="main__body">
-                <AboutSection currentLang={currentLang} direction={direction} />
-
-                <BenefitsSection currentLang={currentLang} />
-
-                <FeatureSection
-                    currentLang={currentLang}
-                    direction={direction}
-                />
-
-                <WhyUsSection
-                    currentLang={currentLang}
-                    direction={direction}
-                />
+            />
+            {<WhyUsSection
+                currentLang={currentLang}
+                direction={direction}
+            />}
 
                 <VideoSection currentLang={currentLang} direction={direction} />
+            
+            <div className="main__body">
+                {/* <AboutSection currentLang={currentLang} direction={direction} />
 
-                <ClientFeedbackSection />
+                <BenefitsSection currentLang={currentLang} /> */}
 
-                <AccessTodaySection
+                {/* <FeatureSection
+                    currentLang={currentLang}
+                    direction={direction}
+                /> */}
+
+
+                {/* <ClientFeedbackSection /> */}
+
+                {/* <AccessTodaySection
                     currentLang={currentLang}
                     direction={direction}
                 />
@@ -88,7 +73,7 @@ export default async function Home({
                 <TeamworkSection
                     currentLang={currentLang}
                     direction={direction}
-                />
+                /> */}
             </div>
 
 

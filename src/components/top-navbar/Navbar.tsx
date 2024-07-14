@@ -20,7 +20,7 @@ export default function Navbar({
     return (
         <nav className="navbar">
             <LogoWithName />
-
+            
             <LanguageDropdown lang={lang} />
 
         </nav>

@@ -1,3 +1,9 @@
+$breakpoint-xxxlarge: 1920px;
+$breakpoint-xxlarge: 1440px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-large: 1024px;
+$breakpoint-medium: 768px;
+$breakpoint-small: 576px;
 
 .navbar {
     width: 100%;
@@ -52,4 +58,26 @@ ul {
             transition: all 0.3s ease-in-out;
         }
     }
+}
+
+// Small screens (up to 576px)
+@media (max-width: $breakpoint-small) {
+    .navbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: initial;
+        }
+}
+
+// Medium screens (up to 768px)
+@media screen and (min-width: $breakpoint-small) and (max-width: ($breakpoint-medium + 1)) {
+    .navbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: initial;
+        }
 }

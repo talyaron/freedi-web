@@ -22,6 +22,8 @@ import HeroSection from "@/components/Pages/HomeSections/heroSection/HeroSection
 // Helpers
 import { getLanguageData } from "@/helpers/languages";
 import BenefitsSection from "@/components/Pages/HomeSections/benefits/BenefitsSection";
+
+import BottomLogo from "@/components/bottomLogo/BottomLogo";
 import WhyUsSection from "@/components/Pages/HomeSections/whyUs/WhyUsSection";
 
 
@@ -57,6 +59,8 @@ export default async function Home({
             <WelcomeHeader currentLang={currentLang} />
 
             <div className="main__body">
+                <BottomLogo />
+
                 <AboutSection currentLang={currentLang} direction={direction} />
 
                 <BenefitsSection currentLang={currentLang} />

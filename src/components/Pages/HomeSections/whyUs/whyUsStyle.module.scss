@@ -1,3 +1,4 @@
+$breakpoint-xxxlarge: 1920px;
 $breakpoint-xxlarge: 1440px;
 $breakpoint-xlarge: 1200px;
 $breakpoint-large: 1024px;
@@ -8,15 +9,14 @@ $breakpoint-xsmall: 375px;
  @import "../../../../styles/globalExtends.scss";
 
  .whyUsActive {
-
     &--title {
         color: var(--white) !important;
-        transition: 1s ease-in;
+        transition: .5s ease-in;
     }
 
     &--description {
         color: var(--white) !important;
-        transition: 1s ease-in;
+        transition: .5s ease-in;
     }
 
     &__cardWrapper {
@@ -27,7 +27,7 @@ $breakpoint-xsmall: 375px;
             0px 37px 22px 0px rgba(88, 109, 141, 0.12),
             0px 65px 26px 0px rgba(88, 109, 141, 0.04),
             0px 102px 29px 0px rgba(88, 109, 141, 0) !important;
-        transition: 1s ease-in;
+        transition: .5s ease-in;  
     }
 
     &__main {
@@ -139,6 +139,11 @@ $breakpoint-xsmall: 375px;
 }
 
 
+.freediLogo {
+    position: relative;
+    top: 2rem;
+    right: 2rem;
+}
 
 
 
@@ -226,6 +231,7 @@ $breakpoint-xsmall: 375px;
 
 // min-width:376px and max-width: 576px
 @media screen and (min-width: $breakpoint-xsmall) and (max-width: $breakpoint-small) {
+    
     .whyUs {
         display: flex;
         flex-direction: column;
@@ -287,6 +293,12 @@ $breakpoint-xsmall: 375px;
 
 // min-width 576px and max-width: 768px
 @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+    .freediLogo {
+        position: relative;
+        bottom: 6rem;
+        right: 2rem;
+    }
+    
     .whyUs {
         height: 52.75rem;
         display: flex;
@@ -371,6 +383,7 @@ $breakpoint-xsmall: 375px;
 
 //min-width: 768px and max-width: 1024px
 @media screen and (min-width: $breakpoint-medium) and (max-width: ($breakpoint-large - 1)) {
+    
     .whyUs {
         display: flex;
         flex-direction: column;
@@ -428,7 +441,10 @@ $breakpoint-xsmall: 375px;
             &:hover {
                 animation-play-state: paused;
             }
-
+        }
+        .freediLogo {
+            position: relative;
+            left: 14rem;
         }
     }
 
@@ -455,6 +471,7 @@ $breakpoint-xsmall: 375px;
 
 // min-width 1024px and max-width: 1200px
 @media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-xlarge) {
+    
     .whyUs {
 
         &--title {
@@ -484,8 +501,8 @@ $breakpoint-xsmall: 375px;
 
 // min-width 1200px and max-width: 1440px
 @media screen and (min-width: $breakpoint-xlarge) and (max-width: $breakpoint-xxlarge) {
-    .whyUs {
 
+    .whyUs {
         &--title {
             font-size: 3rem;
         }
@@ -514,7 +531,34 @@ $breakpoint-xsmall: 375px;
 
 
 
+// min-width 1440px and max-width: 1920px
+@media screen and (min-width: $breakpoint-xxlarge) and (max-width: $breakpoint-xxxlarge) {
 
+    .whyUs {
+        &--title {
+            font-size: 3rem;
+        }
+
+        &__cardSection {
+            width: 50rem;
+            margin-top: 8rem;
+            margin-left: 0;
+            margin-right: 0;
+
+
+            &__carouselWrapper {
+
+                &__carousel {
+                    width: 14.5rem;
+
+                    &__vertical {
+                        width: 14.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 

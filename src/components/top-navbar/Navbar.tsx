@@ -8,21 +8,18 @@ import "./navbar.scss";
 // Custom Components
 import LanguageDropdown from "./LanguageDropdown";
 import LogoWithName from "../logo/LogoWithName";
-import { useTranslate } from "@/hooks/useTranslate";
 
 export default function Navbar({
-    lang,
+	lang,
 }: Readonly<{
     lang: string;
 }>) {
-    const { t } = useTranslate();
+	return (
+		<nav className="navbar">
+			<LogoWithName />
 
-    return (
-        <nav className="navbar">
-            <LogoWithName />
-            
-            <LanguageDropdown lang={lang} />
+			<LanguageDropdown lang={lang} />
 
-        </nav>
-    );
+		</nav>
+	);
 }

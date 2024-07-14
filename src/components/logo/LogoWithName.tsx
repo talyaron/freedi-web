@@ -4,7 +4,6 @@ import React from "react";
 import FreediLogoIcon from "../icons/FreediLogoIcon";
 
 import style from "./logoStyle.module.scss";
-import { useTranslate } from "@/hooks/useTranslate";
 import FreediIcon from "../icons/FreediIcon";
 
 interface Props {
@@ -13,17 +12,15 @@ interface Props {
 }
 
 export default function LogoWithName({
-    size = "1rem",
-    color,
+	size = "1.9rem",
+	color,
 }: Readonly<Props>) {
-    const { t } = useTranslate();
-
-    return (
-        <div className={style["logoBox"]}>
-            <FreediLogoIcon size={"1.9rem"} color={color} />
-            <FreediIcon height="1.9rem" width="4.1rem" />
-        </div>
-    );
+	return (
+		<div className={style["logoBox"]}>
+			<FreediLogoIcon size={size} color={color} />
+			<FreediIcon height={size} width="4.1rem" />
+		</div>
+	);
 }
 
 // 25 83

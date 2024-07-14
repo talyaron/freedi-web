@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import style from "./videoSectionStyle.module.scss";
 import FreediLogoIcon from "@/components/icons/FreediLogoIcon";
@@ -12,8 +12,8 @@ import useWindowSizeFixed from "@/hooks/useWindowSizeFixed";
 import LogoWithName from "@/components/logo/LogoWithName";
 
 export default function VideoSection({
-    currentLang,
-    direction,
+	currentLang,
+	direction,
 }: Readonly<{
     currentLang: Record<string, string>;
     direction: "rtl" | "ltr";
@@ -21,9 +21,9 @@ export default function VideoSection({
     const { width } = useWindowSizeFixed();
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
-    const handlePlayVideo = () => {
-        setIsVideoPlaying(true);
-    };
+	const handlePlayVideo = () => {
+		setIsVideoPlaying(true);
+	};
 
     if (width == undefined) {
         return (

@@ -11,14 +11,14 @@ import LogoWithName from "@/components/logo/LogoWithName";
 export const LangContext = createContext<LangType | undefined>(undefined);
 
 const WhyUsSection = ({
-    currentLang,
-    direction,
+	currentLang,
+	direction,
 }: Readonly<{
     currentLang: Record<string, string>;
     direction: "rtl" | "ltr";
 }>) => {
-    const ref = useRef<HTMLDivElement>(null);
-    const isVisible = useIsVisible(ref);
+	const ref = useRef<HTMLDivElement>(null);
+	const isVisible = useIsVisible(ref);
 
     useEffect(() => {
         const body = document.querySelector(".main") as HTMLElement;
@@ -29,7 +29,7 @@ const WhyUsSection = ({
         }
     }, [isVisible]);
 
-    const contextValue = useMemo(() => ({ currentLang, isVisible, itemRef: ref }), [currentLang, isVisible]);
+	const contextValue = useMemo(() => ({ currentLang, isVisible, itemRef: ref }), [currentLang, isVisible]);
 
     return (
         <LangContext.Provider value={contextValue}>

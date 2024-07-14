@@ -4,12 +4,12 @@ import { CardModel } from "./whyUsModel";
 import style from "./whyUsStyle.module.scss";
 
 const WhyUsCard = ({ title, description, img: SvgImage }: CardModel) => {
-    const context = useContext(LangContext);
-    if (!context) {
-        throw new Error('Lang or inSection cannot be undefined!');
-    }
+	const context = useContext(LangContext);
+	if (!context) {
+		throw new Error('Lang or inSection cannot be undefined!');
+	}
     
-    const { currentLang, isVisible } = context;
+	const { currentLang, isVisible } = context;
 
     return (
         <div className={`${style.cardWrapper} ${isVisible ? style.whyUsActive__cardWrapper : ''}`}>

@@ -30,16 +30,16 @@ export default async function Home({
 	return (
 		<main className={isHebrew ? "main he" : "main en"}>
 			<div className="main__body">
-				<HeroSection />
+				<HeroSection currentLang={currentLang} direction={direction}/>
 
 				<WhyUsSection currentLang={currentLang} direction={direction} />
 
 				<VideoSection currentLang={currentLang} direction={direction} />
 
-				<WhoAreWeSection />
+				<WhoAreWeSection currentLang={currentLang} direction={direction}/>
 			</div>
 
-			<HomeFooter />
+			<HomeFooter currentLang={currentLang} direction={direction}/>
 		</main>
 	);
 }

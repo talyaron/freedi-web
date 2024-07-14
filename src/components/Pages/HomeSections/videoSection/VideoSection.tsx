@@ -9,7 +9,6 @@ import videoSectionImage from "@/assets/Images/VideoSectionImage.png";
 import videoSectionPeopleImage from "@/assets/Images/VideoSectionPeople.png";
 import Image from "next/image";
 import useWindowSizeFixed from "@/hooks/useWindowSizeFixed";
-import LogoWithName from "@/components/logo/LogoWithName";
 
 export default function VideoSection({
 	currentLang,

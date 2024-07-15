@@ -16,6 +16,7 @@ const WhyUsCardContainer = () => {
 	if(!context) {
 		throw new Error('Lang or inSection cannot be undefined!');
 	}
+	
     
 	const {itemRef} = context;
 

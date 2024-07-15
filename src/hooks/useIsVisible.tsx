@@ -1,21 +1,43 @@
-import { useEffect, useState, RefObject } from "react";
+import { useState, useEffect } from 'react';
+import useWindowSizeFixed from './useWindowSizeFixed';
 
-export function useIsVisible(ref: RefObject<HTMLElement>): boolean {
-	const [isIntersecting, setIsIntersecting] = useState(false);
+export const useIsVisible = (ref: React.RefObject<HTMLElement>, threshold = 0.1): boolean => {
+	const [isVisible, setIsVisible] = useState(false);
+	const { width } = useWindowSizeFixed();
+	const isSmallScreen = width! < 576;
+	const isMediumScreen = width! >= 576 && width! < 1024;
+	if(isSmallScreen) {
+		threshold = 0.25;
+	} else if(isMediumScreen) {
+		threshold = 0.2
+	} else {
+		threshold = 0.1
+	}
 
 	useEffect(() => {
-		if (!ref.current) return;
-
-		const observer = new IntersectionObserver(([entry]) =>
-			setIsIntersecting(entry.isIntersecting)
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					setIsVisible(entry.isIntersecting);
+				});
+			},
+			{
+				root: null,
+				rootMargin: '0px',
+				threshold,
+			}
 		);
 
-		observer.observe(ref.current);
-        
-		return () => {
-			observer.disconnect();
-		};
-	}, [ref]);
+		if (ref.current) {
+			observer.observe(ref.current);
+		}
 
-	return isIntersecting;
-}
+		return () => {
+			if (ref.current) {
+				observer.unobserve(ref.current);
+			}
+		};
+	}, [ref, threshold]);
+
+	return isVisible;
+};

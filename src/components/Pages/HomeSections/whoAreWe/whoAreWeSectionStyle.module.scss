@@ -85,7 +85,7 @@ $breakpoint-xsmall: 375px;
 
     &__rightSection {
         position: sticky;
-        top: -12rem;
+        top: -15rem;
         height: fit-content;
         align-self: flex-start;
 
@@ -94,6 +94,12 @@ $breakpoint-xsmall: 375px;
             height: 67.5rem;
         }
     }
+}
+
+.bottomLogo{
+   position: relative;
+   top: 4rem;
+   left: 25rem;
 }
 
 // Small screens (up to 375px)
@@ -320,7 +326,7 @@ $breakpoint-xsmall: 375px;
         &__rightSection {
             &__img {
                 position: relative;
-                bottom: 102rem;
+                bottom: 105rem;
                 left: 6rem;
                 width: 31rem;
                 height: 38rem;
@@ -328,9 +334,14 @@ $breakpoint-xsmall: 375px;
         }
     }
 }
+.bottomLogo{
+    position: relative;
+    top: 4rem;
+    left: 5rem;
+ }
 
 // Extra large screens (up to 1200px)
-@media (min-width: $breakpoint-large) and (max-width: $breakpoint-xlarge) {
+@media (min-width: ($breakpoint-large + 1)) and (max-width: $breakpoint-xlarge) {
     .whoAreWe {
         width: 54.75rem;
 
@@ -373,6 +384,12 @@ $breakpoint-xsmall: 375px;
                 height: 40rem;
             }
         }
+        .bottomLogo{
+            position: relative;
+            top: 4rem;
+            left: 20rem;
+            z-index: 1;
+         }
     }
 }
 

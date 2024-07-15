@@ -94,13 +94,13 @@ $breakpoint-xsmall: 375px;
             height: 67.5rem;
         }
     }
+    .bottomLogo{
+       position: relative;
+       top: 4rem;
+       left: 25rem;
+    }
 }
 
-.bottomLogo{
-   position: relative;
-   top: 4rem;
-   left: 25rem;
-}
 
 // Small screens (up to 375px)
 @media (max-width: $breakpoint-xsmall) {
@@ -332,13 +332,14 @@ $breakpoint-xsmall: 375px;
                 height: 38rem;
             }
         }
+        .bottomLogo{
+            position: relative;
+            top: 4rem;
+            left: 5rem;
+         }
     }
 }
-.bottomLogo{
-    position: relative;
-    top: 4rem;
-    left: 5rem;
- }
+
 
 // Extra large screens (up to 1200px)
 @media (min-width: ($breakpoint-large + 1)) and (max-width: $breakpoint-xlarge) {

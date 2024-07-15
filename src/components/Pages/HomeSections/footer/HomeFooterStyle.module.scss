@@ -67,6 +67,9 @@ $breakpoint-small: 576px;
         @extend %flex-align;
         width: 7rem;
     }
+    &__arrowUp:hover{
+        opacity: 0.5;
+    }
 }
 
 // Small screens (up to 576px)

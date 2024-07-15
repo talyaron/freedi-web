@@ -11,22 +11,28 @@ import ArrowDownIcon2 from '@/components/icons/ArrowDownIcon2'
 import ContactPhoneBlueIcon from '@/components/icons/ContactPhoneBlueIcon'
 import RunningBanner from './RunningBanner'
 
-function HeroSection() {
+function HeroSection({
+	currentLang,
+	direction,
+}: Readonly<{
+    currentLang: Record<string, string>;
+    direction: "rtl" | "ltr";
+}>) {
 	return (
-		<div className={style.heroSection}>
+		<div className={style.heroSection} style={{ direction }}>
 			<div className={style.heroSection__centerArea}>
 				<div className={style.heroSection__centerArea__leftSideContent}>
 					<div className={style.heroSection__centerArea__leftSideContent__title}>
-						<h1>Genuine Agreement via Deliberation</h1>
-						<p>Building Bonds and Bridging Divides</p>
+						<h1>{currentLang["Genuine Agreement via Deliberation"]}</h1>
+						<p>{currentLang["Building Bonds and Bridging Divides"]}</p>
 					</div>
 					<div className={style.heroSection__centerArea__leftSideContent__icons}>
 						<ArrowDownIcon2 />
 						<div className={style.heroSection__centerArea__leftSideContent__icons__phone}>
 							<ContactPhoneBlueIcon />
 							<div className={style.heroSection__centerArea__leftSideContent__icons__phone__text}>
-								<p>Call us</p>
-								<p>+972-52-607-9419</p>
+								<p>{currentLang["Call us"]}</p>
+								<p>{currentLang["+972-52-607-9419"]}</p>
 							</div>
 						</div>
 					</div>
@@ -36,7 +42,7 @@ function HeroSection() {
 				</div>
 			</div>
 			<div className={style.heroSection__runningBanner}>
-				<RunningBanner />
+				<RunningBanner currentLang={currentLang}/>
 			</div>
 		</div>
 	)

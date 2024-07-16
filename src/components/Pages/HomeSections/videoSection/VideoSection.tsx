@@ -77,10 +77,10 @@ export default function VideoSection({
 							quality={100}
 							className={style.videoPeopleImage}
 						/>
+						<div className={style.bottomLogo}>
+							<BottomLogo theme="light" />
+						</div>
 					</div>
-					{/* <div className={style.bottomLogo}>
-						<BottomLogo theme="light" />
-					</div> */}
 				</>
 			) : (
 				<>
@@ -124,10 +124,10 @@ export default function VideoSection({
 							quality={100}
 							className={style.videoPeopleImage}
 						/>
+						<div className={style.bottomLogoMin}>
+							<BottomLogo theme="light" />
+						</div>
 					</div>
-					{/* <div className={style.bottomLogo}>
-						<BottomLogo theme="light" />
-					</div> */}
 				</>
 			)}
 		</section>

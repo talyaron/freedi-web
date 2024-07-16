@@ -86,9 +86,14 @@ $breakpoint-xsmall: 375px;
 }
 
 .bottomLogo{
-    position: relative;
-    top: 18rem;
-    left: 15rem;
+    position: absolute;
+    top: 45rem;
+    left: 16rem;
+}
+.bottomLogoMin{
+    position: absolute;
+    top: 38rem;
+    left: 12rem;
 }
 
 .none {
@@ -166,6 +171,11 @@ $breakpoint-xsmall: 375px;
                 left: 3.6rem;
             }
         }
+        .bottomLogoMin{
+            position: absolute;
+            top: 32rem;
+            left: 7.5rem;
+        }
     }
 }
 
@@ -229,6 +239,11 @@ $breakpoint-xsmall: 375px;
                 top: 16.5rem;
                 left: 3.6rem;
             }
+        }
+        .bottomLogoMin{
+            position: absolute;
+            top: 32rem;
+            left: 7.5rem;
         }
     }
 }
@@ -298,13 +313,14 @@ $breakpoint-xsmall: 375px;
                 left: 7.6rem;
             }
         }
-        .bottomLogo{
-            position: relative;
-            top: 8rem;
+        .bottomLogoMin{
+            position: absolute;
+            top: 34rem;
             left: 11rem;
         }
     }
 }
+
 
 //min-width: 768px and max-width: 1024px
 @media screen and (min-width: $breakpoint-medium) and (max-width: ($breakpoint-large - 1)) {
@@ -370,14 +386,8 @@ $breakpoint-xsmall: 375px;
                 top: 22.55rem;
                 left: 9rem;
             }
-        }
-        .bottomLogo{
-            position: relative;
-            top: 8rem;
-            left: 12rem;
-        }
+        }  
     }
-
 }
 
 // min-width 1024px and max-width: 1200px
@@ -443,13 +453,7 @@ $breakpoint-xsmall: 375px;
                 left: 9rem;
             }
         }
-        .bottomLogo{
-            position: relative;
-            top: 15rem;
-            left: 12rem;
-        }
     }
-
 }
 
 // min-width 1200px and max-width: 1440px

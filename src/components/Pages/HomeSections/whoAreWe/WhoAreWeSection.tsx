@@ -51,9 +51,9 @@ function WhoAreWeSection({
 						<p>{currentLang["The end goal? Fostering mutual understanding and crafting fair, well-informed agreements on the complex matters that impact us all."]}</p>
 						<p>{currentLang["Step into the"]} <span className={style.free}>{currentLang["Free"]}</span><span className={style.di}>{currentLang["Di"]}</span> {currentLang["experience and help bridge divides through the power of deliberation!"]}</p>
 					</div>
-					{/* <div className={style.bottomLogo}>
+					<div className={style.bottomLogo}>
 						<BottomLogo theme={"light"} />
-					</div> */}
+					</div>
 				</div>
 			</div>
 

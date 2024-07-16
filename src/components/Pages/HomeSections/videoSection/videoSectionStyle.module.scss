@@ -85,6 +85,12 @@ $breakpoint-xsmall: 375px;
     }
 }
 
+.bottomLogo{
+    position: relative;
+    top: 18rem;
+    left: 15rem;
+}
+
 .none {
     display: none;
 }
@@ -292,6 +298,11 @@ $breakpoint-xsmall: 375px;
                 left: 7.6rem;
             }
         }
+        .bottomLogo{
+            position: relative;
+            top: 8rem;
+            left: 11rem;
+        }
     }
 }
 
@@ -360,6 +371,11 @@ $breakpoint-xsmall: 375px;
                 left: 9rem;
             }
         }
+        .bottomLogo{
+            position: relative;
+            top: 8rem;
+            left: 12rem;
+        }
     }
 
 }
@@ -426,6 +442,11 @@ $breakpoint-xsmall: 375px;
                 top: 22.55rem;
                 left: 9rem;
             }
+        }
+        .bottomLogo{
+            position: relative;
+            top: 15rem;
+            left: 12rem;
         }
     }
 

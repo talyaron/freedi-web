@@ -40,7 +40,7 @@ $breakpoint-xsmall: 375px;
         }
 
         &__bottom {
-            margin-top: 10rem;
+            margin-top: 30rem;
 
             &__imgArea {
                 margin-bottom: 10rem;
@@ -97,7 +97,7 @@ $breakpoint-xsmall: 375px;
     .bottomLogo{
        position: relative;
        top: 4rem;
-       left: 25rem;
+       left: 28rem;
     }
 }
 
@@ -150,12 +150,17 @@ $breakpoint-xsmall: 375px;
         &__rightSection {
             &__img {
                 position: relative;
-                bottom: 105rem;
+                bottom: 125rem;
                 right: 0rem;
                 width: 31rem;
                 height: 38rem;
             }
         }
+        .bottomLogo{
+            position: relative;
+            top: 4rem;
+            left: 4rem;
+         }
     }
 }
 // Small screens (up to 576px)
@@ -207,17 +212,22 @@ $breakpoint-xsmall: 375px;
         &__rightSection {
             &__img {
                 position: relative;
-                bottom: 105rem;
+                bottom: 125rem;
                 left: 0rem;
                 width: 31rem;
                 height: 38rem;
             }
         }
+        .bottomLogo{
+            position: relative;
+            top: 4rem;
+            left: 4rem;
+         }
     }
 }
 
 // Medium screens (up to 768px)
-@media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+@media (min-width: ($breakpoint-small + 1)) and (max-width: $breakpoint-medium) {
     .whoAreWe {
         width: 30.5rem;
         display: flex;
@@ -263,12 +273,17 @@ $breakpoint-xsmall: 375px;
         &__rightSection {
             &__img {
                 position: relative;
-                bottom: 105rem;
+                bottom: 126rem;
                 left: 2rem;
                 width: 31rem;
                 height: 38rem;
             }
         }
+        .bottomLogo{
+            position: relative;
+            top: 4rem;
+            left: 4rem;
+         }
     }
 }
 
@@ -298,7 +313,6 @@ $breakpoint-xsmall: 375px;
             }
 
             &__bottom {
-                margin-top: 10rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -326,7 +340,7 @@ $breakpoint-xsmall: 375px;
         &__rightSection {
             &__img {
                 position: relative;
-                bottom: 105rem;
+                bottom: 125rem;
                 left: 6rem;
                 width: 31rem;
                 height: 38rem;
@@ -335,7 +349,7 @@ $breakpoint-xsmall: 375px;
         .bottomLogo{
             position: relative;
             top: 4rem;
-            left: 5rem;
+            left: 4rem;
          }
     }
 }

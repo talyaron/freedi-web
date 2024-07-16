@@ -1,0 +1,62 @@
+.wrapper {
+    &__button {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        background-color: initial;
+        cursor: pointer;
+
+        &:hover .wrapper__button__title__number {
+            transform: translateY(-120%);
+          }
+      
+          &:hover .wrapper__button__title__cloneNumber {
+            transform: translateY(-155%);
+          }
+
+        &__title {
+            position: relative;
+            font-size: 1.41rem;
+            font-weight: 400;
+            color: var(--dark-text);
+            padding: 4px 0px;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding-bottom: 0.4rem;
+            overflow: hidden;
+
+            &__number {
+                position: relative;
+                font-size: 1.05rem;
+                font-weight: 350;
+                transition: transform 0.2s ease;
+            }
+
+            &__cloneNumber {
+                position: absolute;
+                top: 100%;
+            }
+        }
+    }
+
+    &__descriptionWrapper {
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        &.open {
+            padding-top: 2rem;
+            padding-bottom: 4.5rem;
+        }
+
+        &__description {
+            padding: 0;
+            font-weight: 350;
+            font-size: 1.05rem;
+            color: var(--dark-text);
+        }
+    }
+}

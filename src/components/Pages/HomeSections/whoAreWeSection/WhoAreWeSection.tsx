@@ -61,9 +61,9 @@ function WhoAreWeSection({
 					alt="Who Are We"
 				/>
 			</div>
-			<div className={style.bottomLogo}>
+			{/* <div className={style.bottomLogo}>
 				<BottomLogo theme={"light"} />
-			</div>
+			</div> */}
 		</div>
 	)
 }

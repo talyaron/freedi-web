@@ -16,27 +16,25 @@ import image12 from '@/assets/Images/12.png';
 import image13 from '@/assets/Images/13.png';
 import image14 from '@/assets/Images/14.png';
 
-interface Props {}
-
-const ImageSlider = (props: Props) => {
-  return (
-    <div className={styles.slider}>
-            <div className={styles.slide}><Image src={image1} alt="Image 1" /></div>
-            <div className={styles.slide}><Image src={image2} alt="Image 2" /></div>
-            <div className={styles.slide}><Image src={image3} alt="Image 3" /></div>
-            <div className={styles.slide}><Image src={image4} alt="Image 4" /></div>
-            <div className={styles.slide}><Image src={image5} alt="Image 5" /></div>
-            <div className={styles.slide}><Image src={image6} alt="Image 6" /></div>
-            <div className={styles.slide}><Image src={image7} alt="Image 7" /></div>
-            <div className={styles.slide}><Image src={image8} alt="Image 8" /></div>
-            <div className={styles.slide}><Image src={image9} alt="Image 9" /></div>
-            <div className={styles.slide}><Image src={image10} alt="Image 10" /></div>
-            <div className={styles.slide}><Image src={image11} alt="Image 11" /></div>
-            <div className={styles.slide}><Image src={image12} alt="Image 12" /></div>
-            <div className={styles.slide}><Image src={image13} alt="Image 13" /></div>
-            <div className={styles.slide}><Image src={image14} alt="Image 14" /></div>
-</div>
-  )
+const ImageSlider = () => {
+	return (
+		<div className={styles.slider}>
+			<div className={styles.slide}><Image src={image1} alt="Image 1" /></div>
+			<div className={styles.slide}><Image src={image2} alt="Image 2" /></div>
+			<div className={styles.slide}><Image src={image3} alt="Image 3" /></div>
+			<div className={styles.slide}><Image src={image4} alt="Image 4" /></div>
+			<div className={styles.slide}><Image src={image5} alt="Image 5" /></div>
+			<div className={styles.slide}><Image src={image6} alt="Image 6" /></div>
+			<div className={styles.slide}><Image src={image7} alt="Image 7" /></div>
+			<div className={styles.slide}><Image src={image8} alt="Image 8" /></div>
+			<div className={styles.slide}><Image src={image9} alt="Image 9" /></div>
+			<div className={styles.slide}><Image src={image10} alt="Image 10" /></div>
+			<div className={styles.slide}><Image src={image11} alt="Image 11" /></div>
+			<div className={styles.slide}><Image src={image12} alt="Image 12" /></div>
+			<div className={styles.slide}><Image src={image13} alt="Image 13" /></div>
+			<div className={styles.slide}><Image src={image14} alt="Image 14" /></div>
+		</div>
+	)
 }
 
 export default ImageSlider

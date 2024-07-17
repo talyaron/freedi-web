@@ -122,9 +122,10 @@ $breakpoint-small: 576px;
             &__bottomContent {
                 display: flex;
                 align-items: center;
-                gap: 1.8rem;
+                gap: 2rem;
                 width: 20.8rem;
                 height: 2.6rem;
+                margin-right: 4rem;
 
                 svg {
                     width: 2rem;
@@ -135,12 +136,12 @@ $breakpoint-small: 576px;
                 }
 
                 &__phone {
-                    gap: 0.5rem;
                     &__text {
                         font-weight: 300;
-                        font-size: 1rem;
+                        font-size: 0.9rem;
                         line-height: 1.4rem;
                         color: var(--notFound-btn);
+                        margin-left: -1.4rem;
                     }
                 }
             }
@@ -192,9 +193,10 @@ $breakpoint-small: 576px;
             &__bottomContent {
                 display: flex;
                 align-items: center;
-                gap: 1.8rem;
+                gap: 2rem;
                 width: 20.8rem;
                 height: 2.6rem;
+                margin-right: 7rem;
 
                 svg {
                     width: 2rem;
@@ -205,12 +207,12 @@ $breakpoint-small: 576px;
                 }
 
                 &__phone {
-                    gap: 0.5rem;
                     &__text {
                         font-weight: 300;
-                        font-size: 1rem;
+                        font-size: 0.9rem;
                         line-height: 1.4rem;
                         color: var(--notFound-btn);
+                        margin-left: -1.4rem;
                     }
                 }
             }
@@ -264,9 +266,10 @@ $breakpoint-small: 576px;
             &__bottomContent {
                 display: flex;
                 align-items: center;
-                gap: 1.8rem;
+                gap: 2rem;
                 width: 20.8rem;
                 height: 2.6rem;
+                margin-right: 6rem;
 
                 svg {
                     width: 2rem;
@@ -277,12 +280,12 @@ $breakpoint-small: 576px;
                 }
 
                 &__phone {
-                    gap: 0.5rem;
                     &__text {
                         font-weight: 300;
-                        font-size: 1rem;
+                        font-size: 0.9rem;
                         line-height: 1.4rem;
                         color: var(--notFound-btn);
+                        margin-left: -1.4rem;
                     }
                 }
             }
@@ -353,20 +356,22 @@ $breakpoint-small: 576px;
                     }
                     &__phone {
                         &__text {
-                            font-size: 1rem;
+                            font-size: 0.9rem;
                         }
                     }
                 }
             }
             &__rightSideContent {
                 .heroSectionImg {
+                position: relative;
+                    top: 17rem;                    
                     width: 31.5rem;
                     height: 27rem;
                 }
             }
         }
         &__runningBanner {
-            margin-top: 8rem;
+            margin-top: 22rem;
             margin-left: 2rem;
             font-size: 1.1rem;
             font-weight: 350;
@@ -389,8 +394,8 @@ $breakpoint-small: 576px;
 // Extra extra large screens (up to 1440px)
 @media screen and (min-width: ($breakpoint-xlarge + 1)) and (max-width: $breakpoint-xxlarge) {
     .heroSection {
+        width: 54.75rem;
         &__centerArea {
-            width: 54.75rem;
             &__leftSideContent {
                 height: 8.4rem;
 
@@ -418,13 +423,15 @@ $breakpoint-small: 576px;
             }
             &__rightSideContent {
                 .heroSectionImg {
+                    position: relative;
+                    top: 17rem;
                     width: 33.75rem;
                     height: 28.9rem;
                 }
             }
         }
         &__runningBanner {
-            margin-top: 8rem;
+            margin-top: 20rem;
             margin-left: 5rem;
             font-size: 1.1rem;
             font-weight: 350;

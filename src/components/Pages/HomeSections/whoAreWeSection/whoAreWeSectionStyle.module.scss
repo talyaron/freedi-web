@@ -3,7 +3,7 @@ $ColorFree: #3851d3;
 $ColorDi: #3db7b7;
 $breakpoint-xxlarge: 1440px;
 $breakpoint-xlarge: 1200px;
-$breakpoint-large: 1024px;
+$breakpoint-large: 1023px;
 $breakpoint-medium: 768px;
 $breakpoint-small: 576px;
 $breakpoint-xsmall: 375px;
@@ -63,7 +63,7 @@ $breakpoint-xsmall: 375px;
             &__paragraph {
                 width: 29.2rem;
                 p {
-                    margin-bottom: 1rem;
+                    margin-bottom: 1.5rem;
                     color: $ColorDarkText;
                     font-weight: 350;
                     line-height: 1.8rem;
@@ -85,7 +85,7 @@ $breakpoint-xsmall: 375px;
 
     &__rightSection {
         position: sticky;
-        top: -15rem;
+        top: -12rem;
         height: fit-content;
         align-self: flex-start;
 
@@ -94,13 +94,16 @@ $breakpoint-xsmall: 375px;
             height: 63rem;
         }
     }
-    .bottomLogo{
-       position: absolute;
-       top:345rem;
-       left:40rem;
-    }
 }
 
+.bottomLogoMaxWid{
+    position: absolute;
+    top: 12rem;
+}
+.bottomLogoMinWid{
+    position: absolute;
+    right: 34rem;
+}
 
 // Small screens (up to 375px)
 @media (max-width: $breakpoint-xsmall) {
@@ -149,38 +152,38 @@ $breakpoint-xsmall: 375px;
         }
         &__rightSection {
             &__img {
-                position: absolute; 
-                bottom: 87rem;
-                left: 0%;
+                position: relative;
+                bottom: 105rem;
+                right: 0rem;
                 width: 31rem;
                 height: 38rem;
             }
         }
-        .bottomLogo{
-            position: relative;
-            top: 4rem;
-            left: 4rem;
-         }
     }
 }
 // Small screens (up to 576px)
 @media (min-width: $breakpoint-xsmall) and (max-width: $breakpoint-small) {
     .whoAreWe {
-        width: 30.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 36.5rem;
 
         &__leftSection {
             &__top {
-                margin-left: 2.5rem;
-
-                margin-top: 7rem;
-                gap: 39rem;
+                gap: 2rem;
 
                 &__title {
                     font-size: 2.5rem;
+                }
+
+                &__middle {
+                    &__img{
+                        margin-left: -3.5rem;
+                        width: 31rem;
+                        height: 38rem;
+                    }
                 }
 
                 &__description {
@@ -191,59 +194,57 @@ $breakpoint-xsmall: 375px;
             }
 
             &__bottom {
+                margin-top: 10rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
 
                 &__imgArea {
-                    margin-bottom: 5rem;
+                    margin-bottom: 7rem;
+                    margin-left: 1rem;
 
                     &__geometryImg {
-                        width: 33rem;
-                        height: 15rem;
+                        width: 36rem;
+                        height: 16rem;
                     }
                 }
                 &__paragraph {
-                    width: 23.5rem;
+                    width: 25rem;
+
+                    p {
+                        margin-bottom: 1rem;
+                        line-height: 1.8rem;
+                    }
                 }
             }
         }
-
-        &__rightSection {
-            &__img {
-                position: absolute; 
-                bottom: 87rem;
-                left: 0%;
-                width: 31rem;
-                height: 38rem;
-            }
-        }
-        
-        .bottomLogo{
-            position: relative;
-            top: 4rem;
-            left: 4rem;
-         }
     }
 }
 
 // Medium screens (up to 768px)
-@media (min-width: ($breakpoint-small + 1)) and (max-width: $breakpoint-medium) {
+@media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
     .whoAreWe {
-        width: 30.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 36.5rem;
 
         &__leftSection {
             &__top {
-                margin-top: 7rem;
-                gap: 39rem;
+                gap: 2rem;
 
                 &__title {
                     font-size: 2.5rem;
+                }
+
+                &__middle {
+                    &__img{
+                        margin-right: 1rem;
+                        width: 31rem;
+                        height: 38rem;
+                    }
                 }
 
                 &__description {
@@ -254,40 +255,31 @@ $breakpoint-xsmall: 375px;
             }
 
             &__bottom {
+                margin-top: 10rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
 
                 &__imgArea {
-                    margin-bottom: 5rem;
+                    margin-bottom: 7rem;
+                    margin-left: 1rem;
 
                     &__geometryImg {
-                        width: 33rem;
-                        height: 15rem;
+                        width: 36rem;
+                        height: 16rem;
                     }
                 }
                 &__paragraph {
-                    width: 35rem;
+                    width: 32rem;
+
+                    p {
+                        margin-bottom: 1rem;
+                        line-height: 1.8rem;
+                    }
                 }
             }
         }
-        &__rightSection {
-
-            &__img {
-                position: absolute; 
-                bottom: 88rem;
-                left: 2rem;
-                width: 31rem;
-                height: 38rem;
-            }
-        }
-        
-        .bottomLogo{
-            position: relative;
-            top: 4rem;
-            left: 4rem;
-         }
     }
 }
 
@@ -302,11 +294,18 @@ $breakpoint-xsmall: 375px;
 
         &__leftSection {
             &__top {
-                margin-top: 7rem;
-                gap: 39rem;
+                gap: 2rem;
 
                 &__title {
                     font-size: 2.5rem;
+                }
+
+                &__middle {
+                    &__img{
+                        margin-left: 1rem;
+                        width: 31rem;
+                        height: 38rem;
+                    }
                 }
 
                 &__description {
@@ -317,6 +316,7 @@ $breakpoint-xsmall: 375px;
             }
 
             &__bottom {
+                margin-top: 10rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -341,27 +341,11 @@ $breakpoint-xsmall: 375px;
                 }
             }
         }
-        &__rightSection {
-
-            &__img {
-                position: absolute; 
-                bottom: 87rem;
-                left: 6rem;
-                width: 31rem;
-                height: 38rem;
-            }
-        }
-        .bottomLogo{
-            position: relative;
-            top: 4rem;
-            left: 4rem;
-         }
     }
 }
 
-
 // Extra large screens (up to 1200px)
-@media (min-width: ($breakpoint-large + 1)) and (max-width: $breakpoint-xlarge) {
+@media (min-width: $breakpoint-large) and (max-width: $breakpoint-xlarge) {
     .whoAreWe {
         width: 54.75rem;
 
@@ -404,11 +388,6 @@ $breakpoint-xsmall: 375px;
                 height: 37rem;
             }
         }
-        .bottomLogo{
-            position: relative;
-            top: 4rem;
-            left: 20rem;
-         }
     }
 }
 
@@ -432,8 +411,6 @@ $breakpoint-xsmall: 375px;
         }
 
         &__rightSection {
-            top: -12rem;
-
             &__img {
                 width: 36rem;
                 height: 56rem;

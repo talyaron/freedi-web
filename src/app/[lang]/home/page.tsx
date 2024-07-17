@@ -12,6 +12,7 @@ import WhyUsSection from "@/components/Pages/HomeSections/whyUs/WhyUsSection";
 
 // Helpers
 import { getLanguageData } from "@/helpers/languages";
+import FeaturesSection from "@/components/Pages/HomeSections/featuresSection/FeaturesSection";
 
 export default async function Home({
 	params,
@@ -30,16 +31,18 @@ export default async function Home({
 	return (
 		<main className={isHebrew ? "main he" : "main en"}>
 			<div className="main__body">
-				<HeroSection />
+				<HeroSection currentLang={currentLang} direction={direction}/>
+
+				<WhoAreWeSection currentLang={currentLang} direction={direction}/>
 
 				<WhyUsSection currentLang={currentLang} direction={direction} />
 
 				<VideoSection currentLang={currentLang} direction={direction} />
 
-				<WhoAreWeSection />
+				<FeaturesSection currentLang={currentLang} direction={direction}/>
 			</div>
 
-			<HomeFooter />
+			<HomeFooter currentLang={currentLang} direction={direction}/>
 		</main>
 	);
 }

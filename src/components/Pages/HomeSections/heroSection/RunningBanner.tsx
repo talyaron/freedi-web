@@ -1,16 +1,20 @@
 import React from 'react'
 
-function RunningBanner() {
+interface Props {
+	currentLang: Record<string, string>
+}
+
+function RunningBanner({currentLang}:Props) {
 	return (
 		<ul>
-			<li>Consensus reaching technology</li>
-			<li>Everybody can evaluate the different options</li>
-			<li>Suites for all ages</li>
-			<li>Satisfactory solutions</li>
-			<li>Deep thought</li>
-			<li>Modern technology</li>
-			<li>Everybody can write her/his opinion</li>
-			<li>Everybody can see multiple perspectives</li>
+			<li>{currentLang["Consensus reaching technology"]}</li>
+			<li>{currentLang["Everybody can evaluate the different options"]}</li>
+			<li>{currentLang["Suites for all ages"]}</li>
+			<li>{currentLang["Satisfactory solutions"]}</li>
+			<li>{currentLang["Deep thought"]}</li>
+			<li>{currentLang["Modern technology"]}</li>
+			<li>{currentLang["Everybody can write her/his opinion"]}</li>
+			<li>{currentLang["Everybody can see multiple perspectives"]}</li>
 		</ul>
 	)
 }

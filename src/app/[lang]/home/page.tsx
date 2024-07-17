@@ -7,7 +7,7 @@ import "./home.scss";
 import VideoSection from "@/components/Pages/HomeSections/videoSection/VideoSection";
 import HomeFooter from "@/components/Pages/HomeSections/footer/HomeFooter";
 import HeroSection from "@/components/Pages/HomeSections/heroSection/HeroSection";
-import WhoAreWeSection from "@/components/Pages/HomeSections/whoAreWe/WhoAreWeSection";
+import WhoAreWeSection from "@/components/Pages/HomeSections/whoAreWeSection/WhoAreWeSection";
 import WhyUsSection from "@/components/Pages/HomeSections/whyUs/WhyUsSection";
 
 // Helpers

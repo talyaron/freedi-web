@@ -5,10 +5,9 @@ import styles from "./featuresSection.module.scss";
 import Accordion from "@/components/accordion/Accordion";
 import { accordionData } from "@/components/accordion/data/accordionData";
 import useWindowSizeFixed from "@/hooks/useWindowSizeFixed";
-import ImageSlider from "@/components/imageSlider/ImageSlider";
 
 export default function FeaturesSection({
-	currentLang,
+	// currentLang,
 	direction,
 }: Readonly<{
 	currentLang: Record<string, string>;

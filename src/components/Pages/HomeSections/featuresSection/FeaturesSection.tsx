@@ -60,7 +60,7 @@ export default function FeaturesSection({
 						<div
 							className={styles.wrapper__mainWrapper__imageSlider}
 						>
-						<ImageSlider direction={direction}/>
+							<ImageSlider direction={direction}/>
 						</div>
 						<div className={styles.wrapper__mainWrapper__features}>
 							<div

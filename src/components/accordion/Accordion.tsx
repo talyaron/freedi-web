@@ -101,7 +101,7 @@ const Accordion = ({ features, accordionOpen, setAccordionOpen ,currentLang}: Pr
 							</span>
 						</div>
 						<span className={styles.wrapper__button__title}>
-						{currentLang[`${features.title}`]}
+							{currentLang[`${features.title}`]}
 						</span>
 					</>
 				)}

@@ -46,6 +46,7 @@ const ImageSlider = ({
 
 		return () => clearInterval(interval);
 	}, [images]);
+	
 	return (
 		<>
 			{images.map((item, index) => (

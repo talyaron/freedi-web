@@ -1,0 +1,332 @@
+$breakpoint-large: 1024px;
+$breakpoint-medium: 768px;
+$breakpoint-small: 576px;
+$breakpoint-xsmall: 375px;
+
+.none {
+    display: none;
+    opacity: 0;
+}
+
+.activeLtr {
+    animation: imageAnimationLtr 8s ease-in;
+    opacity: 1;
+}
+
+.activeRtl {
+    animation: imageAnimationRtl 8s ease-in;
+    opacity: 1;
+}
+
+.imageContainerLtr {
+    width: 22.94rem;
+    height: 43rem;
+    margin-top: 2rem;
+    box-shadow: 0px 16.07px 35.36px 0px #7D8BA621,
+        0px 64.3px 64.3px 0px #7D8BA61C;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: translateX(130%);
+
+    * {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.imageContainerRtl {
+    width: 22.94rem;
+    height: 43rem;
+    margin-top: 2rem;
+    box-shadow: 0px 16.07px 35.36px 0px #7D8BA621,
+        0px 64.3px 64.3px 0px #7D8BA61C;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: translateX(-130%);
+
+    * {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes imageAnimationLtr {
+    0% {
+        transform: translateX(130%);
+        opacity: 0;
+    }
+
+    15%{
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateX(-20%);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+}
+
+@keyframes imageAnimationRtl {
+    0% {
+        transform: translateX(-130%);
+        opacity: 0;
+    }
+
+    
+    15%{
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(20%);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+}
+
+//max-width:375px 
+@media screen and (max-width: $breakpoint-xsmall) {
+    .imageContainerLtr {
+        width: 15.29rem;
+        height: 33.09rem;
+        transform: translateX(190%);
+    }
+    
+    .imageContainerRtl {
+        width: 15.29rem;
+        height: 33.09rem;
+        transform: translateX(-190%);
+    }
+    
+    
+    @keyframes imageAnimationLtr {
+        0% {
+            transform: translateX(190%);
+            opacity: 0;
+        }
+    
+        30% {
+            transform: translateX(-10%);
+            opacity: 1;
+        }
+    
+        80% {
+            opacity: 1;
+        }
+    
+        100% {
+            transform: translateX(-10%);
+            opacity: 0;
+        }
+    }
+
+    @keyframes imageAnimationRtl {
+        0% {
+            transform: translateX(-190%);
+            opacity: 0;
+        }
+    
+        30% {
+            transform: translateX(10%);
+            opacity: 1;
+        }
+    
+        80% {
+            opacity: 1;
+        }
+    
+        100% {
+            transform: translateX(10%);
+            opacity: 0;
+        }
+    }
+}
+
+// min-width:376px and max-width: 576px
+@media screen and (min-width: $breakpoint-xsmall) and (max-width: $breakpoint-small) {
+    .imageContainerLtr {
+        width: 15.29rem;
+        height: 33.09rem;
+        transform: translateX(180%);
+    }
+
+    .imageContainerRtl {
+        width: 15.29rem;
+        height: 33.09rem;
+        transform: translateX(-180%);
+    }
+    
+    @keyframes imageAnimationLtr {
+        0% {
+            transform: translateX(180%);
+            opacity: 0;
+        }
+    
+        30% {
+            transform: translateX(-10%);
+            opacity: 1;
+        }
+    
+        80% {
+            opacity: 1;
+        }
+    
+        100% {
+            transform: translateX(-10%);
+            opacity: 0;
+        }
+    }
+
+    @keyframes imageAnimationRtl {
+        0% {
+            transform: translateX(-180%);
+            opacity: 0;
+        }
+    
+        30% {
+            transform: translateX(10%);
+            opacity: 1;
+        }
+    
+        80% {
+            opacity: 1;
+        }
+    
+        100% {
+            transform: translateX(10%);
+            opacity: 0;
+        }
+    }
+}
+
+// min-width 576px and max-width: 768px
+@media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+    .imageContainerLtr {
+        width: 15.29rem;
+        height: 33.09rem;
+        transform: translateX(175%);
+    }
+
+    .imageContainerRtl {
+        width: 15.29rem;
+        height: 33.09rem;
+        transform: translateX(-175%);
+    }
+    
+    @keyframes imageAnimationLtr {
+        0% {
+            transform: translateX(175%);
+            opacity: 0;
+        }
+    
+        30% {
+            transform: translateX(-10%);
+            opacity: 1;
+        }
+    
+        80% {
+            opacity: 1;
+        }
+    
+        100% {
+            transform: translateX(-10%);
+            opacity: 0;
+        }
+    }
+
+    @keyframes imageAnimationRtl {
+        0% {
+            transform: translateX(-175%);
+            opacity: 0;
+        }
+    
+        30% {
+            transform: translateX(10%);
+            opacity: 1;
+        }
+    
+        80% {
+            opacity: 1;
+        }
+    
+        100% {
+            transform: translateX(10%);
+            opacity: 0;
+        }
+    }
+}
+
+//min-width: 768px and max-width: 1024px
+@media screen and (min-width: $breakpoint-medium) and (max-width: ($breakpoint-large - 1)) {
+    .imageContainerLtr {
+        width: 19.29rem;
+        height: 41.75rem;
+        transform: translateX(160%);
+    }
+    
+    .imageContainerRtl {
+        width: 19.29rem;
+        height: 41.75rem;
+        transform: translateX(-160%);
+    }
+
+    @keyframes imageAnimationLtr {
+        0% {
+            transform: translateX(160%);
+            opacity: 0;
+        }
+    
+        30% {
+            transform: translateX(-10%);
+            opacity: 1;
+        }
+    
+        80% {
+            opacity: 1;
+        }
+    
+        100% {
+            transform: translateX(-10%);
+            opacity: 0;
+        }
+    }
+
+    @keyframes imageAnimationRtl {
+        0% {
+            transform: translateX(-160%);
+            opacity: 0;
+        }
+    
+        30% {
+            transform: translateX(10%);
+            opacity: 1;
+        }
+    
+        80% {
+            opacity: 1;
+        }
+    
+        100% {
+            transform: translateX(10%);
+            opacity: 0;
+        }
+    }
+
+}

@@ -60,7 +60,7 @@ $breakpoint-xsmall: 375px;
         opacity: 0;
     }
 
-    30% {
+    50%{
         transform: translateX(-20%);
         opacity: 1;
     }
@@ -82,11 +82,11 @@ $breakpoint-xsmall: 375px;
     }
 
     
-    20%{
+    15%{
         opacity: 0;
     }
 
-    30% {
+    50% {
         transform: translateX(20%);
         opacity: 1;
     }

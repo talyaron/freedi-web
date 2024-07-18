@@ -56,6 +56,10 @@ $breakpoint-xsmall: 375px;
         opacity: 0;
     }
 
+    15%{
+        opacity: 0;
+    }
+
     30% {
         transform: translateX(-20%);
         opacity: 1;
@@ -74,6 +78,11 @@ $breakpoint-xsmall: 375px;
 @keyframes imageAnimationRtl {
     0% {
         transform: translateX(-130%);
+        opacity: 0;
+    }
+
+    
+    20%{
         opacity: 0;
     }
 

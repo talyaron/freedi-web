@@ -10,11 +10,11 @@ $breakpoint-xsmall: 375px;
     display: flex;
     justify-content: center;
     gap: 13.64rem;
-    overflow-x: hidden;
+    overflow: hidden;
 
     &__features {
         width: 35.17rem;
-        height: 51.82rem;
+        height: 59rem;
 
         &__header {
             font-size: 3.52rem;
@@ -57,7 +57,7 @@ $breakpoint-xsmall: 375px;
 
             &__features {
                 width: 28.70rem;
-                height: 41.35rem;
+                height: 49.35rem;
 
                 &__main {
                     display: flex;
@@ -93,7 +93,7 @@ $breakpoint-xsmall: 375px;
 
             &__features {
                 width: 28.70rem;
-                height: 41.35rem;
+                height: 49.35rem;
 
                 &__main {
                     display: flex;
@@ -129,7 +129,7 @@ $breakpoint-xsmall: 375px;
 
             &__features {
                 width: 28.70rem;
-                height: 41.35rem;
+                height: 49.35rem;
 
                 &__main {
                     display: flex;
@@ -165,7 +165,7 @@ $breakpoint-xsmall: 375px;
 
             &__features {
                 width: 34.35rem;
-                height: 49.03rem;
+                height: 56.03rem;
 
                 &__main {
                     display: flex;
@@ -185,7 +185,7 @@ $breakpoint-xsmall: 375px;
 
         &__features {
             width: 24.29rem;
-            height: 47.23rem;
+            height: 54.23rem;
 
             &__header {
                 font-size: 2.82rem;
@@ -206,7 +206,7 @@ $breakpoint-xsmall: 375px;
 
         &__features {
             width: 25.05rem;
-            height: 51.50rem;
+            height: 58.50rem;
 
             &__header {
                 font-size: 3.05rem;
@@ -228,7 +228,7 @@ $breakpoint-xsmall: 375px;
 
         &__features {
             width: 31.70rem;
-            height: 51.68rem;
+            height: 58.68rem;
 
             &__header {
                 font-size: 3.05rem;

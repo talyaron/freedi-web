@@ -45,7 +45,7 @@ const ImageSlider = ({
 		}, 8000);
 
 		return () => clearInterval(interval);
-	}, [images]);
+	},[]);
 	
 	return (
 		<>

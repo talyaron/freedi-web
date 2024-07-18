@@ -5,9 +5,10 @@ import styles from "./featuresSection.module.scss";
 import Accordion from "@/components/accordion/Accordion";
 import { accordionData } from "@/components/accordion/data/accordionData";
 import useWindowSizeFixed from "@/hooks/useWindowSizeFixed";
+import ImageSlider from "@/components/imageSlider/ImageSlider";
 
 export default function FeaturesSection({
-	// currentLang,
+	currentLang,
 	direction,
 }: Readonly<{
 	currentLang: Record<string, string>;
@@ -30,7 +31,7 @@ export default function FeaturesSection({
 				<>
 					<div className={styles.wrapper__features}>
 						<h1 className={styles.wrapper__features__header}>
-							Our Features
+							{currentLang["Our Features"]}
 						</h1>
 						<div className={styles.wrapper__features__main}>
 							{accordionData.map((features, index) => {
@@ -42,23 +43,24 @@ export default function FeaturesSection({
 										setAccordionOpen={() =>
 											handleAccordionToggle(index)
 										}
+										currentLang={currentLang}
 									/>
 								);
 							})}
 						</div>
 					</div>
 					<div className={styles.wrapper__imageSlider}>
-						{/* <ImageSlider/> */}
+						<ImageSlider direction={direction}/>
 					</div>
 				</>
 			) : (
 				<>
-					<h1 className={styles.wrapper__header}>Our Features</h1>
+					<h1 className={styles.wrapper__header}>{currentLang["Our Features"]}</h1>
 					<div className={styles.wrapper__mainWrapper}>
 						<div
 							className={styles.wrapper__mainWrapper__imageSlider}
 						>
-							{/* <img src="" alt="" /> */}
+							<ImageSlider direction={direction}/>
 						</div>
 						<div className={styles.wrapper__mainWrapper__features}>
 							<div
@@ -75,6 +77,7 @@ export default function FeaturesSection({
 											setAccordionOpen={() =>
 												handleAccordionToggle(index)
 											}
+											currentLang={currentLang}
 										/>
 									);
 								})}

@@ -11,9 +11,10 @@ interface Props {
 	features: FeaturesData;
 	accordionOpen: boolean;
 	setAccordionOpen: () => void;
+	currentLang: Record<string, string>;
 }
 
-const Accordion = ({ features, accordionOpen, setAccordionOpen }: Props) => {
+const Accordion = ({ features, accordionOpen, setAccordionOpen ,currentLang}: Props) => {
 	const [height, setHeight] = useState("0px");
 	const contentRef = useRef<HTMLDivElement>(null);
 
@@ -61,7 +62,7 @@ const Accordion = ({ features, accordionOpen, setAccordionOpen }: Props) => {
 								height="1.41rem"
 								strokeColor="var(--dark-text)"
 							/>
-							{features.title}
+							{currentLang[`${features.title}`]}
 							<span
 								className={`${styles.wrapper__button__title__number} ${styles.wrapper__button__title__cloneNumber}`}
 							>
@@ -100,7 +101,7 @@ const Accordion = ({ features, accordionOpen, setAccordionOpen }: Props) => {
 							</span>
 						</div>
 						<span className={styles.wrapper__button__title}>
-							{features.title}
+							{currentLang[`${features.title}`]}
 						</span>
 					</>
 				)}
@@ -113,7 +114,7 @@ const Accordion = ({ features, accordionOpen, setAccordionOpen }: Props) => {
 				<span
 					className={styles.wrapper__descriptionWrapper__description}
 				>
-					{features.description}
+					{currentLang[`${features.description}`]}
 				</span>
 			</div>
 		</div>

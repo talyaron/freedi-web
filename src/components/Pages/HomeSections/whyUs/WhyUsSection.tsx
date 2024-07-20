@@ -7,6 +7,7 @@ import WhyUsCardContainer from "./WhyUsCardContainer";
 import { LangType } from "./whyUsModel";
 import { useIsVisible } from "@/hooks/useIsVisible";
 import BottomLogo from "@/components/bottomLogo/BottomLogo";
+
 export const LangContext = createContext<LangType | undefined>(undefined);
 
 const WhyUsSection = ({

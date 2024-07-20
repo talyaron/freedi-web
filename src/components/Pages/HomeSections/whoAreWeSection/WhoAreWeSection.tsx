@@ -22,7 +22,7 @@ function WhoAreWeSection({
 }>) {
 	const { width } = useWindowSizeFixed();
 	if (width === undefined) {
-		return <div className={style.heroSection} style={{ direction }}> </div>
+		return <div className={style.whoAreWe} style={{ direction }}> </div>
 	}
 
 	return (

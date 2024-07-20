@@ -11,6 +11,7 @@ $breakpoint-xsmall: 375px;
 .whoAreWe {
     width: 70.5rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
 
@@ -96,32 +97,38 @@ $breakpoint-xsmall: 375px;
     }
 }
 
-.bottomLogoMaxWid{
-    position: absolute;
-    top: 12rem;
+.bottomLogoMaxWid,
+.bottomLogoMinWid {
+    margin-top: 7rem;
+    margin-inline: auto;
+    text-align: center;
 }
-.bottomLogoMinWid{
-    position: absolute;
-    right: 34rem;
-}
+
+
 
 // Small screens (up to 375px)
 @media (max-width: $breakpoint-xsmall) {
     .whoAreWe {
-        width: 30.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 31.5rem;
 
         &__leftSection {
             &__top {
-                margin-left: 2.5rem;
-                margin-top: 7rem;
-                gap: 39rem;
+                gap: 2rem;
 
                 &__title {
                     font-size: 2.5rem;
+                }
+
+                &__middle {
+                    &__img{
+                        margin-left: -3.5rem;
+                        width: 31rem;
+                        height: 38rem;
+                    }
                 }
 
                 &__description {
@@ -132,31 +139,28 @@ $breakpoint-xsmall: 375px;
             }
 
             &__bottom {
+                margin-top: 10rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
 
                 &__imgArea {
-                    margin-bottom: 5rem;
+                    margin-bottom: 7rem;
+                    margin-left: 1rem;
 
                     &__geometryImg {
-                        width: 33rem;
-                        height: 15rem;
+                        width: 36rem;
+                        height: 16rem;
                     }
                 }
                 &__paragraph {
-                    width: 23.5rem;
+                    width: 25rem;
+                    p {
+                        margin-bottom: 1rem;
+                        line-height: 1.8rem;
+                    }
                 }
-            }
-        }
-        &__rightSection {
-            &__img {
-                position: relative;
-                bottom: 105rem;
-                right: 0rem;
-                width: 31rem;
-                height: 38rem;
             }
         }
     }
@@ -211,13 +215,15 @@ $breakpoint-xsmall: 375px;
                 }
                 &__paragraph {
                     width: 25rem;
-
                     p {
                         margin-bottom: 1rem;
                         line-height: 1.8rem;
                     }
                 }
             }
+        }
+        .bottomLogoMinWid {
+            margin-left: 6rem;
         }
     }
 }
@@ -346,8 +352,10 @@ $breakpoint-xsmall: 375px;
 
 // Extra large screens (up to 1200px)
 @media (min-width: $breakpoint-large) and (max-width: $breakpoint-xlarge) {
+
+    
     .whoAreWe {
-        width: 54.75rem;
+        width: 54rem;
 
         &__leftSection {
             &__top {
@@ -379,12 +387,8 @@ $breakpoint-xsmall: 375px;
 
         &__rightSection {
             top: -5rem;
-
             &__img {
-                position: relative;
-                top: 3rem;
-                right: 0rem;
-                width: 27rem;
+                width: 25rem;
                 height: 37rem;
             }
         }

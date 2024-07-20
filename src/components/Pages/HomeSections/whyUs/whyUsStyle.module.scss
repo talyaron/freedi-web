@@ -141,7 +141,7 @@ $breakpoint-xsmall: 375px;
 
 .freediLogo {
     position: relative;
-    top: 2rem;
+    bottom: 5rem;
     left: 3rem;
 }
 
@@ -295,7 +295,7 @@ $breakpoint-xsmall: 375px;
 @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
     .freediLogo {
         position: relative;
-        bottom: 6rem;
+        bottom: 12rem;
         right: 2rem;
     }
     

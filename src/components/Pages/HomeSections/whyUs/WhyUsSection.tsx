@@ -48,9 +48,9 @@ const WhyUsSection = ({
 				</h1>
 				<WhyUsCardContainer />
 			</section>
-			{/* <div className={style.freediLogo}>
+			<div className={style.freediLogo}>
 				<BottomLogo theme={"dark"} />
-			</div> */}
+			</div>
 		</LangContext.Provider>
 
 	);

@@ -14,13 +14,13 @@ function BottomLogo({ theme }: BottomLogoProps) {
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex(prevIndex => (prevIndex + 1) % spanText.length);
-        }, 2000);
+        }, 6000);
 
         return () => clearInterval(interval);
     }, []);
 
     return (
-        <div className={style.bottomLogo}>
+        <div className={style.bottomLogo} >
             {theme === 'light' && (
                 <div className={style.bottomLogo__bottomLogoLight}>
                     <p>Free<span>Di</span><span className={style.bottomLogo__bottomLogoLight__span}>{spanText[index]}</span></p>

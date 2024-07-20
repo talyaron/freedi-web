@@ -85,15 +85,16 @@ $breakpoint-xsmall: 375px;
     }
 }
 
-.bottomLogo{
+.bottomLogoMax{
     position: absolute;
     top: 45rem;
-    left: 16rem;
+    left: 12rem;
 }
+
 .bottomLogoMin{
     position: absolute;
     top: 38rem;
-    left: 12rem;
+    left: 8rem;
 }
 
 .none {
@@ -174,7 +175,7 @@ $breakpoint-xsmall: 375px;
         .bottomLogoMin{
             position: absolute;
             top: 32rem;
-            left: 7.5rem;
+            left: 2.5rem;
         }
     }
 }
@@ -243,7 +244,7 @@ $breakpoint-xsmall: 375px;
         .bottomLogoMin{
             position: absolute;
             top: 32rem;
-            left: 7.5rem;
+            left: 2rem;
         }
     }
 }
@@ -316,7 +317,7 @@ $breakpoint-xsmall: 375px;
         .bottomLogoMin{
             position: absolute;
             top: 34rem;
-            left: 11rem;
+            left: 5.5rem;
         }
     }
 }

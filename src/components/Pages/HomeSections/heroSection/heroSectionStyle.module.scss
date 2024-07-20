@@ -115,6 +115,8 @@ $breakpoint-small: 576px;
 // Small screens (up to 576px)
 @media (max-width: $breakpoint-small) {
     .heroSection {
+        margin-top: 4rem;
+
         &__centerArea {
             width: 26.5rem;
             flex-direction: column;
@@ -186,6 +188,8 @@ $breakpoint-small: 576px;
 // Medium screens (up to 768px)
 @media screen and (min-width: $breakpoint-small) and (max-width: ($breakpoint-medium + 1)) {
     .heroSection {
+        margin-top: 4rem;
+
         &__centerArea {
             flex-direction: column;
             width: 30.5rem;
@@ -259,6 +263,7 @@ $breakpoint-small: 576px;
 // Large screens (up to 1024px)
 @media screen and (min-width: ($breakpoint-medium  + 1)) and (max-width: $breakpoint-large) {
     .heroSection {
+        margin-top: 4rem;
         &__centerArea {
             flex-direction: column;
             width: 36.5rem;

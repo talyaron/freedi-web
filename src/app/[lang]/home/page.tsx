@@ -21,7 +21,7 @@ export default async function Home({
 }>) {
 	const langs = await getLanguageData();
 
-	const currentLang = langs[params.lang] || "en";
+	const currentLang = langs[params.lang];
 
 	const direction =
 		params.lang === "he" || params.lang === "ar" ? "rtl" : "ltr";
@@ -29,20 +29,29 @@ export default async function Home({
 	const isHebrew = params.lang === "he";
 
 	return (
-		<main className={isHebrew ? "main he" : "main en"}>
+		<main
+			className={isHebrew ? "main he" : "main en"}
+			style={{ direction }}
+		>
 			<div className="main__body">
-				<HeroSection currentLang={currentLang} direction={direction}/>
+				<HeroSection currentLang={currentLang} direction={direction} />
 
-				<WhoAreWeSection currentLang={currentLang} direction={direction}/>
+				<WhoAreWeSection
+					currentLang={currentLang}
+					direction={direction}
+				/>
 
 				<WhyUsSection currentLang={currentLang} direction={direction} />
 
 				<VideoSection currentLang={currentLang} direction={direction} />
 
-				<FeaturesSection currentLang={currentLang} direction={direction}/>
+				<FeaturesSection
+					currentLang={currentLang}
+					direction={direction}
+				/>
 			</div>
 
-			<HomeFooter currentLang={currentLang} direction={direction}/>
+			<HomeFooter currentLang={currentLang} direction={direction} />
 		</main>
 	);
 }

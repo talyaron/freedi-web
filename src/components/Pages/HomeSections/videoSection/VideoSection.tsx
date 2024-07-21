@@ -8,8 +8,8 @@ import FreediIcon from "@/components/icons/FreediIcon";
 import videoSectionImage from "@/assets/Images/VideoSectionImage.png";
 import videoSectionPeopleImage from "@/assets/Images/VideoSectionPeople.png";
 import Image from "next/image";
-import useWindowSizeFixed from "@/hooks/useWindowSizeFixed";
 import BottomLogo from "@/components/bottomLogo/BottomLogo";
+import useWindowSize from "@/hooks/useWindowSizeFixed";
 
 export default function VideoSection({
 	currentLang,
@@ -18,7 +18,7 @@ export default function VideoSection({
 	currentLang: Record<string, string>;
 	direction: "rtl" | "ltr";
 }>) {
-	const { width } = useWindowSizeFixed();
+	const { width } = useWindowSize();
 	const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
 	const handlePlayVideo = () => {

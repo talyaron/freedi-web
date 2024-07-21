@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import styles from "./featuresSection.module.scss";
 import Accordion from "@/components/accordion/Accordion";
 import { accordionData } from "@/components/accordion/data/accordionData";
-import useWindowSizeFixed from "@/hooks/useWindowSizeFixed";
 import ImageSlider from "@/components/imageSlider/ImageSlider";
+import useWindowSize from "@/hooks/useWindowSizeFixed";
 
 export default function FeaturesSection({
 	currentLang,
@@ -15,7 +15,7 @@ export default function FeaturesSection({
 	direction: "rtl" | "ltr";
 }>) {
 	const [openIndex, setOpenIndex] = useState<number | null>(null);
-	const { width } = useWindowSizeFixed();
+	const { width } = useWindowSize();
 
 	const handleAccordionToggle = (index: number) => {
 		setOpenIndex(openIndex === index ? null : index);
@@ -24,7 +24,7 @@ export default function FeaturesSection({
 	if (width === undefined) {
 		return <section className={styles.wrapper}></section>;
 	}
-	
+
 	return (
 		<section style={{ direction }} className={styles.wrapper}>
 			{width > 1024 ? (
@@ -50,17 +50,19 @@ export default function FeaturesSection({
 						</div>
 					</div>
 					<div className={styles.wrapper__imageSlider}>
-						<ImageSlider direction={direction}/>
+						<ImageSlider direction={direction} />
 					</div>
 				</>
 			) : (
 				<>
-					<h1 className={styles.wrapper__header}>{currentLang["Our Features"]}</h1>
+					<h1 className={styles.wrapper__header}>
+						{currentLang["Our Features"]}
+					</h1>
 					<div className={styles.wrapper__mainWrapper}>
 						<div
 							className={styles.wrapper__mainWrapper__imageSlider}
 						>
-							<ImageSlider direction={direction}/>
+							<ImageSlider direction={direction} />
 						</div>
 						<div className={styles.wrapper__mainWrapper__features}>
 							<div

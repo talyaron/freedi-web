@@ -5,7 +5,7 @@ import styles from "./accordion.module.scss";
 import MinusIcon from "../icons/MinusIcon";
 import PlusIconLight from "../icons/PlusIconLight";
 import { FeaturesData } from "./model/accordionModel";
-import useWindowSizeFixed from "@/hooks/useWindowSizeFixed";
+import useWindowSize from "@/hooks/useWindowSizeFixed";
 
 interface Props {
 	features: FeaturesData;
@@ -14,16 +14,19 @@ interface Props {
 	currentLang: Record<string, string>;
 }
 
-const Accordion = ({ features, accordionOpen, setAccordionOpen ,currentLang}: Props) => {
+const Accordion = ({
+	features,
+	accordionOpen,
+	setAccordionOpen,
+	currentLang,
+}: Props) => {
 	const [height, setHeight] = useState("0px");
 	const contentRef = useRef<HTMLDivElement>(null);
 
-	const { width } = useWindowSizeFixed();
+	const { width } = useWindowSize();
 
 	useEffect(() => {
-		setHeight(
-			accordionOpen ? `200px` : "0px",
-		);
+		setHeight(accordionOpen ? `200px` : "0px");
 	}, [accordionOpen]);
 
 	if (width === undefined) {
@@ -38,10 +41,7 @@ const Accordion = ({ features, accordionOpen, setAccordionOpen ,currentLang}: Pr
 	}
 
 	return (
-		<div
-			className={styles.wrapper}
-			style={borderBottomStyle}
-		>
+		<div className={styles.wrapper} style={borderBottomStyle}>
 			<button
 				className={styles.wrapper__button}
 				onClick={setAccordionOpen}

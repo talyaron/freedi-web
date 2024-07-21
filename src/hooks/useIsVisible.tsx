@@ -1,17 +1,20 @@
-import { useState, useEffect } from 'react';
-import useWindowSizeFixed from './useWindowSizeFixed';
+import { useState, useEffect } from "react";
+import useWindowSize from "./useWindowSizeFixed";
 
-export const useIsVisible = (ref: React.RefObject<HTMLElement>, threshold = 0.1): boolean => {
+export const useIsVisible = (
+	ref: React.RefObject<HTMLElement>,
+	threshold = 0.1,
+): boolean => {
 	const [isVisible, setIsVisible] = useState(false);
-	const { width } = useWindowSizeFixed();
+	const { width } = useWindowSize();
 	const isSmallScreen = width! < 576;
 	const isMediumScreen = width! >= 576 && width! < 1024;
-	if(isSmallScreen) {
+	if (isSmallScreen) {
 		threshold = 0.25;
-	} else if(isMediumScreen) {
-		threshold = 0.2
+	} else if (isMediumScreen) {
+		threshold = 0.2;
 	} else {
-		threshold = 0.1
+		threshold = 0.1;
 	}
 
 	useEffect(() => {
@@ -23,9 +26,9 @@ export const useIsVisible = (ref: React.RefObject<HTMLElement>, threshold = 0.1)
 			},
 			{
 				root: null,
-				rootMargin: '0px',
+				rootMargin: "0px",
 				threshold,
-			}
+			},
 		);
 
 		if (ref.current) {

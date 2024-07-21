@@ -7,10 +7,10 @@ interface WindowSize {
     height: number | undefined;
 }
 
-const useWindowSizeFixed = (): WindowSize => {
+const useWindowSize = (): WindowSize => {
 	const [windowSize, setWindowSize] = useState<WindowSize>({
-		width: undefined,
-		height: undefined,
+		width: window.innerWidth,
+		height: window.innerHeight,
 	});
 
 	useEffect(() => {
@@ -31,4 +31,4 @@ const useWindowSizeFixed = (): WindowSize => {
 	return windowSize;
 };
 
-export default useWindowSizeFixed;
+export default useWindowSize;

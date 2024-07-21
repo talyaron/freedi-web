@@ -9,567 +9,527 @@ $breakpoint-xsmall: 375px;
 @import "../../../../styles/globalExtends.scss";
 
 .videoSection {
-    font-family: 'Overused Grotesk';
-    height: 39.15rem;
-    margin-bottom: 30rem;
+	font-family: "Overused Grotesk";
+	height: 39.15rem;
+	margin-bottom: 30rem;
 
-    .freediLogo {
-        position: relative;
-        top: 6rem;
-        left: 10rem;
-    }
+	.freediLogo {
+		position: relative;
+		top: 6rem;
+		left: 10rem;
+	}
 
-    .videoWrapper {
-        position: relative;
-        margin-inline: auto;
-        margin-top: 10rem;
+	.videoWrapper {
+		position: relative;
+		margin-inline: auto;
+		margin-top: 10rem;
 
+		.videoPlayer {
+			border-radius: 35px;
+			border: none;
+		}
 
-        .videoPlayer {
-            border-radius: 35px;
-            border: none;
-        }
+		.videoImage {
+			width: 46.075rem;
+			height: 27.15rem;
+			cursor: pointer;
+		}
 
-        .videoImage {
-            width: 46.075rem;
-            height: 27.15rem;
-            cursor: pointer;
-        }
+		.textWrapper {
+			@extend %flex-column;
+			position: absolute;
+			top: 20%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			gap: 0.8rem;
+			text-align: center;
+			color: var(--white);
+			width: 40rem;
 
-        .textWrapper {
-            @extend %flex-column;
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            gap: .8rem;
-            text-align: center;
-            color: var(--white);
-            width: 40rem;
+			.header {
+				font-weight: 500;
+				font-size: 2.6rem;
+				line-height: 125%;
+			}
 
-            .header {
-                font-weight: 500;
-                font-size: 2.6rem;
-                line-height: 125%;
-            }
+			.timerP {
+				font-size: 0.9rem;
+				line-height: 35%;
+				font-weight: 350;
+			}
 
-            .timerP {
-                font-size: 0.9rem;
-                line-height: 35%;
-                font-weight: 350;
-            }
+			.underHeaderP {
+				font-size: 0.9rem;
+				line-height: 125%;
+				font-weight: 350;
+			}
+		}
 
-            .underHeaderP {
-                font-size: 0.9rem;
-                line-height: 125%;
-                font-weight: 350;
-            }
-        }
+		.logoWrapper {
+			position: absolute;
+			left: 1.5rem;
+			bottom: 2.1rem;
+			@extend %flex-align;
+			justify-content: center;
+			gap: 0.6rem;
+		}
 
-        .logoWrapper {
-            position: absolute;
-            left: 1.5rem;
-            bottom: 2.1rem;
-            @extend %flex-align;
-            justify-content: center;
-            gap: .6rem;
-        }
-
-        .videoPeopleImage {
-            width: 26.3rem;
-            height: 12.575rem;
-            position: absolute;
-            top: 26.55rem;
-            left: 9.9rem;
-        }
-    }
+		.videoPeopleImage {
+			width: 26.3rem;
+			height: 12.575rem;
+			position: absolute;
+			top: 26.55rem;
+			left: 9.9rem;
+		}
+	}
 }
 
-.bottomLogoMax{
-    position: absolute;
-    top: 45rem;
-    left: 12rem;
+.bottomLogoMax {
+	position: absolute;
+	top: 45rem;
+	left: 12rem;
 }
 
-.bottomLogoMin{
-    position: absolute;
-    top: 38rem;
-    left: 8rem;
+.bottomLogoMin {
+	position: absolute;
+	top: 38rem;
+	left: 8rem;
 }
 
 .none {
-    display: none;
+	display: none;
 }
 
 .loading {
-    height: 39.15rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
+	height: 39.15rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 50px;
 }
 
-
-
-
-//max-width:375px 
+//max-width:375px
 @media screen and (max-width: $breakpoint-xsmall) {
-    .videoSection {
-        display: flex;
-        flex-direction: column;
-        gap: 7rem;
+	.videoSection {
+		display: flex;
+		flex-direction: column;
+		gap: 7rem;
 
-        .textWrapper {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            gap: .8rem;
-            margin-bottom: -9rem;
+		.textWrapper {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			gap: 0.8rem;
+			margin-bottom: -9rem;
 
-            .header {
-                font-weight: 500;
-                margin-top: 8rem;
-                font-size: 2.6666rem;
-                line-height: 125%;
-                width: 60%;
-                color: var(--text-black);
-            }
+			.header {
+				font-weight: 500;
+				margin-top: 8rem;
+				font-size: 2.6666rem;
+				line-height: 125%;
+				width: 60%;
+				color: var(--text-black);
+			}
 
-            .underHeaderP {
-                font-size: 1.5rem;
-                line-height: 125%;
-                font-weight: 350;
-                color: #57688F;
-            }
-        }
+			.underHeaderP {
+				font-size: 1.5rem;
+				line-height: 125%;
+				font-weight: 350;
+				color: #57688f;
+			}
+		}
 
-        .videoWrapper {
-            .timerP {
-                font-size: 1.333rem;
-                line-height: 35%;
-                font-weight: 350;
-                position: absolute;
-                color: white;
-                top: 2.8rem;
-                left: 7.8rem;
-            }
+		.videoWrapper {
+			.timerP {
+				font-size: 1.333rem;
+				line-height: 35%;
+				font-weight: 350;
+				position: absolute;
+				color: white;
+				top: 2.8rem;
+				left: 7.8rem;
+			}
 
-            .videoImage {
-                width: 28.416rem;
-                height: 16.75rem;
-            }
+			.videoImage {
+				width: 28.416rem;
+				height: 16.75rem;
+			}
 
+			.logoWrapper {
+				bottom: 1.7rem;
+			}
 
-            .logoWrapper {
-                bottom: 1.7rem;
-            }
-
-            .videoPeopleImage {
-                width: 21rem;
-                height: 10.040rem;
-                top: 16.5rem;
-                left: 3.6rem;
-            }
-        }
-        .bottomLogoMin{
-            position: absolute;
-            top: 32rem;
-            left: 2.5rem;
-        }
-    }
+			.videoPeopleImage {
+				width: 21rem;
+				height: 10.04rem;
+				top: 16.5rem;
+				left: 3.6rem;
+			}
+		}
+		.bottomLogoMin {
+			position: absolute;
+			top: 32rem;
+			left: 2.5rem;
+		}
+	}
 }
 
 // min-width:376px and max-width: 576px
 @media screen and (min-width: $breakpoint-xsmall) and (max-width: $breakpoint-small) {
-    .videoSection {
-        display: flex;
-        flex-direction: column;
-        gap: 7rem;
-        margin: 18rem 0;
+	.videoSection {
+		display: flex;
+		flex-direction: column;
+		gap: 7rem;
+		margin: 18rem 0;
 
-        .textWrapper {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            gap: .8rem;
-            margin-bottom: -8rem;
+		.textWrapper {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			gap: 0.8rem;
+			margin-bottom: -8rem;
 
-            .header {
-                margin-top: -9rem;
-                font-weight: 500;
-                font-size: 2.6666rem;
-                line-height: 125%;
-                width: 60%;
-                color: var(--text-black);
-            }
+			.header {
+				margin-top: -9rem;
+				font-weight: 500;
+				font-size: 2.6666rem;
+				line-height: 125%;
+				width: 60%;
+				color: var(--text-black);
+			}
 
-            .underHeaderP {
-                font-size: 1.5rem;
-                line-height: 125%;
-                font-weight: 350;
-                color: #57688F;
-            }
-        }
+			.underHeaderP {
+				font-size: 1.5rem;
+				line-height: 125%;
+				font-weight: 350;
+				color: #57688f;
+			}
+		}
 
-        .videoWrapper {
-            .timerP {
-                font-size: 1.333rem;
-                line-height: 35%;
-                font-weight: 350;
-                position: absolute;
-                color: white;
-                top: 20%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
+		.videoWrapper {
+			.timerP {
+				font-size: 1.333rem;
+				line-height: 35%;
+				font-weight: 350;
+				position: absolute;
+				color: white;
+				top: 20%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
 
-            .videoImage {
-                width: 28.416rem;
-                height: 16.75rem;
-            }
+			.videoImage {
+				width: 28.416rem;
+				height: 16.75rem;
+			}
 
+			.logoWrapper {
+				bottom: 1.7rem;
+			}
 
-            .logoWrapper {
-                bottom: 1.7rem;
-            }
-
-            .videoPeopleImage {
-                width: 21rem;
-                height: 10.040rem;
-                top: 16.5rem;
-                left: 3.6rem;
-            }
-        }
-        .bottomLogoMin{
-            position: absolute;
-            top: 32rem;
-            left: 2rem;
-        }
-    }
+			.videoPeopleImage {
+				width: 21rem;
+				height: 10.04rem;
+				top: 16.5rem;
+				left: 3.6rem;
+			}
+		}
+		.bottomLogoMin {
+			position: absolute;
+			top: 32rem;
+			left: 2rem;
+		}
+	}
 }
 
 // min-width 576px and max-width: 768px
 @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
-    .videoSection {
-        display: flex;
-        flex-direction: column;
-        gap: 7rem;
+	.videoSection {
+		display: flex;
+		flex-direction: column;
+		gap: 7rem;
 
-        .freediLogo {
-            position: relative;
-            left: 14rem;
-        }
+		.freediLogo {
+			position: relative;
+			left: 14rem;
+		}
 
-        .textWrapper {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            gap: .8rem;
-            margin-bottom: -8rem;
+		.textWrapper {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			gap: 0.8rem;
+			margin-bottom: -8rem;
 
+			.header {
+				font-weight: 500;
+				font-size: 2.5714rem;
+				line-height: 125%;
+				width: 45%;
+				color: var(--text-black);
+			}
 
-            .header {
-                font-weight: 500;
-                font-size: 2.5714rem;
-                line-height: 125%;
-                width: 45%;
-                color: var(--text-black);
-            }
+			.underHeaderP {
+				font-size: 1.2857rem;
+				line-height: 125%;
+				font-weight: 350;
+				color: #57688f;
+			}
+		}
 
-            .underHeaderP {
-                font-size: 1.2857rem;
-                line-height: 125%;
-                font-weight: 350;
-                color: #57688F;
-            }
-        }
+		.videoWrapper {
+			.timerP {
+				font-size: 1.1428rem;
+				line-height: 35%;
+				font-weight: 350;
+				position: absolute;
+				color: white;
+				top: 20%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
 
-        .videoWrapper {
-            .timerP {
-                font-size: 1.1428rem;
-                line-height: 35%;
-                font-weight: 350;
-                position: absolute;
-                color: white;
-                top: 20%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
+			.videoImage {
+				width: 34.785rem;
+				height: 20.504rem;
+			}
 
-            .videoImage {
-                width: 34.785rem;
-                height: 20.504rem;
-            }
+			.logoWrapper {
+				bottom: 1.7rem;
+			}
 
-
-            .logoWrapper {
-                bottom: 1.7rem;
-            }
-
-            .videoPeopleImage {
-                width: 20rem;
-                height: 9.5627rem;
-                top: 20.3rem;
-                left: 7.6rem;
-            }
-        }
-        .bottomLogoMin{
-            position: absolute;
-            top: 34rem;
-            left: 5.5rem;
-        }
-    }
+			.videoPeopleImage {
+				width: 20rem;
+				height: 9.5627rem;
+				top: 20.3rem;
+				left: 7.6rem;
+			}
+		}
+		.bottomLogoMin {
+			position: absolute;
+			top: 34rem;
+			left: 5.5rem;
+		}
+	}
 }
-
 
 //min-width: 768px and max-width: 1024px
 @media screen and (min-width: $breakpoint-medium) and (max-width: ($breakpoint-large - 1)) {
-    .videoSection {
-        display: flex;
-        flex-direction: column;
-        gap: 7rem;
-        margin-top: 10rem;
+	.videoSection {
+		display: flex;
+		flex-direction: column;
+		gap: 7rem;
+		margin-top: 10rem;
 
-        .freediLogo {
-            position: relative;
-            left: 15rem;
-        }
+		.freediLogo {
+			position: relative;
+			left: 15rem;
+		}
 
-        .textWrapper {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            gap: .8rem;
-            margin-bottom: -8rem;
+		.textWrapper {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			gap: 0.8rem;
+			margin-bottom: -8rem;
 
-            .header {
-                font-weight: 500;
-                font-size: 2.5rem;
-                line-height: 125%;
-                width: 45%;
-                color: var(--text-black);
-            }
+			.header {
+				font-weight: 500;
+				font-size: 2.5rem;
+				line-height: 125%;
+				width: 45%;
+				color: var(--text-black);
+			}
 
-            .underHeaderP {
-                font-size: 1.125rem;
-                line-height: 125%;
-                font-weight: 350;
-                color: #57688F;
-            }
-        }
+			.underHeaderP {
+				font-size: 1.125rem;
+				line-height: 125%;
+				font-weight: 350;
+				color: #57688f;
+			}
+		}
 
-        .videoWrapper {
-            .timerP {
-                font-size: 0.9rem;
-                line-height: 35%;
-                font-weight: 350;
-                position: absolute;
-                color: white;
-                top: 20%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
+		.videoWrapper {
+			.timerP {
+				font-size: 0.9rem;
+				line-height: 35%;
+				font-weight: 350;
+				position: absolute;
+				color: white;
+				top: 20%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
 
-            .videoImage {
-                width: 38.66rem;
-                height: 22.791rem;
-            }
+			.videoImage {
+				width: 38.66rem;
+				height: 22.791rem;
+			}
 
+			.logoWrapper {
+				bottom: 1.9rem;
+			}
 
-            .logoWrapper {
-                bottom: 1.9rem;
-            }
-
-            .videoPeopleImage {
-                width: 20rem;
-                height: 9.5627rem;
-                top: 22.55rem;
-                left: 9rem;
-            }
-        }  
-    }
+			.videoPeopleImage {
+				width: 20rem;
+				height: 9.5627rem;
+				top: 22.55rem;
+				left: 9rem;
+			}
+		}
+	}
 }
 
 // min-width 1024px and max-width: 1200px
 @media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-xlarge) {
-    .videoSection {
-        display: flex;
-        flex-direction: column;
+	.videoSection {
+		display: flex;
+		flex-direction: column;
 
-        .freediLogo {
-            position: relative;
-            left: 15rem;
-        }
+		.freediLogo {
+			position: relative;
+			left: 15rem;
+		}
 
-        .textWrapper {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            gap: .8rem;
-            margin-left: -0.5rem;
+		.textWrapper {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			gap: 0.8rem;
+			margin-left: -0.5rem;
 
-            .header {
-                font-weight: 500;
-                font-size: 2.66rem;
-                line-height: 125%;
-                color: var(--text-black);
-                margin-top: 2rem;
-            }
+			.header {
+				font-weight: 500;
+				font-size: 2.66rem;
+				line-height: 125%;
+				color: var(--text-black);
+				margin-top: 2rem;
+			}
 
-            .underHeaderP {
-                font-size: 1rem;
-                line-height: 125%;
-                font-weight: 350;
-                color: #57688F;
-            }
-        }
+			.underHeaderP {
+				font-size: 1rem;
+				line-height: 125%;
+				font-weight: 350;
+				color: #57688f;
+			}
+		}
 
-        .videoWrapper {
-            .timerP {
-                font-size: 0.9rem;
-                line-height: 35%;
-                font-weight: 350;
-                position: absolute;
-                color: white;
-                top: 20%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
+		.videoWrapper {
+			.timerP {
+				font-size: 0.9rem;
+				line-height: 35%;
+				font-weight: 350;
+				position: absolute;
+				color: white;
+				top: 20%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
 
-            .videoImage {
-                width: 38.66rem;
-                height: 22.791rem;
-            }
+			.videoImage {
+				width: 38.66rem;
+				height: 22.791rem;
+			}
 
+			.logoWrapper {
+				bottom: 1.9rem;
+			}
 
-            .logoWrapper {
-                bottom: 1.9rem;
-            }
-
-            .videoPeopleImage {
-                width: 20rem;
-                height: 9.5627rem;
-                top: 22.55rem;
-                left: 9rem;
-            }
-        }
-    }
+			.videoPeopleImage {
+				width: 20rem;
+				height: 9.5627rem;
+				top: 22.55rem;
+				left: 9rem;
+			}
+		}
+	}
 }
 
 // min-width 1200px and max-width: 1440px
 @media screen and (min-width: $breakpoint-xlarge) and (max-width: $breakpoint-xxlarge) {
-    .videoSection {
-        margin: 7rem 0;
-        margin-bottom: 15rem;
+	.videoSection {
+		margin: 7rem 0;
+		margin-bottom: 15rem;
 
-        .freediLogo {
-            position: relative;
-            top: 18rem;
-            left: 18rem;
-        }
-        
-        .videoWrapper {
-            .videoImage {
-                width: 45.33rem;
-                height: 26.721rem;
-            }
+		.freediLogo {
+			position: relative;
+			top: 18rem;
+			left: 18rem;
+		}
 
-            .textWrapper {
-                top: 20%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                gap: .8rem;
+		.videoWrapper {
+			.videoImage {
+				width: 45.33rem;
+				height: 26.721rem;
+			}
 
-                .timerP {
-                    font-size: 0.88rem;
-                }
+			.textWrapper {
+				top: 20%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				gap: 0.8rem;
 
-                .header {
-                    font-size: 2.22rem;
-                }
+				.timerP {
+					font-size: 0.88rem;
+				}
 
-                .underHeaderP {
-                    font-size: 1rem;
-                }
-            }
+				.header {
+					font-size: 2.22rem;
+				}
 
-            .logoWrapper {
-                left: 5rem;
-            }
-        }
-    }
+				.underHeaderP {
+					font-size: 1rem;
+				}
+			}
+
+			.logoWrapper {
+				left: 5rem;
+			}
+		}
+	}
 }
-
 
 // min-width 1440px and max-width: 1920px
 @media screen and (min-width: $breakpoint-xxlarge) and (max-width: $breakpoint-xxxlarge) {
-    .videoSection {
-        margin: 7rem 0;
-        margin-bottom: 15rem;
+	.videoSection {
+		margin: 7rem 0;
+		margin-bottom: 15rem;
 
-        .freediLogo {
-            position: relative;
-            top: 18rem;
-            left: 18rem;
-        }
-        
-        .videoWrapper {
-            .videoImage {
-                width: 45.33rem;
-                height: 26.721rem;
-            }
+		.freediLogo {
+			position: relative;
+			top: 18rem;
+			left: 18rem;
+		}
 
-            .textWrapper {
-                top: 20%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                gap: .8rem;
+		.videoWrapper {
+			.videoImage {
+				width: 45.33rem;
+				height: 26.721rem;
+			}
 
-                .timerP {
-                    font-size: 0.88rem;
-                }
+			.textWrapper {
+				top: 20%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				gap: 0.8rem;
 
-                .header {
-                    font-size: 2.22rem;
-                }
+				.timerP {
+					font-size: 0.88rem;
+				}
 
-                .underHeaderP {
-                    font-size: 1rem;
-                }
-            }
+				.header {
+					font-size: 2.22rem;
+				}
 
-            .logoWrapper {
-                left: 5rem;
-            }
-        }
-    }
+				.underHeaderP {
+					font-size: 1rem;
+				}
+			}
+
+			.logoWrapper {
+				left: 5rem;
+			}
+		}
+	}
 }
-
-
-
-
-
-
-
-
-
-// .videoSection {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     gap: 2vw;
-//     &__video {
-//         border: none;
-//         border-radius: 5px;
-//         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-//         width: 60vw;
-//         max-width: 800px;
-//         aspect-ratio: 16/9;
-//     }
-
-//     .sectionTitle,
-//     .sectionText {
-//         text-align: center;
-//     }
-// }

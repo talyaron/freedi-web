@@ -22,6 +22,7 @@ export default function HomeFooter({
 			behavior: "smooth"
 		});
 	};
+	
 	return (
 		<div className={style.footer} style={{direction}}>
 			<div className={style.footer__mainArea}>
@@ -52,7 +53,7 @@ export default function HomeFooter({
 			<hr />
 			<div className={style.footer__bottomArea}>
 				<div className={style.footer__arrowUp}>
-						<ArrowUpIcon onClick={scrollToTop}/>
+					<ArrowUpIcon onClick={scrollToTop}/>
 				</div>
 			</div>
 		</div>

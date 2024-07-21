@@ -9,7 +9,6 @@ import { useIsVisible } from "@/hooks/useIsVisible";
 
 //Custom components
 import BottomLogo from "@/components/bottomLogo/BottomLogo";
-import LogoWithName from "@/components/logo/LogoWithName";
 
 
 export const LangContext = createContext<LangType | undefined>(undefined);

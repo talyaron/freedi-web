@@ -8,6 +8,7 @@ import ContactPhoneIcon from "@/components/icons/ContactPhoneIcon";
 import ContactEmailIcon from "@/components/icons/ContactEmailIcon";
 import ArrowUpIcon from "@/components/icons/ArrowUpIcon";
 
+
 export default function HomeFooter({
 	currentLang,
 	direction,
@@ -15,7 +16,12 @@ export default function HomeFooter({
     currentLang: Record<string, string>;
     direction: "rtl" | "ltr";
 }>) {
-    
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		});
+	};
 	return (
 		<div className={style.footer} style={{direction}}>
 			<div className={style.footer__mainArea}>
@@ -46,7 +52,7 @@ export default function HomeFooter({
 			<hr />
 			<div className={style.footer__bottomArea}>
 				<div className={style.footer__arrowUp}>
-					<ArrowUpIcon />
+						<ArrowUpIcon onClick={scrollToTop}/>
 				</div>
 			</div>
 		</div>
@@ -66,29 +72,29 @@ export default function HomeFooter({
 
 {
 	/* <Image
-                className="footer__backgroundShapeLeft"
-                alt="background-image-01"
-                src={backgroundShape}
-            />
-            <Image
-                className="footer__backgroundShapeMiddle"
-                alt="background-image-03"
-                src={backgroundShape2}
-            />
-            <Image
-                className="footer__flowerImage"
-                alt="flower-image-02"
-                src={flower2}
-            />
-            <Image
-                className="footer__natureImage"
-                alt="nature-image"
-                src={nature}
-            /> */
+				className="footer__backgroundShapeLeft"
+				alt="background-image-01"
+				src={backgroundShape}
+			/>
+			<Image
+				className="footer__backgroundShapeMiddle"
+				alt="background-image-03"
+				src={backgroundShape2}
+			/>
+			<Image
+				className="footer__flowerImage"
+				alt="flower-image-02"
+				src={flower2}
+			/>
+			<Image
+				className="footer__natureImage"
+				alt="nature-image"
+				src={nature}
+			/> */
 }
 {
 	/* <div className="footer__text">
-                <LogoWithName color="var(--button-primary)" size="1.2rem" /> */
+				<LogoWithName color="var(--button-primary)" size="1.2rem" /> */
 }
 
 {
@@ -97,12 +103,12 @@ export default function HomeFooter({
 
 {
 	/* <p className="sectionText footer__text__credit">
-                    {("From the Institute for Deliberative Democracy")}
-                </p>
-            </div>
-            <Image
-                className="footer__backgroundShapeRight"
-                alt="background-image-01"
-                src={backgroundShape}
-            /> */
+					{("From the Institute for Deliberative Democracy")}
+				</p>
+			</div>
+			<Image
+				className="footer__backgroundShapeRight"
+				alt="background-image-01"
+				src={backgroundShape}
+			/> */
 }

@@ -1,22 +1,32 @@
-import React from 'react'
+import React from "react";
 
 interface Props {
-	currentLang: Record<string, string>
+	currentLang: Record<string, string>;
 }
 
-function RunningBanner({currentLang}:Props) {
+function RunningBanner({ currentLang }: Props) {
 	return (
-		<ul>
-			<li>{currentLang["Consensus reaching technology"]}</li>
-			<li>{currentLang["Everybody can evaluate the different options"]}</li>
-			<li>{currentLang["Suites for all ages"]}</li>
-			<li>{currentLang["Satisfactory solutions"]}</li>
-			<li>{currentLang["Deep thought"]}</li>
-			<li>{currentLang["Modern technology"]}</li>
-			<li>{currentLang["Everybody can write her/his opinion"]}</li>
-			<li>{currentLang["Everybody can see multiple perspectives"]}</li>
-		</ul>
-	)
+		<div className="heroSection__runningBanner">
+			<ul>
+				<li>{currentLang["Consensus reaching technology"]}</li>
+				<li>
+					{
+						currentLang[
+							"Everybody can evaluate the different options"
+						]
+					}
+				</li>
+				<li>{currentLang["Suites for all ages"]}</li>
+				<li>{currentLang["Satisfactory solutions"]}</li>
+				<li>{currentLang["Deep thought"]}</li>
+				<li>{currentLang["Modern technology"]}</li>
+				<li>{currentLang["Everybody can write her/his opinion"]}</li>
+				<li>
+					{currentLang["Everybody can see multiple perspectives"]}
+				</li>
+			</ul>
+		</div>
+	);
 }
 
-export default RunningBanner
+export default RunningBanner;

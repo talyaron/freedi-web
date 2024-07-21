@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function AccessiblityIcon() {
+export default function ContactPhoneBlueIcon() {
 	return (
 		<svg
 			width="40"

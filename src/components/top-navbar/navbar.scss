@@ -1,83 +1,50 @@
-$breakpoint-xxxlarge: 1920px;
-$breakpoint-xxlarge: 1440px;
-$breakpoint-xlarge: 1200px;
-$breakpoint-large: 1024px;
-$breakpoint-medium: 768px;
-$breakpoint-small: 576px;
-
 .navbar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.4rem 5.9rem;
-    background-color: initial;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	max-width: 1440px;
+	margin: 0 auto;
 
-    &__languages {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 0.3rem;
-        gap: 0.3rem;
-        &__flag {
-            transition: all 0.5s ease-in-out;
-            position: absolute;
-            background-color: transparent;
-            right: 0;
-            &--current {
-                position: relative;
-                background-color: transparent;
-                height: 1.2rem;
-                width: 1.2rem;
-            }
-        }
+	&__languages {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		&__flag {
+			transition: all 0.5s ease-in-out;
+			position: absolute;
+			background-color: transparent;
+			left: 0;
+			&--current {
+				position: relative;
+				background-color: transparent;
+			}
+		}
 
-        &__ArrowDownIcon{
-            &--button{
-                border: none;
-                background-color: initial;
-            }
-        }
-    }
+		&__ArrowDownIcon {
+			border: none;
+			background-color: inherit;
+		}
+	}
 }
 
 ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
-    li {
-        margin: 0 10px;
-        a {
-            font-family: Catamaran, sans-serif;
-            font-size: 1.1rem;
-            font-weight: 100;
-            line-height: 1.2rem;
-            text-align: center;
-            transition: all 0.3s ease-in-out;
-        }
-    }
-}
-
-// Small screens (up to 576px)
-@media (max-width: $breakpoint-small) {
-    .navbar {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: initial;
-        }
-}
-
-// Medium screens (up to 768px)
-@media screen and (min-width: $breakpoint-small) and (max-width: ($breakpoint-medium + 1)) {
-    .navbar {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: initial;
-        }
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	list-style: none;
+	li {
+		margin: 0 10px;
+		a {
+			font-family: Catamaran, sans-serif;
+			font-size: 1.1rem;
+			font-weight: 100;
+			line-height: 1.2rem;
+			text-align: center;
+			transition: all 0.3s ease-in-out;
+		}
+	}
 }

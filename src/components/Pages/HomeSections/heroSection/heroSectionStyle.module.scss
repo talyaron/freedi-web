@@ -1,516 +1,106 @@
-$ColorBodyText: #57688f;
-$breakpoint-xxxlarge: 1920px;
-$breakpoint-xxlarge: 1440px;
-$breakpoint-xlarge: 1200px;
-$breakpoint-large: 1024px;
-$breakpoint-medium: 768px;
-$breakpoint-small: 576px;
-
-@import "../../../../styles/globalExtends.scss";
-
 .heroSection {
-    @extend %centered;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-    &__centerArea {
-        width: 66.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+	&__centerArea {
+		width: 66.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-        &__leftSideContent {
-            @extend %flex-column;
-            gap: 3rem;
-            height: 22.8rem;
+		&__leftSideContent {
+			display: flex;
+			flex-direction: column;
+			gap: 3rem;
+			height: 22.8rem;
 
-            &__title {
-                h1 {
-                    font-weight: 600;
-                    color: var(--text-black);
-                    font-size: 3.75rem;
-                    line-height: 4.6rem;
-                    margin-bottom: 0.5rem;
-                    width: 25rem;
-                }
+			&__title {
+				h1 {
+					font-weight: 600;
+					color: var(--text-black);
+					font-size: 3.75rem;
+					line-height: 4.6rem;
+					margin-bottom: 0.5rem;
+					width: 25rem;
+				}
 
-                p {
-                    font-size: 1rem;
-                    font-weight: 350;
-                    color: $ColorBodyText;
-                }
-            }
-            &__icons {
-                @extend %flex-align;
-                gap: 1.5rem;
-                
-                svg {
-                    width: 2.5rem;
-                    height: 2.5rem;
-                }
-                svg:hover{
-                opacity: 0.5
-                }
+				p {
+					font-size: 1rem;
+					font-weight: 350;
+					color: var(--dark-text);
+				}
+			}
+			&__icons {
+				display: flex;
+				align-items: center;
+				gap: 1.5rem;
 
-                &__phone {
-                    @extend %flex-align;
-                    gap: 0.5rem;
-                    &__text {
-                        font-weight: 300;
-                        font-size: 0.99rem;
-                        line-height: 1.4rem;
-                        color: var(--notFound-btn);
-                    }
-                }
-            }
-        }
-        &__rightSideContent {
-            .heroSectionImg {
-                width: 43.8rem;
-                height: 40.4rem;
-            }
-        }
-    }
+				svg {
+					width: 2.5rem;
+					height: 2.5rem;
+				}
+				svg:hover {
+					opacity: 0.5;
+				}
 
-    &__runningBanner {
-        margin-top: 10rem;
-        overflow: hidden;
-        width: 57rem;
-        margin-bottom: 5rem;
+				&__phone {
+					display: flex;
+					align-items: center;
+					gap: 0.5rem;
+					&__text {
+						font-weight: 300;
+						font-size: 0.99rem;
+						line-height: 1.4rem;
+						color: var(--notFound-btn);
+					}
+				}
+			}
+		}
+		.heroSectionImg {
+			width: 43.8rem;
+			height: 40.4rem;
+		}
+	}
 
-        ul {
-            display: flex;
-            gap: 1rem;
-            color: var(--notFound-btn);
-            animation: running-banner-animation 25s linear infinite;
+	&__runningBanner {
+		margin-top: 10rem;
+		overflow: hidden;
+		width: 57rem;
+		margin-bottom: 5rem;
 
-            li {
-                white-space: nowrap;
-                display: inline-block;
-                padding: 0 2rem;
-                font-size: 1.2rem;
-                position: relative;
-                padding-left: 1rem;
+		ul {
+			display: flex;
+			gap: 1rem;
+			color: var(--notFound-btn);
+			animation: running-banner-animation 25s linear infinite;
 
-                &::before {
-                    content: "•";
-                    position: absolute;
-                    left: 0;
-                    color: var(--notFound-btn);
-                    font-size: 1.4rem;
-                    line-height: 1.3;
-                }
-            }
-        }
-    }
+			li {
+				white-space: nowrap;
+				display: inline-block;
+				padding: 0 2rem;
+				font-size: 1.2rem;
+				position: relative;
+				padding-left: 1rem;
 
-    @keyframes running-banner-animation {
-        0% {
-            transform: translateX(100%);
-        }
-        100% {
-            transform: translateX(-300%);
-        }
-    }
-}
+				&::before {
+					content: "•";
+					position: absolute;
+					left: 0;
+					color: var(--notFound-btn);
+					font-size: 1.4rem;
+					line-height: 1.3;
+				}
+			}
+		}
+	}
 
-// Small screens (up to 576px)
-@media (max-width: $breakpoint-small) {
-    .heroSection {
-        margin-top: 4rem;
-
-        &__centerArea {
-            width: 26.5rem;
-            flex-direction: column;
-
-            &__bottomContent {
-                display: flex;
-                align-items: center;
-                gap: 2rem;
-                width: 20.8rem;
-                height: 2.6rem;
-                margin-right: 4rem;
-
-                svg {
-                    width: 2rem;
-                    height: 2.5rem;
-                }
-                svg:hover{
-                opacity: 0.5
-                }
-
-                &__phone {
-                    &__text {
-                        font-weight: 300;
-                        font-size: 0.9rem;
-                        line-height: 1.4rem;
-                        color: var(--notFound-btn);
-                        margin-left: -1.4rem;
-                    }
-                }
-            }
-
-            &__leftSideContent {
-                height: 8.4rem;
-
-                &__title {
-                    h1 {
-                        width: 30rem;
-                        font-size: 2rem;
-                        line-height: 125%;
-                    }
-                }
-            }
-            &__rightSideContent {
-                .heroSectionImg {
-                    width: 26rem;
-                    height: 24rem;
-                }
-            }
-        }
-        &__runningBanner {
-            margin-top: 9rem;
-            font-size: 1.1rem;
-            font-weight: 350;
-            width: 26.5rem;
-            ul {
-                @keyframes running-banner-animation {
-                    0% {
-                        transform: translateX(100%);
-                    }
-                    100% {
-                        transform: translateX(-150%);
-                    }
-                }
-            }
-        }
-    }
-}
-
-// Medium screens (up to 768px)
-@media screen and (min-width: $breakpoint-small) and (max-width: ($breakpoint-medium + 1)) {
-    .heroSection {
-        margin-top: 4rem;
-
-        &__centerArea {
-            flex-direction: column;
-            width: 30.5rem;
-
-            &__bottomContent {
-                display: flex;
-                align-items: center;
-                gap: 2rem;
-                width: 20.8rem;
-                height: 2.6rem;
-                margin-right: 7rem;
-
-                svg {
-                    width: 2rem;
-                    height: 2.5rem;
-                }
-                svg:hover{
-                opacity: 0.5
-                }
-
-                &__phone {
-                    &__text {
-                        font-weight: 300;
-                        font-size: 0.9rem;
-                        line-height: 1.4rem;
-                        color: var(--notFound-btn);
-                        margin-left: -1.4rem;
-                    }
-                }
-            }
-
-            &__leftSideContent {
-                height: 8.4rem;
-
-                &__title {
-                    h1 {
-                        width: 28rem;
-                        font-size: 2.5rem;
-                        line-height: 125%;
-                    }
-                }
-                
-            }
-            &__rightSideContent {
-                .heroSectionImg {
-                    width: 30.1rem;
-                    height: 27.8rem;
-                }
-            }
-        }
-        &__runningBanner {
-            margin-top: 8rem;
-            margin-left: -2rem;
-            font-size: 1.1rem;
-            font-weight: 350;
-            width: 29rem;
-            ul {
-                @keyframes running-banner-animation {
-                    0% {
-                        transform: translateX(100%);
-                    }
-                    100% {
-                        transform: translateX(-150%);
-                    }
-                }
-            }
-        }
-    }
-}
-
-// Large screens (up to 1024px)
-@media screen and (min-width: ($breakpoint-medium  + 1)) and (max-width: $breakpoint-large) {
-    .heroSection {
-        margin-top: 4rem;
-        &__centerArea {
-            flex-direction: column;
-            width: 36.5rem;
-
-            &__bottomContent {
-                display: flex;
-                align-items: center;
-                gap: 2rem;
-                width: 20.8rem;
-                height: 2.6rem;
-                margin-right: 6rem;
-
-                svg {
-                    width: 2rem;
-                    height: 2.5rem;
-                }
-                svg:hover{
-                opacity: 0.5
-                }
-
-                &__phone {
-                    &__text {
-                        font-weight: 300;
-                        font-size: 0.9rem;
-                        line-height: 1.4rem;
-                        color: var(--notFound-btn);
-                        margin-left: -1.4rem;
-                    }
-                }
-            }
-
-            &__leftSideContent {
-                height: 8.4rem;
-
-                &__title {
-                    h1 {
-                        width: 36.3rem;
-                        font-size: 2.5rem;
-                        line-height: 125%;
-                    }
-                }
-               
-            }
-            &__rightSideContent {
-                .heroSectionImg {
-                    width: 30.1rem;
-                    height: 27.8rem;
-                }
-            }
-        }
-        &__runningBanner {
-            margin-top: 9rem;
-            margin-left: 2rem;
-            font-size: 1.1rem;
-            font-weight: 350;
-            width: 28rem;
-            height: 1.6rem;
-            ul {
-                @keyframes running-banner-animation {
-                    0% {
-                        transform: translateX(100%);
-                    }
-                    100% {
-                        transform: translateX(-150%);
-                    }
-                }
-            }
-        }
-    }
-}
-
-// Extra large screens (up to 1200px)
-@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-xlarge) {
-    .heroSection {
-        &__centerArea {
-            width: 51rem;
-
-            &__leftSideContent {
-                height: 8.4rem;
-
-                &__title {
-                    h1 {
-                        width: 20.8rem;
-                        font-size: 2.5rem;
-                        line-height: 125%;
-                    }
-                }
-                &__icons {
-                    gap: 1.8rem;
-                    width: 20.8rem;
-                    height: 2.6rem;
-
-                    svg {
-                        width: 2rem;
-                    }
-                    &__phone {
-                        &__text {
-                            font-size: 0.9rem;
-                        }
-                    }
-                }
-            }
-            &__rightSideContent {
-                .heroSectionImg {
-                position: relative;
-                    top: 17rem;                    
-                    width: 31.5rem;
-                    height: 27rem;
-                }
-            }
-        }
-        &__runningBanner {
-            margin-top: 22rem;
-            margin-left: 2rem;
-            font-size: 1.1rem;
-            font-weight: 350;
-            width: 28rem;
-            height: 1.6rem;
-            ul {
-                @keyframes running-banner-animation {
-                    0% {
-                        transform: translateX(100%);
-                    }
-                    100% {
-                        transform: translateX(-150%);
-                    }
-                }
-            }
-        }
-    }
-}
-
-// Extra extra large screens (up to 1440px)
-@media screen and (min-width: ($breakpoint-xlarge + 1)) and (max-width: $breakpoint-xxlarge) {
-    .heroSection {
-        width: 54.75rem;
-        &__centerArea {
-            &__leftSideContent {
-                height: 8.4rem;
-
-                &__title {
-                    h1 {
-                        width: 26.25rem;
-                        font-size: 3.25rem;
-                        line-height: 125%;
-                    }
-                }
-                &__icons {
-                    gap: 1.8rem;
-                    width: 20.8rem;
-                    height: 2.6rem;
-
-                    svg {
-                        width: 2.5rem;
-                    }
-                    &__phone {
-                        &__text {
-                            font-size: 1rem;
-                        }
-                    }
-                }
-            }
-            &__rightSideContent {
-                .heroSectionImg {
-                    position: relative;
-                    top: 17rem;
-                    width: 33.75rem;
-                    height: 28.9rem;
-                }
-            }
-        }
-        &__runningBanner {
-            margin-top: 20rem;
-            margin-left: 5rem;
-            font-size: 1.1rem;
-            font-weight: 350;
-            width: 28rem;
-            height: 1.6rem;
-            ul {
-                @keyframes running-banner-animation {
-                    0% {
-                        transform: translateX(100%);
-                    }
-                    100% {
-                        transform: translateX(-150%);
-                    }
-                }
-            }
-        }
-    }
-}
-
-// Extra extra extra large screens (up to 1920px)
-@media screen and (min-width: ($breakpoint-xxlarge + 1)) and (max-width: $breakpoint-xxxlarge) {
-    .heroSection {
-        &__centerArea {
-            width: 69rem;
-
-            &__leftSideContent {
-                height: 20.1rem;
-
-                &__title {
-                    h1 {
-                        width: 26.25rem;
-                        font-size: 3.25rem;
-                        line-height: 125%;
-                    }
-                }
-                &__icons {
-                    gap: 1.8rem;
-                    width: 20.8rem;
-                    height: 2.6rem;
-
-                    svg {
-                        width: 2.5rem;
-                    }
-                    &__phone {
-                        &__text {
-                            font-size: 1rem;
-                        }
-                    }
-                }
-            }
-            &__rightSideContent {
-                .heroSectionImg {
-                    width: 33.6rem;
-                    height: 33.5rem;
-                }
-            }
-        }
-        &__runningBanner {
-            margin-top: 8rem;
-            margin-left: -1rem;
-            font-size: 1.1rem;
-            font-weight: 350;
-            width: 40rem;
-            height: 1.6rem;
-            ul {
-                @keyframes running-banner-animation {
-                    0% {
-                        transform: translateX(100%);
-                    }
-                    100% {
-                        transform: translateX(-150%);
-                    }
-                }
-            }
-        }
-    }
+	@keyframes running-banner-animation {
+		0% {
+			transform: translateX(100%);
+		}
+		100% {
+			transform: translateX(-300%);
+		}
+	}
 }

@@ -9,10 +9,10 @@ import HomeFooter from "@/components/Pages/HomeSections/footer/HomeFooter";
 import HeroSection from "@/components/Pages/HomeSections/heroSection/HeroSection";
 import WhoAreWeSection from "@/components/Pages/HomeSections/whoAreWeSection/WhoAreWeSection";
 import WhyUsSection from "@/components/Pages/HomeSections/whyUs/WhyUsSection";
+import FeaturesSection from "@/components/Pages/HomeSections/featuresSection/FeaturesSection";
 
 // Helpers
 import { getLanguageData } from "@/helpers/languages";
-import FeaturesSection from "@/components/Pages/HomeSections/featuresSection/FeaturesSection";
 
 export default async function Home({
 	params,
@@ -34,7 +34,7 @@ export default async function Home({
 			style={{ direction }}
 		>
 			<div className="main__body">
-				<HeroSection currentLang={currentLang} direction={direction} />
+				<HeroSection currentLang={currentLang} />
 
 				<WhoAreWeSection
 					currentLang={currentLang}

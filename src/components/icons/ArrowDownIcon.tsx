@@ -8,7 +8,7 @@ interface Props {
 
 export default function ArrowDownIcon({ height, width, onClick}: Readonly<Props>) {
 	return (
-		<button className="navbar__languages__ArrowDownIcon--button" onClick={onClick}>
+		<button className="navbar__languages__ArrowDownIcon" onClick={onClick}>
 			<svg
 				width={width}
 				height={height}

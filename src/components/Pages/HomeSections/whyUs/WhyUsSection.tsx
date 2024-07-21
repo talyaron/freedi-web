@@ -1,24 +1,28 @@
 "use client";
 
-import React, { useEffect, createContext, useRef, useMemo} from "react";
+import React, { useEffect, createContext, useRef, useMemo } from "react";
 import style from "./whyUsStyle.module.scss";
 
 import WhyUsCardContainer from "./WhyUsCardContainer";
 import { LangType } from "./whyUsModel";
 import { useIsVisible } from "@/hooks/useIsVisible";
-import LogoWithName from "@/components/logo/LogoWithName";
+
+//Custom components
+import BottomLogo from "@/components/bottomLogo/BottomLogo";
+
+
 export const LangContext = createContext<LangType | undefined>(undefined);
 
 const WhyUsSection = ({
 	currentLang,
 	direction,
 }: Readonly<{
-    currentLang: Record<string, string>;
-    direction: "rtl" | "ltr";
+	currentLang: Record<string, string>;
+	direction: "rtl" | "ltr";
 }>) => {
 
 	const ref = useRef<HTMLDivElement>(null);
-	const isVisible = useIsVisible(ref,0.3);
+	const isVisible = useIsVisible(ref, 0.3);
 
 	useEffect(() => {
 		const body = document.querySelector(".main") as HTMLElement;
@@ -49,10 +53,10 @@ const WhyUsSection = ({
 				<WhyUsCardContainer />
 			</section>
 			<div className={style.freediLogo}>
-				<LogoWithName />
+				<BottomLogo theme={"dark"} />
 			</div>
 		</LangContext.Provider>
-        
+
 	);
 };
 

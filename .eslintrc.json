@@ -1,6 +1,7 @@
 {
 	"plugins": ["@typescript-eslint", "prettier", "sonarjs", "react", "import"],
 	"extends": [
+        "eslint:recommended",
 		"plugin:@next/next/recommended",
 		"plugin:@typescript-eslint/recommended",
 		"prettier",

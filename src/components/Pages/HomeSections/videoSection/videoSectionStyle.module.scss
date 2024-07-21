@@ -85,6 +85,18 @@ $breakpoint-xsmall: 375px;
     }
 }
 
+.bottomLogoMax{
+    position: absolute;
+    top: 45rem;
+    left: 12rem;
+}
+
+.bottomLogoMin{
+    position: absolute;
+    top: 38rem;
+    left: 8rem;
+}
+
 .none {
     display: none;
 }
@@ -160,6 +172,11 @@ $breakpoint-xsmall: 375px;
                 left: 3.6rem;
             }
         }
+        .bottomLogoMin{
+            position: absolute;
+            top: 32rem;
+            left: 2.5rem;
+        }
     }
 }
 
@@ -223,6 +240,11 @@ $breakpoint-xsmall: 375px;
                 top: 16.5rem;
                 left: 3.6rem;
             }
+        }
+        .bottomLogoMin{
+            position: absolute;
+            top: 32rem;
+            left: 2rem;
         }
     }
 }
@@ -292,8 +314,14 @@ $breakpoint-xsmall: 375px;
                 left: 7.6rem;
             }
         }
+        .bottomLogoMin{
+            position: absolute;
+            top: 34rem;
+            left: 5.5rem;
+        }
     }
 }
+
 
 //min-width: 768px and max-width: 1024px
 @media screen and (min-width: $breakpoint-medium) and (max-width: ($breakpoint-large - 1)) {
@@ -359,9 +387,8 @@ $breakpoint-xsmall: 375px;
                 top: 22.55rem;
                 left: 9rem;
             }
-        }
+        }  
     }
-
 }
 
 // min-width 1024px and max-width: 1200px
@@ -428,7 +455,6 @@ $breakpoint-xsmall: 375px;
             }
         }
     }
-
 }
 
 // min-width 1200px and max-width: 1440px

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
+
+.bottomLogo {
+    width: 21rem;
+    font-size: 1.5rem;
+    font-weight: 450;
+    font-family: "Bruno Ace";
+
+    &__bottomLogoLight {
+        margin-right: 2rem;
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            direction: ltr;
+            color: var(--bottom-Logo-Free-Light);
+            span {
+                width: 1.8rem;
+                color: var(--bottom-Logo-Di-Light);
+            }
+        }
+        &__span {
+            animation: fadeIn 6s infinite;
+        }
+    }
+
+    &__bottomLogoDark {
+        p {
+            color: var(--bottom-Logo-Free-Dark);
+            span {
+                color: var(--bottom-Logo-Di-Dark);
+            }
+        }
+        &__span {
+            animation: fadeIn 6s infinite;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}

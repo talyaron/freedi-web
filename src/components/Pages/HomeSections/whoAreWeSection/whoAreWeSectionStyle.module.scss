@@ -3,14 +3,15 @@ $ColorFree: #3851d3;
 $ColorDi: #3db7b7;
 $breakpoint-xxlarge: 1440px;
 $breakpoint-xlarge: 1200px;
-$breakpoint-large: 1024px;
+$breakpoint-large: 1023px;
 $breakpoint-medium: 768px;
 $breakpoint-small: 576px;
 $breakpoint-xsmall: 375px;
 
 .whoAreWe {
-    width: 76.5rem;
+    width: 70.5rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
 
@@ -40,7 +41,7 @@ $breakpoint-xsmall: 375px;
         }
 
         &__bottom {
-            margin-top: 10rem;
+            margin-top: 30rem;
 
             &__imgArea {
                 margin-bottom: 10rem;
@@ -63,7 +64,7 @@ $breakpoint-xsmall: 375px;
             &__paragraph {
                 width: 29.2rem;
                 p {
-                    margin-bottom: 1rem;
+                    margin-bottom: 1.5rem;
                     color: $ColorDarkText;
                     font-weight: 350;
                     line-height: 1.8rem;
@@ -90,29 +91,44 @@ $breakpoint-xsmall: 375px;
         align-self: flex-start;
 
         &__img {
-            width: 47rem;
-            height: 67.5rem;
+            width: 40rem;
+            height: 63rem;
         }
     }
 }
 
+.bottomLogoMaxWid,
+.bottomLogoMinWid {
+    margin-top: 7rem;
+    margin-inline: auto;
+    text-align: center;
+}
+
+
+
 // Small screens (up to 375px)
 @media (max-width: $breakpoint-xsmall) {
     .whoAreWe {
-        width: 30.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 31.5rem;
 
         &__leftSection {
             &__top {
-                margin-left: 2.5rem;
-                margin-top: 7rem;
-                gap: 39rem;
+                gap: 2rem;
 
                 &__title {
                     font-size: 2.5rem;
+                }
+
+                &__middle {
+                    &__img{
+                        margin-left: -3.5rem;
+                        width: 31rem;
+                        height: 38rem;
+                    }
                 }
 
                 &__description {
@@ -123,31 +139,28 @@ $breakpoint-xsmall: 375px;
             }
 
             &__bottom {
+                margin-top: 10rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
 
                 &__imgArea {
-                    margin-bottom: 5rem;
+                    margin-bottom: 7rem;
+                    margin-left: 1rem;
 
                     &__geometryImg {
-                        width: 33rem;
-                        height: 15rem;
+                        width: 36rem;
+                        height: 16rem;
                     }
                 }
                 &__paragraph {
-                    width: 23.5rem;
+                    width: 25rem;
+                    p {
+                        margin-bottom: 1rem;
+                        line-height: 1.8rem;
+                    }
                 }
-            }
-        }
-        &__rightSection {
-            &__img {
-                position: relative;
-                bottom: 105rem;
-                right: 0rem;
-                width: 31rem;
-                height: 38rem;
             }
         }
     }
@@ -155,21 +168,26 @@ $breakpoint-xsmall: 375px;
 // Small screens (up to 576px)
 @media (min-width: $breakpoint-xsmall) and (max-width: $breakpoint-small) {
     .whoAreWe {
-        width: 30.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 36.5rem;
 
         &__leftSection {
             &__top {
-                margin-left: 2.5rem;
-
-                margin-top: 7rem;
-                gap: 39rem;
+                gap: 2rem;
 
                 &__title {
                     font-size: 2.5rem;
+                }
+
+                &__middle {
+                    &__img{
+                        margin-left: -3.5rem;
+                        width: 31rem;
+                        height: 38rem;
+                    }
                 }
 
                 &__description {
@@ -180,32 +198,32 @@ $breakpoint-xsmall: 375px;
             }
 
             &__bottom {
+                margin-top: 10rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
 
                 &__imgArea {
-                    margin-bottom: 5rem;
+                    margin-bottom: 7rem;
+                    margin-left: 1rem;
 
                     &__geometryImg {
-                        width: 33rem;
-                        height: 15rem;
+                        width: 36rem;
+                        height: 16rem;
                     }
                 }
                 &__paragraph {
-                    width: 23.5rem;
+                    width: 25rem;
+                    p {
+                        margin-bottom: 1rem;
+                        line-height: 1.8rem;
+                    }
                 }
             }
         }
-        &__rightSection {
-            &__img {
-                position: relative;
-                bottom: 105rem;
-                left: 0rem;
-                width: 31rem;
-                height: 38rem;
-            }
+        .bottomLogoMinWid {
+            margin-left: 6rem;
         }
     }
 }
@@ -213,19 +231,26 @@ $breakpoint-xsmall: 375px;
 // Medium screens (up to 768px)
 @media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
     .whoAreWe {
-        width: 30.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 36.5rem;
 
         &__leftSection {
             &__top {
-                margin-top: 7rem;
-                gap: 39rem;
+                gap: 2rem;
 
                 &__title {
                     font-size: 2.5rem;
+                }
+
+                &__middle {
+                    &__img{
+                        margin-right: 1rem;
+                        width: 31rem;
+                        height: 38rem;
+                    }
                 }
 
                 &__description {
@@ -236,31 +261,29 @@ $breakpoint-xsmall: 375px;
             }
 
             &__bottom {
+                margin-top: 10rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
 
                 &__imgArea {
-                    margin-bottom: 5rem;
+                    margin-bottom: 7rem;
+                    margin-left: 1rem;
 
                     &__geometryImg {
-                        width: 33rem;
-                        height: 15rem;
+                        width: 36rem;
+                        height: 16rem;
                     }
                 }
                 &__paragraph {
-                    width: 35rem;
+                    width: 32rem;
+
+                    p {
+                        margin-bottom: 1rem;
+                        line-height: 1.8rem;
+                    }
                 }
-            }
-        }
-        &__rightSection {
-            &__img {
-                position: relative;
-                bottom: 105rem;
-                left: 2rem;
-                width: 31rem;
-                height: 38rem;
             }
         }
     }
@@ -277,11 +300,18 @@ $breakpoint-xsmall: 375px;
 
         &__leftSection {
             &__top {
-                margin-top: 7rem;
-                gap: 39rem;
+                gap: 2rem;
 
                 &__title {
                     font-size: 2.5rem;
+                }
+
+                &__middle {
+                    &__img{
+                        margin-left: 1rem;
+                        width: 31rem;
+                        height: 38rem;
+                    }
                 }
 
                 &__description {
@@ -317,22 +347,15 @@ $breakpoint-xsmall: 375px;
                 }
             }
         }
-        &__rightSection {
-            &__img {
-                position: relative;
-                bottom: 102rem;
-                left: 6rem;
-                width: 31rem;
-                height: 38rem;
-            }
-        }
     }
 }
 
 // Extra large screens (up to 1200px)
 @media (min-width: $breakpoint-large) and (max-width: $breakpoint-xlarge) {
+
+    
     .whoAreWe {
-        width: 54.75rem;
+        width: 54rem;
 
         &__leftSection {
             &__top {
@@ -364,13 +387,9 @@ $breakpoint-xsmall: 375px;
 
         &__rightSection {
             top: -5rem;
-
             &__img {
-                position: relative;
-                top: 3rem;
-                right: 0rem;
-                width: 33rem;
-                height: 40rem;
+                width: 25rem;
+                height: 37rem;
             }
         }
     }
@@ -379,7 +398,7 @@ $breakpoint-xsmall: 375px;
 // Extra extra large screens (up to 1440px)
 @media (min-width: $breakpoint-xlarge) and (max-width: $breakpoint-xxlarge) {
     .whoAreWe {
-        width: 69rem;
+        width: 65rem;
 
         &__leftSection {
             &__bottom {
@@ -397,8 +416,8 @@ $breakpoint-xsmall: 375px;
 
         &__rightSection {
             &__img {
-                width: 44rem;
-                height: 64rem;
+                width: 36rem;
+                height: 56rem;
             }
         }
     }

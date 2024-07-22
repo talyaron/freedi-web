@@ -38,7 +38,6 @@ export default async function Home({
 
 				<WhoAreWeSection
 					currentLang={currentLang}
-					direction={direction}
 				/>
 
 				<WhyUsSection currentLang={currentLang} direction={direction} />

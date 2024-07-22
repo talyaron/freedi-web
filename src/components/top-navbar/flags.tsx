@@ -3,7 +3,7 @@ import React from "react";
 import UsaFlagIcon from "../icons/UsaFlagIcon";
 import IsraelFlagIcon from "../icons/IsraelFlagIcon";
 
-const flagSize = "1.5rem";
+const flagSize = "2rem";
 
 export const flagArr = [
 	{

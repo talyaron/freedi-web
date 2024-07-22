@@ -10,10 +10,8 @@ import ArrowUpIcon from "@/components/icons/ArrowUpIcon";
 
 export default function HomeFooter({
 	currentLang,
-	direction,
 }: Readonly<{
 	currentLang: Record<string, string>;
-	direction: "rtl" | "ltr";
 }>) {
 	const scrollToTop = () => {
 		window.scrollTo({
@@ -23,7 +21,7 @@ export default function HomeFooter({
 	};
 
 	return (
-		<div className={style.footer} style={{ direction }}>
+		<div className={style.footer}>
 			<div className={style.footer__mainArea}>
 				<div className={style.footer__topText}>
 					<p>

@@ -15,7 +15,8 @@
 	--background-primary: #eff1ff;
 	--button-primary: #5d98f3;
 
-	--text-gray: #6e8aa6;
+	--text-body-light: #818fad;
+	--text-body-very-light: #a4aec5;
 	--text-black: #232f4a;
 
 	--notFound-title: #544d80;
@@ -43,19 +44,36 @@
 	--breakpoint-xSmall: 375px;
 }
 
+$breakpoint-xxxLarge: 1920px;
+$breakpoint-xxLarge: 1440px;
+$breakpoint-xLarge: 1280px;
+$breakpoint-large: 1024px;
+$breakpoint-medium: 768px;
+$breakpoint-small: 576px;
+$breakpoint-xSmall: 375px;
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	.he {
+		font-family: "Varela Round", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+	}
+
+	.en {
+		font-family: "Overused Grotesk", sans-serif;
+		font-optical-sizing: auto;
+	}
 }
 
 html {
-	font-size: 24px;
+	font-size: 16px;
 }
 
 body {
 	background-color: #f2f6ff;
-	padding: 0 20vw;
 }
 
 a {
@@ -79,43 +97,43 @@ button {
 	user-select: none;
 }
 
-@media screen and (max-width: var(--breakpoint-xxxLarge)) {
+@media screen and (max-width: $breakpoint-xxxLarge) {
 	html {
 		font-size: 18px;
 	}
 }
 
-@media screen and (max-width: var(--breakpoint-xxLarge)) {
+@media screen and (max-width: $breakpoint-xxLarge) {
 	html {
 		font-size: 16px;
 	}
 }
 
-@media screen and (max-width: var(--breakpoint-xLarge)) {
+@media screen and (max-width: $breakpoint-xLarge) {
 	html {
 		font-size: 15px;
 	}
 }
 
-@media screen and (max-width: var(--breakpoint-large)) {
+@media screen and (max-width: $breakpoint-large) {
 	html {
 		font-size: 14px;
 	}
 }
 
-@media screen and (max-width: var(--breakpoint-medium)) {
+@media screen and (max-width: $breakpoint-medium) {
 	html {
 		font-size: 12px;
 	}
 }
 
-@media screen and (max-width: var(--breakpoint-small)) {
+@media screen and (max-width: $breakpoint-small) {
 	html {
 		font-size: 10px;
 	}
 }
 
-@media screen and (max-width: var(--breakpoint-xSmall)) {
+@media screen and (max-width: $breakpoint-xSmall) {
 	html {
 		font-size: 8px;
 	}

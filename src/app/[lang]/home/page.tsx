@@ -36,13 +36,11 @@ export default async function Home({
 			<div className="main__body">
 				<HeroSection currentLang={currentLang} />
 
-				<WhoAreWeSection
-					currentLang={currentLang}
-				/>
+				<WhoAreWeSection currentLang={currentLang} />
 
-				<WhyUsSection currentLang={currentLang} direction={direction} />
+				<WhyUsSection currentLang={currentLang} />
 
-				<VideoSection currentLang={currentLang} direction={direction} />
+				<VideoSection currentLang={currentLang} />
 
 				<FeaturesSection
 					currentLang={currentLang}
@@ -50,7 +48,7 @@ export default async function Home({
 				/>
 			</div>
 
-			<HomeFooter currentLang={currentLang} direction={direction} />
+			<HomeFooter currentLang={currentLang} />
 		</main>
 	);
 }

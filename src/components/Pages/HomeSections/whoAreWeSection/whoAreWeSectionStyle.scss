@@ -2,7 +2,7 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 5rem;
 
 	&__imageBox {
 		width: 100%;
@@ -10,14 +10,14 @@
 		flex-direction: column;
 
 		.heroImg {
-			width: 40%;
+			width: 55%;
 			max-width: 800px;
 			height: auto;
 			margin: 0 auto;
 		}
 
-		.sectionSubHeader{
-			width: 50%;
+		.sectionSubHeader {
+			width: 55%;
 		}
 	}
 
@@ -28,10 +28,22 @@
 		gap: 3rem;
 
 		.geometryImg {
-			width: 50%;
+			width: 100%;
 			max-width: 800px;
 			height: auto;
-			margin: 0 auto;
+		}
+
+		.sectionText {
+
+			span {
+				font-weight: 450;
+			}
+			.free {
+				color: var(--freedi-blue);
+			}
+			.di {
+				color: var(--bottom-Logo-Di-Light);
+			}
 		}
 	}
 
@@ -89,16 +101,6 @@
 					font-weight: 350;
 					line-height: 1.8rem;
 					font-size: 1.25rem;
-				}
-
-				span {
-					font-weight: 450;
-				}
-				.free {
-					color: var(--freedi-blue);
-				}
-				.di {
-					color: var(--bottom-Logo-Di-Light);
 				}
 			}
 		}

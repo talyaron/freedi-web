@@ -6,8 +6,6 @@ $breakpoint-medium: 768px;
 $breakpoint-small: 576px;
 $breakpoint-xsmall: 375px;
 
-@import "../../../../styles/globalExtends.scss";
-
 .whyUsActive {
 	&--title {
 		color: var(--white) !important;
@@ -37,7 +35,10 @@ $breakpoint-xsmall: 375px;
 }
 
 .whyUs {
-	font-family: "Overused Grotesk";
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2rem;
 
 	&--title {
 		padding-top: 2rem;
@@ -70,12 +71,14 @@ $breakpoint-xsmall: 375px;
 			margin-inline: auto;
 
 			&__carousel {
-				@extend %flex-column;
+				display: flex;
+				flex-direction: column;
 				gap: 2rem;
 				width: 14.8665rem;
 
 				&__vertical {
-					@extend %flex-column;
+					display: flex;
+					flex-direction: column;
 					gap: 2rem;
 				}
 
@@ -105,7 +108,9 @@ $breakpoint-xsmall: 375px;
 		0px 30px 18px 0px rgba(132, 143, 169, 0.05),
 		0px 54px 22px 0px rgba(132, 143, 169, 0.01),
 		0px 84px 24px 0px rgba(132, 143, 169, 0);
-	@extend %centered;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	gap: 1.6rem;
 	padding: 2.4rem 1.2rem;
 	font-family: "Overused Grotesk", sans-serif;
@@ -114,7 +119,8 @@ $breakpoint-xsmall: 375px;
 	transition: 1s ease-out;
 
 	&__card {
-		@extend %flex-column;
+		display: flex;
+		flex-direction: column;
 		align-items: flex-start;
 		gap: 0.8rem;
 		transition: opacity 0.3s ease-in-out;
@@ -142,12 +148,6 @@ $breakpoint-xsmall: 375px;
 	height: 3.25rem;
 }
 
-.freediLogo {
-	position: relative;
-	bottom: 5rem;
-	left: 3rem;
-}
-
 @keyframes infiniteSlideUp {
 	0% {
 		transform: translateY(calc(0% + 2rem));
@@ -171,11 +171,6 @@ $breakpoint-xsmall: 375px;
 //max-width:375px
 @media screen and (max-width: $breakpoint-xsmall) {
 	.whyUs {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-
 		&--title {
 			font-size: 2rem;
 			padding-inline: 4rem;
@@ -229,11 +224,6 @@ $breakpoint-xsmall: 375px;
 // min-width:376px and max-width: 576px
 @media screen and (min-width: $breakpoint-xsmall) and (max-width: $breakpoint-small) {
 	.whyUs {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-
 		&--title {
 			font-size: 2rem;
 			padding-inline: 4rem;
@@ -294,10 +284,6 @@ $breakpoint-xsmall: 375px;
 
 	.whyUs {
 		height: 52.75rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
 
 		&--title {
 			font-size: 2.25rem;
@@ -373,11 +359,6 @@ $breakpoint-xsmall: 375px;
 //min-width: 768px and max-width: 1024px
 @media screen and (min-width: $breakpoint-medium) and (max-width: ($breakpoint-large - 1)) {
 	.whyUs {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-
 		&--title {
 			font-size: 2.25rem;
 			padding-inline: 3rem;

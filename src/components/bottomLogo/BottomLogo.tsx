@@ -3,18 +3,12 @@
 import React, { useEffect, useState } from "react";
 import style from "./bottomLogo.module.scss";
 
+const spanText = ["scourse", "scussion", "alogue", "sputation", "squisition"];
 interface BottomLogoProps {
 	theme: "light" | "dark";
 }
 
-function BottomLogo({ theme }: BottomLogoProps) {
-	const spanText = [
-		"scourse",
-		"scussion",
-		"alogue",
-		"sputation",
-		"squisition",
-	];
+function BottomLogo({ theme }: Readonly<BottomLogoProps>) {
 	const [index, setIndex] = useState(0);
 
 	useEffect(() => {

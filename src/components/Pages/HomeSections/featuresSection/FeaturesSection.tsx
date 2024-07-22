@@ -26,7 +26,7 @@ export default function FeaturesSection({
 	}
 
 	return (
-		<section style={{ direction }} className={styles.wrapper}>
+		<section className={styles.wrapper}>
 			{width > 1024 ? (
 				<>
 					<div className={styles.wrapper__features}>

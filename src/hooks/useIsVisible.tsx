@@ -7,8 +7,10 @@ export const useIsVisible = (
 ): boolean => {
 	const [isVisible, setIsVisible] = useState(false);
 	const { width } = useWindowSize();
-	const isSmallScreen = width! < 576;
-	const isMediumScreen = width! >= 576 && width! < 1024;
+
+	const isSmallScreen = width < 576;
+	const isMediumScreen = width >= 576 && width < 1024;
+	
 	if (isSmallScreen) {
 		threshold = 0.25;
 	} else if (isMediumScreen) {

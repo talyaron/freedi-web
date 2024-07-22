@@ -41,7 +41,7 @@ export default function HomeFooter({
 						<ContactEmailIcon />
 						<div className={style.footer__contactDetails__text}>
 							<p>{currentLang["Contact via Email"]}</p>
-							<p>"tal.yaron@delib.org"</p>
+							<p>"tal.yaron@freedi.co"</p>
 						</div>
 					</div>
 				</div>

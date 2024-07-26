@@ -4,7 +4,7 @@ import WhyUsColumn2 from "./whyUsColumns/whyUsColumn2";
 import WhyUsColumn3 from "./whyUsColumns/whyUsColumn3";
 import { LangContext } from "./WhyUsSection";
 import style from "./whyUsStyle.module.scss";
-import useWindowSize from "@/hooks/useWindowSizeFixed";
+import useWindowSize from "@/hooks/useWindowSize";
 
 const WhyUsCardContainer = () => {
 

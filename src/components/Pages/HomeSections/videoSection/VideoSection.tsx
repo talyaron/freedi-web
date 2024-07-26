@@ -13,7 +13,7 @@ import videoSectionPeopleImage from "@/assets/Images/VideoSectionPeople.png";
 import BottomLogo from "@/components/bottomLogo/BottomLogo";
 
 // Hooks
-import useWindowSize from "@/hooks/useWindowSizeFixed";
+import useWindowSize from "@/hooks/useWindowSize";
 
 export default function VideoSection({
 	currentLang,

@@ -7,9 +7,9 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 15vw;
+		gap: 20vw;
 		width: 100%;
-		padding: 5vw 15vw;
+		padding: 5vw 10vw;
 		margin: 0 auto;
 	}
 }
@@ -22,13 +22,13 @@
 }
 
 .sectionSubHeader {
-	font-size: 1.7rem;
+	font-size: 1.3rem;
 	font-weight: 400;
 	color: var(--text-black);
 }
 
 .sectionText {
-	font-size: 1.5rem;
+	font-size: 1.1rem;
 	font-weight: 350;
 	color: var(--dark-text);
 }

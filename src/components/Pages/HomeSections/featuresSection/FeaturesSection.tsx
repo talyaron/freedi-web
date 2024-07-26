@@ -27,12 +27,12 @@ export default function FeaturesSection({
 			<h1 className="sectionHeader">{currentLang["Our Features"]}</h1>
 			<div className={styles.wrapper__features}>
 				<div className={styles.wrapper__features__main}>
-					{accordionData.map((features, index) => {
+					{accordionData.map((feature, index) => {
 						return (
 							<Accordion
-								features={features}
+								feature={feature}
 								key={index}
-								accordionOpen={openIndex === index}
+								isOpen={openIndex === index}
 								setAccordionOpen={() =>
 									handleAccordionToggle(index)
 								}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useWindowSize from "./useWindowSizeFixed";
+import useWindowSize from "./useWindowSize";
 
 export const useIsVisible = (
 	ref: React.RefObject<HTMLElement>,

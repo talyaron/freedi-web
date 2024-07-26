@@ -23,11 +23,6 @@ export default function VideoSection({
 	const { width } = useWindowSize();
 	const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
-	const handlePlayVideo = () => {
-		console.log("play video");
-		setIsVideoPlaying(true);
-	};
-
 	return (
 		<section className="videoSection">
 			{width <= 1200 && (
@@ -46,7 +41,7 @@ export default function VideoSection({
 			)}
 			<div
 				className="videoSection__videoWrapper"
-				onClick={handlePlayVideo}
+				onClick={() => setIsVideoPlaying(true)}
 			>
 				{isVideoPlaying ? (
 					<iframe

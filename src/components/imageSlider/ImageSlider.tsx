@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./imageSlider.module.scss";
+import "./imageSlider.scss";
 import Image from "next/image";
 import image1 from "@/assets/Images/1.png";
 import image2 from "@/assets/Images/2.png";
@@ -20,7 +20,7 @@ const ImageSlider = ({
 	direction,
 }: Readonly<{
 	direction: "rtl" | "ltr";
-}>)  => {
+}>) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const images = [
 		image1,
@@ -42,23 +42,23 @@ const ImageSlider = ({
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
-		}, 8000);
+		}, 5000);
 
 		return () => clearInterval(interval);
-	},[]);
-	
-	return (
-		<>
-			{images.map((item, index) => (
-				<div
-					key={index}
-					className={`${index === activeIndex ? (direction === "ltr" ? styles.activeLtr : styles.activeRtl) : styles.none} ${direction === "ltr" ? styles.imageContainerLtr : styles.imageContainerRtl}`}
-				>
-					<Image src={item} alt={`Image ${index}`} />
-				</div>
-			))}
-		</>
-	);
+	}, []);
+
+	return images.map((item, index) => (
+		<Image
+			key={index}
+			src={item}
+			alt={`Image ${index}`}
+			className={
+				direction === "rtl"
+					? `slideRtl ${index === activeIndex ? "activeRtl" : ""}`
+					: `slideLtr ${index === activeIndex ? "activeLtr" : ""}`
+			}
+		/>
+	));
 };
 
 export default ImageSlider;

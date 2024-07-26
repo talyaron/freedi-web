@@ -42,10 +42,10 @@ export default async function Home({
 
 				<VideoSection currentLang={currentLang} />
 
-				{/* <FeaturesSection
+				<FeaturesSection
 					currentLang={currentLang}
 					direction={direction}
-				/> */}
+				/>
 			</div>
 
 			<HomeFooter currentLang={currentLang} />

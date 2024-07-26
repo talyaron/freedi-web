@@ -2,10 +2,12 @@
 
 import React, { useState } from "react";
 import styles from "./featuresSection.module.scss";
+
+// Custom Components
 import Accordion from "@/components/accordion/Accordion";
 import { accordionData } from "@/components/accordion/data/accordionData";
 import ImageSlider from "@/components/imageSlider/ImageSlider";
-import useWindowSize from "@/hooks/useWindowSizeFixed";
+import BottomLogo from "@/components/bottomLogo/BottomLogo";
 
 export default function FeaturesSection({
 	currentLang,
@@ -15,79 +17,35 @@ export default function FeaturesSection({
 	direction: "rtl" | "ltr";
 }>) {
 	const [openIndex, setOpenIndex] = useState<number | null>(null);
-	const { width } = useWindowSize();
 
 	const handleAccordionToggle = (index: number) => {
 		setOpenIndex(openIndex === index ? null : index);
 	};
 
-	if (width === undefined) {
-		return <section className={styles.wrapper}></section>;
-	}
-
 	return (
 		<section className={styles.wrapper}>
-			{width > 1024 ? (
-				<>
-					<div className={styles.wrapper__features}>
-						<h1 className={styles.wrapper__features__header}>
-							{currentLang["Our Features"]}
-						</h1>
-						<div className={styles.wrapper__features__main}>
-							{accordionData.map((features, index) => {
-								return (
-									<Accordion
-										features={features}
-										key={index}
-										accordionOpen={openIndex === index}
-										setAccordionOpen={() =>
-											handleAccordionToggle(index)
-										}
-										currentLang={currentLang}
-									/>
-								);
-							})}
-						</div>
-					</div>
-					<div className={styles.wrapper__imageSlider}>
-						<ImageSlider direction={direction} />
-					</div>
-				</>
-			) : (
-				<>
-					<h1 className={styles.wrapper__header}>
-						{currentLang["Our Features"]}
-					</h1>
-					<div className={styles.wrapper__mainWrapper}>
-						<div
-							className={styles.wrapper__mainWrapper__imageSlider}
-						>
-							<ImageSlider direction={direction} />
-						</div>
-						<div className={styles.wrapper__mainWrapper__features}>
-							<div
-								className={
-									styles.wrapper__mainWrapper__features__main
+			<h1 className="sectionHeader">{currentLang["Our Features"]}</h1>
+			<div className={styles.wrapper__features}>
+				<div className={styles.wrapper__features__main}>
+					{accordionData.map((features, index) => {
+						return (
+							<Accordion
+								features={features}
+								key={index}
+								accordionOpen={openIndex === index}
+								setAccordionOpen={() =>
+									handleAccordionToggle(index)
 								}
-							>
-								{accordionData.map((features, index) => {
-									return (
-										<Accordion
-											features={features}
-											key={index}
-											accordionOpen={openIndex === index}
-											setAccordionOpen={() =>
-												handleAccordionToggle(index)
-											}
-											currentLang={currentLang}
-										/>
-									);
-								})}
-							</div>
-						</div>
-					</div>
-				</>
-			)}
+								currentLang={currentLang}
+							/>
+						);
+					})}
+				</div>
+				<div className={styles.wrapper__features__imageSlider}>
+					<ImageSlider direction={direction} />
+				</div>
+			</div>
+			<BottomLogo theme="light" />
 		</section>
 	);
 }

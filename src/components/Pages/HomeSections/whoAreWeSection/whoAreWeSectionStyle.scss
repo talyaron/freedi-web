@@ -1,24 +1,19 @@
 .whoAreWe {
 	width: 100%;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, auto);
 	gap: 5rem;
 
-	&__imageBox {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
+	.heroImg {
+		width: 55%;
+		max-width: 800px;
+		height: auto;
+		margin: 0 auto;
+	}
 
-		.heroImg {
-			width: 55%;
-			max-width: 800px;
-			height: auto;
-			margin: 0 auto;
-		}
-
-		.sectionSubHeader {
-			width: 50%;
-		}
+	.sectionSubHeader {
+		width: 50%;
 	}
 
 	&__textBox {
@@ -34,7 +29,6 @@
 		}
 
 		.sectionText {
-
 			span {
 				font-weight: 450;
 			}
@@ -44,6 +38,39 @@
 			.di {
 				color: var(--bottom-Logo-Di-Light);
 			}
+		}
+	}
+}
+
+.whoWeAreLarge {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 80vh;
+	width: 100%;
+	.scrollable {
+		display: flex;
+		flex-direction: column;
+		overflow-y: scroll;
+		height: 100%;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.whoAreWe {
+		grid-template-areas:
+			"header" "imageBox"
+			"textBox" "imageBox";
+		.heroImg {
+			width: 70%;
 		}
 	}
 }

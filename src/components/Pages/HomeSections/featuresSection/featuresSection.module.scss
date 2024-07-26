@@ -10,7 +10,6 @@
 		grid-template-columns: 3fr 2fr;
         grid-template-rows: 1fr;
 		overflow: hidden;
-        padding: 2rem;
 
 		&__main {
 			display: flex;
@@ -25,7 +24,7 @@
 	}
 }
 
-@media screen and (max-width: 768) {
+@media screen and (max-width: 1024px) {
 	.wrapper {
 		&__features {
 			grid-template-columns: 1fr;

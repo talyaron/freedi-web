@@ -55,9 +55,9 @@ export default function HomeFooter({
 			</div>
 			<hr />
 			<div className={style.footer__bottomArea}>
-				<div className={style.footer__arrowUp}>
+				<button>
 					<ArrowUpIcon onClick={scrollToTop} />
-				</div>
+				</button>
 			</div>
 		</div>
 	);

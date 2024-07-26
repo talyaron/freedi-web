@@ -60,22 +60,12 @@ $breakpoint-small: 576px;
 	&__bottomArea {
 		display: flex;
 		justify-content: flex-end;
-		width: 83%;
-		margin-top: 1rem;
-		margin-bottom: 2rem;
+		width: 100%;
+		padding: 1rem;
 	}
 	hr {
 		width: 100%;
 		opacity: 30%;
-	}
-
-	&__arrowUp {
-		display: flex;
-		align-items: center;
-		width: 7rem;
-	}
-	&__arrowUp:hover {
-		opacity: 0.5;
 	}
 }
 

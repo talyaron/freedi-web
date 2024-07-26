@@ -7,7 +7,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 20vw;
+		gap: 30vw;
 		width: 100%;
 		padding: 5vw 10vw;
 		margin: 0 auto;
@@ -15,14 +15,14 @@
 }
 
 .sectionHeader {
-	font-size: 2rem;
+	font-size: 2.5rem;
 	font-weight: 600;
 	color: var(--text-black);
-	line-height: 2rem;
+	line-height: 3rem;
 }
 
 .sectionSubHeader {
-	font-size: 1.3rem;
+	font-size: 1.75rem;
 	font-weight: 400;
 	color: var(--text-black);
 }
@@ -31,4 +31,12 @@
 	font-size: 1.1rem;
 	font-weight: 350;
 	color: var(--dark-text);
+}
+
+@media screen and (min-width: 1200px) {
+	.main {
+		&__body {
+			padding: 5vw 15vw;
+		}
+	}
 }

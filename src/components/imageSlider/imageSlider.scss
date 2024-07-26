@@ -3,7 +3,6 @@
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	padding-bottom: 2rem;
 }
 
 .slideRtl,
@@ -49,12 +48,12 @@
 		transform: translateX(-200%);
 	}
 	.slideRtl.activeRtl {
-		transform: translateX(-30%);
+		transform: translateX(-80%);
 	}
 	.slideLtr {
 		transform: translateX(200%);
 	}
 	.slideLtr.activeLtr {
-		transform: translateX(30%);
+		transform: translateX(80%);
 	}
 }

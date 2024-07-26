@@ -18,6 +18,10 @@
 		padding: 0;
 		cursor: pointer;
 		text-align: left;
+
+		.sectionSubHeader {
+			font-size: 1.2rem;
+		}
 	}
 
 	&__numberWrapper {
@@ -31,21 +35,8 @@
 	&__content {
 		overflow: hidden;
 		transition: max-height 0.3s ease-in-out;
+		.sectionText {
+			padding-bottom: 1rem;
+		}
 	}
-}
-
-.sectionSubHeader {
-	font-size: 1.41rem;
-	font-weight: 400;
-	color: var(--text-black);
-	padding: 4px 0px;
-	display: flex;
-	align-items: center;
-}
-
-.sectionText {
-	padding: 0.5rem 0;
-	font-weight: 350;
-	font-size: 1.05rem;
-	color: var(--dark-text);
 }

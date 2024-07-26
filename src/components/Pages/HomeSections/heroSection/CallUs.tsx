@@ -9,12 +9,23 @@ export default function CallUs({
 }: Readonly<{
 	currentLang: Record<string, string>;
 }>) {
+	// scroll to the bottom of the page
+
+	const scrollDown = () => {
+		window.scrollTo({
+			top: window.innerHeight * 10,
+			behavior: "smooth",
+		});
+	};
+
 	return (
 		<div
 			className="
 		callUs"
 		>
-			<ArrowDownIcon2 />
+			<button onClick={scrollDown}>
+				<ArrowDownIcon2 />
+			</button>
 			<div className="callUs__phone">
 				<ContactPhoneBlueIcon />
 				<div

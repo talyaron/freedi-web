@@ -20,26 +20,30 @@ function HeroSection({
 	const { lgScreen } = useWindowSize();
 
 	return (
-		<div className="heroSection">
-			<div className="heroSection__header">
-				<h1 className="sectionHeader">
-					{currentLang["Genuine Agreement via Deliberation"]}
-				</h1>
-				<p className="sectionText">
-					{currentLang["Building Bonds and Bridging Divides"]}
-				</p>
-				{lgScreen && <CallUs currentLang={currentLang} />}
-			</div>
-			<Image
-				className="heroSectionImg"
-				src={heroSectionImg}
-				alt="Hero Section"
-				quality={100}
-				priority={true}
-			/>
-			{!lgScreen && <CallUs currentLang={currentLang} />}
-			{/* <RunningBanner currentLang={currentLang} /> */}
-		</div>
+		<>
+			<section className="heroSection">
+				<div className="heroSection__header">
+					<h1 className="sectionHeader">
+						{currentLang["Genuine Agreement via Deliberation"]}
+					</h1>
+					<p className="sectionText">
+						{currentLang["Building Bonds and Bridging Divides"]}
+					</p>
+					{lgScreen && <CallUs currentLang={currentLang} />}
+				</div>
+				<div className="heroSection__imageBox">
+					<Image
+						className="heroSectionImg"
+						src={heroSectionImg}
+						alt="Hero Section"
+						quality={100}
+						priority={true}
+					/>
+					{!lgScreen && <CallUs currentLang={currentLang} />}
+				</div>
+			</section>
+			<RunningBanner currentLang={currentLang} />
+		</>
 	);
 }
 

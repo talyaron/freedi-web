@@ -54,7 +54,7 @@
 		height: 100%;
 		gap: 5rem;
 
-		.sectionSubHeader{
+		.sectionSubHeader {
 			margin-top: 50vh;
 		}
 
@@ -69,19 +69,8 @@
 
 	.heroImg {
 		position: sticky;
-		top: 5rem;
+		top: 0;
 		width: 100%;
 		height: auto;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.whoAreWe {
-		grid-template-areas:
-			"header" "imageBox"
-			"textBox" "imageBox";
-		.heroImg {
-			width: 70%;
-		}
 	}
 }

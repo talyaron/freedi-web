@@ -7,20 +7,18 @@ import style from "./logoStyle.module.scss";
 import FreediIcon from "../icons/FreediIcon";
 
 interface Props {
-    size?: string;
-    color?: string;
+	size?: string;
+	color?: string;
 }
 
 export default function LogoWithName({
-	size = "1.9rem",
+	size = "2rem",
 	color,
 }: Readonly<Props>) {
 	return (
 		<div className={style["logoBox"]}>
 			<FreediLogoIcon size={size} color={color} />
-			<FreediIcon height={size} width="4.1rem" />
+			<FreediIcon height={size} width="4rem" />
 		</div>
 	);
 }
-
-// 25 83

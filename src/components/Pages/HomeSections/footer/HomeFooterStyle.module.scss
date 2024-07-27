@@ -1,211 +1,65 @@
-$breakpoint-xxxlarge: 1920px;
-$breakpoint-xxlarge: 1440px;
-$breakpoint-xlarge: 1200px;
-$breakpoint-large: 1024px;
-$breakpoint-medium: 768px;
-$breakpoint-small: 576px;
-
-@import "../../../../styles/globalExtends.scss";
 .footer {
-    width: 100%;
-    @extend %centered;
-    position: relative;
-    background-color: var(--notFound-btn);
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--notFound-btn);
 
-    &__mainArea {
-        width: 80%;
-        margin-top: 4rem;
-        @extend %flex-column;
-        gap: 3rem;
-    }
+	&__mainArea {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+		padding: 2rem;
+	}
 
-    &__topText {
-        font-size: 2rem;
-        width: 32%;
-        color: var(--white);
-    }
+	&__topText {
+		font-size: 1.25rem;
+		color: var(--white);
+	}
 
-    &__contactDetails {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 3.5rem;
+	&__contactDetails {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 3.5rem;
 
-        &__call,
-        &__email {
-            @extend %flex-align;
-            gap: 0.5rem;
-        }
+		&__call,
+		&__email {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
 
-        &__text {
-            @extend %flex-column;
-            font-size: 1.3rem;
-        }
+		&__text {
+			display: flex;
+			flex-direction: column;
+			font-size: 0.9rem;
+		}
 
-        p {
-            color: var(--white);
-        }
-    }
+		p {
+			color: var(--white);
+		}
+	}
 
-    &__bottomText {
-        font-weight: 610;
-        font-size: 5.7rem;
-        color: var(--white);
-    }
+	&__bottomText {
+		font-weight: 600;
+		font-size: 3.3rem;
+		color: var(--white);
+	}
 
-    &__bottomArea {
-        display: flex;
-        justify-content: flex-end;
-        width: 83%;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-    }
-    hr {
-        width: 100%;
-        opacity: 30%;
-    }
-
-    &__arrowUp {
-        @extend %flex-align;
-        width: 7rem;
-    }
-    &__arrowUp:hover{
-        opacity: 0.5;
-    }
+	&__bottomArea {
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+		padding: 1rem;
+		border-top: 1px solid #ffffff50;
+	}
 }
 
-// Small screens (up to 576px)
-@media (max-width: $breakpoint-small) {
-    .footer {
-        &__topText {
-            width: 62%;
-        }
-        &__contactDetails {
-        gap: 2.6rem;
-            &__call{
-                
-            }
-            &__email {
-            }
-            &__text {
-                font-size: 1.1rem;
-            }    
-        }
-        &__bottomText {
-            font-size: 2.2rem;
-        }
-        &__bottomArea {
-            width: 80%;
-        }
-        &__arrowUp {
-            width: 2rem;
-        }
-    }
+@media screen and (max-width: 475px) {
+	.footer {
+		&__bottomText {
+			font-size: 2.5rem;
+		}
+	}
 }
-
-// Medium screens (up to 768px)
-@media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
-    .footer {
-        &__topText {
-            width: 60%;
-        }
-        &__bottomText {
-            font-size: 2.4rem;
-        }
-        &__bottomArea {
-            width: 70%;
-        }
-        &__arrowUp {
-            width: 2rem;
-        }
-    }
-}
-
-// Large screens (up to 1024px)
-@media screen and (min-width: $breakpoint-medium) and (max-width: ($breakpoint-large + 1)) {
-    .footer {
-        &__mainArea {
-            width: 90%;
-        }
-        &__topText {
-            width: 50%;
-        }
-        &__bottomText {
-            font-size: 3.8rem;
-        }
-        &__bottomArea {
-            width: 86%;
-        }
-        &__arrowUp {
-            width: 2rem;
-        }
-    }
-}
-
-// Extra large screens (up to 1200px)
-@media screen and (min-width: ($breakpoint-large +1)) and (max-width: $breakpoint-xlarge) {
-    .footer {
-        &__mainArea {
-            width: 51rem;
-        }
-        &__topText {
-            width: 35%;
-        }
-        &__bottomText {
-            font-size: 4rem;
-        }
-        &__bottomArea {
-            width: 93%;
-        }
-    }
-}
-
-// Extra extra large screens (up to 1440px)
-@media screen and (min-width: $breakpoint-xlarge) and (max-width: $breakpoint-xxlarge) {
-    .footer {
-        &__mainArea {
-            width: 56.75rem;
-        }
-        &__topText {
-            width: 45%;
-        }
-        &__bottomText {
-            font-size: 4.4rem;
-        }
-        &__bottomArea {
-            width: 87%;
-        }
-    }
-}
-
-// Extra extra extra large screens (above 1920px)
-@media screen and (min-width: $breakpoint-xxxlarge) {
-    .footer {
-        &__mainArea {
-            width: 82.75rem;
-        }
-        &__topText {
-            width: 35%;
-            font-size: 2.5rem;
-        }
-        &__bottomText {
-            font-size: 6rem;
-        }
-        &__bottomArea {
-            width: 83%;
-        }
-        
-    &__contactDetails {
-        gap: 5.5rem;
-
-        &__email {
-            gap: 0.5rem;
-        }
-
-        &__text {
-           font-size: 1.4rem;
-        }
-    }
-    }
-}
-

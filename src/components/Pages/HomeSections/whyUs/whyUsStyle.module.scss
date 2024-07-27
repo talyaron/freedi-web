@@ -6,590 +6,508 @@ $breakpoint-medium: 768px;
 $breakpoint-small: 576px;
 $breakpoint-xsmall: 375px;
 
- @import "../../../../styles/globalExtends.scss";
+.whyUsActive {
+	&--title {
+		color: var(--white) !important;
+		transition: 0.5s ease-in;
+	}
 
- .whyUsActive {
-    &--title {
-        color: var(--white) !important;
-        transition: .5s ease-in;
-    }
+	&--description {
+		color: var(--white) !important;
+		transition: 0.5s ease-in;
+	}
 
-    &--description {
-        color: var(--white) !important;
-        transition: .5s ease-in;
-    }
+	&__cardWrapper {
+		background-color: var(--sky-blue) !important;
+		box-shadow:
+			0px 4px 9px 0px rgba(88, 109, 141, 0.24),
+			0px 16px 16px 0px rgba(88, 109, 141, 0.2),
+			0px 37px 22px 0px rgba(88, 109, 141, 0.12),
+			0px 65px 26px 0px rgba(88, 109, 141, 0.04),
+			0px 102px 29px 0px rgba(88, 109, 141, 0) !important;
+		transition: 0.5s ease-in;
+	}
 
-    &__cardWrapper {
-        background-color: var(--sky-blue) !important;
-        box-shadow:
-            0px 4px 9px 0px rgba(88, 109, 141, 0.24),
-            0px 16px 16px 0px rgba(88, 109, 141, 0.2),
-            0px 37px 22px 0px rgba(88, 109, 141, 0.12),
-            0px 65px 26px 0px rgba(88, 109, 141, 0.04),
-            0px 102px 29px 0px rgba(88, 109, 141, 0) !important;
-        transition: .5s ease-in;  
-    }
-
-    &__main {
-        background-color: var(--notFound-btn);
-        transition: .7s ease;
-    }
+	&__main {
+		background-color: var(--notFound-btn);
+		transition: 0.7s ease;
+	}
 }
 
 .whyUs {
-    font-family: 'Overused Grotesk';
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
-    &--title {
-        padding-top: 2rem;
-        font-size: 3rem;
-        color: var(--text-black);
-        font-weight: 500;
-        line-height: 125%;
-        transition: 1s ease-out;
-    }
+	&--title {
+		padding-top: 2rem;
+		font-size: 3rem;
+		color: var(--text-black);
+		font-weight: 500;
+		line-height: 125%;
+		transition: 1s ease-out;
+	}
 
-    &__cardSection {
-        position: relative;
-        height: 31.2rem;
-        width: 48.5995rem;
-        margin: 4rem 5rem 0rem 5rem;
-        overflow-y: hidden;
-        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+	&__cardSection {
+		position: relative;
+		height: 31.2rem;
+		width: 48.5995rem;
+		margin: 4rem 5rem 0rem 5rem;
+		overflow-y: hidden;
+		mask-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0),
+			rgba(0, 0, 0, 1) 20%,
+			rgba(0, 0, 0, 1) 80%,
+			rgba(0, 0, 0, 0)
+		);
 
-        &__carouselWrapper {
-            display: flex;
-            gap: 2rem;
-            height: 87.9375rem;
-            width: 48.5995rem;
-            margin-inline: auto;
+		&__carouselWrapper {
+			display: flex;
+			gap: 2rem;
+			height: 87.9375rem;
+			width: 48.5995rem;
+			margin-inline: auto;
 
-            &__carousel {
-                @extend %flex-column;
-                gap: 2rem;
-                width: 14.8665rem;
+			&__carousel {
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+				width: 14.8665rem;
 
-                &__vertical {
-                    @extend %flex-column;
-                    gap: 2rem;
-                }
+				&__vertical {
+					display: flex;
+					flex-direction: column;
+					gap: 2rem;
+				}
 
-                &__firstVertical,
-                &__thirdVertical {
-                    animation: infiniteSlideUp 85s linear infinite;
-                }
+				&__firstVertical,
+				&__thirdVertical {
+					animation: infiniteSlideUp 85s linear infinite;
+				}
 
-                &__secondVertical {
-                    animation: infiniteSlideDown 85s linear infinite;
-                }
-            }
+				&__secondVertical {
+					animation: infiniteSlideDown 85s linear infinite;
+				}
+			}
 
-            &__carousel:hover &__carousel__firstVertical,
-            &__carousel:hover &__carousel__secondVertical,
-            &__carousel:hover &__carousel__thirdVertical {
-                animation-play-state: paused;
-            }
-        }
-
-    }
-
+			&__carousel:hover &__carousel__firstVertical,
+			&__carousel:hover &__carousel__secondVertical,
+			&__carousel:hover &__carousel__thirdVertical {
+				animation-play-state: paused;
+			}
+		}
+	}
 }
 
 .cardWrapper {
-    box-shadow:
-        0px 3px 7px 0px rgba(132, 143, 169, 0.1),
-        0px 13px 13px 0px rgba(132, 143, 169, 0.09),
-        0px 30px 18px 0px rgba(132, 143, 169, 0.05),
-        0px 54px 22px 0px rgba(132, 143, 169, 0.01),
-        0px 84px 24px 0px rgba(132, 143, 169, 0);
-    @extend %centered;
-    gap: 1.6rem;
-    padding: 2.4rem 1.2rem;
-    font-family: 'Overused Grotesk', sans-serif;
-    background-color: var(--white);
-    border-radius: 2px;
-    transition: 1s ease-out;
+	box-shadow:
+		0px 3px 7px 0px rgba(132, 143, 169, 0.1),
+		0px 13px 13px 0px rgba(132, 143, 169, 0.09),
+		0px 30px 18px 0px rgba(132, 143, 169, 0.05),
+		0px 54px 22px 0px rgba(132, 143, 169, 0.01),
+		0px 84px 24px 0px rgba(132, 143, 169, 0);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.6rem;
+	padding: 2.4rem 1.2rem;
+	font-family: "Overused Grotesk", sans-serif;
+	background-color: var(--white);
+	border-radius: 2px;
+	transition: 1s ease-out;
 
-    &__card {
-        @extend %flex-column;
-        align-items: flex-start;
-        gap: 0.8rem;
-        transition: opacity 0.3s ease-in-out;
-    }
+	&__card {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.8rem;
+		transition: opacity 0.3s ease-in-out;
+	}
 
-    &--title {
-        line-height: 125%;
-        font-weight: 500;
-        font-size: 1.2rem;
-        color: var(--text-black);
-        transition: 1s ease-out;
-    }
+	&--title {
+		line-height: 125%;
+		font-weight: 500;
+		font-size: 1.2rem;
+		color: var(--text-black);
+		transition: 1s ease-out;
+	}
 
-    &--description {
-        line-height: 150%;
-        font-weight: 350;
-        font-size: 0.9rem;
-        color: var(--gray-blue);
-        transition: 1s ease-out;
-    }
+	&--description {
+		line-height: 150%;
+		font-weight: 350;
+		font-size: 0.9rem;
+		color: var(--gray-blue);
+		transition: 1s ease-out;
+	}
 }
 
 .freediSliderIcons {
-    width: 3.25rem;
-    height: 3.25rem;
+	width: 3.25rem;
+	height: 3.25rem;
 }
-
-
-.freediLogo {
-    position: relative;
-    bottom: 5rem;
-    left: 3rem;
-}
-
-
 
 @keyframes infiniteSlideUp {
-    0% {
-        transform: translateY(calc(0% + 2rem));
-    }
+	0% {
+		transform: translateY(calc(0% + 2rem));
+	}
 
-    100% {
-        transform: translateY(-100%);
-    }
+	100% {
+		transform: translateY(-100%);
+	}
 }
-
 
 @keyframes infiniteSlideDown {
-    from {
-        transform: translateY(calc(-100% - 2rem));
-    }
+	from {
+		transform: translateY(calc(-100% - 2rem));
+	}
 
-    to {
-        transform: translateY(0%);
-    }
+	to {
+		transform: translateY(0%);
+	}
 }
 
-
-//max-width:375px 
+//max-width:375px
 @media screen and (max-width: $breakpoint-xsmall) {
-    .whyUs {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+	.whyUs {
+		&--title {
+			font-size: 2rem;
+			padding-inline: 4rem;
+		}
 
-        &--title {
-            font-size: 2rem;
-            padding-inline: 4rem;
-        }
+		&__cardSection {
+			width: 24rem;
+			height: 39.875rem;
+			margin-left: 0;
+			margin-right: 0;
 
-        &__cardSection {
-            width: 24rem;
-            height: 39.875rem;
-            margin-left: 0;
-            margin-right: 0;
+			&__carouselWrapper {
+				width: 21.1875rem;
+				justify-content: center;
+				gap: 2rem;
 
-            &__carouselWrapper {
-                width: 21.1875rem;
-                justify-content: center;
-                gap: 2rem;
+				&:hover {
+					animation-play-state: paused;
+				}
 
-                &:hover {
-                    animation-play-state: paused;
-                }
+				&__carousel__firstVertical,
+				&__carousel__secondVertical,
+				&__carousel__thirdVertical {
+					animation: none;
+				}
 
-                &__carousel__firstVertical,
-                &__carousel__secondVertical,
-                &__carousel__thirdVertical {
-                    animation: none;
-                }
+				&__carousel {
+					width: 16rem;
+					animation: infiniteSlideUp 85s linear infinite;
+					margin-top: 6rem;
 
-                &__carousel {
-                    width: 16rem;
-                    animation: infiniteSlideUp 85s linear infinite;
-                    margin-top: 6rem;
+					&:hover {
+						animation-play-state: paused;
+					}
+				}
+			}
+		}
+	}
 
-                    &:hover {
-                        animation-play-state: paused;
-                    }
-                }
-            }
-        }
-    }
+	@keyframes infiniteSlideUp {
+		0% {
+			transform: translateY(calc(-261% + 2rem));
+		}
 
-
-    @keyframes infiniteSlideUp {
-        0% {
-            transform: translateY(calc(-261% + 2rem));
-        }
-
-        100% {
-            transform: translateY(0%);
-        }
-    }
-
+		100% {
+			transform: translateY(0%);
+		}
+	}
 }
 
 // min-width:376px and max-width: 576px
 @media screen and (min-width: $breakpoint-xsmall) and (max-width: $breakpoint-small) {
-    
-    .whyUs {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+	.whyUs {
+		&--title {
+			font-size: 2rem;
+			padding-inline: 4rem;
+		}
 
-        &--title {
-            font-size: 2rem;
-            padding-inline: 4rem;
-        }
+		&__cardSection {
+			width: 24rem;
+			height: 39.875rem;
+			margin-left: 0;
+			margin-right: 0;
 
-        &__cardSection {
-            width: 24rem;
-            height: 39.875rem;
-            margin-left: 0;
-            margin-right: 0;
+			&__carouselWrapper {
+				width: 21.1875rem;
+				justify-content: center;
+				gap: 2rem;
 
+				&:hover {
+					animation-play-state: paused;
+				}
 
-            &__carouselWrapper {
-                width: 21.1875rem;
-                justify-content: center;
-                gap: 2rem;
+				&__carousel__firstVertical,
+				&__carousel__secondVertical,
+				&__carousel__thirdVertical {
+					animation: none;
+				}
 
-                &:hover {
-                    animation-play-state: paused;
-                }
+				&__carousel {
+					width: 16rem;
+					animation: infiniteSlideUp 85s linear infinite;
+					margin-top: 6rem;
 
-                &__carousel__firstVertical,
-                &__carousel__secondVertical,
-                &__carousel__thirdVertical {
-                    animation: none;
-                }
+					&:hover {
+						animation-play-state: paused;
+					}
+				}
+			}
+		}
+	}
 
-                &__carousel {
-                    width: 16rem;
-                    animation: infiniteSlideUp 85s linear infinite;
-                    margin-top: 6rem;
+	@keyframes infiniteSlideUp {
+		0% {
+			transform: translateY(calc(-261% + 2rem));
+		}
 
-                    &:hover {
-                        animation-play-state: paused;
-                    }
-                }
-            }
-        }
-    }
-
-
-    @keyframes infiniteSlideUp {
-        0% {
-            transform: translateY(calc(-261% + 2rem));
-        }
-
-        100% {
-            transform: translateY(0%);
-        }
-    }
-
+		100% {
+			transform: translateY(0%);
+		}
+	}
 }
 
 // min-width 576px and max-width: 768px
 @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
-    .freediLogo {
-        position: relative;
-        bottom: 12rem;
-        right: 2rem;
-    }
-    
-    .whyUs {
-        height: 52.75rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+	.freediLogo {
+		position: relative;
+		bottom: 12rem;
+		right: 2rem;
+	}
 
-        &--title {
-            font-size: 2.25rem;
-            padding-inline: 3rem;
-        }
+	.whyUs {
+		height: 52.75rem;
 
-        &__cardSection {
-            width: 35.9375rem;
-            margin-left: 0;
-            margin-right: 0;
+		&--title {
+			font-size: 2.25rem;
+			padding-inline: 3rem;
+		}
 
+		&__cardSection {
+			width: 35.9375rem;
+			margin-left: 0;
+			margin-right: 0;
 
-            &__carouselWrapper {
-                width: 30.5rem;
-                margin-inline: auto;
-                gap: 2rem;
-                margin-top: -37.375rem;
+			&__carouselWrapper {
+				width: 30.5rem;
+				margin-inline: auto;
+				gap: 2rem;
+				margin-top: -37.375rem;
 
+				&__carousel__firstVertical,
+				&__carousel__secondVertical,
+				&__carousel__thirdVertical {
+					animation: none;
+				}
 
-                &__carousel__firstVertical,
-                &__carousel__secondVertical,
-                &__carousel__thirdVertical {
-                    animation: none;
-                }
+				&__carousel {
+					width: 14.5rem;
+					animation: none;
 
-                &__carousel {
-                    width: 14.5rem;
-                    animation: none;
+					&__vertical {
+						width: 14.5rem;
+					}
+				}
+			}
+		}
 
-                    &__vertical {
-                        width: 14.5rem;
-                    }
-                }
-            }
-        }
+		.animationDown {
+			animation: infiniteSlideDown 85s linear infinite;
 
-        .animationDown {
-            animation: infiniteSlideDown 85s linear infinite;
+			&:hover {
+				animation-play-state: paused;
+			}
+		}
 
-            &:hover {
-                animation-play-state: paused;
-            }
+		.animationUp {
+			animation: infiniteSlideUp 85s linear infinite;
 
-        }
+			&:hover {
+				animation-play-state: paused;
+			}
+		}
+	}
 
-        .animationUp {
-            animation: infiniteSlideUp 85s linear infinite;
+	@keyframes infiniteSlideUp {
+		0% {
+			transform: translateY(calc(-211% + 2rem));
+		}
 
-            &:hover {
-                animation-play-state: paused;
-            }
+		100% {
+			transform: translateY(45%);
+		}
+	}
 
-        }
-    }
+	@keyframes infiniteSlideDown {
+		0% {
+			transform: translateY(calc(45% - 2rem));
+		}
 
-    @keyframes infiniteSlideUp {
-        0% {
-            transform: translateY(calc(-211% + 2rem));
-        }
-
-        100% {
-            transform: translateY(45%);
-        }
-    }
-
-    @keyframes infiniteSlideDown {
-        0% {
-            transform: translateY(calc(45% - 2rem));
-        }
-
-        100% {
-            transform: translateY(-211%);
-        }
-    }
+		100% {
+			transform: translateY(-211%);
+		}
+	}
 }
 
 //min-width: 768px and max-width: 1024px
 @media screen and (min-width: $breakpoint-medium) and (max-width: ($breakpoint-large - 1)) {
-    
-    .whyUs {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+	.whyUs {
+		&--title {
+			font-size: 2.25rem;
+			padding-inline: 3rem;
+		}
 
-        &--title {
-            font-size: 2.25rem;
-            padding-inline: 3rem;
-        }
+		&__cardSection {
+			width: 35.9375rem;
+			margin-top: 8rem;
+			margin-left: 0;
+			margin-right: 0;
 
-        &__cardSection {
-            width: 35.9375rem;
-            margin-top: 8rem;
-            margin-left: 0;
-            margin-right: 0;
+			&__carouselWrapper {
+				width: 30.5rem;
+				margin-inline: auto;
+				gap: 2rem;
+				margin-top: -37.375rem;
 
+				&__carousel__firstVertical,
+				&__carousel__secondVertical,
+				&__carousel__thirdVertical {
+					animation: none;
+				}
 
-            &__carouselWrapper {
-                width: 30.5rem;
-                margin-inline: auto;
-                gap: 2rem;
-                margin-top: -37.375rem;
+				&__carousel {
+					width: 14.5rem;
+					animation: none;
 
+					&__vertical {
+						width: 14.5rem;
+					}
+				}
+			}
+		}
 
-                &__carousel__firstVertical,
-                &__carousel__secondVertical,
-                &__carousel__thirdVertical {
-                    animation: none;
-                }
+		.animationDown {
+			animation: infiniteSlideDown 85s linear infinite;
 
-                &__carousel {
-                    width: 14.5rem;
-                    animation: none;
+			&:hover {
+				animation-play-state: paused;
+			}
+		}
 
-                    &__vertical {
-                        width: 14.5rem;
-                    }
-                }
-            }
-        }
+		.animationUp {
+			animation: infiniteSlideUp 85s linear infinite;
 
-        .animationDown {
-            animation: infiniteSlideDown 85s linear infinite;
+			&:hover {
+				animation-play-state: paused;
+			}
+		}
+		.freediLogo {
+			position: relative;
+			left: 14rem;
+		}
+	}
 
-            &:hover {
-                animation-play-state: paused;
-            }
+	@keyframes infiniteSlideUp {
+		0% {
+			transform: translateY(calc(-211% + 2rem));
+		}
 
-        }
+		100% {
+			transform: translateY(45%);
+		}
+	}
 
-        .animationUp {
-            animation: infiniteSlideUp 85s linear infinite;
+	@keyframes infiniteSlideDown {
+		0% {
+			transform: translateY(calc(45% - 2rem));
+		}
 
-            &:hover {
-                animation-play-state: paused;
-            }
-        }
-        .freediLogo {
-            position: relative;
-            left: 14rem;
-        }
-    }
-
-    @keyframes infiniteSlideUp {
-        0% {
-            transform: translateY(calc(-211% + 2rem));
-        }
-
-        100% {
-            transform: translateY(45%);
-        }
-    }
-
-    @keyframes infiniteSlideDown {
-        0% {
-            transform: translateY(calc(45% - 2rem));
-        }
-
-        100% {
-            transform: translateY(-211%);
-        }
-    }
+		100% {
+			transform: translateY(-211%);
+		}
+	}
 }
 
 // min-width 1024px and max-width: 1200px
 @media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-xlarge) {
-    
-    .whyUs {
+	.whyUs {
+		&--title {
+			font-size: 3rem;
+		}
 
-        &--title {
-            font-size: 3rem;
-        }
+		&__cardSection {
+			width: 50rem;
+			margin-top: 8rem;
+			margin-left: 0;
+			margin-right: 0;
 
-        &__cardSection {
-            width: 50rem;
-            margin-top: 8rem;
-            margin-left: 0;
-            margin-right: 0;
+			&__carouselWrapper {
+				&__carousel {
+					width: 14.5rem;
 
-
-            &__carouselWrapper {
-
-                &__carousel {
-                    width: 14.5rem;
-
-                    &__vertical {
-                        width: 14.5rem;
-                    }
-                }
-            }
-        }
-    }
+					&__vertical {
+						width: 14.5rem;
+					}
+				}
+			}
+		}
+	}
 }
 
 // min-width 1200px and max-width: 1440px
 @media screen and (min-width: $breakpoint-xlarge) and (max-width: $breakpoint-xxlarge) {
+	.whyUs {
+		&--title {
+			font-size: 3rem;
+		}
 
-    .whyUs {
-        &--title {
-            font-size: 3rem;
-        }
+		&__cardSection {
+			width: 50rem;
+			margin-top: 8rem;
+			margin-left: 0;
+			margin-right: 0;
 
-        &__cardSection {
-            width: 50rem;
-            margin-top: 8rem;
-            margin-left: 0;
-            margin-right: 0;
+			&__carouselWrapper {
+				&__carousel {
+					width: 14.5rem;
 
-
-            &__carouselWrapper {
-
-                &__carousel {
-                    width: 14.5rem;
-
-                    &__vertical {
-                        width: 14.5rem;
-                    }
-                }
-            }
-        }
-    }
+					&__vertical {
+						width: 14.5rem;
+					}
+				}
+			}
+		}
+	}
 }
-
-
-
 
 // min-width 1440px and max-width: 1920px
 @media screen and (min-width: $breakpoint-xxlarge) and (max-width: $breakpoint-xxxlarge) {
+	.whyUs {
+		&--title {
+			font-size: 3rem;
+		}
 
-    .whyUs {
-        &--title {
-            font-size: 3rem;
-        }
+		&__cardSection {
+			width: 50rem;
+			margin-top: 8rem;
+			margin-left: 0;
+			margin-right: 0;
 
-        &__cardSection {
-            width: 50rem;
-            margin-top: 8rem;
-            margin-left: 0;
-            margin-right: 0;
+			&__carouselWrapper {
+				&__carousel {
+					width: 14.5rem;
 
-
-            &__carouselWrapper {
-
-                &__carousel {
-                    width: 14.5rem;
-
-                    &__vertical {
-                        width: 14.5rem;
-                    }
-                }
-            }
-        }
-    }
+					&__vertical {
+						width: 14.5rem;
+					}
+				}
+			}
+		}
+	}
 }
-
-
-
-
-
-
-
-// .connections {
-//     display: flex;
-//     gap: 5rem;
-
-//     &__img {
-//         width: 40vw;
-//         height: auto;
-//     }
-
-//     .sectionTextBox {
-//         margin: auto 0;
-//         padding-right: 5vw;
-//     }
-// }
-
-// @media screen and (max-width: 500px) {
-//     // .connections {
-//     //     flex-direction: column;
-
-//     //     &__img {
-//     //         width: 60vw;
-//     //     }
-//     // }
-//     // .sectionTextBox {
-//     //     margin: 0 auto;
-//     // }
-// }

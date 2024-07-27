@@ -1,13 +1,18 @@
 import React from "react";
 
 interface Props {
-    height: string;
-    width: string;
-    freeColor?: string,
-    diColor?: string,
+	height: string;
+	width?: string;
+	freeColor?: string;
+	diColor?: string;
 }
 
-export default function FreediIcon({ height, width, freeColor, diColor }: Readonly<Props>) {
+export default function FreediIcon({
+	height,
+	width = "4rem",
+	freeColor,
+	diColor,
+}: Readonly<Props>) {
 	return (
 		<svg
 			width={width}

@@ -1,38 +1,29 @@
 "use client";
 
 import React, { useState } from "react";
-import UsaFlagIcon from "../icons/UsaFlagIcon";
-import IsraelFlagIcon from "../icons/IsraelFlagIcon";
+import { useRouter, usePathname } from "next/navigation";
+
+// Custom Components
 import ArrowDownIcon from "../icons/ArrowDownIcon";
 
-const flagSize = "1.2rem";
+// Helpers
+import { flagArr, FlagLanguage } from "./flags";
 
 export default function LanguageDropdown({ lang }: Readonly<{ lang: string }>) {
-	const flagArr = [
-		{
-			lang: "en",
-			flag: <UsaFlagIcon size={flagSize} />,
-		},
-		{
-			lang: "he",
-			flag: <IsraelFlagIcon size={flagSize} />,
-		},
-	];
+	const { push } = useRouter();
+	const pathname = usePathname();
 
 	const currentFlag = flagArr.find((x) => x.lang === lang);
 
 	const [isOpen, setIsOpen] = useState(false);
 
-	const handleSetLang = (lang: (typeof flagArr)[0]) => {
+	const handleSetLang = (lang: FlagLanguage) => {
 		setIsOpen(false);
 
-		const currentPath = window.location.pathname;
-
-		const newPath = currentPath
+		const newPath = pathname
 			.split("/")
 			.map((x) => {
 				if (x === "he" || x === "en") {
-                    
 					return lang.lang;
 				}
 
@@ -40,7 +31,7 @@ export default function LanguageDropdown({ lang }: Readonly<{ lang: string }>) {
 			})
 			.join("/");
 
-		window.location.href = newPath;
+		push(newPath);
 	};
 
 	return (
@@ -65,7 +56,6 @@ export default function LanguageDropdown({ lang }: Readonly<{ lang: string }>) {
 						onClick={() => handleSetLang(lang)}
 						style={{
 							top: isOpen ? (i + 1) * 2 + "rem" : i + 1 + "rem",
-							right: isOpen ? (i + 1) * 1 + "rem" : i + 1 + "rem",
 							zIndex: isOpen ? 1 : -1,
 							opacity: isOpen ? 1 : 0,
 						}}

@@ -2,13 +2,13 @@ import React, { useContext } from "react";
 import WhyUsColumn1 from "./whyUsColumns/whyUsColumn1";
 import WhyUsColumn2 from "./whyUsColumns/whyUsColumn2";
 import WhyUsColumn3 from "./whyUsColumns/whyUsColumn3";
-import useWindowSizeFixed from "@/hooks/useWindowSizeFixed";
 import { LangContext } from "./WhyUsSection";
 import style from "./whyUsStyle.module.scss";
+import useWindowSize from "@/hooks/useWindowSize";
 
 const WhyUsCardContainer = () => {
 
-	const { width } = useWindowSizeFixed();
+	const { width } = useWindowSize();
 	const isSmallScreen = width! < 576;
 	const isMediumScreen = width! >= 576 && width! < 1024;
 	const isLargeScreen = width! >= 1024;

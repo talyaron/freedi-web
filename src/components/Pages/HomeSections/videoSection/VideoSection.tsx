@@ -1,135 +1,97 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
-import style from "./videoSectionStyle.module.scss";
+// Styles
+import "./videoSectionStyle.scss";
+
+// Custom Components
 import FreediLogoIcon from "@/components/icons/FreediLogoIcon";
 import FreediIcon from "@/components/icons/FreediIcon";
-import videoSectionImage from "@/assets/Images/VideoSectionImage.png";
 import videoSectionPeopleImage from "@/assets/Images/VideoSectionPeople.png";
-import Image from "next/image";
-import useWindowSizeFixed from "@/hooks/useWindowSizeFixed";
 import BottomLogo from "@/components/bottomLogo/BottomLogo";
+
+// Hooks
+import useWindowSize from "@/hooks/useWindowSize";
 
 export default function VideoSection({
 	currentLang,
-	direction,
 }: Readonly<{
 	currentLang: Record<string, string>;
-	direction: "rtl" | "ltr";
 }>) {
-	const { width } = useWindowSizeFixed();
+	const { width } = useWindowSize();
 	const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
-	const handlePlayVideo = () => {
-		setIsVideoPlaying(true);
-	};
-
-	if (width == undefined) {
-		return (
-			<section className={style.videoSection}></section>
-		)
-	}
-
 	return (
-		<section className={style.videoSection} style={{ direction }}>
-			{width! > 1200 ? (
-				<>
-					<div className={style.videoWrapper}>
-						<iframe
-							src="https://www.youtube.com/embed/qLznfpgj1E4?wmode=transparent&autoplay=1"
-							title="YouTube video player"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							loading="lazy"
-							allowFullScreen
-							className={isVideoPlaying ? `${style.videoPlayer} ${style.videoImage}` : style.none}
-						></iframe>
-						<Image
-							alt="videoImage"
-							src={videoSectionImage}
-							quality={100}
-							className={isVideoPlaying ? style.none : style.videoImage}
-							onClick={() => handlePlayVideo()}
-						/>
-						<div className={isVideoPlaying ? style.none : style.textWrapper}>
-							<p className={style.timerP}>
+		<section className="videoSection">
+			{width <= 1200 && (
+				<div className="videoSection__header">
+					<h1 className="sectionHeader">
+						{currentLang["How does FreeDi work?"]}
+					</h1>
+					<p className="sectionText">
+						{
+							currentLang[
+								"Let us walk you through how our app works"
+							]
+						}
+					</p>
+				</div>
+			)}
+			<div
+				className="videoSection__videoWrapper"
+				onClick={() => setIsVideoPlaying(true)}
+			>
+				{isVideoPlaying ? (
+					<iframe
+						src="https://www.youtube.com/embed/qLznfpgj1E4?wmode=transparent&autoplay=1"
+						title="YouTube video player"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						loading="eager"
+						allowFullScreen
+						className="video"
+					/>
+				) : (
+					<>
+						<div className="videoSection__videoWrapper__text">
+							<p className="sectionText">
 								{currentLang["explained in 90 second"]}
 							</p>
-							<h1 className={style.header}>
-								{currentLang["How does FreeDi work?"]}
-							</h1>
-							<p className={style.underHeaderP}>
-								{currentLang["Let us walk you through how our app works"]}
-							</p>
+							{width > 1200 && (
+								<>
+									<h1 className="sectionHeader">
+										{currentLang["How does FreeDi work?"]}
+									</h1>
+									<p className="sectionText">
+										{
+											currentLang[
+												"Let us walk you through how our app works"
+											]
+										}
+									</p>
+								</>
+							)}
 						</div>
-						<div className={isVideoPlaying ? style.none : style.logoWrapper}>
-							<FreediLogoIcon size={"1.9rem"} color={"white"} />
-							<FreediIcon
-								height="1.9rem"
-								width="4.1rem"
-								freeColor="var(--freedi-yellow)"
-								diColor="white"
-							/>
-						</div>
-						<Image
-							alt="videoPeopleImage"
-							src={videoSectionPeopleImage}
-							quality={100}
-							className={style.videoPeopleImage}
-						/>
-						<div className={style.bottomLogoMax}>
-							<BottomLogo theme="light" />
-						</div>
-					</div>
-				</>
-			) : (
-				<>
-					<div className={style.textWrapper}>
-						<h1 className={style.header}>{currentLang["How does FreeDi work?"]}</h1>
-						<p className={style.underHeaderP}>
-							{currentLang["Let us walk you through how our app works"]}
-						</p>
-					</div>
-					<div className={style.videoWrapper}>
-						<iframe
-							src="https://www.youtube.com/embed/qLznfpgj1E4?wmode=transparent&autoplay=1"
-							title="YouTube video player"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							loading="lazy"
-							allowFullScreen
-							className={isVideoPlaying ? `${style.videoPlayer} ${style.videoImage}` : style.none}
-						></iframe>
-						<Image
-							alt="videoImage"
-							src={videoSectionImage}
-							quality={100}
-							className={isVideoPlaying ? style.none : style.videoImage}
-							onClick={() => handlePlayVideo()}
-						/>
-						<p className={isVideoPlaying ? style.none : style.timerP}>
-							{currentLang["explained in 90 second"]}
-						</p>
-						<div className={isVideoPlaying ? style.none : style.logoWrapper}>
-							<FreediLogoIcon size={"1.459rem"} color={"white"} />
+						<div className="logo">
+							<FreediLogoIcon size="1.5rem" color="white" />
 							<FreediIcon
 								height="1rem"
-								width="3.22rem"
+								width="3rem"
 								freeColor="var(--freedi-yellow)"
 								diColor="white"
 							/>
 						</div>
-						<Image
-							alt="videoPeopleImage"
-							src={videoSectionPeopleImage}
-							quality={100}
-							className={style.videoPeopleImage}
-						/>
-						<div className={style.bottomLogoMin}>
-							<BottomLogo theme="light" />
-						</div>
-					</div>
-				</>
-			)}
+					</>
+				)}
+			</div>
+			<Image
+				alt="videoPeopleImage"
+				src={videoSectionPeopleImage}
+				quality={100}
+				className="videoSection__peopleImage"
+			/>
+			<BottomLogo theme="light" />
 		</section>
 	);
 }

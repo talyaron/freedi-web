@@ -1,77 +1,42 @@
-@import "../../../styles/globalExtends.scss";
 .main {
-    @extend %centered;
-    gap: 5rem;
-    transition: .7s ease-in-out;
-    // padding: 0 10vw;
-    // background-image: url("../../../assets/Images/Hero-Background.png");
-    // background-repeat: no-repeat;
-    // background-position: top;
-    // background-size: cover;
-    // background-size: contain;
+	display: flex;
+	flex-direction: column;
+	transition: 0.7s ease-in-out;
 
-    &__body {
-        @extend %centered;
-        gap: 10rem;
-        width: 100%;
-        max-width: 1440px;
-    }
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20vw;
+		width: 100%;
+		padding: 5vw 10vw;
+		margin: 0 auto;
+	}
 }
 
 .sectionHeader {
-    font-size: var(--btn-font-size);
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    color: var(--text-gray);
+	font-size: 2.5rem;
+	font-weight: 600;
+	color: var(--text-black);
+	line-height: 3rem;
 }
 
-.sectionTextBox {
-    width: 40%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.sectionTitle {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-black);
+.sectionSubHeader {
+	font-size: 1.75rem;
+	font-weight: 400;
+	color: var(--text-black);
 }
 
 .sectionText {
-    font-size: var(--btn-font-size);
-    line-height: 1.5rem;
-    color: var(--text-gray);
+	font-size: 1.1rem;
+	font-weight: 350;
+	color: var(--dark-text);
 }
 
-@media screen and (max-width: 500px) {
-    .defaultSection {
-        flex-direction: column;
-
-        &__teamworkImg {
-            width: 50vw;
-        }
-    }
-    .sectionTitle {
-        width: 100%;
-    }
-
-    .sectionTextBox {
-        width: 80%;
-        justify-content: end;
-    }
-
-    .sectionText {
-        width: 100%;
-    }
+@media screen and (min-width: 1200px) {
+	.main {
+		&__body {
+			padding: 5vw 15vw;
+		}
+	}
 }
-
-// @media screen and (min-width: 1440px) {
-//     .main {
-
-//         &__body {
-//             width: 70%;
-//         }
-//     }
-// }

@@ -1,0 +1,43 @@
+.runningBanner {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+
+	ul {
+		gap: 5rem;
+		animation-duration: 20s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		list-style: outside;
+
+		.scrollLeft {
+			animation-name: scrollLeft;
+		}
+
+		.scrollRight {
+			animation-name: scrollRight;
+		}
+
+		li {
+			white-space: nowrap;
+		}
+	}
+}
+
+@keyframes scrollRight {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-300%);
+	}
+}
+
+@keyframes scrollLeft {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(300%);
+	}
+}

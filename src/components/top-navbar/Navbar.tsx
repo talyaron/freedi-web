@@ -12,14 +12,13 @@ import LogoWithName from "../logo/LogoWithName";
 export default function Navbar({
 	lang,
 }: Readonly<{
-    lang: string;
+	lang: string;
 }>) {
 	return (
 		<nav className="navbar">
 			<LogoWithName />
 
 			<LanguageDropdown lang={lang} />
-
 		</nav>
 	);
 }

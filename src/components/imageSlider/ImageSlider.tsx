@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import styles from "./imageSlider.module.scss";
+import React, { useEffect, useState, useRef } from "react";
+import "./imageSlider.scss";
 import Image from "next/image";
 import image1 from "@/assets/Images/1.png";
 import image2 from "@/assets/Images/2.png";
@@ -15,49 +15,76 @@ import image11 from "@/assets/Images/11.png";
 import image12 from "@/assets/Images/12.png";
 import image13 from "@/assets/Images/13.png";
 import image14 from "@/assets/Images/14.png";
+import useWindowSize from "@/hooks/useWindowSize";
 
-const ImageSlider = ({
-	direction,
-}: Readonly<{
-	direction: "rtl" | "ltr";
-}>)  => {
+const images = [
+	image1,
+	image2,
+	image3,
+	image4,
+	image5,
+	image6,
+	image7,
+	image8,
+	image9,
+	image10,
+	image11,
+	image12,
+	image13,
+	image14,
+];
+
+const ImageSlider = ({ direction }: { direction: "ltr" | "rtl" }) => {
+	const { width } = useWindowSize();
+	const sliderRef = useRef<HTMLDivElement | null>(null);
 	const [activeIndex, setActiveIndex] = useState(0);
-	const images = [
-		image1,
-		image2,
-		image3,
-		image4,
-		image5,
-		image6,
-		image7,
-		image8,
-		image9,
-		image10,
-		image11,
-		image12,
-		image13,
-		image14,
-	];
+	const [sliderHeight, setSliderHeight] = useState(0);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
-		}, 8000);
+		}, 5000);
 
 		return () => clearInterval(interval);
-	},[]);
-	
+	}, []);
+
+	useEffect(() => {
+		if (sliderRef.current) {
+			if (width < 1024) {
+				setSliderHeight(sliderRef.current?.clientHeight - 50);
+			} else {
+				setSliderHeight(sliderRef.current?.clientHeight);
+			}
+		}
+	}, [width]);
+
+	const getClassName = (
+		direction: string,
+		index: number,
+		activeIndex: number,
+	) => {
+		if (direction === "rtl") {
+			return `slideRtl ${index === activeIndex ? "activeRtl" : ""}`;
+		} else {
+			return `slideLtr ${index === activeIndex ? "activeLtr" : ""}`;
+		}
+	};
+
 	return (
-		<>
+		<div className="slider" ref={sliderRef}>
 			{images.map((item, index) => (
-				<div
+				<Image
 					key={index}
-					className={`${index === activeIndex ? (direction === "ltr" ? styles.activeLtr : styles.activeRtl) : styles.none} ${direction === "ltr" ? styles.imageContainerLtr : styles.imageContainerRtl}`}
-				>
-					<Image src={item} alt={`Image ${index}`} />
-				</div>
+					src={item}
+					alt={`Image ${index}`}
+					className={getClassName(direction, index, activeIndex)}
+					quality={100}
+					style={{
+						height: `${sliderHeight - 30}px`,
+					}}
+				/>
 			))}
-		</>
+		</div>
 	);
 };
 

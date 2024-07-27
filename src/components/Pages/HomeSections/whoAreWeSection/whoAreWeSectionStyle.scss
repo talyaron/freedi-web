@@ -1,0 +1,76 @@
+.whoAreWe {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, auto);
+	gap: 5rem;
+
+	.heroImg {
+		width: 55%;
+		max-width: 800px;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	.sectionSubHeader {
+		width: 50%;
+	}
+
+	&__textBox {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+
+		.geometryImg {
+			width: 100%;
+			max-width: 800px;
+			height: auto;
+		}
+
+		.sectionText {
+			span {
+				font-weight: 450;
+			}
+			.free {
+				color: var(--freedi-blue);
+			}
+			.di {
+				color: var(--bottom-Logo-Di-Light);
+			}
+		}
+	}
+}
+
+.whoWeAreLarge {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: fit-content;
+	width: 100%;
+	.scrollable {
+		display: flex;
+		flex-direction: column;
+		overflow-y: scroll;
+		height: 100%;
+		gap: 5rem;
+
+		.sectionSubHeader {
+			margin-top: 50vh;
+		}
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.heroImg {
+		position: sticky;
+		top: 0;
+		width: 100%;
+		height: auto;
+	}
+}

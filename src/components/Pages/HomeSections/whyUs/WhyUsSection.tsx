@@ -10,17 +10,13 @@ import { useIsVisible } from "@/hooks/useIsVisible";
 //Custom components
 import BottomLogo from "@/components/bottomLogo/BottomLogo";
 
-
 export const LangContext = createContext<LangType | undefined>(undefined);
 
 const WhyUsSection = ({
 	currentLang,
-	direction,
 }: Readonly<{
 	currentLang: Record<string, string>;
-	direction: "rtl" | "ltr";
 }>) => {
-
 	const ref = useRef<HTMLDivElement>(null);
 	const isVisible = useIsVisible(ref, 0.3);
 
@@ -33,13 +29,19 @@ const WhyUsSection = ({
 		}
 	}, [isVisible]);
 
-	const contextValue = useMemo(() => ({ currentLang, isVisible, itemRef: ref }), [currentLang, isVisible]);
+	const contextValue = useMemo(
+		() => ({ currentLang, isVisible, itemRef: ref }),
+		[currentLang, isVisible],
+	);
 
 	return (
 		<LangContext.Provider value={contextValue}>
 			<section
-				className={isVisible ? `${style.whyUs} ${style.whyUsActive}` : style.whyUs}
-				style={{ direction }}
+				className={
+					isVisible
+						? `${style.whyUs} ${style.whyUsActive}`
+						: style.whyUs
+				}
 			>
 				<h1
 					className={
@@ -51,12 +53,9 @@ const WhyUsSection = ({
 					{currentLang["Why Freedi?"]}
 				</h1>
 				<WhyUsCardContainer />
-			</section>
-			<div className={style.freediLogo}>
 				<BottomLogo theme={"dark"} />
-			</div>
+			</section>
 		</LangContext.Provider>
-
 	);
 };
 

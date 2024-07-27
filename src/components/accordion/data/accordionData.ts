@@ -1,6 +1,6 @@
 import { FeaturesData } from "../model/accordionModel";
 
-export const accordionData:FeaturesData[] = [
+export const accordionData: FeaturesData[] = [
 	{
 		number: "01",
 		title: "Visualizations of data and viewpoints",
@@ -9,7 +9,8 @@ export const accordionData:FeaturesData[] = [
 	{
 		number: "02",
 		title: "Real-time conversation and discussion",
-		description: "We aim to nurture an environment where every voice is heard and valued through respectful discourse and active listening. Together, we can engage in deliberative democracy, weighing ideas and insights to reach well-informed agreements.",
+		description:
+			"We aim to nurture an environment where every voice is heard and valued through respectful discourse and active listening. Together, we can engage in deliberative democracy, weighing ideas and insights to reach well-informed agreements.",
 	},
 	{
 		number: "03",

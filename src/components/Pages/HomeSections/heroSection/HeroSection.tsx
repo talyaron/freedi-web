@@ -14,35 +14,42 @@ import useWindowSize from "@/hooks/useWindowSize";
 
 function HeroSection({
 	currentLang,
+	direction,
 }: Readonly<{
 	currentLang: Record<string, string>;
+	direction: "rtl" | "ltr";
 }>) {
 	const { lgScreen } = useWindowSize();
 
 	return (
 		<>
-			<section className="heroSection">
-				<div className="heroSection__header">
-					<h1 className="sectionHeader">
-						{currentLang["Genuine Agreement via Deliberation"]}
-					</h1>
-					<p className="sectionText">
-						{currentLang["Building Bonds and Bridging Divides"]}
-					</p>
-					{lgScreen && <CallUs currentLang={currentLang} />}
+			<section className="heroSectionWrapper">
+				<div className="heroSection">
+					<div className="heroSection__header">
+						<h1 className="sectionHeader">
+							{currentLang["Genuine Agreement via Deliberation"]}
+						</h1>
+						<p className="sectionText">
+							{currentLang["Building Bonds and Bridging Divides"]}
+						</p>
+						{lgScreen && <CallUs currentLang={currentLang} />}
+					</div>
+					<div className="heroSection__imageBox">
+						<Image
+							className="heroSectionImg"
+							src={heroSectionImg}
+							alt="Hero Section"
+							quality={100}
+							priority={true}
+						/>
+						{!lgScreen && <CallUs currentLang={currentLang} />}
+					</div>
 				</div>
-				<div className="heroSection__imageBox">
-					<Image
-						className="heroSectionImg"
-						src={heroSectionImg}
-						alt="Hero Section"
-						quality={100}
-						priority={true}
-					/>
-					{!lgScreen && <CallUs currentLang={currentLang} />}
-				</div>
+				<RunningBanner
+					currentLang={currentLang}
+					direction={direction}
+				/>
 			</section>
-			<RunningBanner currentLang={currentLang} />
 		</>
 	);
 }

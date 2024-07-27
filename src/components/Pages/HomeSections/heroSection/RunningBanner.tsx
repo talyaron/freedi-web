@@ -4,10 +4,11 @@ import React from "react";
 import "./runningBanner.scss";
 
 interface Props {
+	direction: "rtl" | "ltr";
 	currentLang: Record<string, string>;
 }
 
-function RunningBanner({ currentLang }: Props) {
+function RunningBanner({ direction, currentLang }: Props) {
 	const items = [
 		currentLang["Consensus reaching technology"],
 		currentLang["Everybody can evaluate the different options"],
@@ -21,9 +22,16 @@ function RunningBanner({ currentLang }: Props) {
 
 	return (
 		<div className="runningBanner">
-			<ul>
+			<ul
+				style={{
+					animationName:
+						direction === "ltr" ? "scrollRight" : "scrollLeft",
+				}}
+			>
 				{items.map((item, index) => (
-					<li key={index}>{item}</li>
+					<li className="sectionText" key={index}>
+						{item}
+					</li>
 				))}
 			</ul>
 		</div>

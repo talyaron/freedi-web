@@ -24,13 +24,8 @@ export default function HomeFooter({
 		<div className={style.footer}>
 			<div className={style.footer__mainArea}>
 				<div className={style.footer__topText}>
-					<p>
-						{
-							currentLang[
-								"Together, we can build a better future for everyone"
-							]
-						}
-					</p>
+					<p>{currentLang["Together, we can build a"]}</p>
+					<p>{currentLang["better future for everyone"]}</p>
 				</div>
 				<div className={style.footer__contactDetails}>
 					<div className={style.footer__contactDetails__call}>
@@ -44,7 +39,7 @@ export default function HomeFooter({
 						<ContactEmailIcon />
 						<div className={style.footer__contactDetails__text}>
 							<p>{currentLang["Contact via Email"]}</p>
-							<p>"tal.yaron@delib.org"</p>
+							<p>"tal.yaron@freedi.co"</p>
 						</div>
 					</div>
 				</div>
@@ -53,7 +48,6 @@ export default function HomeFooter({
 					<p>{currentLang["FreeDi Genuine Deliberation"]}</p>
 				</div>
 			</div>
-			<hr />
 			<div className={style.footer__bottomArea}>
 				<button>
 					<ArrowUpIcon onClick={scrollToTop} />

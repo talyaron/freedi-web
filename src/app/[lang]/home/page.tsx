@@ -34,7 +34,7 @@ export default async function Home({
 			style={{ direction }}
 		>
 			<div className="main__body">
-				<HeroSection currentLang={currentLang} />
+				<HeroSection currentLang={currentLang} direction={direction}/>
 
 				<WhoAreWeSection currentLang={currentLang} />
 
